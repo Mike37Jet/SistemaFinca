@@ -24,16 +24,6 @@ namespace SistemaFinca
             login.DrawLine(lapiz, 310, 165, 717, 165);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textUsuario_Enter(object sender, EventArgs e)
         {
             if (textUsuario.Text == "USUARIO")
@@ -90,6 +80,7 @@ namespace SistemaFinca
         {
             FormMenu formMenu = new FormMenu();
             formMenu.Show(this);
+            this.Hide();
         }
         
        

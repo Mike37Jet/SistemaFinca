@@ -51,7 +51,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(250, 330);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            
             // 
             // pictureBox3
             // 
@@ -74,7 +74,6 @@
             textUsuario.Size = new Size(402, 25);
             textUsuario.TabIndex = 1;
             textUsuario.Text = "USUARIO";
-            textUsuario.TextChanged += textBox1_TextChanged;
             textUsuario.Enter += textUsuario_Enter;
             textUsuario.Leave += textUsuario_Leave;
             // 
@@ -126,10 +125,10 @@
             linkLabel1.LinkColor = Color.DimGray;
             linkLabel1.Location = new Point(421, 277);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(197, 20);
+            linkLabel1.Size = new Size(204, 20);
             linkLabel1.TabIndex = 0;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "¿Ha olvidado la contraseña?";
+            linkLabel1.Text = "¿Has olvidado tu contraseña?";
             // 
             // button2
             // 
