@@ -107,7 +107,6 @@
             labelMenuPrincipal.Size = new Size(114, 18);
             labelMenuPrincipal.TabIndex = 0;
             labelMenuPrincipal.Text = "Menu Principal";
-            labelMenuPrincipal.Click += label1_Click;
             // 
             // buttonMinimizar
             // 
@@ -385,7 +384,6 @@
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
-            Load += FormMenu_Load;
             Resize += FormMenu_Resize;
             panelEncabezado.ResumeLayout(false);
             panelEncabezado.PerformLayout();

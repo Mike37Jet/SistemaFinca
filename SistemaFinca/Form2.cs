@@ -25,15 +25,6 @@ namespace SistemaFinca
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendeMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormMenu_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonAdministracion_Click(object sender, EventArgs e)
         {
