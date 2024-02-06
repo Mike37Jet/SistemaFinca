@@ -76,6 +76,9 @@
             // 
             buttonCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonCerrar.FlatAppearance.BorderSize = 0;
+            buttonCerrar.FlatAppearance.CheckedBackColor = Color.Transparent;
+            buttonCerrar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            buttonCerrar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             buttonCerrar.FlatStyle = FlatStyle.Flat;
             buttonCerrar.Image = (Image)resources.GetObject("buttonCerrar.Image");
             buttonCerrar.Location = new Point(858, 7);
@@ -89,6 +92,9 @@
             // 
             buttonMaximizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonMaximizar.FlatAppearance.BorderSize = 0;
+            buttonMaximizar.FlatAppearance.CheckedBackColor = Color.Transparent;
+            buttonMaximizar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            buttonMaximizar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             buttonMaximizar.FlatStyle = FlatStyle.Flat;
             buttonMaximizar.Image = (Image)resources.GetObject("buttonMaximizar.Image");
             buttonMaximizar.Location = new Point(821, 7);
@@ -112,6 +118,8 @@
             // 
             buttonMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonMinimizar.FlatAppearance.BorderSize = 0;
+            buttonMinimizar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            buttonMinimizar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             buttonMinimizar.FlatStyle = FlatStyle.Flat;
             buttonMinimizar.Image = (Image)resources.GetObject("buttonMinimizar.Image");
             buttonMinimizar.Location = new Point(784, 7);
@@ -380,6 +388,7 @@
             Controls.Add(panelMenu);
             Controls.Add(panel1);
             Controls.Add(panelEncabezado);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormMenu";
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;
