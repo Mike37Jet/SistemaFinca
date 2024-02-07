@@ -18,6 +18,7 @@ namespace SistemaFinca
         public FormMenu()
         {
             InitializeComponent();
+            personalizarDiseño();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -26,10 +27,7 @@ namespace SistemaFinca
         private extern static void SendeMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
 
-        private void buttonAdministracion_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormAdministrador());
-        }
+
 
         private void buttonCerrar_Click(object sender, EventArgs e)
         {
@@ -104,24 +102,33 @@ namespace SistemaFinca
             formularioHijo.Show();
         }
 
+        private void buttonAdministracion_Click(object sender, EventArgs e)
+        {
+            mostrarSubMenu(subPanelAdministracion);
+            //abrirFormulariosHijos(new FormAdministrador());
+        }
         private void buttonGestionGanadera_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormGestionGanadera());
+            mostrarSubMenu(subPanelGestionGanadera);
+            //abrirFormulariosHijos(new FormGestionGanadera());
         }
 
         private void buttonVentas_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormVentas());
+            mostrarSubMenu(subPanelVenta);
+            //abrirFormulariosHijos(new FormVentas());
         }
 
         private void buttonInventario_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormInventario());
+            mostrarSubMenu(subPanelInventario);
+            
         }
 
         private void buttonZonasPastoreo_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormZonasPastoreo());
+            mostrarSubMenu(subPanelZonasPastoreo);
+            //abrirFormulariosHijos(new FormZonasPastoreo());
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)
@@ -129,9 +136,60 @@ namespace SistemaFinca
             Application.Exit();
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
 
+
+
+
+
+        private void personalizarDiseño()
+        {
+            subPanelAdministracion.Visible = false;
+            subPanelGestionGanadera.Visible = false;
+            subPanelInventario.Visible = false;
+            subPanelVenta.Visible = false;
+            subPanelZonasPastoreo.Visible = false;
+        }
+
+        private void ocultarSubMenu()
+        {
+            if (subPanelAdministracion.Visible == true)
+            {
+                subPanelAdministracion.Visible = false;
+            }
+            if (subPanelGestionGanadera.Visible == true)
+            {
+                subPanelGestionGanadera.Visible = false;
+            }
+            if (subPanelInventario.Visible == true)
+            {
+                subPanelInventario.Visible = false;
+            }
+            if (subPanelVenta.Visible == true)
+            {
+                subPanelVenta.Visible = false;
+            }
+            if (subPanelZonasPastoreo.Visible == true)
+            {
+                subPanelZonasPastoreo.Visible = false;
+            }
+        }
+
+        private void mostrarSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                ocultarSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
+        }
+
+        private void buttonHerrAgrGan_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormHerramientasAgricolasGanaderas());
         }
     }
 }

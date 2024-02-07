@@ -10,16 +10,23 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormInventario : Form
+    public partial class FormRegistrar : Form
     {
-        public FormInventario()
+        public FormRegistrar()
         {
             InitializeComponent();
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("La herramienta se ha registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    
     }
 }
