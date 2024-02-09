@@ -36,7 +36,12 @@
             buttonMinimizar = new Button();
             panel1 = new Panel();
             panelMenu = new Panel();
+            subPanelClientes = new Panel();
+            button21 = new Button();
+            buttonClientes = new Button();
             subPanelZonasPastoreo = new Panel();
+            button16 = new Button();
+            button15 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -48,11 +53,13 @@
             buttonHerrAgrGan = new Button();
             buttonInventario = new Button();
             subPanelVenta = new Panel();
+            button14 = new Button();
+            button4 = new Button();
             button7 = new Button();
             button6 = new Button();
-            button5 = new Button();
             buttonVentas = new Button();
             subPanelGestionGanadera = new Panel();
+            button5 = new Button();
             button10 = new Button();
             button9 = new Button();
             button8 = new Button();
@@ -73,6 +80,7 @@
             pictureLogo = new PictureBox();
             panelEncabezado.SuspendLayout();
             panelMenu.SuspendLayout();
+            subPanelClientes.SuspendLayout();
             subPanelZonasPastoreo.SuspendLayout();
             subPanelInventario.SuspendLayout();
             subPanelVenta.SuspendLayout();
@@ -168,6 +176,8 @@
             panelMenu.AccessibleRole = AccessibleRole.Document;
             panelMenu.AutoScroll = true;
             panelMenu.BackColor = Color.FromArgb(15, 15, 15);
+            panelMenu.Controls.Add(subPanelClientes);
+            panelMenu.Controls.Add(buttonClientes);
             panelMenu.Controls.Add(subPanelZonasPastoreo);
             panelMenu.Controls.Add(buttonZonasPastoreo);
             panelMenu.Controls.Add(subPanelInventario);
@@ -186,17 +196,105 @@
             panelMenu.Size = new Size(300, 467);
             panelMenu.TabIndex = 2;
             // 
+            // subPanelClientes
+            // 
+            subPanelClientes.BackColor = Color.FromArgb(25, 25, 25);
+            subPanelClientes.Controls.Add(button21);
+            subPanelClientes.Dock = DockStyle.Top;
+            subPanelClientes.Location = new Point(0, 1161);
+            subPanelClientes.Name = "subPanelClientes";
+            subPanelClientes.Size = new Size(279, 59);
+            subPanelClientes.TabIndex = 12;
+            // 
+            // button21
+            // 
+            button21.Dock = DockStyle.Top;
+            button21.FlatAppearance.BorderSize = 0;
+            button21.FlatAppearance.MouseDownBackColor = Color.Gray;
+            button21.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            button21.FlatStyle = FlatStyle.Flat;
+            button21.Font = new Font("Arial", 9F);
+            button21.ForeColor = Color.Silver;
+            button21.Location = new Point(0, 0);
+            button21.Name = "button21";
+            button21.Padding = new Padding(20, 0, 0, 0);
+            button21.Size = new Size(279, 30);
+            button21.TabIndex = 1;
+            button21.Text = "Gestión de Clientes";
+            button21.TextAlign = ContentAlignment.MiddleLeft;
+            button21.UseVisualStyleBackColor = true;
+            // 
+            // buttonClientes
+            // 
+            buttonClientes.Dock = DockStyle.Top;
+            buttonClientes.FlatAppearance.BorderSize = 0;
+            buttonClientes.FlatAppearance.MouseDownBackColor = Color.Gray;
+            buttonClientes.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            buttonClientes.FlatStyle = FlatStyle.Flat;
+            buttonClientes.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonClientes.ForeColor = Color.Silver;
+            buttonClientes.Image = (Image)resources.GetObject("buttonClientes.Image");
+            buttonClientes.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonClientes.Location = new Point(0, 1111);
+            buttonClientes.Name = "buttonClientes";
+            buttonClientes.Padding = new Padding(5, 0, 0, 0);
+            buttonClientes.Size = new Size(279, 50);
+            buttonClientes.TabIndex = 11;
+            buttonClientes.Text = "Clientes";
+            buttonClientes.TextAlign = ContentAlignment.MiddleLeft;
+            buttonClientes.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonClientes.UseVisualStyleBackColor = true;
+            buttonClientes.Click += buttonClientes_Click;
+            // 
             // subPanelZonasPastoreo
             // 
             subPanelZonasPastoreo.BackColor = Color.FromArgb(25, 25, 25);
+            subPanelZonasPastoreo.Controls.Add(button16);
+            subPanelZonasPastoreo.Controls.Add(button15);
             subPanelZonasPastoreo.Controls.Add(button3);
             subPanelZonasPastoreo.Controls.Add(button2);
             subPanelZonasPastoreo.Controls.Add(button1);
             subPanelZonasPastoreo.Dock = DockStyle.Top;
-            subPanelZonasPastoreo.Location = new Point(0, 872);
+            subPanelZonasPastoreo.Location = new Point(0, 932);
             subPanelZonasPastoreo.Name = "subPanelZonasPastoreo";
-            subPanelZonasPastoreo.Size = new Size(279, 125);
+            subPanelZonasPastoreo.Size = new Size(279, 179);
             subPanelZonasPastoreo.TabIndex = 10;
+            // 
+            // button16
+            // 
+            button16.Dock = DockStyle.Top;
+            button16.FlatAppearance.BorderSize = 0;
+            button16.FlatAppearance.MouseDownBackColor = Color.Gray;
+            button16.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            button16.FlatStyle = FlatStyle.Flat;
+            button16.Font = new Font("Arial", 9F);
+            button16.ForeColor = Color.Silver;
+            button16.Location = new Point(0, 120);
+            button16.Name = "button16";
+            button16.Padding = new Padding(20, 0, 0, 0);
+            button16.Size = new Size(279, 30);
+            button16.TabIndex = 5;
+            button16.Text = "Informes Mensuales";
+            button16.TextAlign = ContentAlignment.MiddleLeft;
+            button16.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            button15.Dock = DockStyle.Top;
+            button15.FlatAppearance.BorderSize = 0;
+            button15.FlatAppearance.MouseDownBackColor = Color.Gray;
+            button15.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            button15.FlatStyle = FlatStyle.Flat;
+            button15.Font = new Font("Arial", 9F);
+            button15.ForeColor = Color.Silver;
+            button15.Location = new Point(0, 90);
+            button15.Name = "button15";
+            button15.Padding = new Padding(20, 0, 0, 0);
+            button15.Size = new Size(279, 30);
+            button15.TabIndex = 4;
+            button15.Text = "Gestión de Arriendo de Áreas";
+            button15.TextAlign = ContentAlignment.MiddleLeft;
+            button15.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -212,6 +310,7 @@
             button3.Padding = new Padding(20, 0, 0, 0);
             button3.Size = new Size(279, 30);
             button3.TabIndex = 3;
+            button3.Text = "Notificaciones";
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = true;
             // 
@@ -229,6 +328,7 @@
             button2.Padding = new Padding(20, 0, 0, 0);
             button2.Size = new Size(279, 30);
             button2.TabIndex = 2;
+            button2.Text = "Seguimiento de Actividades";
             button2.TextAlign = ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = true;
             // 
@@ -246,6 +346,7 @@
             button1.Padding = new Padding(20, 0, 0, 0);
             button1.Size = new Size(279, 30);
             button1.TabIndex = 1;
+            button1.Text = "Gestión de Zonas de Pastoreo";
             button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = true;
             // 
@@ -260,7 +361,7 @@
             buttonZonasPastoreo.ForeColor = Color.Silver;
             buttonZonasPastoreo.Image = (Image)resources.GetObject("buttonZonasPastoreo.Image");
             buttonZonasPastoreo.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonZonasPastoreo.Location = new Point(0, 822);
+            buttonZonasPastoreo.Location = new Point(0, 882);
             buttonZonasPastoreo.Name = "buttonZonasPastoreo";
             buttonZonasPastoreo.Padding = new Padding(5, 0, 0, 0);
             buttonZonasPastoreo.Size = new Size(279, 50);
@@ -279,7 +380,7 @@
             subPanelInventario.Controls.Add(buttonIndPers);
             subPanelInventario.Controls.Add(buttonHerrAgrGan);
             subPanelInventario.Dock = DockStyle.Top;
-            subPanelInventario.Location = new Point(0, 700);
+            subPanelInventario.Location = new Point(0, 760);
             subPanelInventario.Name = "subPanelInventario";
             subPanelInventario.Size = new Size(279, 122);
             subPanelInventario.TabIndex = 8;
@@ -337,6 +438,7 @@
             buttonIndPers.Text = "Indumentaria del Personal";
             buttonIndPers.TextAlign = ContentAlignment.MiddleLeft;
             buttonIndPers.UseVisualStyleBackColor = true;
+            buttonIndPers.Click += buttonIndPers_Click;
             // 
             // buttonHerrAgrGan
             // 
@@ -368,7 +470,7 @@
             buttonInventario.ForeColor = Color.Silver;
             buttonInventario.Image = (Image)resources.GetObject("buttonInventario.Image");
             buttonInventario.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonInventario.Location = new Point(0, 650);
+            buttonInventario.Location = new Point(0, 710);
             buttonInventario.Name = "buttonInventario";
             buttonInventario.Padding = new Padding(5, 0, 0, 0);
             buttonInventario.Size = new Size(279, 50);
@@ -382,14 +484,51 @@
             // subPanelVenta
             // 
             subPanelVenta.BackColor = Color.FromArgb(25, 25, 25);
+            subPanelVenta.Controls.Add(button14);
+            subPanelVenta.Controls.Add(button4);
             subPanelVenta.Controls.Add(button7);
             subPanelVenta.Controls.Add(button6);
-            subPanelVenta.Controls.Add(button5);
             subPanelVenta.Dock = DockStyle.Top;
-            subPanelVenta.Location = new Point(0, 525);
+            subPanelVenta.Location = new Point(0, 565);
             subPanelVenta.Name = "subPanelVenta";
-            subPanelVenta.Size = new Size(279, 125);
+            subPanelVenta.Size = new Size(279, 145);
             subPanelVenta.TabIndex = 9;
+            // 
+            // button14
+            // 
+            button14.Dock = DockStyle.Top;
+            button14.FlatAppearance.BorderSize = 0;
+            button14.FlatAppearance.MouseDownBackColor = Color.Gray;
+            button14.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            button14.FlatStyle = FlatStyle.Flat;
+            button14.Font = new Font("Arial", 9F);
+            button14.ForeColor = Color.Silver;
+            button14.Location = new Point(0, 90);
+            button14.Name = "button14";
+            button14.Padding = new Padding(20, 0, 0, 0);
+            button14.Size = new Size(279, 30);
+            button14.TabIndex = 6;
+            button14.Text = "Recordatorios y Alertas";
+            button14.TextAlign = ContentAlignment.MiddleLeft;
+            button14.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Dock = DockStyle.Top;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.MouseDownBackColor = Color.Gray;
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Arial", 9F);
+            button4.ForeColor = Color.Silver;
+            button4.Location = new Point(0, 60);
+            button4.Name = "button4";
+            button4.Padding = new Padding(20, 0, 0, 0);
+            button4.Size = new Size(279, 30);
+            button4.TabIndex = 5;
+            button4.Text = "Gestión de Pagos";
+            button4.TextAlign = ContentAlignment.MiddleLeft;
+            button4.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -400,11 +539,12 @@
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Arial", 9F);
             button7.ForeColor = Color.Silver;
-            button7.Location = new Point(0, 60);
+            button7.Location = new Point(0, 30);
             button7.Name = "button7";
             button7.Padding = new Padding(20, 0, 0, 0);
             button7.Size = new Size(279, 30);
             button7.TabIndex = 4;
+            button7.Text = "Informes y Análisis";
             button7.TextAlign = ContentAlignment.MiddleLeft;
             button7.UseVisualStyleBackColor = true;
             // 
@@ -417,30 +557,14 @@
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Arial", 9F);
             button6.ForeColor = Color.Silver;
-            button6.Location = new Point(0, 30);
+            button6.Location = new Point(0, 0);
             button6.Name = "button6";
             button6.Padding = new Padding(20, 0, 0, 0);
             button6.Size = new Size(279, 30);
             button6.TabIndex = 3;
+            button6.Text = "Ventas";
             button6.TextAlign = ContentAlignment.MiddleLeft;
             button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Dock = DockStyle.Top;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseDownBackColor = Color.Gray;
-            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Arial", 9F);
-            button5.ForeColor = Color.Silver;
-            button5.Location = new Point(0, 0);
-            button5.Name = "button5";
-            button5.Padding = new Padding(20, 0, 0, 0);
-            button5.Size = new Size(279, 30);
-            button5.TabIndex = 2;
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = true;
             // 
             // buttonVentas
             // 
@@ -453,7 +577,7 @@
             buttonVentas.ForeColor = Color.Silver;
             buttonVentas.Image = (Image)resources.GetObject("buttonVentas.Image");
             buttonVentas.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonVentas.Location = new Point(0, 475);
+            buttonVentas.Location = new Point(0, 515);
             buttonVentas.Name = "buttonVentas";
             buttonVentas.Padding = new Padding(5, 0, 0, 0);
             buttonVentas.Size = new Size(279, 50);
@@ -467,14 +591,33 @@
             // subPanelGestionGanadera
             // 
             subPanelGestionGanadera.BackColor = Color.FromArgb(25, 25, 25);
+            subPanelGestionGanadera.Controls.Add(button5);
             subPanelGestionGanadera.Controls.Add(button10);
             subPanelGestionGanadera.Controls.Add(button9);
             subPanelGestionGanadera.Controls.Add(button8);
             subPanelGestionGanadera.Dock = DockStyle.Top;
             subPanelGestionGanadera.Location = new Point(0, 350);
             subPanelGestionGanadera.Name = "subPanelGestionGanadera";
-            subPanelGestionGanadera.Size = new Size(279, 125);
+            subPanelGestionGanadera.Size = new Size(279, 165);
             subPanelGestionGanadera.TabIndex = 7;
+            // 
+            // button5
+            // 
+            button5.Dock = DockStyle.Top;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatAppearance.MouseDownBackColor = Color.Gray;
+            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Arial", 9F);
+            button5.ForeColor = Color.Silver;
+            button5.Location = new Point(0, 90);
+            button5.Name = "button5";
+            button5.Padding = new Padding(20, 0, 0, 0);
+            button5.Size = new Size(279, 30);
+            button5.TabIndex = 5;
+            button5.Text = "Proceso de Faenamiento";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
+            button5.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
@@ -490,6 +633,7 @@
             button10.Padding = new Padding(20, 0, 0, 0);
             button10.Size = new Size(279, 30);
             button10.TabIndex = 4;
+            button10.Text = "Registro de ordeño";
             button10.TextAlign = ContentAlignment.MiddleLeft;
             button10.UseVisualStyleBackColor = true;
             // 
@@ -507,6 +651,7 @@
             button9.Padding = new Padding(20, 0, 0, 0);
             button9.Size = new Size(279, 30);
             button9.TabIndex = 3;
+            button9.Text = "Producción de leche";
             button9.TextAlign = ContentAlignment.MiddleLeft;
             button9.UseVisualStyleBackColor = true;
             // 
@@ -524,6 +669,7 @@
             button8.Padding = new Padding(20, 0, 0, 0);
             button8.Size = new Size(279, 30);
             button8.TabIndex = 2;
+            button8.Text = "Ganado Bovino";
             button8.TextAlign = ContentAlignment.MiddleLeft;
             button8.UseVisualStyleBackColor = true;
             // 
@@ -575,6 +721,7 @@
             button13.Padding = new Padding(20, 0, 0, 0);
             button13.Size = new Size(279, 30);
             button13.TabIndex = 4;
+            button13.Text = "Parametros del Sistema";
             button13.TextAlign = ContentAlignment.MiddleLeft;
             button13.UseVisualStyleBackColor = true;
             // 
@@ -592,6 +739,7 @@
             button12.Padding = new Padding(20, 0, 0, 0);
             button12.Size = new Size(279, 30);
             button12.TabIndex = 3;
+            button12.Text = "Gestión de Cuentas de Usuario";
             button12.TextAlign = ContentAlignment.MiddleLeft;
             button12.UseVisualStyleBackColor = true;
             // 
@@ -609,6 +757,7 @@
             button11.Padding = new Padding(20, 0, 0, 0);
             button11.Size = new Size(279, 30);
             button11.TabIndex = 2;
+            button11.Text = "Gestión de Usuario";
             button11.TextAlign = ContentAlignment.MiddleLeft;
             button11.UseVisualStyleBackColor = true;
             // 
@@ -715,7 +864,7 @@
             buttonSalir.ForeColor = Color.Silver;
             buttonSalir.Image = (Image)resources.GetObject("buttonSalir.Image");
             buttonSalir.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonSalir.Location = new Point(0, 997);
+            buttonSalir.Location = new Point(0, 1220);
             buttonSalir.Name = "buttonSalir";
             buttonSalir.Padding = new Padding(10, 0, 0, 0);
             buttonSalir.Size = new Size(279, 50);
@@ -766,6 +915,7 @@
             panelEncabezado.ResumeLayout(false);
             panelEncabezado.PerformLayout();
             panelMenu.ResumeLayout(false);
+            subPanelClientes.ResumeLayout(false);
             subPanelZonasPastoreo.ResumeLayout(false);
             subPanelInventario.ResumeLayout(false);
             subPanelVenta.ResumeLayout(false);
@@ -815,13 +965,20 @@
         private Button button2;
         private Button button1;
         private Button button7;
-        private Button button6;
-        private Button button5;
         private Button button10;
         private Button button9;
         private Button button8;
         private Button button13;
         private Button button12;
         private Button button11;
+        private Button button4;
+        private Button button14;
+        private Button button6;
+        private Button button5;
+        private Button button16;
+        private Button button15;
+        private Button buttonClientes;
+        private Panel subPanelClientes;
+        private Button button21;
     }
 }

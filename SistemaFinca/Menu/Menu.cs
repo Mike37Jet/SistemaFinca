@@ -122,7 +122,7 @@ namespace SistemaFinca
         private void buttonInventario_Click(object sender, EventArgs e)
         {
             mostrarSubMenu(subPanelInventario);
-            
+
         }
 
         private void buttonZonasPastoreo_Click(object sender, EventArgs e)
@@ -130,13 +130,17 @@ namespace SistemaFinca
             mostrarSubMenu(subPanelZonasPastoreo);
             //abrirFormulariosHijos(new FormZonasPastoreo());
         }
+        private void buttonClientes_Click(object sender, EventArgs e)
+        {
+            mostrarSubMenu(subPanelClientes);
+        }
 
         private void buttonSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-
+      
 
 
 
@@ -148,6 +152,7 @@ namespace SistemaFinca
             subPanelInventario.Visible = false;
             subPanelVenta.Visible = false;
             subPanelZonasPastoreo.Visible = false;
+            subPanelClientes.Visible = false;
         }
 
         private void ocultarSubMenu()
@@ -172,6 +177,10 @@ namespace SistemaFinca
             {
                 subPanelZonasPastoreo.Visible = false;
             }
+            if (subPanelClientes.Visible == true)
+            {
+                subPanelClientes.Visible = false;
+            }
         }
 
         private void mostrarSubMenu(Panel subMenu)
@@ -191,5 +200,12 @@ namespace SistemaFinca
         {
             abrirFormulariosHijos(new FormHerramientasAgricolasGanaderas());
         }
+
+        private void buttonIndPers_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormIndumentariaDelPersonal());
+        }
+
+        
     }
 }

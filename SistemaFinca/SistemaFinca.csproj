@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Módulo Inventario\Herramientas Agricolas y Ganaderas\Consultar.cs" />
+    <Compile Update="Módulo Inventario\Herramientas Agricolas y Ganaderas\Eliminar.cs" />
+    <Compile Update="Módulo Inventario\Herramientas Agricolas y Ganaderas\Actualizar.cs" />
+    <Compile Update="Módulo Inventario\Indumentaria de Personal\FormIndPers.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -25,6 +29,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Módulo Administración\" />
   </ItemGroup>
 
 </Project>

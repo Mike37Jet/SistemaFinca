@@ -34,14 +34,40 @@ namespace SistemaFinca
             formularioHijo.Show();
         }
 
-        private void buttonRegresar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void buttonRegistrar_Click(object sender, EventArgs e)
+
+
+        private void buttonRegistrar_Click_1(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormRegistrar());
+        }
+
+        private void buttonRegresar_Click(object sender, EventArgs e)
+        {
+            if (formularioActivo != null)
+            {
+                formularioActivo.Close();
+                formularioActivo = null;
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        private void buttonActualizar_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormActualizar());
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormConsultar());
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormEliminar());
         }
     }
 }
