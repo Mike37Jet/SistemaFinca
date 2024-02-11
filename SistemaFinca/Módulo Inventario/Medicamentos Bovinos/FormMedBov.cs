@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormIndumentariaDelPersonal: Form
+    public partial class FormMedicamentosBovinos: Form
     {
-        public FormIndumentariaDelPersonal()
+        public FormMedicamentosBovinos()
         {
             InitializeComponent();
         }
@@ -39,7 +39,7 @@ namespace SistemaFinca
 
         private void buttonRegistrar_Click_1(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormIP_Registrar());
+            abrirFormulariosHijos(new FormMB_Registrar());
         }
 
         private void buttonRegresar_Click(object sender, EventArgs e)
@@ -57,17 +57,17 @@ namespace SistemaFinca
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormIP_Actualizar());
+            abrirFormulariosHijos(new FormMB_Actualizar());
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormIP_Consultar());
+            abrirFormulariosHijos(new FormMB_Consultar());
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormIP_Eliminar());
+            abrirFormulariosHijos(new FormMB_Eliminar());
         }
     }
 }

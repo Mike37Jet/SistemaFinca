@@ -13,10 +13,93 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Módulo Inventario\Herramientas Agricolas y Ganaderas\Consultar.cs" />
-    <Compile Update="Módulo Inventario\Herramientas Agricolas y Ganaderas\Eliminar.cs" />
-    <Compile Update="Módulo Inventario\Herramientas Agricolas y Ganaderas\Actualizar.cs" />
+    <Compile Update="Módulo Administración\Gestión de Usuario\GU_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Administración\Gestión de Usuario\GU_RestablecerContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Administración\Gestión de Usuario\GU_GenerarInforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Administración\Gestión de Usuario\GU_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Administración\Gestión de Usuario\GU_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Administración\Gestión de Usuario\FormGestionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Administración\Gestión de Usuario\SubFormGUActualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Clientes\Gestión Clientes\C_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Clientes\Gestión Clientes\C_DarDeAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Clientes\Gestión Clientes\C_DarDeBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Clientes\Gestión Clientes\FormGestionClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Clientes\Gestión Clientes\C_Registrar.cs" />
+    <Compile Update="Módulo Inventario\Alimentaria Bovina\FormAliBov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Alimentaria Bovina\AB_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Alimentaria Bovina\AB_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Alimentaria Bovina\AB_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Alimentaria Bovina\AB_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Herramientas Agricolas y Ganaderas\HAG_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Herramientas Agricolas y Ganaderas\HAG_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Herramientas Agricolas y Ganaderas\HAG_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Herramientas Agricolas y Ganaderas\HAG_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Indumentaria de Personal\IP_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Indumentaria de Personal\IP_Consultar.cs" />
+    <Compile Update="Módulo Inventario\Indumentaria de Personal\IP_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Módulo Inventario\Indumentaria de Personal\FormIndPers.cs" />
+    <Compile Update="Módulo Inventario\Indumentaria de Personal\IP_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Medicamentos Bovinos\FormMedBov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Medicamentos Bovinos\MB_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Medicamentos Bovinos\MB_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Medicamentos Bovinos\MB_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Inventario\Medicamentos Bovinos\MB_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -32,7 +115,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Módulo Administración\" />
+    <Folder Include="Módulo Administración\Parametros del Sistema\" />
+    <Folder Include="Módulo Gestión Ganadera\" />
+    <Folder Include="Módulo Zonas de Pastoreo\" />
+    <Folder Include="Módulo Ventas\" />
   </ItemGroup>
 
 </Project>

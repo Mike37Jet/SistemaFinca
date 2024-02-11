@@ -140,7 +140,7 @@ namespace SistemaFinca
             Application.Exit();
         }
 
-      
+
 
 
 
@@ -206,6 +206,24 @@ namespace SistemaFinca
             abrirFormulariosHijos(new FormIndumentariaDelPersonal());
         }
 
-        
+        private void buttonGestionCliente(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormGestionClientes());
+        }
+
+        private void buttonMedBov_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormMedicamentosBovinos());
+        }
+
+        private void buttonAliBov_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormAlimentariaBovina());
+        }
+
+        private void buttonGestionUsuario_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormGestionUsuario());
+        }
     }
 }

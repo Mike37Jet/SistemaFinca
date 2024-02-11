@@ -34,13 +34,7 @@ namespace SistemaFinca
             formularioHijo.Show();
         }
 
-
-
-
-        private void buttonRegistrar_Click_1(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormRegistrar());
-        }
+        
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
@@ -55,19 +49,24 @@ namespace SistemaFinca
             }
         }
 
+        private void buttonRegistrar_Click_1(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormHAG_Registrar());
+        }
+
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormActualizar());
+            abrirFormulariosHijos(new FormHAG_Actualizar());
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormConsultar());
+            abrirFormulariosHijos(new FormHAG_Consultar());
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormEliminar());
+            abrirFormulariosHijos(new FormHAG_Eliminar());
         }
     }
 }

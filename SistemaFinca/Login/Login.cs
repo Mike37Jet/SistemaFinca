@@ -8,6 +8,8 @@ namespace SistemaFinca
         public FormLogin()
         {
             InitializeComponent();
+
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -55,6 +57,7 @@ namespace SistemaFinca
         {
             if (textContraseña.Text == "")
             {
+                textContraseña.PasswordChar = '\0';
                 textContraseña.Text = "CONTRASEÑA";
                 textContraseña.ForeColor = Color.DimGray;
             }
@@ -78,11 +81,24 @@ namespace SistemaFinca
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormMenu formMenu = new FormMenu();
-            formMenu.Show(this);
-            this.Hide();
+            if (textUsuario.Text == "admin" && textContraseña.Text == "admin")
+            {
+                FormMenu formMenu = new FormMenu();
+                formMenu.Show(this);
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Contraseña incorrecta. Por favor, inténtalo de nuevo.", "Contraseña Incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
-        
-       
+
+        private void textContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+            textContraseña.PasswordChar = '*';
+        }
     }
 }

@@ -51,7 +51,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(250, 330);
             panel1.TabIndex = 0;
-            
             // 
             // pictureBox3
             // 
@@ -89,6 +88,7 @@
             textContraseña.TabIndex = 2;
             textContraseña.Text = "CONTRASEÑA";
             textContraseña.Enter += textContraseña_Enter;
+            textContraseña.KeyPress += textContraseña_KeyPress;
             textContraseña.Leave += textContraseña_Leave;
             // 
             // label1

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormIndumentariaDelPersonal: Form
+    public partial class FormGestionUsuario : Form
     {
-        public FormIndumentariaDelPersonal()
+        public FormGestionUsuario()
         {
             InitializeComponent();
         }
@@ -36,12 +36,6 @@ namespace SistemaFinca
 
 
 
-
-        private void buttonRegistrar_Click_1(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormIP_Registrar());
-        }
-
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
             if (formularioActivo != null)
@@ -55,19 +49,29 @@ namespace SistemaFinca
             }
         }
 
-        private void buttonActualizar_Click(object sender, EventArgs e)
+        private void buttonRegistrar_Click_1(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormIP_Actualizar());
+            abrirFormulariosHijos(new FormGU_Registrar());
         }
 
-        private void buttonBuscar_Click(object sender, EventArgs e)
+        private void buttonActualizar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormIP_Consultar());
+            abrirFormulariosHijos(new FormGU_Actualizar());
+        }
+
+        private void buttonGenerarInforme_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormGU_GenerarInforme());
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormIP_Eliminar());
+            abrirFormulariosHijos(new FormGU_Eliminar());
+        }
+
+        private void buttonRestablecerContraseña_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormGU_RestablecerContraseña());
         }
     }
 }
