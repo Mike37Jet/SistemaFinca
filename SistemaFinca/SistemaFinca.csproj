@@ -6,10 +6,13 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Chart.Controls" Version="4.7.2046" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.5" />
+    <PackageReference Include="Perspective" Version="2.2.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,6 +50,36 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Módulo Clientes\Gestión Clientes\C_Registrar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\GB_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\GB_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\GB_Remover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\GB_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\FormGanadoBovino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\SubFormGB_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\SubFormGB_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Producción de leche\FormProduccionLeche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Registro de ordeño\FormRegistroOrdeño.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Registro de ordeño\RO_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Módulo Inventario\Alimentaria Bovina\FormAliBov.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,7 +149,7 @@
 
   <ItemGroup>
     <Folder Include="Módulo Administración\Parametros del Sistema\" />
-    <Folder Include="Módulo Gestión Ganadera\" />
+    <Folder Include="Módulo Gestión Ganadera\Proceso de Faenamiento\" />
     <Folder Include="Módulo Zonas de Pastoreo\" />
     <Folder Include="Módulo Ventas\" />
   </ItemGroup>

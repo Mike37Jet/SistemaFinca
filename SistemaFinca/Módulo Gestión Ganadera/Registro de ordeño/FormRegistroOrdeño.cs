@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormGestionClientes : Form
+    public partial class FormRegistroOrdeño : Form
     {
-        public FormGestionClientes()
+
+        private float rotationAngleX = 0;
+        private float rotationAngleY = 0;
+        public FormRegistroOrdeño()
         {
             InitializeComponent();
+            // Configura el PictureBox para mostrar el GIF (ajusta la ruta según sea necesario)
+            //pictureGIF.Image = System.Drawing.Image.FromFile("C:\\Users\\migue\\Desktop\\Iconos\\Finca\\vaca.gif");
+            //pictureGIF.SizeMode = PictureBoxSizeMode.StretchImage;
         }
         private Form formularioActivo = null;
 
@@ -51,25 +57,11 @@ namespace SistemaFinca
 
         private void buttonRegistrar_Click_1(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormC_Registrar());
+            abrirFormulariosHijos(new FormRO_Registrar());
         }
 
-        private void buttonActualizar_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormC_Actualizar());
-        }
 
-        private void buttonDarDeBaja_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormC_DarDeBaja());
-        }
-
-        private void buttonDarDeAlta_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormC_DarDeAlta());
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

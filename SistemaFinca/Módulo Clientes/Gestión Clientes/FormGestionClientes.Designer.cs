@@ -37,10 +37,18 @@
             buttonActualizar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
+            listView1 = new ListView();
+            columnID = new ColumnHeader();
+            columnNombre = new ColumnHeader();
             label2 = new Label();
             textBuscarCliente = new TextBox();
-            Clientes = new ListBox();
             label1 = new Label();
+            columnApellidos = new ColumnHeader();
+            columnTelefono = new ColumnHeader();
+            columnDireccionDomicilio = new ColumnHeader();
+            columnEmail = new ColumnHeader();
+            columnCantidadDeLeche = new ColumnHeader();
+            columnTipoContrato = new ColumnHeader();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -150,9 +158,9 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
+            panelFormularioHijo.Controls.Add(listView1);
             panelFormularioHijo.Controls.Add(label2);
             panelFormularioHijo.Controls.Add(textBuscarCliente);
-            panelFormularioHijo.Controls.Add(Clientes);
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
@@ -160,10 +168,31 @@
             panelFormularioHijo.Size = new Size(650, 459);
             panelFormularioHijo.TabIndex = 8;
             // 
+            // listView1
+            // 
+            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listView1.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnDireccionDomicilio, columnEmail, columnCantidadDeLeche, columnTipoContrato });
+            listView1.Location = new Point(63, 183);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(524, 249);
+            listView1.TabIndex = 6;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
+            // 
+            // columnID
+            // 
+            columnID.Text = "CI";
+            // 
+            // columnNombre
+            // 
+            columnNombre.Text = "Nombre";
+            columnNombre.Width = 65;
+            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(69, 91);
+            label2.Location = new Point(63, 108);
             label2.Name = "label2";
             label2.Size = new Size(100, 20);
             label2.TabIndex = 3;
@@ -171,19 +200,10 @@
             // 
             // textBuscarCliente
             // 
-            textBuscarCliente.Location = new Point(69, 131);
+            textBuscarCliente.Location = new Point(63, 131);
             textBuscarCliente.Name = "textBuscarCliente";
             textBuscarCliente.Size = new Size(351, 27);
             textBuscarCliente.TabIndex = 4;
-            // 
-            // Clientes
-            // 
-            Clientes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Clientes.FormattingEnabled = true;
-            Clientes.Location = new Point(69, 178);
-            Clientes.Name = "Clientes";
-            Clientes.Size = new Size(512, 244);
-            Clientes.TabIndex = 5;
             // 
             // label1
             // 
@@ -196,6 +216,36 @@
             label1.TabIndex = 5;
             label1.Text = "Clientes";
             label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // columnApellidos
+            // 
+            columnApellidos.Text = "Apellidos";
+            columnApellidos.Width = 65;
+            // 
+            // columnTelefono
+            // 
+            columnTelefono.Text = "Teléfono";
+            columnTelefono.Width = 65;
+            // 
+            // columnDireccionDomicilio
+            // 
+            columnDireccionDomicilio.Text = "Dirección domiciliaria";
+            columnDireccionDomicilio.Width = 65;
+            // 
+            // columnEmail
+            // 
+            columnEmail.Text = "E - mail";
+            columnEmail.Width = 65;
+            // 
+            // columnCantidadDeLeche
+            // 
+            columnCantidadDeLeche.Text = "Volumen de leche requerido";
+            columnCantidadDeLeche.Width = 65;
+            // 
+            // columnTipoContrato
+            // 
+            columnTipoContrato.Text = "Tipo de contrato";
+            columnTipoContrato.Width = 65;
             // 
             // FormGestionClientes
             // 
@@ -223,9 +273,16 @@
         private Button buttonRegresar;
         private Panel panelFormularioHijo;
         private Label label1;
-        private ListBox Clientes;
         private Label label2;
         private TextBox textBuscarCliente;
-       
+        private ListView listView1;
+        private ColumnHeader columnID;
+        private ColumnHeader columnNombre;
+        private ColumnHeader columnApellidos;
+        private ColumnHeader columnTelefono;
+        private ColumnHeader columnDireccionDomicilio;
+        private ColumnHeader columnEmail;
+        private ColumnHeader columnCantidadDeLeche;
+        private ColumnHeader columnTipoContrato;
     }
 }

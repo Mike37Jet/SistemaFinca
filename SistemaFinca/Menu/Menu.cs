@@ -225,5 +225,15 @@ namespace SistemaFinca
         {
             abrirFormulariosHijos(new FormGestionUsuario());
         }
+
+        private void buttonGanadoBovino_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormGanadoBovino());
+        }
+
+        private void buttonRegistroOrdeño_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormRegistroOrdeño());
+        }
     }
 }

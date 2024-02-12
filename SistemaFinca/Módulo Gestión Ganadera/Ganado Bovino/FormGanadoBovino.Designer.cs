@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca
 {
-    partial class FormGestionUsuario
+    partial class FormGanadoBovino
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGanadoBovino));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
-            buttonEliminar = new Button();
             buttonRegistrar = new Button();
-            buttonRestablecerContraseña = new Button();
-            buttonInforme = new Button();
+            buttonConsultar = new Button();
             buttonActualizar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            label2 = new Label();
-            textBuscarCliente = new TextBox();
             label1 = new Label();
-            columnID = new ColumnHeader();
-            columnNombre = new ColumnHeader();
-            columnApellidos = new ColumnHeader();
-            columnTelefono = new ColumnHeader();
-            columnEmail = new ColumnHeader();
-            columnRol = new ColumnHeader();
-            listView1 = new ListView();
+            buttonEliminar = new Button();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -77,8 +67,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 150F));
             tableLayoutPanel1.Controls.Add(buttonEliminar, 1, 0);
             tableLayoutPanel1.Controls.Add(buttonRegistrar, 0, 0);
-            tableLayoutPanel1.Controls.Add(buttonRestablecerContraseña, 4, 0);
-            tableLayoutPanel1.Controls.Add(buttonInforme, 3, 0);
+            tableLayoutPanel1.Controls.Add(buttonConsultar, 3, 0);
             tableLayoutPanel1.Controls.Add(buttonActualizar, 2, 0);
             tableLayoutPanel1.Controls.Add(buttonRegresar, 6, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
@@ -88,20 +77,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Size = new Size(650, 45);
             tableLayoutPanel1.TabIndex = 7;
-            // 
-            // buttonEliminar
-            // 
-            buttonEliminar.Dock = DockStyle.Fill;
-            buttonEliminar.Image = (Image)resources.GetObject("buttonEliminar.Image");
-            buttonEliminar.Location = new Point(53, 0);
-            buttonEliminar.Margin = new Padding(0);
-            buttonEliminar.Name = "buttonEliminar";
-            buttonEliminar.Size = new Size(53, 45);
-            buttonEliminar.TabIndex = 11;
-            buttonEliminar.TextAlign = ContentAlignment.BottomCenter;
-            buttonEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonEliminar.UseVisualStyleBackColor = true;
-            buttonEliminar.Click += buttonEliminar_Click;
             // 
             // buttonRegistrar
             // 
@@ -117,33 +92,19 @@
             buttonRegistrar.UseVisualStyleBackColor = true;
             buttonRegistrar.Click += buttonRegistrar_Click_1;
             // 
-            // buttonRestablecerContraseña
+            // buttonConsultar
             // 
-            buttonRestablecerContraseña.Dock = DockStyle.Fill;
-            buttonRestablecerContraseña.Image = (Image)resources.GetObject("buttonRestablecerContraseña.Image");
-            buttonRestablecerContraseña.Location = new Point(214, 0);
-            buttonRestablecerContraseña.Margin = new Padding(0);
-            buttonRestablecerContraseña.Name = "buttonRestablecerContraseña";
-            buttonRestablecerContraseña.Size = new Size(57, 45);
-            buttonRestablecerContraseña.TabIndex = 9;
-            buttonRestablecerContraseña.TextAlign = ContentAlignment.BottomCenter;
-            buttonRestablecerContraseña.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonRestablecerContraseña.UseVisualStyleBackColor = true;
-            buttonRestablecerContraseña.Click += buttonRestablecerContraseña_Click;
-            // 
-            // buttonInforme
-            // 
-            buttonInforme.Dock = DockStyle.Fill;
-            buttonInforme.Image = (Image)resources.GetObject("buttonInforme.Image");
-            buttonInforme.Location = new Point(159, 0);
-            buttonInforme.Margin = new Padding(0);
-            buttonInforme.Name = "buttonInforme";
-            buttonInforme.Size = new Size(55, 45);
-            buttonInforme.TabIndex = 8;
-            buttonInforme.TextAlign = ContentAlignment.BottomCenter;
-            buttonInforme.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonInforme.UseVisualStyleBackColor = true;
-            buttonInforme.Click += buttonGenerarInforme_Click;
+            buttonConsultar.Dock = DockStyle.Fill;
+            buttonConsultar.Image = (Image)resources.GetObject("buttonConsultar.Image");
+            buttonConsultar.Location = new Point(214, 0);
+            buttonConsultar.Margin = new Padding(0);
+            buttonConsultar.Name = "buttonConsultar";
+            buttonConsultar.Size = new Size(57, 45);
+            buttonConsultar.TabIndex = 9;
+            buttonConsultar.TextAlign = ContentAlignment.BottomCenter;
+            buttonConsultar.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonConsultar.UseVisualStyleBackColor = true;
+            buttonConsultar.Click += buttonConsultar_Click;
             // 
             // buttonActualizar
             // 
@@ -173,9 +134,6 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
-            panelFormularioHijo.Controls.Add(listView1);
-            panelFormularioHijo.Controls.Add(label2);
-            panelFormularioHijo.Controls.Add(textBuscarCliente);
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
@@ -183,76 +141,33 @@
             panelFormularioHijo.Size = new Size(650, 459);
             panelFormularioHijo.TabIndex = 8;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(63, 91);
-            label2.Name = "label2";
-            label2.Size = new Size(104, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Buscar usuario";
-            // 
-            // textBuscarCliente
-            // 
-            textBuscarCliente.Location = new Point(63, 114);
-            textBuscarCliente.Name = "textBuscarCliente";
-            textBuscarCliente.Size = new Size(351, 27);
-            textBuscarCliente.TabIndex = 4;
-            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(274, 26);
+            label1.Location = new Point(228, 23);
             label1.Name = "label1";
-            label1.Size = new Size(111, 27);
+            label1.Size = new Size(183, 27);
             label1.TabIndex = 5;
-            label1.Text = "Usuarios";
+            label1.Text = "Ganado Bovino";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // columnID
+            // buttonEliminar
             // 
-            columnID.Text = "CI";
-            columnID.Width = 80;
+            buttonEliminar.Dock = DockStyle.Fill;
+            buttonEliminar.Image = (Image)resources.GetObject("buttonEliminar.Image");
+            buttonEliminar.Location = new Point(53, 0);
+            buttonEliminar.Margin = new Padding(0);
+            buttonEliminar.Name = "buttonEliminar";
+            buttonEliminar.Size = new Size(53, 45);
+            buttonEliminar.TabIndex = 11;
+            buttonEliminar.TextAlign = ContentAlignment.BottomCenter;
+            buttonEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonEliminar.UseVisualStyleBackColor = true;
+            buttonEliminar.Click += buttonEliminar_Click;
             // 
-            // columnNombre
-            // 
-            columnNombre.Text = "Nombre";
-            columnNombre.Width = 80;
-            // 
-            // columnApellidos
-            // 
-            columnApellidos.Text = "Apellidos";
-            columnApellidos.Width = 80;
-            // 
-            // columnTelefono
-            // 
-            columnTelefono.Text = "Teléfono";
-            columnTelefono.Width = 80;
-            // 
-            // columnEmail
-            // 
-            columnEmail.Text = "E - mail";
-            columnEmail.Width = 80;
-            // 
-            // columnRol
-            // 
-            columnRol.Text = "Rol";
-            columnRol.Width = 80;
-            // 
-            // listView1
-            // 
-            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnEmail, columnRol });
-            listView1.Location = new Point(63, 175);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(524, 249);
-            listView1.TabIndex = 7;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
-            // 
-            // FormGestionUsuario
+            // FormGanadoBovino
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -260,7 +175,7 @@
             Controls.Add(panelFormularioHijo);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormGestionUsuario";
+            Name = "FormGanadoBovino";
             Text = "Inventario";
             tableLayoutPanel1.ResumeLayout(false);
             panelFormularioHijo.ResumeLayout(false);
@@ -271,22 +186,12 @@
         #endregion
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel1;
-        private Button buttonRestablecerContraseña;
-        private Button buttonInforme;
         private Button buttonActualizar;
         private Button buttonRegistrar;
         private Panel panelFormularioHijo;
         private Label label1;
-        private Label label2;
-        private TextBox textBuscarCliente;
-        private Button buttonEliminar;
         private Button buttonRegresar;
-        private ListView listView1;
-        private ColumnHeader columnID;
-        private ColumnHeader columnNombre;
-        private ColumnHeader columnApellidos;
-        private ColumnHeader columnTelefono;
-        private ColumnHeader columnEmail;
-        private ColumnHeader columnRol;
+        private Button buttonConsultar;
+        private Button buttonEliminar;
     }
 }
