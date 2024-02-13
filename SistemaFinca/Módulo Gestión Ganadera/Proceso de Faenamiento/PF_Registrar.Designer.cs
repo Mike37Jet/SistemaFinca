@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca
 {
-    partial class FormGU_GenerarInforme
+    partial class FormPF_Registrar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,48 +29,58 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            buttonImprimir = new Button();
-            textBoxInforme = new TextBox();
-            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(291, 33);
+            label1.Location = new Point(183, 28);
             label1.Name = "label1";
-            label1.Size = new Size(61, 20);
+            label1.Size = new Size(256, 20);
             label1.TabIndex = 0;
-            label1.Text = "Informe";
+            label1.Text = "Registrar bovino para el faenamiento";
             // 
-            // buttonImprimir
+            // textBox1
             // 
-            buttonImprimir.Location = new Point(279, 402);
-            buttonImprimir.Name = "buttonImprimir";
-            buttonImprimir.Size = new Size(94, 29);
-            buttonImprimir.TabIndex = 10;
-            buttonImprimir.Text = "Imprimir";
-            buttonImprimir.UseVisualStyleBackColor = true;
-            buttonImprimir.Click += buttonImprimir_Click;
+            textBox1.Cursor = Cursors.IBeam;
+            textBox1.Location = new Point(45, 93);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(278, 27);
+            textBox1.TabIndex = 2;
             // 
-            // textBoxInforme
+            // label2
             // 
-            textBoxInforme.Location = new Point(116, 70);
-            textBoxInforme.Multiline = true;
-            textBoxInforme.Name = "textBoxInforme";
-            textBoxInforme.Size = new Size(414, 303);
-            textBoxInforme.TabIndex = 11;
+            label2.AutoSize = true;
+            label2.Location = new Point(45, 70);
+            label2.Name = "label2";
+            label2.Size = new Size(173, 20);
+            label2.TabIndex = 3;
+            label2.Text = "Número de Identificador";
             // 
-            // FormGU_GenerarInforme
+            // button2
+            // 
+            button2.Location = new Point(270, 364);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 10;
+            button2.Text = "Registrar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // FormPF_Registrar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(650, 459);
-            Controls.Add(textBoxInforme);
-            Controls.Add(buttonImprimir);
+            Controls.Add(button2);
+            Controls.Add(label2);
+            Controls.Add(textBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormGU_GenerarInforme";
+            Name = "FormPF_Registrar";
             Text = "Administrador";
             ResumeLayout(false);
             PerformLayout();
@@ -79,8 +89,8 @@
         #endregion
 
         private Label label1;
-        private Button buttonImprimir;
-        private TextBox textBoxInforme;
-        private System.Drawing.Printing.PrintDocument printDocument1;
+        private TextBox textBox1;
+        private Label label2;
+        private Button button2;
     }
 }

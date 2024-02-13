@@ -37,8 +37,11 @@
             buttonRegistrar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            Medicamentos = new ListBox();
             label1 = new Label();
+            listView1 = new ListView();
+            columnNombre = new ColumnHeader();
+            columnCantidad = new ColumnHeader();
+            columnFechaVencimiento = new ColumnHeader();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -148,22 +151,13 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
-            panelFormularioHijo.Controls.Add(Medicamentos);
+            panelFormularioHijo.Controls.Add(listView1);
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
             panelFormularioHijo.Name = "panelFormularioHijo";
             panelFormularioHijo.Size = new Size(650, 459);
             panelFormularioHijo.TabIndex = 8;
-            // 
-            // Medicamentos
-            // 
-            Medicamentos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Medicamentos.FormattingEnabled = true;
-            Medicamentos.Location = new Point(69, 78);
-            Medicamentos.Name = "Medicamentos";
-            Medicamentos.Size = new Size(500, 344);
-            Medicamentos.TabIndex = 6;
             // 
             // label1
             // 
@@ -176,6 +170,31 @@
             label1.TabIndex = 5;
             label1.Text = "Medicamentos Bovinos\r\n";
             label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // listView1
+            // 
+            listView1.Columns.AddRange(new ColumnHeader[] { columnNombre, columnCantidad, columnFechaVencimiento });
+            listView1.Location = new Point(47, 89);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(557, 332);
+            listView1.TabIndex = 7;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            // 
+            // columnNombre
+            // 
+            columnNombre.Text = "Nombre";
+            columnNombre.Width = 150;
+            // 
+            // columnCantidad
+            // 
+            columnCantidad.Text = "Cantidad";
+            columnCantidad.Width = 150;
+            // 
+            // columnFechaVencimiento
+            // 
+            columnFechaVencimiento.Text = "Fecha de vencimiento";
+            columnFechaVencimiento.Width = 200;
             // 
             // FormMedicamentosBovinos
             // 
@@ -202,7 +221,10 @@
         private Button buttonRegistrar;
         private Button buttonRegresar;
         private Panel panelFormularioHijo;
-        private ListBox Medicamentos;
         private Label label1;
+        private ListView listView1;
+        private ColumnHeader columnNombre;
+        private ColumnHeader columnCantidad;
+        private ColumnHeader columnFechaVencimiento;
     }
 }

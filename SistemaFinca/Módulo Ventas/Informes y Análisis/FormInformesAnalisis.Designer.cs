@@ -1,10 +1,8 @@
-﻿
-
-using System.Windows.Forms.DataVisualization.Charting;
+﻿using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SistemaFinca
 {
-    partial class FormProduccionLeche
+    partial class FormInformesAnalisis
     {
         /// <summary>
         /// Required designer variable.
@@ -32,16 +30,13 @@ namespace SistemaFinca
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProduccionLeche));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInformesAnalisis));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
-            buttonEliminar = new Button();
             buttonRegistrar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            chartDona = new Chart();
-            chartBarras = new Chart();
-            panel1 = new Panel();
+            panel2 = new Panel();
             panel13 = new Panel();
             textBox5 = new TextBox();
             label4 = new Label();
@@ -68,20 +63,17 @@ namespace SistemaFinca
             textBox2 = new TextBox();
             label5 = new Label();
             pictureBox4 = new PictureBox();
-            panel2 = new Panel();
+            panel4 = new Panel();
             textBox1 = new TextBox();
             label2 = new Label();
             pictureBox1 = new PictureBox();
-            panel4 = new Panel();
-            panelGraficoBarras = new Panel();
-            panelGraficoDona = new Panel();
-            label10 = new Label();
-            label1 = new Label();
-            InicializarGraficoDona(chartDona);
-            InicializarGraficoBarras(chartBarras);
+            panel15 = new Panel();
+            panel1 = new Panel();
+            label18 = new Label();
+            chartLineas = new Chart();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
-            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel11.SuspendLayout();
@@ -93,10 +85,10 @@ namespace SistemaFinca
             panel7.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel2.SuspendLayout();
+            panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panelGraficoDona.SuspendLayout();
             SuspendLayout();
+            InicializarGraficoLineas(chartLineas);
             // 
             // tableLayoutPanel2
             // 
@@ -113,17 +105,15 @@ namespace SistemaFinca
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.ColumnCount = 5;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 13.5495415F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 13.5495348F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.5801878F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 58.3207321F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 150F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Controls.Add(buttonEliminar, 1, 0);
+            tableLayoutPanel1.ColumnCount = 6;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
             tableLayoutPanel1.Controls.Add(buttonRegistrar, 0, 0);
-            tableLayoutPanel1.Controls.Add(buttonRegresar, 4, 0);
+            tableLayoutPanel1.Controls.Add(buttonRegresar, 5, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
             tableLayoutPanel1.Location = new Point(0, 459);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -132,20 +122,6 @@ namespace SistemaFinca
             tableLayoutPanel1.Size = new Size(650, 45);
             tableLayoutPanel1.TabIndex = 7;
             // 
-            // buttonEliminar
-            // 
-            buttonEliminar.Dock = DockStyle.Fill;
-            buttonEliminar.Image = (Image)resources.GetObject("buttonEliminar.Image");
-            buttonEliminar.Location = new Point(67, 0);
-            buttonEliminar.Margin = new Padding(0);
-            buttonEliminar.Name = "buttonEliminar";
-            buttonEliminar.Size = new Size(67, 45);
-            buttonEliminar.TabIndex = 11;
-            buttonEliminar.TextAlign = ContentAlignment.BottomCenter;
-            buttonEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonEliminar.UseVisualStyleBackColor = true;
-            buttonEliminar.Click += buttonConsultar_Click;
-            // 
             // buttonRegistrar
             // 
             buttonRegistrar.Dock = DockStyle.Fill;
@@ -153,7 +129,7 @@ namespace SistemaFinca
             buttonRegistrar.Location = new Point(0, 0);
             buttonRegistrar.Margin = new Padding(0);
             buttonRegistrar.Name = "buttonRegistrar";
-            buttonRegistrar.Size = new Size(67, 45);
+            buttonRegistrar.Size = new Size(69, 45);
             buttonRegistrar.TabIndex = 6;
             buttonRegistrar.TextAlign = ContentAlignment.BottomCenter;
             buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -163,10 +139,10 @@ namespace SistemaFinca
             // buttonRegresar
             // 
             buttonRegresar.Dock = DockStyle.Fill;
-            buttonRegresar.Location = new Point(500, 3);
+            buttonRegresar.Location = new Point(495, 3);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(147, 39);
-            buttonRegresar.TabIndex = 10;
+            buttonRegresar.Size = new Size(152, 39);
+            buttonRegresar.TabIndex = 5;
             buttonRegresar.Text = "Regresar";
             buttonRegresar.UseVisualStyleBackColor = true;
             buttonRegresar.Click += buttonRegresar_Click;
@@ -174,34 +150,32 @@ namespace SistemaFinca
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
+            panelFormularioHijo.Controls.Add(panel2);
             panelFormularioHijo.Controls.Add(panel1);
-            panelFormularioHijo.Controls.Add(panelGraficoBarras);
-            panelFormularioHijo.Controls.Add(panelGraficoDona);
-            panelFormularioHijo.Controls.Add(label1);
+            panelFormularioHijo.Controls.Add(label18);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
             panelFormularioHijo.Name = "panelFormularioHijo";
             panelFormularioHijo.Size = new Size(650, 459);
             panelFormularioHijo.TabIndex = 8;
-            panelFormularioHijo.Paint += panelFormularioHijo_Paint;
             // 
-            // panel1
+            // panel2
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.Controls.Add(panel13);
-            panel1.Controls.Add(panel11);
-            panel1.Controls.Add(panel9);
-            panel1.Controls.Add(panel5);
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(panel2);
-            panel1.Location = new Point(3, 67);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(644, 125);
-            panel1.TabIndex = 8;
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Controls.Add(panel13);
+            panel2.Controls.Add(panel11);
+            panel2.Controls.Add(panel9);
+            panel2.Controls.Add(panel5);
+            panel2.Controls.Add(panel3);
+            panel2.Controls.Add(panel4);
+            panel2.Location = new Point(0, 100);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(644, 125);
+            panel2.TabIndex = 36;
             // 
             // panel13
             // 
-            panel13.BackColor = SystemColors.GradientInactiveCaption;
+            panel13.BackColor = Color.Thistle;
             panel13.Controls.Add(textBox5);
             panel13.Controls.Add(label4);
             panel13.Controls.Add(pictureBox3);
@@ -216,7 +190,7 @@ namespace SistemaFinca
             textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox5.Location = new Point(76, 28);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
+            textBox5.Size = new Size(131, 27);
             textBox5.TabIndex = 8;
             // 
             // label4
@@ -225,9 +199,9 @@ namespace SistemaFinca
             label4.Dock = DockStyle.Top;
             label4.Location = new Point(70, 0);
             label4.Name = "label4";
-            label4.Size = new Size(82, 20);
+            label4.Size = new Size(53, 20);
             label4.TabIndex = 4;
-            label4.Text = "Total anual";
+            label4.Text = "Gastos";
             // 
             // pictureBox3
             // 
@@ -249,7 +223,7 @@ namespace SistemaFinca
             // 
             // panel11
             // 
-            panel11.BackColor = SystemColors.Info;
+            panel11.BackColor = Color.Honeydew;
             panel11.Controls.Add(textBox6);
             panel11.Controls.Add(label7);
             panel11.Controls.Add(pictureBox6);
@@ -264,18 +238,19 @@ namespace SistemaFinca
             textBox6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox6.Location = new Point(76, 27);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
+            textBox6.Size = new Size(131, 27);
             textBox6.TabIndex = 9;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Dock = DockStyle.Top;
+            label7.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.Location = new Point(70, 0);
             label7.Name = "label7";
-            label7.Size = new Size(142, 20);
+            label7.Size = new Size(104, 17);
             label7.TabIndex = 4;
-            label7.Text = "Número de ordeños";
+            label7.Text = "Dif.  Gan vs Gast";
             // 
             // pictureBox6
             // 
@@ -297,7 +272,7 @@ namespace SistemaFinca
             // 
             // panel9
             // 
-            panel9.BackColor = SystemColors.GradientInactiveCaption;
+            panel9.BackColor = Color.Thistle;
             panel9.Controls.Add(textBox4);
             panel9.Controls.Add(label6);
             panel9.Controls.Add(pictureBox5);
@@ -321,9 +296,9 @@ namespace SistemaFinca
             label6.Dock = DockStyle.Top;
             label6.Location = new Point(70, 0);
             label6.Name = "label6";
-            label6.Size = new Size(137, 20);
+            label6.Size = new Size(130, 20);
             label6.TabIndex = 4;
-            label6.Text = "Minima Producción";
+            label6.Text = "Minima Ganancias";
             // 
             // pictureBox5
             // 
@@ -345,7 +320,7 @@ namespace SistemaFinca
             // 
             // panel5
             // 
-            panel5.BackColor = SystemColors.Info;
+            panel5.BackColor = Color.Honeydew;
             panel5.Controls.Add(textBox3);
             panel5.Controls.Add(label3);
             panel5.Controls.Add(pictureBox2);
@@ -409,7 +384,7 @@ namespace SistemaFinca
             // 
             // panel3
             // 
-            panel3.BackColor = SystemColors.Info;
+            panel3.BackColor = Color.Honeydew;
             panel3.Controls.Add(textBox2);
             panel3.Controls.Add(label5);
             panel3.Controls.Add(pictureBox4);
@@ -423,7 +398,7 @@ namespace SistemaFinca
             textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox2.Location = new Point(76, 30);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
+            textBox2.Size = new Size(127, 27);
             textBox2.TabIndex = 5;
             // 
             // label5
@@ -432,9 +407,9 @@ namespace SistemaFinca
             label5.Dock = DockStyle.Top;
             label5.Location = new Point(70, 0);
             label5.Name = "label5";
-            label5.Size = new Size(141, 20);
+            label5.Size = new Size(133, 20);
             label5.TabIndex = 4;
-            label5.Text = "Máxima producción";
+            label5.Text = "Máxima Ganancias";
             // 
             // pictureBox4
             // 
@@ -447,24 +422,24 @@ namespace SistemaFinca
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
             // 
-            // panel2
+            // panel4
             // 
-            panel2.BackColor = SystemColors.GradientInactiveCaption;
-            panel2.Controls.Add(textBox1);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(panel4);
-            panel2.Location = new Point(2, 1);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(216, 60);
-            panel2.TabIndex = 0;
+            panel4.BackColor = Color.Thistle;
+            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(label2);
+            panel4.Controls.Add(pictureBox1);
+            panel4.Controls.Add(panel15);
+            panel4.Location = new Point(2, 1);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(216, 60);
+            panel4.TabIndex = 0;
             // 
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox1.Location = new Point(76, 28);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
+            textBox1.Size = new Size(127, 27);
             textBox1.TabIndex = 4;
             // 
             // label2
@@ -488,55 +463,33 @@ namespace SistemaFinca
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // panel4
+            // panel15
             // 
-            panel4.Location = new Point(217, 60);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(219, 65);
-            panel4.TabIndex = 1;
+            panel15.Location = new Point(217, 60);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(219, 65);
+            panel15.TabIndex = 1;
             // 
-            // panelGraficoBarras
+            // panel1
             // 
-            panelGraficoBarras.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panelGraficoBarras.Controls.Add(chartBarras);
-            panelGraficoBarras.Location = new Point(0, 198);
-            panelGraficoBarras.Name = "panelGraficoBarras";
-            panelGraficoBarras.Size = new Size(367, 261);
-            panelGraficoBarras.TabIndex = 7;
+
+            panel1.Controls.Add(chartLineas);
+            panel1.Location = new Point(0, 222);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(650, 237);
+            panel1.TabIndex = 35;
             // 
-            // panelGraficoDona
+            // label18
             // 
-            panelGraficoDona.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panelGraficoDona.Controls.Add(label10);
-            panelGraficoDona.Controls.Add(chartDona);
-            panelGraficoDona.Location = new Point(362, 198);
-            panelGraficoDona.Name = "panelGraficoDona";
-            panelGraficoDona.Size = new Size(288, 261);
-            panelGraficoDona.TabIndex = 6;
+            label18.AutoSize = true;
+            label18.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label18.Location = new Point(216, 40);
+            label18.Name = "label18";
+            label18.Size = new Size(222, 27);
+            label18.TabIndex = 34;
+            label18.Text = "Informes y Análisis";
             // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(44, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(125, 20);
-            label10.TabIndex = 7;
-            label10.Text = "Producción diaria";
-            label10.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top;
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(205, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(241, 27);
-            label1.TabIndex = 5;
-            label1.Text = "Producción Lechera";
-            label1.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // FormProduccionLeche
+            // FormInformesAnalisis
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -544,12 +497,12 @@ namespace SistemaFinca
             Controls.Add(panelFormularioHijo);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormProduccionLeche";
+            Name = "FormInformesAnalisis";
             Text = "Inventario";
             tableLayoutPanel1.ResumeLayout(false);
             panelFormularioHijo.ResumeLayout(false);
             panelFormularioHijo.PerformLayout();
-            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             panel13.ResumeLayout(false);
             panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -566,58 +519,52 @@ namespace SistemaFinca
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panelGraficoDona.ResumeLayout(false);
-            panelGraficoDona.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel1;
-        private Chart chartDona;
-        private Chart chartBarras;
+        private Chart chartLineas;
         private Button buttonRegistrar;
-        private Panel panelFormularioHijo;
-        private Label label1;
-        private Button buttonEliminar;
         private Button buttonRegresar;
-        private Panel panelGraficoDona;
-        private Label label10;
+        private Panel panelFormularioHijo;
+        private Label label18;
         private Panel panel1;
+        private Panel panel2;
         private Panel panel13;
+        private TextBox textBox5;
+        private Label label4;
         private PictureBox pictureBox3;
         private Panel panel14;
         private Panel panel11;
-        private PictureBox pictureBox6;
+        private TextBox textBox6;
+        private Label label7;
         private Panel panel12;
         private Panel panel9;
+        private TextBox textBox4;
+        private Label label6;
         private PictureBox pictureBox5;
         private Panel panel10;
         private Panel panel5;
+        private TextBox textBox3;
+        private Label label3;
         private PictureBox pictureBox2;
         private Panel panel7;
         private Panel panel8;
         private Panel panel6;
         private Panel panel3;
-        private PictureBox pictureBox4;
-        private Panel panel2;
-        private PictureBox pictureBox1;
-        private Panel panel4;
-        private TextBox textBox5;
-        private Label label4;
-        private TextBox textBox6;
-        private Label label7;
-        private TextBox textBox4;
-        private Label label6;
-        private TextBox textBox3;
-        private Label label3;
         private TextBox textBox2;
         private Label label5;
+        private PictureBox pictureBox4;
+        private Panel panel4;
         private TextBox textBox1;
         private Label label2;
-        private Panel panelGraficoBarras;
+        private PictureBox pictureBox1;
+        private Panel panel15;
+        private PictureBox pictureBox6;
     }
 }

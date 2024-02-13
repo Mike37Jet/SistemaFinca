@@ -7,21 +7,118 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Windows;
+
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SistemaFinca
 {
     public partial class FormProduccionLeche : Form
     {
+        private List<int> datosBarras;
 
-        private float rotationAngleX = 0;
-        private float rotationAngleY = 0;
         public FormProduccionLeche()
         {
             InitializeComponent();
-            // Configura el PictureBox para mostrar el GIF (ajusta la ruta según sea necesario)
-            //pictureGIF.Image = System.Drawing.Image.FromFile("C:\\Users\\migue\\Desktop\\Iconos\\Finca\\vaca.gif");
-            //pictureGIF.SizeMode = PictureBoxSizeMode.StretchImage;
+
         }
+
+        private void InicializarGraficoDona(Chart chart)
+        {
+            Series series = new Series("Producción diaria");
+            series.ChartType = SeriesChartType.Doughnut;
+            series.Palette = ChartColorPalette.BrightPastel;
+
+            series.Points.AddXY("Lunes", 10);
+            series.Points.AddXY("Martes", 20);
+            series.Points.AddXY("Miércoles", 15);
+            series.Points.AddXY("Jueves", 25);
+            series.Points.AddXY("Viernes", 15);
+            series.Points.AddXY("Sábado", 25);
+            series.Points.AddXY("Domingo", 15);
+
+
+            ChartArea chartArea = new ChartArea();
+            Legend legend = new Legend();
+
+            chartArea.Name = "ChartArea1";
+            chart.ChartAreas.Add(chartArea);
+
+            chart.Dock = DockStyle.Right;
+            chart.Name = "chart1";
+            chart.TabIndex = 0;
+            chart.Text = "chart1";
+            chart.Series.Add(series);
+
+            legend.Name = "Legend1";
+            legend.Docking = Docking.Bottom;
+            chart.Legends.Add(legend);
+
+            chartArea.BackColor = SystemColors.Control;
+            chart.BackColor = SystemColors.Control;
+            legend.BackColor = SystemColors.Control;
+
+            series.IsValueShownAsLabel = true;
+
+            chart.Size = new Size(288, 261);
+
+            // Asegurarse de que el gráfico esté en la parte superior
+            chart.BringToFront();
+
+
+        }
+
+        private void InicializarGraficoBarras(Chart chart)
+        {
+            Series series = new Series("Producción mensual");
+            series.ChartType = SeriesChartType.Bar;
+            series.Palette = ChartColorPalette.BrightPastel;
+
+            series.Points.AddXY("Enero", 10);
+            series.Points.AddXY("Febrero", 22);
+            series.Points.AddXY("Marzo", 15);
+            series.Points.AddXY("Abril", 25);
+            series.Points.AddXY("Mayo", 13);
+            series.Points.AddXY("Junio", 25);
+            series.Points.AddXY("Julio", 18);
+            series.Points.AddXY("Agosto", 20);
+            series.Points.AddXY("Septiembre", 17);
+            series.Points.AddXY("Octubre", 22);
+            series.Points.AddXY("Noviembre", 11);
+            series.Points.AddXY("Diciembre", 19);
+
+
+            ChartArea chartArea = new ChartArea();
+            Legend legend = new Legend();
+
+            chartArea.Name = "ChartArea1";
+            chart.ChartAreas.Add(chartArea);
+
+            chart.Dock = DockStyle.Fill;
+            chart.Name = "chartBarras";
+            chart.TabIndex = 0;
+            chart.Text = "Barras";
+            chart.Series.Add(series);
+
+            legend.Name = "Legend1";
+            legend.Docking = Docking.Bottom;
+            chart.Legends.Add(legend);
+
+            chartArea.BackColor = SystemColors.Control;
+            chart.BackColor = SystemColors.Control;
+            legend.BackColor = SystemColors.Control;
+
+            series.IsValueShownAsLabel = true;
+
+            chart.Size = new Size(367, 261);
+
+            // Asegurarse de que el gráfico esté en la parte superior
+            chart.BringToFront();
+
+
+        }
+
         private Form formularioActivo = null;
 
         private void abrirFormulariosHijos(Form formularioHijo)
@@ -40,8 +137,6 @@ namespace SistemaFinca
             formularioHijo.Show();
         }
 
-
-
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
             if (formularioActivo != null)
@@ -57,30 +152,24 @@ namespace SistemaFinca
 
         private void buttonRegistrar_Click_1(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormGB_Registrar());
+            abrirFormulariosHijos(new FormPL_Registrar());
         }
 
-        private void buttonActualizar_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormGB_Actualizar());
-        }
 
-        private void buttonGenerarInforme_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormGU_GenerarInforme());
-        }
-
-        private void buttonEliminar_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormGB_Remover());
-        }
 
         private void buttonConsultar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormGB_Consultar());
+            abrirFormulariosHijos(new FormPL_Emitir());
         }
 
-        private void pictureGIF_Click(object sender, EventArgs e)
+
+
+        private void panelFormularioHijo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

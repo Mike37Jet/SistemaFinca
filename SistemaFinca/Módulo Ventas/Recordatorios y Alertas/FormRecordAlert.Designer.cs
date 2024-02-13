@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca
 {
-    partial class FormHerramientasAgricolasGanaderas
+    partial class FormRecordAlert
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHerramientasAgricolasGanaderas));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
-            buttonEliminar = new Button();
-            buttonBuscar = new Button();
-            buttonActualizar = new Button();
-            buttonRegistrar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            label1 = new Label();
+            label18 = new Label();
+            label2 = new Label();
             listView1 = new ListView();
+            columnNumRecord = new ColumnHeader();
             columnNombre = new ColumnHeader();
-            columnCantidad = new ColumnHeader();
-            columnEstado = new ColumnHeader();
+            columnNumNota = new ColumnHeader();
+            columnValorPagar = new ColumnHeader();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -68,10 +65,6 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
-            tableLayoutPanel1.Controls.Add(buttonEliminar, 3, 0);
-            tableLayoutPanel1.Controls.Add(buttonBuscar, 2, 0);
-            tableLayoutPanel1.Controls.Add(buttonActualizar, 1, 0);
-            tableLayoutPanel1.Controls.Add(buttonRegistrar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonRegresar, 5, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
             tableLayoutPanel1.Location = new Point(0, 459);
@@ -80,62 +73,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Size = new Size(650, 45);
             tableLayoutPanel1.TabIndex = 7;
-            // 
-            // buttonEliminar
-            // 
-            buttonEliminar.Dock = DockStyle.Fill;
-            buttonEliminar.Image = (Image)resources.GetObject("buttonEliminar.Image");
-            buttonEliminar.Location = new Point(207, 0);
-            buttonEliminar.Margin = new Padding(0);
-            buttonEliminar.Name = "buttonEliminar";
-            buttonEliminar.Size = new Size(72, 45);
-            buttonEliminar.TabIndex = 9;
-            buttonEliminar.TextAlign = ContentAlignment.BottomCenter;
-            buttonEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonEliminar.UseVisualStyleBackColor = true;
-            buttonEliminar.Click += buttonEliminar_Click;
-            // 
-            // buttonBuscar
-            // 
-            buttonBuscar.Dock = DockStyle.Fill;
-            buttonBuscar.Image = (Image)resources.GetObject("buttonBuscar.Image");
-            buttonBuscar.Location = new Point(138, 0);
-            buttonBuscar.Margin = new Padding(0);
-            buttonBuscar.Name = "buttonBuscar";
-            buttonBuscar.Size = new Size(69, 45);
-            buttonBuscar.TabIndex = 8;
-            buttonBuscar.TextAlign = ContentAlignment.BottomCenter;
-            buttonBuscar.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonBuscar.UseVisualStyleBackColor = true;
-            buttonBuscar.Click += buttonBuscar_Click;
-            // 
-            // buttonActualizar
-            // 
-            buttonActualizar.Dock = DockStyle.Fill;
-            buttonActualizar.Image = (Image)resources.GetObject("buttonActualizar.Image");
-            buttonActualizar.Location = new Point(69, 0);
-            buttonActualizar.Margin = new Padding(0);
-            buttonActualizar.Name = "buttonActualizar";
-            buttonActualizar.Size = new Size(69, 45);
-            buttonActualizar.TabIndex = 7;
-            buttonActualizar.TextAlign = ContentAlignment.BottomCenter;
-            buttonActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonActualizar.UseVisualStyleBackColor = true;
-            buttonActualizar.Click += buttonActualizar_Click;
-            // 
-            // buttonRegistrar
-            // 
-            buttonRegistrar.Dock = DockStyle.Fill;
-            buttonRegistrar.Image = (Image)resources.GetObject("buttonRegistrar.Image");
-            buttonRegistrar.Location = new Point(0, 0);
-            buttonRegistrar.Margin = new Padding(0);
-            buttonRegistrar.Name = "buttonRegistrar";
-            buttonRegistrar.Size = new Size(69, 45);
-            buttonRegistrar.TabIndex = 6;
-            buttonRegistrar.TextAlign = ContentAlignment.BottomCenter;
-            buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonRegistrar.UseVisualStyleBackColor = true;
-            buttonRegistrar.Click += buttonRegistrar_Click_1;
             // 
             // buttonRegresar
             // 
@@ -152,51 +89,64 @@
             // 
             panelFormularioHijo.AutoScroll = true;
             panelFormularioHijo.Controls.Add(listView1);
-            panelFormularioHijo.Controls.Add(label1);
+            panelFormularioHijo.Controls.Add(label2);
+            panelFormularioHijo.Controls.Add(label18);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
             panelFormularioHijo.Name = "panelFormularioHijo";
             panelFormularioHijo.Size = new Size(650, 459);
             panelFormularioHijo.TabIndex = 8;
             // 
-            // label1
+            // label18
             // 
-            label1.Anchor = AnchorStyles.Top;
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(115, 28);
-            label1.Name = "label1";
-            label1.Size = new Size(426, 27);
-            label1.TabIndex = 5;
-            label1.Text = "Herramientas Agrícolas y Ganaderas";
-            label1.TextAlign = ContentAlignment.TopCenter;
+            label18.AutoSize = true;
+            label18.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label18.Location = new Point(196, 30);
+            label18.Name = "label18";
+            label18.Size = new Size(241, 23);
+            label18.TabIndex = 34;
+            label18.Text = "Recordatorios y Alertas";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(43, 82);
+            label2.Name = "label2";
+            label2.Size = new Size(153, 20);
+            label2.TabIndex = 45;
+            label2.Text = "Lista de recordatorios";
             // 
             // listView1
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnNombre, columnCantidad, columnEstado });
-            listView1.Location = new Point(47, 94);
+            listView1.Columns.AddRange(new ColumnHeader[] { columnNumRecord, columnNombre, columnNumNota, columnValorPagar });
+            listView1.Location = new Point(43, 121);
             listView1.Name = "listView1";
-            listView1.Size = new Size(557, 332);
-            listView1.TabIndex = 7;
+            listView1.Size = new Size(557, 311);
+            listView1.TabIndex = 46;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
             // 
+            // columnNumRecord
+            // 
+            columnNumRecord.Text = "Número de recordatorio";
+            columnNumRecord.Width = 180;
+            // 
             // columnNombre
             // 
-            columnNombre.Text = "Nombre";
-            columnNombre.Width = 150;
+            columnNombre.Text = "Nombre cliente";
+            columnNombre.Width = 120;
             // 
-            // columnCantidad
+            // columnNumNota
             // 
-            columnCantidad.Text = "Cantidad";
-            columnCantidad.Width = 150;
+            columnNumNota.Text = "Número de Nota de venta";
+            columnNumNota.Width = 180;
             // 
-            // columnEstado
+            // columnValorPagar
             // 
-            columnEstado.Text = "Estado";
-            columnEstado.Width = 200;
+            columnValorPagar.Text = "Valor a pagar";
+            columnValorPagar.Width = 100;
             // 
-            // FormHerramientasAgricolasGanaderas
+            // FormRecordAlert
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -204,7 +154,7 @@
             Controls.Add(panelFormularioHijo);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormHerramientasAgricolasGanaderas";
+            Name = "FormRecordAlert";
             Text = "Inventario";
             tableLayoutPanel1.ResumeLayout(false);
             panelFormularioHijo.ResumeLayout(false);
@@ -215,16 +165,14 @@
         #endregion
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel1;
-        private Button buttonEliminar;
-        private Button buttonBuscar;
-        private Button buttonActualizar;
-        private Button buttonRegistrar;
         private Button buttonRegresar;
         private Panel panelFormularioHijo;
-        private Label label1;
+        private Label label18;
         private ListView listView1;
+        private ColumnHeader columnNumRecord;
         private ColumnHeader columnNombre;
-        private ColumnHeader columnCantidad;
-        private ColumnHeader columnEstado;
+        private ColumnHeader columnNumNota;
+        private ColumnHeader columnValorPagar;
+        private Label label2;
     }
 }

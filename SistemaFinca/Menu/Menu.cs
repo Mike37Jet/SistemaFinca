@@ -235,5 +235,50 @@ namespace SistemaFinca
         {
             abrirFormulariosHijos(new FormRegistroOrdeño());
         }
+
+        private void buttonProduccionLeche_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormProduccionLeche());
+        }
+
+        private void buttonProcesoFaenamiento_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormProcesoFaenamiento());
+        }
+
+        private void buttonNotaVentas_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormVentas());
+        }
+
+        private void buttonInformeAnalisis_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormInformesAnalisis());
+        }
+
+        private void buttonAlertas_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormRecordAlert());
+        }
+
+        private void buttonGestionPagos_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormGestionPagos());
+        }
+
+        private void buttonGesZonPast_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormGestZonPast());
+        }
+
+        private void buttonGestionArriendo_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormGestArriAreas());
+        }
+
+        private void buttonSeguimientoActividad_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormSeguimientoActividades());
+        }
     }
 }

@@ -37,8 +37,11 @@
             buttonRegistrar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            Indumentaria = new ListBox();
             label1 = new Label();
+            listView1 = new ListView();
+            columnNombre = new ColumnHeader();
+            columnCantidad = new ColumnHeader();
+            columnEstado = new ColumnHeader();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -148,22 +151,13 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
-            panelFormularioHijo.Controls.Add(Indumentaria);
+            panelFormularioHijo.Controls.Add(listView1);
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
             panelFormularioHijo.Name = "panelFormularioHijo";
             panelFormularioHijo.Size = new Size(650, 459);
             panelFormularioHijo.TabIndex = 8;
-            // 
-            // Indumentaria
-            // 
-            Indumentaria.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Indumentaria.FormattingEnabled = true;
-            Indumentaria.Location = new Point(69, 78);
-            Indumentaria.Name = "Indumentaria";
-            Indumentaria.Size = new Size(500, 344);
-            Indumentaria.TabIndex = 6;
             // 
             // label1
             // 
@@ -176,6 +170,31 @@
             label1.TabIndex = 5;
             label1.Text = "Indumentaria del Personal";
             label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // listView1
+            // 
+            listView1.Columns.AddRange(new ColumnHeader[] { columnNombre, columnCantidad, columnEstado });
+            listView1.Location = new Point(47, 86);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(557, 332);
+            listView1.TabIndex = 7;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            // 
+            // columnNombre
+            // 
+            columnNombre.Text = "Nombre";
+            columnNombre.Width = 150;
+            // 
+            // columnCantidad
+            // 
+            columnCantidad.Text = "Cantidad";
+            columnCantidad.Width = 150;
+            // 
+            // columnEstado
+            // 
+            columnEstado.Text = "Estado";
+            columnEstado.Width = 200;
             // 
             // FormIndumentariaDelPersonal
             // 
@@ -202,7 +221,10 @@
         private Button buttonRegistrar;
         private Button buttonRegresar;
         private Panel panelFormularioHijo;
-        private ListBox Indumentaria;
         private Label label1;
+        private ListView listView1;
+        private ColumnHeader columnNombre;
+        private ColumnHeader columnCantidad;
+        private ColumnHeader columnEstado;
     }
 }

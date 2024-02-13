@@ -99,7 +99,7 @@
             label1.Location = new Point(461, 9);
             label1.Name = "label1";
             label1.Size = new Size(126, 40);
-            label1.TabIndex = 3;
+            label1.TabIndex = 0;
             label1.Text = "LOGIN";
             // 
             // button1
@@ -140,7 +140,7 @@
             button2.Location = new Point(737, 9);
             button2.Name = "button2";
             button2.Size = new Size(31, 30);
-            button2.TabIndex = 6;
+            button2.TabIndex = 5;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -154,7 +154,7 @@
             button3.Location = new Point(696, 9);
             button3.Name = "button3";
             button3.Size = new Size(30, 30);
-            button3.TabIndex = 7;
+            button3.TabIndex = 4;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
