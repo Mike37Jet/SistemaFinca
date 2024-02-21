@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormGanadoBovino : Form
+    public partial class FormGanadoLechero : Form
     {
 
         private float rotationAngleX = 0;
         private float rotationAngleY = 0;
-        public FormGanadoBovino()
+        public FormGanadoLechero()
         {
             InitializeComponent();
             

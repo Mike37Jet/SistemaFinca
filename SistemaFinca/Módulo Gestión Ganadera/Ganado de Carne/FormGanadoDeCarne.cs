@@ -7,21 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
-using ToolTip = System.Windows.Forms.ToolTip;
-
 
 namespace SistemaFinca
 {
-    public partial class FormGestionClientes : Form
+    public partial class FormGanadoDeCarne : Form
     {
-        private ToolTip toolTip = new ToolTip();
 
-        public FormGestionClientes()
+        private float rotationAngleX = 0;
+        private float rotationAngleY = 0;
+        public FormGanadoDeCarne()
         {
             InitializeComponent();
-            
             
         }
         private Form formularioActivo = null;
@@ -59,44 +55,32 @@ namespace SistemaFinca
 
         private void buttonRegistrar_Click_1(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormC_Registrar());
+            abrirFormulariosHijos(new FormGB_Registrar());
         }
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormC_Actualizar());
+            abrirFormulariosHijos(new FormGB_Actualizar());
         }
 
-        private void buttonDarDeBaja_Click(object sender, EventArgs e)
+        private void buttonGenerarInforme_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormC_DarDeBaja());
+            abrirFormulariosHijos(new FormGU_GenerarInforme());
         }
 
-        private void buttonDarDeAlta_Click(object sender, EventArgs e)
+        private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormC_DarDeAlta());
+            abrirFormulariosHijos(new FormGB_Remover());
         }
 
-
-
-        private void buttonRegistrar_MouseHover(object sender, EventArgs e)
+        private void buttonConsultar_Click(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(buttonRegistrar, "Registrar cliente"); 
+            abrirFormulariosHijos(new FormGB_Consultar());
         }
 
-        private void buttonDarDeBaja_MouseHover(object sender, EventArgs e)
+        private void pictureGIF_Click(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(buttonDarDeBaja, "Dar de baja al cliente");
-        }
 
-        private void buttonDarDeAlta_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.SetToolTip(buttonDarDeAlta, "Dar de alta al cliente");
-        }
-
-        private void buttonActualizar_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.SetToolTip(buttonActualizar, "Actualizar cliente");
         }
     }
 }

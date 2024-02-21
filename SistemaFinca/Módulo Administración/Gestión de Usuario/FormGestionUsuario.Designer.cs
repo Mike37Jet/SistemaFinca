@@ -38,16 +38,16 @@
             buttonActualizar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            label2 = new Label();
-            textBuscarCliente = new TextBox();
-            label1 = new Label();
+            listView1 = new ListView();
             columnID = new ColumnHeader();
             columnNombre = new ColumnHeader();
             columnApellidos = new ColumnHeader();
             columnTelefono = new ColumnHeader();
             columnEmail = new ColumnHeader();
             columnRol = new ColumnHeader();
-            listView1 = new ListView();
+            label2 = new Label();
+            textBuscarCliente = new TextBox();
+            label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -102,6 +102,7 @@
             buttonEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonEliminar.UseVisualStyleBackColor = true;
             buttonEliminar.Click += buttonEliminar_Click;
+            buttonEliminar.MouseHover += buttonEliminar_MouseHover;
             // 
             // buttonRegistrar
             // 
@@ -116,6 +117,7 @@
             buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonRegistrar.UseVisualStyleBackColor = true;
             buttonRegistrar.Click += buttonRegistrar_Click_1;
+            buttonRegistrar.MouseHover += buttonRegistrar_MouseHover;
             // 
             // buttonRestablecerContraseña
             // 
@@ -130,6 +132,7 @@
             buttonRestablecerContraseña.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonRestablecerContraseña.UseVisualStyleBackColor = true;
             buttonRestablecerContraseña.Click += buttonRestablecerContraseña_Click;
+            buttonRestablecerContraseña.MouseHover += buttonRestablecerContraseña_MouseHover;
             // 
             // buttonInforme
             // 
@@ -144,6 +147,7 @@
             buttonInforme.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonInforme.UseVisualStyleBackColor = true;
             buttonInforme.Click += buttonGenerarInforme_Click;
+            buttonInforme.MouseHover += buttonInforme_MouseHover;
             // 
             // buttonActualizar
             // 
@@ -158,6 +162,7 @@
             buttonActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonActualizar.UseVisualStyleBackColor = true;
             buttonActualizar.Click += buttonActualizar_Click;
+            buttonActualizar.MouseHover += buttonActualizar_MouseHover;
             // 
             // buttonRegresar
             // 
@@ -183,33 +188,16 @@
             panelFormularioHijo.Size = new Size(650, 459);
             panelFormularioHijo.TabIndex = 8;
             // 
-            // label2
+            // listView1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(63, 91);
-            label2.Name = "label2";
-            label2.Size = new Size(104, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Buscar usuario";
-            // 
-            // textBuscarCliente
-            // 
-            textBuscarCliente.Location = new Point(63, 114);
-            textBuscarCliente.Name = "textBuscarCliente";
-            textBuscarCliente.Size = new Size(351, 27);
-            textBuscarCliente.TabIndex = 4;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top;
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(274, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(111, 27);
-            label1.TabIndex = 5;
-            label1.Text = "Usuarios";
-            label1.TextAlign = ContentAlignment.TopCenter;
+            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listView1.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnEmail, columnRol });
+            listView1.Location = new Point(63, 175);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(524, 249);
+            listView1.TabIndex = 7;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
             // 
             // columnID
             // 
@@ -241,16 +229,33 @@
             columnRol.Text = "Rol";
             columnRol.Width = 80;
             // 
-            // listView1
+            // label2
             // 
-            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnEmail, columnRol });
-            listView1.Location = new Point(63, 175);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(524, 249);
-            listView1.TabIndex = 7;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            label2.AutoSize = true;
+            label2.Location = new Point(63, 91);
+            label2.Name = "label2";
+            label2.Size = new Size(104, 20);
+            label2.TabIndex = 3;
+            label2.Text = "Buscar usuario";
+            // 
+            // textBuscarCliente
+            // 
+            textBuscarCliente.Location = new Point(63, 114);
+            textBuscarCliente.Name = "textBuscarCliente";
+            textBuscarCliente.Size = new Size(351, 27);
+            textBuscarCliente.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top;
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(274, 26);
+            label1.Name = "label1";
+            label1.Size = new Size(111, 27);
+            label1.TabIndex = 5;
+            label1.Text = "Usuarios";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // FormGestionUsuario
             // 

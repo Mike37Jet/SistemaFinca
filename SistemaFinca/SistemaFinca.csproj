@@ -30,20 +30,23 @@
     <Compile Update="Módulo Clientes\Gestión Clientes\C_DarDeBaja.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\FormGestionClientes.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\C_Registrar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\GB_Consultar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\GB_Actualizar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\GB_Remover.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\GB_Registrar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\FormGanadoBovino.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\SubFormGB_Consultar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Bovino\SubFormGB_Actualizar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Proceso de Faenamiento\FormProcesoFaenamiento.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Proceso de Faenamiento\PF_Registrar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Producción de leche\FormProduccionLeche.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Producción de leche\PL_Consultar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Producción de leche\PL_Registrar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Registro de ordeño\FormRegistroOrdeño.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Registro de ordeño\RO_Registrar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\FormGanadoDeCarne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\GB_Consultar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\GB_Actualizar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\GB_Remover.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\GB_Registrar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\FormGanadoLechero.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\SubFormGB_Consultar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\SubFormGB_Actualizar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\Proceso de Faenamiento\FormProcesoFaenamiento.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\Proceso de Faenamiento\PF_Registrar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\Producción de leche\FormProduccionLeche.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\Producción de leche\PL_Consultar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\Producción de leche\PL_Registrar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\Registro de ordeño\FormRegistroOrdeño.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\Registro de ordeño\RO_Registrar.cs" />
     <Compile Update="Módulo Inventario\Alimentaria Bovina\FormAliBov.cs" />
     <Compile Update="Módulo Inventario\Alimentaria Bovina\AB_Actualizar.cs" />
     <Compile Update="Módulo Inventario\Alimentaria Bovina\AB_Consultar.cs" />

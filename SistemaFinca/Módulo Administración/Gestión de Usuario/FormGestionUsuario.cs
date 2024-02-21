@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolTip = System.Windows.Forms.ToolTip;
 
 namespace SistemaFinca
 {
     public partial class FormGestionUsuario : Form
     {
+        private ToolTip toolTip1 = new ToolTip();
         public FormGestionUsuario()
         {
             InitializeComponent();
@@ -72,6 +74,31 @@ namespace SistemaFinca
         private void buttonRestablecerContraseña_Click(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormGU_RestablecerContraseña());
+        }
+
+        private void buttonRegistrar_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonRegistrar, "Registrar usuario");
+        }
+
+        private void buttonEliminar_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonEliminar, "Eliminar usuario");
+        }
+
+        private void buttonActualizar_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonActualizar, "Actualizar usuario");
+        }
+
+        private void buttonInforme_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonInforme, "Generar informe");
+        }
+
+        private void buttonRestablecerContraseña_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonRestablecerContraseña, "Restablecer contraseña");
         }
     }
 }

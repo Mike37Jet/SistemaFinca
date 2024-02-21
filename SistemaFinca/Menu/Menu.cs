@@ -109,6 +109,7 @@ namespace SistemaFinca
         }
         private void buttonGestionGanadera_Click(object sender, EventArgs e)
         {
+            subPanelGestionGanadera.Size = new Size(279, 62);
             mostrarSubMenu(subPanelGestionGanadera);
             //abrirFormulariosHijos(new FormGestionGanadera());
         }
@@ -128,11 +129,12 @@ namespace SistemaFinca
         private void buttonZonasPastoreo_Click(object sender, EventArgs e)
         {
             mostrarSubMenu(subPanelZonasPastoreo);
-            //abrirFormulariosHijos(new FormZonasPastoreo());
+
         }
         private void buttonClientes_Click(object sender, EventArgs e)
         {
-            mostrarSubMenu(subPanelClientes);
+            ocultarSubMenu();
+            abrirFormulariosHijos(new FormGestionClientes());
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)
@@ -152,7 +154,9 @@ namespace SistemaFinca
             subPanelInventario.Visible = false;
             subPanelVenta.Visible = false;
             subPanelZonasPastoreo.Visible = false;
-            subPanelClientes.Visible = false;
+            subPanelGanadoLechero.Visible = false;
+            subPanelGanadoCarne.Visible = false;
+
         }
 
         private void ocultarSubMenu()
@@ -163,7 +167,15 @@ namespace SistemaFinca
             }
             if (subPanelGestionGanadera.Visible == true)
             {
-                subPanelGestionGanadera.Visible = false;
+                
+    
+                    subPanelGestionGanadera.Visible = false;
+                
+               
+                    subPanelGanadoLechero.Visible = false;
+  
+                    subPanelGanadoCarne.Visible = false;
+                
             }
             if (subPanelInventario.Visible == true)
             {
@@ -177,10 +189,7 @@ namespace SistemaFinca
             {
                 subPanelZonasPastoreo.Visible = false;
             }
-            if (subPanelClientes.Visible == true)
-            {
-                subPanelClientes.Visible = false;
-            }
+          
         }
 
         private void mostrarSubMenu(Panel subMenu)
@@ -189,11 +198,38 @@ namespace SistemaFinca
             {
                 ocultarSubMenu();
                 subMenu.Visible = true;
+               
             }
             else
             {
                 subMenu.Visible = false;
             }
+        }
+             private void mostrarSubMenu2(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                ocultarSubMenu2();
+                subMenu.Visible = true;
+               
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
+        }
+
+        private void ocultarSubMenu2()
+        {
+            if (subPanelGanadoLechero.Visible == true)
+            {
+                subPanelGanadoLechero.Visible = false;
+            }
+            if (subPanelGanadoCarne.Visible == true)
+            {
+                subPanelGanadoCarne.Visible = false;
+            }
+
         }
 
         private void buttonHerrAgrGan_Click(object sender, EventArgs e)
@@ -206,10 +242,6 @@ namespace SistemaFinca
             abrirFormulariosHijos(new FormIndumentariaDelPersonal());
         }
 
-        private void buttonGestionCliente(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormGestionClientes());
-        }
 
         private void buttonMedBov_Click(object sender, EventArgs e)
         {
@@ -228,22 +260,31 @@ namespace SistemaFinca
 
         private void buttonGanadoBovino_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormGanadoBovino());
+            if (subPanelGanadoLechero.Visible != false)
+            {
+                subPanelGestionGanadera.Size = new Size(279, 62);
+            }
+            else
+            {
+                subPanelGestionGanadera.Size = new Size(279, 122);
+            }
+            
+            abrirFormulariosHijos(new FormGanadoLechero());
+            mostrarSubMenu2(subPanelGanadoLechero);
         }
 
-        private void buttonRegistroOrdeño_Click(object sender, EventArgs e)
+        private void buttonGanadoCarne_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormRegistroOrdeño());
-        }
-
-        private void buttonProduccionLeche_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormProduccionLeche());
-        }
-
-        private void buttonProcesoFaenamiento_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormProcesoFaenamiento());
+            if (subPanelGanadoCarne.Visible != false)
+            {
+                subPanelGestionGanadera.Size = new Size(279, 62);
+            }
+            else
+            {
+                subPanelGestionGanadera.Size = new Size(279, 92);
+            }
+            abrirFormulariosHijos(new FormGanadoDeCarne());
+            mostrarSubMenu2(subPanelGanadoCarne);
         }
 
         private void buttonNotaVentas_Click(object sender, EventArgs e)
@@ -279,6 +320,21 @@ namespace SistemaFinca
         private void buttonSeguimientoActividad_Click(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormSeguimientoActividades());
+        }
+
+        private void buttonProcesoFaenamiento_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormProcesoFaenamiento());
+        }
+
+        private void buttonProduccionDeLeche_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormProduccionLeche());
+        }
+
+        private void buttonRegistroDeOrdeño_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormRegistroOrdeño());
         }
     }
 }

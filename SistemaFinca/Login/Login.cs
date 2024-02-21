@@ -89,7 +89,7 @@ namespace SistemaFinca
             }
             else
             {
-                MessageBox.Show("Contraseña usuario o contraseña incorrecta. Por favor, inténtalo de nuevo.", "Contraseña Incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario o contraseña incorrecta. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 

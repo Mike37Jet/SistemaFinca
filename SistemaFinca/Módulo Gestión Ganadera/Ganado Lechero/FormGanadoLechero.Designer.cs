@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca
 {
-    partial class FormGanadoBovino
+    partial class FormGanadoLechero
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGanadoBovino));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGanadoLechero));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
             buttonEliminar = new Button();
@@ -37,12 +37,12 @@
             buttonActualizar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            label1 = new Label();
             listView1 = new ListView();
             columnNumIdent = new ColumnHeader();
             columnRaza = new ColumnHeader();
             columnEdad = new ColumnHeader();
             columnCategoria = new ColumnHeader();
+            label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -161,18 +161,6 @@
             panelFormularioHijo.Size = new Size(650, 459);
             panelFormularioHijo.TabIndex = 8;
             // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top;
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(228, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(183, 27);
-            label1.TabIndex = 5;
-            label1.Text = "Ganado Bovino";
-            label1.TextAlign = ContentAlignment.TopCenter;
-            // 
             // listView1
             // 
             listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -203,6 +191,18 @@
             // 
             columnCategoria.Text = "Categoría";
             columnCategoria.Width = 80;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top;
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(228, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(200, 27);
+            label1.TabIndex = 5;
+            label1.Text = "Ganado Lechero";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // FormGanadoBovino
             // 

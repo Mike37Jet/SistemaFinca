@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
+            textCedula = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            textTelefono = new TextBox();
             label3 = new Label();
             button2 = new Button();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            textNombres = new TextBox();
+            textApellidos = new TextBox();
+            textDireccionDom = new TextBox();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
@@ -44,8 +44,8 @@
             radioButton2 = new RadioButton();
             label7 = new Label();
             label8 = new Label();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
+            textCantidaLeche = new TextBox();
+            textEmail = new TextBox();
             label9 = new Label();
             SuspendLayout();
             // 
@@ -58,13 +58,13 @@
             label1.TabIndex = 0;
             label1.Text = "Registrar nuevo cliente";
             // 
-            // textBox1
+            // textCedula
             // 
-            textBox1.Cursor = Cursors.IBeam;
-            textBox1.Location = new Point(45, 93);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(278, 27);
-            textBox1.TabIndex = 2;
+            textCedula.Cursor = Cursors.IBeam;
+            textCedula.Location = new Point(45, 93);
+            textCedula.Name = "textCedula";
+            textCedula.Size = new Size(278, 27);
+            textCedula.TabIndex = 2;
             // 
             // label2
             // 
@@ -75,18 +75,19 @@
             label2.TabIndex = 3;
             label2.Text = "Número de Cédula";
             // 
-            // textBox2
+            // textTelefono
             // 
-            textBox2.Cursor = Cursors.IBeam;
-            textBox2.Location = new Point(339, 93);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(278, 27);
-            textBox2.TabIndex = 4;
+            textTelefono.Cursor = Cursors.IBeam;
+            textTelefono.Location = new Point(330, 93);
+            textTelefono.Name = "textTelefono";
+            textTelefono.Size = new Size(278, 27);
+            textTelefono.TabIndex = 4;
+            textTelefono.TextChanged += textBox2_TextChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(339, 70);
+            label3.Location = new Point(333, 70);
             label3.Name = "label3";
             label3.Size = new Size(67, 20);
             label3.TabIndex = 5;
@@ -102,29 +103,29 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // textBox3
+            // textNombres
             // 
-            textBox3.Cursor = Cursors.IBeam;
-            textBox3.Location = new Point(45, 150);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(278, 27);
-            textBox3.TabIndex = 11;
+            textNombres.Cursor = Cursors.IBeam;
+            textNombres.Location = new Point(45, 150);
+            textNombres.Name = "textNombres";
+            textNombres.Size = new Size(278, 27);
+            textNombres.TabIndex = 11;
             // 
-            // textBox4
+            // textApellidos
             // 
-            textBox4.Cursor = Cursors.IBeam;
-            textBox4.Location = new Point(339, 150);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(278, 27);
-            textBox4.TabIndex = 12;
+            textApellidos.Cursor = Cursors.IBeam;
+            textApellidos.Location = new Point(329, 150);
+            textApellidos.Name = "textApellidos";
+            textApellidos.Size = new Size(278, 27);
+            textApellidos.TabIndex = 12;
             // 
-            // textBox5
+            // textDireccionDom
             // 
-            textBox5.Cursor = Cursors.IBeam;
-            textBox5.Location = new Point(45, 211);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(572, 27);
-            textBox5.TabIndex = 13;
+            textDireccionDom.Cursor = Cursors.IBeam;
+            textDireccionDom.Location = new Point(45, 211);
+            textDireccionDom.Name = "textDireccionDom";
+            textDireccionDom.Size = new Size(572, 27);
+            textDireccionDom.TabIndex = 13;
             // 
             // label4
             // 
@@ -193,22 +194,21 @@
             label8.TabIndex = 20;
             label8.Text = "Cantidad de Leche";
             // 
-            // textBox6
+            // textCantidaLeche
             // 
-            textBox6.Cursor = Cursors.IBeam;
-            textBox6.Location = new Point(339, 350);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(278, 27);
-            textBox6.TabIndex = 21;
-     
+            textCantidaLeche.Cursor = Cursors.IBeam;
+            textCantidaLeche.Location = new Point(339, 350);
+            textCantidaLeche.Name = "textCantidaLeche";
+            textCantidaLeche.Size = new Size(278, 27);
+            textCantidaLeche.TabIndex = 21;
             // 
-            // textBox7
+            // textEmail
             // 
-            textBox7.Cursor = Cursors.IBeam;
-            textBox7.Location = new Point(45, 271);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(572, 27);
-            textBox7.TabIndex = 22;
+            textEmail.Cursor = Cursors.IBeam;
+            textEmail.Location = new Point(45, 271);
+            textEmail.Name = "textEmail";
+            textEmail.Size = new Size(572, 27);
+            textEmail.TabIndex = 22;
             // 
             // label9
             // 
@@ -225,8 +225,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(650, 459);
             Controls.Add(label9);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
+            Controls.Add(textEmail);
+            Controls.Add(textCantidaLeche);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(radioButton2);
@@ -234,14 +234,14 @@
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
+            Controls.Add(textDireccionDom);
+            Controls.Add(textApellidos);
+            Controls.Add(textNombres);
             Controls.Add(button2);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(textTelefono);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(textCedula);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormC_Registrar";
@@ -253,14 +253,14 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox textCedula;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox textTelefono;
         private Label label3;
         private Button button2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox textNombres;
+        private TextBox textApellidos;
+        private TextBox textDireccionDom;
         private Label label4;
         private Label label5;
         private Label label6;
@@ -268,8 +268,8 @@
         private RadioButton radioButton2;
         private Label label7;
         private Label label8;
-        private TextBox textBox6;
-        private TextBox textBox7;
+        private TextBox textCantidaLeche;
+        private TextBox textEmail;
         private Label label9;
     }
 }
