@@ -11,9 +11,9 @@ using SistemaFinca.Módulo_Clientes.Gestión_Clientes;
 
 namespace SistemaFinca
 {
-    public partial class FormGB_Actualizar : Form
+    public partial class FormGB_Consultar : Form
     {
-        public FormGB_Actualizar()
+        public FormGB_Consultar()
         {
             InitializeComponent();
         }
@@ -33,18 +33,23 @@ namespace SistemaFinca
             formularioHijo.BringToFront();
             formularioHijo.Show();
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-       
 
-     
+
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new SubFormGB_Actualizar());
+            abrirFormulariosHijos(new SubFormGB_Consultar());
+        }
+
+        private void panelActualizarCliente_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

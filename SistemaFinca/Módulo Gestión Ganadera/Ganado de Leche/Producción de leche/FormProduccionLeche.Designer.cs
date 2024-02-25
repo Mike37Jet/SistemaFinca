@@ -39,8 +39,6 @@ namespace SistemaFinca
             buttonRegistrar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            chartDona = new Chart();
-            chartBarras = new Chart();
             panel1 = new Panel();
             panel13 = new Panel();
             textBox5 = new TextBox();
@@ -77,8 +75,6 @@ namespace SistemaFinca
             panelGraficoDona = new Panel();
             label10 = new Label();
             label1 = new Label();
-            InicializarGraficoDona(chartDona);
-            InicializarGraficoBarras(chartBarras);
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             panel1.SuspendLayout();
@@ -118,28 +114,29 @@ namespace SistemaFinca
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 13.5495348F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.5801878F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 58.3207321F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 150F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 134F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 18F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 18F));
             tableLayoutPanel1.Controls.Add(buttonEliminar, 1, 0);
             tableLayoutPanel1.Controls.Add(buttonRegistrar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonRegresar, 4, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 459);
+            tableLayoutPanel1.Location = new Point(0, 507);
+            tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(650, 45);
+            tableLayoutPanel1.Size = new Size(895, 34);
             tableLayoutPanel1.TabIndex = 7;
             // 
             // buttonEliminar
             // 
             buttonEliminar.Dock = DockStyle.Fill;
             buttonEliminar.Image = (Image)resources.GetObject("buttonEliminar.Image");
-            buttonEliminar.Location = new Point(67, 0);
+            buttonEliminar.Location = new Point(103, 0);
             buttonEliminar.Margin = new Padding(0);
             buttonEliminar.Name = "buttonEliminar";
-            buttonEliminar.Size = new Size(67, 45);
+            buttonEliminar.Size = new Size(103, 34);
             buttonEliminar.TabIndex = 11;
             buttonEliminar.TextAlign = ContentAlignment.BottomCenter;
             buttonEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -153,7 +150,7 @@ namespace SistemaFinca
             buttonRegistrar.Location = new Point(0, 0);
             buttonRegistrar.Margin = new Padding(0);
             buttonRegistrar.Name = "buttonRegistrar";
-            buttonRegistrar.Size = new Size(67, 45);
+            buttonRegistrar.Size = new Size(103, 34);
             buttonRegistrar.TabIndex = 6;
             buttonRegistrar.TextAlign = ContentAlignment.BottomCenter;
             buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -163,9 +160,10 @@ namespace SistemaFinca
             // buttonRegresar
             // 
             buttonRegresar.Dock = DockStyle.Fill;
-            buttonRegresar.Location = new Point(500, 3);
+            buttonRegresar.Location = new Point(762, 2);
+            buttonRegresar.Margin = new Padding(3, 2, 3, 2);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(147, 39);
+            buttonRegresar.Size = new Size(130, 30);
             buttonRegresar.TabIndex = 10;
             buttonRegresar.Text = "Regresar";
             buttonRegresar.UseVisualStyleBackColor = true;
@@ -180,8 +178,9 @@ namespace SistemaFinca
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
+            panelFormularioHijo.Margin = new Padding(3, 2, 3, 2);
             panelFormularioHijo.Name = "panelFormularioHijo";
-            panelFormularioHijo.Size = new Size(650, 459);
+            panelFormularioHijo.Size = new Size(895, 507);
             panelFormularioHijo.TabIndex = 8;
             panelFormularioHijo.Paint += panelFormularioHijo_Paint;
             // 
@@ -194,9 +193,10 @@ namespace SistemaFinca
             panel1.Controls.Add(panel5);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(3, 67);
+            panel1.Location = new Point(3, 50);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(644, 125);
+            panel1.Size = new Size(890, 257);
             panel1.TabIndex = 8;
             // 
             // panel13
@@ -206,26 +206,28 @@ namespace SistemaFinca
             panel13.Controls.Add(label4);
             panel13.Controls.Add(pictureBox3);
             panel13.Controls.Add(panel14);
-            panel13.Location = new Point(434, 1);
+            panel13.Location = new Point(380, 1);
+            panel13.Margin = new Padding(3, 2, 3, 2);
             panel13.Name = "panel13";
-            panel13.Size = new Size(216, 60);
+            panel13.Size = new Size(189, 45);
             panel13.TabIndex = 6;
             // 
             // textBox5
             // 
             textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox5.Location = new Point(76, 28);
+            textBox5.Location = new Point(66, 21);
+            textBox5.Margin = new Padding(3, 2, 3, 2);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
+            textBox5.Size = new Size(110, 23);
             textBox5.TabIndex = 8;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Dock = DockStyle.Top;
-            label4.Location = new Point(70, 0);
+            label4.Location = new Point(61, 0);
             label4.Name = "label4";
-            label4.Size = new Size(82, 20);
+            label4.Size = new Size(64, 15);
             label4.TabIndex = 4;
             label4.Text = "Total anual";
             // 
@@ -234,17 +236,19 @@ namespace SistemaFinca
             pictureBox3.Dock = DockStyle.Left;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(0, 0);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(70, 60);
+            pictureBox3.Size = new Size(61, 45);
             pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox3.TabIndex = 3;
             pictureBox3.TabStop = false;
             // 
             // panel14
             // 
-            panel14.Location = new Point(217, 60);
+            panel14.Location = new Point(190, 45);
+            panel14.Margin = new Padding(3, 2, 3, 2);
             panel14.Name = "panel14";
-            panel14.Size = new Size(219, 65);
+            panel14.Size = new Size(192, 49);
             panel14.TabIndex = 1;
             // 
             // panel11
@@ -254,26 +258,28 @@ namespace SistemaFinca
             panel11.Controls.Add(label7);
             panel11.Controls.Add(pictureBox6);
             panel11.Controls.Add(panel12);
-            panel11.Location = new Point(434, 62);
+            panel11.Location = new Point(380, 46);
+            panel11.Margin = new Padding(3, 2, 3, 2);
             panel11.Name = "panel11";
-            panel11.Size = new Size(216, 60);
+            panel11.Size = new Size(189, 45);
             panel11.TabIndex = 5;
             // 
             // textBox6
             // 
             textBox6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox6.Location = new Point(76, 27);
+            textBox6.Location = new Point(66, 20);
+            textBox6.Margin = new Padding(3, 2, 3, 2);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
+            textBox6.Size = new Size(110, 23);
             textBox6.TabIndex = 9;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Dock = DockStyle.Top;
-            label7.Location = new Point(70, 0);
+            label7.Location = new Point(61, 0);
             label7.Name = "label7";
-            label7.Size = new Size(142, 20);
+            label7.Size = new Size(113, 15);
             label7.TabIndex = 4;
             label7.Text = "Número de ordeños";
             // 
@@ -282,17 +288,19 @@ namespace SistemaFinca
             pictureBox6.Dock = DockStyle.Left;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(0, 0);
+            pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(70, 60);
+            pictureBox6.Size = new Size(61, 45);
             pictureBox6.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox6.TabIndex = 3;
             pictureBox6.TabStop = false;
             // 
             // panel12
             // 
-            panel12.Location = new Point(217, 60);
+            panel12.Location = new Point(190, 45);
+            panel12.Margin = new Padding(3, 2, 3, 2);
             panel12.Name = "panel12";
-            panel12.Size = new Size(219, 65);
+            panel12.Size = new Size(192, 49);
             panel12.TabIndex = 1;
             // 
             // panel9
@@ -302,26 +310,28 @@ namespace SistemaFinca
             panel9.Controls.Add(label6);
             panel9.Controls.Add(pictureBox5);
             panel9.Controls.Add(panel10);
-            panel9.Location = new Point(217, 62);
+            panel9.Location = new Point(190, 46);
+            panel9.Margin = new Padding(3, 2, 3, 2);
             panel9.Name = "panel9";
-            panel9.Size = new Size(216, 60);
+            panel9.Size = new Size(189, 45);
             panel9.TabIndex = 4;
             // 
             // textBox4
             // 
             textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox4.Location = new Point(76, 30);
+            textBox4.Location = new Point(66, 22);
+            textBox4.Margin = new Padding(3, 2, 3, 2);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
+            textBox4.Size = new Size(110, 23);
             textBox4.TabIndex = 7;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Dock = DockStyle.Top;
-            label6.Location = new Point(70, 0);
+            label6.Location = new Point(61, 0);
             label6.Name = "label6";
-            label6.Size = new Size(137, 20);
+            label6.Size = new Size(112, 15);
             label6.TabIndex = 4;
             label6.Text = "Minima Producción";
             // 
@@ -330,17 +340,19 @@ namespace SistemaFinca
             pictureBox5.Dock = DockStyle.Left;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(0, 0);
+            pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(70, 60);
+            pictureBox5.Size = new Size(61, 45);
             pictureBox5.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox5.TabIndex = 3;
             pictureBox5.TabStop = false;
             // 
             // panel10
             // 
-            panel10.Location = new Point(217, 60);
+            panel10.Location = new Point(190, 45);
+            panel10.Margin = new Padding(3, 2, 3, 2);
             panel10.Name = "panel10";
-            panel10.Size = new Size(219, 65);
+            panel10.Size = new Size(192, 49);
             panel10.TabIndex = 1;
             // 
             // panel5
@@ -351,26 +363,28 @@ namespace SistemaFinca
             panel5.Controls.Add(pictureBox2);
             panel5.Controls.Add(panel7);
             panel5.Controls.Add(panel6);
-            panel5.Location = new Point(217, 1);
+            panel5.Location = new Point(190, 1);
+            panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(216, 60);
+            panel5.Size = new Size(189, 45);
             panel5.TabIndex = 2;
             // 
             // textBox3
             // 
             textBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox3.Location = new Point(76, 28);
+            textBox3.Location = new Point(66, 21);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
+            textBox3.Size = new Size(110, 23);
             textBox3.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Dock = DockStyle.Top;
-            label3.Location = new Point(70, 0);
+            label3.Location = new Point(61, 0);
             label3.Name = "label3";
-            label3.Size = new Size(101, 20);
+            label3.Size = new Size(80, 15);
             label3.TabIndex = 5;
             label3.Text = "Total mensual";
             // 
@@ -379,8 +393,9 @@ namespace SistemaFinca
             pictureBox2.Dock = DockStyle.Left;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(70, 60);
+            pictureBox2.Size = new Size(61, 45);
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
@@ -388,23 +403,26 @@ namespace SistemaFinca
             // panel7
             // 
             panel7.Controls.Add(panel8);
-            panel7.Location = new Point(217, 0);
+            panel7.Location = new Point(190, 0);
+            panel7.Margin = new Padding(3, 2, 3, 2);
             panel7.Name = "panel7";
-            panel7.Size = new Size(216, 60);
+            panel7.Size = new Size(189, 45);
             panel7.TabIndex = 3;
             // 
             // panel8
             // 
-            panel8.Location = new Point(217, 60);
+            panel8.Location = new Point(190, 45);
+            panel8.Margin = new Padding(3, 2, 3, 2);
             panel8.Name = "panel8";
-            panel8.Size = new Size(219, 65);
+            panel8.Size = new Size(192, 49);
             panel8.TabIndex = 1;
             // 
             // panel6
             // 
-            panel6.Location = new Point(217, 60);
+            panel6.Location = new Point(190, 45);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(219, 65);
+            panel6.Size = new Size(192, 49);
             panel6.TabIndex = 1;
             // 
             // panel3
@@ -413,26 +431,28 @@ namespace SistemaFinca
             panel3.Controls.Add(textBox2);
             panel3.Controls.Add(label5);
             panel3.Controls.Add(pictureBox4);
-            panel3.Location = new Point(2, 62);
+            panel3.Location = new Point(2, 46);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(216, 60);
+            panel3.Size = new Size(189, 45);
             panel3.TabIndex = 0;
             // 
             // textBox2
             // 
             textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Location = new Point(76, 30);
+            textBox2.Location = new Point(66, 22);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
+            textBox2.Size = new Size(110, 23);
             textBox2.TabIndex = 5;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Dock = DockStyle.Top;
-            label5.Location = new Point(70, 0);
+            label5.Location = new Point(61, 0);
             label5.Name = "label5";
-            label5.Size = new Size(141, 20);
+            label5.Size = new Size(114, 15);
             label5.TabIndex = 4;
             label5.Text = "Máxima producción";
             // 
@@ -441,8 +461,9 @@ namespace SistemaFinca
             pictureBox4.Dock = DockStyle.Left;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(0, 0);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(70, 60);
+            pictureBox4.Size = new Size(61, 45);
             pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
@@ -455,25 +476,27 @@ namespace SistemaFinca
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(panel4);
             panel2.Location = new Point(2, 1);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(216, 60);
+            panel2.Size = new Size(189, 45);
             panel2.TabIndex = 0;
             // 
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(76, 28);
+            textBox1.Location = new Point(66, 21);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
+            textBox1.Size = new Size(110, 23);
             textBox1.TabIndex = 4;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Dock = DockStyle.Top;
-            label2.Location = new Point(70, 0);
+            label2.Location = new Point(61, 0);
             label2.Name = "label2";
-            label2.Size = new Size(85, 20);
+            label2.Size = new Size(65, 15);
             label2.TabIndex = 3;
             label2.Text = "Total diario";
             // 
@@ -482,44 +505,46 @@ namespace SistemaFinca
             pictureBox1.Dock = DockStyle.Left;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(70, 60);
+            pictureBox1.Size = new Size(61, 45);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
             // panel4
             // 
-            panel4.Location = new Point(217, 60);
+            panel4.Location = new Point(190, 45);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(219, 65);
+            panel4.Size = new Size(192, 49);
             panel4.TabIndex = 1;
             // 
             // panelGraficoBarras
             // 
             panelGraficoBarras.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panelGraficoBarras.Controls.Add(chartBarras);
-            panelGraficoBarras.Location = new Point(0, 198);
+            panelGraficoBarras.Location = new Point(0, 148);
+            panelGraficoBarras.Margin = new Padding(3, 2, 3, 2);
             panelGraficoBarras.Name = "panelGraficoBarras";
-            panelGraficoBarras.Size = new Size(367, 261);
+            panelGraficoBarras.Size = new Size(647, 359);
             panelGraficoBarras.TabIndex = 7;
             // 
             // panelGraficoDona
             // 
             panelGraficoDona.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelGraficoDona.Controls.Add(label10);
-            panelGraficoDona.Controls.Add(chartDona);
-            panelGraficoDona.Location = new Point(362, 198);
+            panelGraficoDona.Location = new Point(317, 148);
+            panelGraficoDona.Margin = new Padding(3, 2, 3, 2);
             panelGraficoDona.Name = "panelGraficoDona";
-            panelGraficoDona.Size = new Size(288, 261);
+            panelGraficoDona.Size = new Size(578, 359);
             panelGraficoDona.TabIndex = 6;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(44, 0);
+            label10.Location = new Point(38, 0);
             label10.Name = "label10";
-            label10.Size = new Size(125, 20);
+            label10.Size = new Size(100, 15);
             label10.TabIndex = 7;
             label10.Text = "Producción diaria";
             label10.TextAlign = ContentAlignment.MiddleCenter;
@@ -529,21 +554,22 @@ namespace SistemaFinca
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(205, 24);
+            label1.Location = new Point(342, 18);
             label1.Name = "label1";
-            label1.Size = new Size(241, 27);
+            label1.Size = new Size(193, 22);
             label1.TabIndex = 5;
             label1.Text = "Producción Lechera";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // FormProduccionLeche
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 504);
+            ClientSize = new Size(895, 541);
             Controls.Add(panelFormularioHijo);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormProduccionLeche";
             Text = "Inventario";
             tableLayoutPanel1.ResumeLayout(false);

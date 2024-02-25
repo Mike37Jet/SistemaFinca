@@ -36,8 +36,10 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(291, 33);
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(422, 25);
             label1.Name = "label1";
             label1.Size = new Size(61, 20);
             label1.TabIndex = 0;
@@ -45,9 +47,12 @@
             // 
             // buttonImprimir
             // 
-            buttonImprimir.Location = new Point(279, 402);
+            buttonImprimir.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            buttonImprimir.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonImprimir.Location = new Point(411, 478);
+            buttonImprimir.Margin = new Padding(3, 2, 3, 2);
             buttonImprimir.Name = "buttonImprimir";
-            buttonImprimir.Size = new Size(94, 29);
+            buttonImprimir.Size = new Size(82, 34);
             buttonImprimir.TabIndex = 10;
             buttonImprimir.Text = "Imprimir";
             buttonImprimir.UseVisualStyleBackColor = true;
@@ -55,21 +60,24 @@
             // 
             // textBoxInforme
             // 
-            textBoxInforme.Location = new Point(116, 70);
+            textBoxInforme.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBoxInforme.Location = new Point(103, 70);
+            textBoxInforme.Margin = new Padding(3, 2, 3, 2);
             textBoxInforme.Multiline = true;
             textBoxInforme.Name = "textBoxInforme";
-            textBoxInforme.Size = new Size(414, 303);
+            textBoxInforme.Size = new Size(698, 377);
             textBoxInforme.TabIndex = 11;
             // 
             // FormGU_GenerarInforme
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 459);
+            ClientSize = new Size(895, 541);
             Controls.Add(textBoxInforme);
             Controls.Add(buttonImprimir);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormGU_GenerarInforme";
             Text = "Administrador";
             ResumeLayout(false);

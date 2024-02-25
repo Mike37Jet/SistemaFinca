@@ -19,11 +19,8 @@ namespace SistemaFinca
             InitializeComponent();
         }
 
+        Form formularioActivo = null;
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -45,7 +42,7 @@ namespace SistemaFinca
                 MessageBox.Show("Apellidos inválidos", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            else if (textTelefono.Text.Length != 10 )
+            else if (textTelefono.Text.Length != 10)
             {
                 MessageBox.Show("Número de teléfono inválido", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -61,22 +58,26 @@ namespace SistemaFinca
                 MessageBox.Show("Correo Electrónico inválido", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            else if (textCantidaLeche.Text == null)
-            {
-
-                MessageBox.Show("Cantidad de Leche incorrecta", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
             else
             {
                 MessageBox.Show("El cliente se ha registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            
+
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+
+        private void buttoContrato_Click_1(object sender, EventArgs e)
         {
+            FormVContratos contratos = new FormVContratos();
+            contratos.TopLevel = false;
+            contratos.FormBorderStyle = FormBorderStyle.None;
+            contratos.Dock = DockStyle.Fill;
+            panelHijo.Controls.Add(contratos);
+            panelHijo.Tag = contratos;
+            contratos.BringToFront();
+           
+            contratos.Show();
 
         }
     }

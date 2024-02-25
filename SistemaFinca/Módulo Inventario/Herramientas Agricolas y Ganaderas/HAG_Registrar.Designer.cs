@@ -42,52 +42,61 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(269, 33);
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(397, 45);
             label1.Name = "label1";
-            label1.Size = new Size(98, 20);
+            label1.Size = new Size(104, 21);
             label1.TabIndex = 0;
             label1.Text = "Herramientas";
             // 
             // textBox1
             // 
             textBox1.Cursor = Cursors.IBeam;
-            textBox1.Location = new Point(213, 86);
+            textBox1.Font = new Font("Segoe UI", 12F);
+            textBox1.Location = new Point(348, 84);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(278, 27);
+            textBox1.Size = new Size(244, 29);
             textBox1.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(95, 89);
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(245, 87);
             label2.Name = "label2";
-            label2.Size = new Size(64, 20);
+            label2.Size = new Size(68, 21);
             label2.TabIndex = 3;
             label2.Text = "Nombre";
             // 
             // textBox2
             // 
             textBox2.Cursor = Cursors.IBeam;
-            textBox2.Location = new Point(213, 137);
+            textBox2.Font = new Font("Segoe UI", 12F);
+            textBox2.Location = new Point(348, 123);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(278, 27);
+            textBox2.Size = new Size(244, 29);
             textBox2.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(95, 144);
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.Location = new Point(245, 128);
             label3.Name = "label3";
-            label3.Size = new Size(69, 20);
+            label3.Size = new Size(72, 21);
             label3.TabIndex = 5;
             label3.Text = "Cantidad";
             // 
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(153, 244);
+            radioButton1.Font = new Font("Segoe UI", 12F);
+            radioButton1.Location = new Point(296, 203);
+            radioButton1.Margin = new Padding(3, 2, 3, 2);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(73, 24);
+            radioButton1.Size = new Size(74, 25);
             radioButton1.TabIndex = 6;
             radioButton1.TabStop = true;
             radioButton1.Text = "Nuevo";
@@ -96,18 +105,21 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(269, 215);
+            label4.Font = new Font("Segoe UI", 12F);
+            label4.Location = new Point(397, 181);
             label4.Name = "label4";
-            label4.Size = new Size(54, 20);
+            label4.Size = new Size(56, 21);
             label4.TabIndex = 7;
             label4.Text = "Estado";
             // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(153, 274);
+            radioButton2.Font = new Font("Segoe UI", 12F);
+            radioButton2.Location = new Point(296, 226);
+            radioButton2.Margin = new Padding(3, 2, 3, 2);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(72, 24);
+            radioButton2.Size = new Size(72, 25);
             radioButton2.TabIndex = 8;
             radioButton2.TabStop = true;
             radioButton2.Text = "Usado";
@@ -115,19 +127,21 @@
             // 
             // button2
             // 
-            button2.Location = new Point(269, 347);
+            button2.Font = new Font("Segoe UI", 12F);
+            button2.Location = new Point(397, 280);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(87, 40);
             button2.TabIndex = 10;
             button2.Text = "Registrar";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // FormIP_Registrar
+            // FormHAG_Registrar
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 504);
+            ClientSize = new Size(895, 496);
             Controls.Add(button2);
             Controls.Add(radioButton2);
             Controls.Add(label4);
@@ -138,7 +152,8 @@
             Controls.Add(textBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormIP_Registrar";
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "FormHAG_Registrar";
             Text = "Administrador";
             ResumeLayout(false);
             PerformLayout();

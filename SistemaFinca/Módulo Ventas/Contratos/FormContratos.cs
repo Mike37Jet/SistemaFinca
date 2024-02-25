@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormVentas : Form
+    public partial class FormContratos : Form
     {
-        public FormVentas()
+        public FormContratos()
         {
             InitializeComponent();
         }
@@ -38,23 +38,43 @@ namespace SistemaFinca
 
 
 
+        public void ocultarPanel()
+        {
+            tableLayoutPanelContrato.Visible = false;
+        }
+
+        private void buttonRegresar_Click(object sender, EventArgs e)
+        {
+            if (formularioActivo != null)
+            {
+                formularioActivo.Close();
+                formularioActivo = null;
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        private void buttonActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void panelFormularioHijo_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-
-
-
-        private void label1_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
+        
         private void buttonBuscarCliente_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormVNotaDeVenta());
+            abrirFormulariosHijos(new FormVContratos());
         }
     }
 }

@@ -81,11 +81,12 @@
             tableLayoutPanel1.Controls.Add(buttonActualizar, 1, 0);
             tableLayoutPanel1.Controls.Add(buttonRegresar, 5, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 459);
+            tableLayoutPanel1.Location = new Point(0, 541);
+            tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(650, 45);
+            tableLayoutPanel1.Size = new Size(895, 50);
             tableLayoutPanel1.TabIndex = 7;
             // 
             // buttonRegistrar
@@ -95,7 +96,7 @@
             buttonRegistrar.Location = new Point(0, 0);
             buttonRegistrar.Margin = new Padding(0);
             buttonRegistrar.Name = "buttonRegistrar";
-            buttonRegistrar.Size = new Size(69, 45);
+            buttonRegistrar.Size = new Size(95, 50);
             buttonRegistrar.TabIndex = 6;
             buttonRegistrar.TextAlign = ContentAlignment.BottomCenter;
             buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -107,10 +108,10 @@
             // 
             buttonDarDeAlta.Dock = DockStyle.Fill;
             buttonDarDeAlta.Image = (Image)resources.GetObject("buttonDarDeAlta.Image");
-            buttonDarDeAlta.Location = new Point(207, 0);
+            buttonDarDeAlta.Location = new Point(285, 0);
             buttonDarDeAlta.Margin = new Padding(0);
             buttonDarDeAlta.Name = "buttonDarDeAlta";
-            buttonDarDeAlta.Size = new Size(72, 45);
+            buttonDarDeAlta.Size = new Size(99, 50);
             buttonDarDeAlta.TabIndex = 9;
             buttonDarDeAlta.TextAlign = ContentAlignment.BottomCenter;
             buttonDarDeAlta.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -122,10 +123,10 @@
             // 
             buttonDarDeBaja.Dock = DockStyle.Fill;
             buttonDarDeBaja.Image = (Image)resources.GetObject("buttonDarDeBaja.Image");
-            buttonDarDeBaja.Location = new Point(138, 0);
+            buttonDarDeBaja.Location = new Point(190, 0);
             buttonDarDeBaja.Margin = new Padding(0);
             buttonDarDeBaja.Name = "buttonDarDeBaja";
-            buttonDarDeBaja.Size = new Size(69, 45);
+            buttonDarDeBaja.Size = new Size(95, 50);
             buttonDarDeBaja.TabIndex = 8;
             buttonDarDeBaja.TextAlign = ContentAlignment.BottomCenter;
             buttonDarDeBaja.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -137,10 +138,10 @@
             // 
             buttonActualizar.Dock = DockStyle.Fill;
             buttonActualizar.Image = (Image)resources.GetObject("buttonActualizar.Image");
-            buttonActualizar.Location = new Point(69, 0);
+            buttonActualizar.Location = new Point(95, 0);
             buttonActualizar.Margin = new Padding(0);
             buttonActualizar.Name = "buttonActualizar";
-            buttonActualizar.Size = new Size(69, 45);
+            buttonActualizar.Size = new Size(95, 50);
             buttonActualizar.TabIndex = 7;
             buttonActualizar.TextAlign = ContentAlignment.BottomCenter;
             buttonActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -151,9 +152,11 @@
             // buttonRegresar
             // 
             buttonRegresar.Dock = DockStyle.Fill;
-            buttonRegresar.Location = new Point(495, 3);
+            buttonRegresar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonRegresar.Location = new Point(680, 2);
+            buttonRegresar.Margin = new Padding(3, 2, 3, 2);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(152, 39);
+            buttonRegresar.Size = new Size(212, 46);
             buttonRegresar.TabIndex = 10;
             buttonRegresar.Text = "Regresar";
             buttonRegresar.UseVisualStyleBackColor = true;
@@ -168,17 +171,20 @@
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
+            panelFormularioHijo.Margin = new Padding(3, 2, 3, 2);
             panelFormularioHijo.Name = "panelFormularioHijo";
-            panelFormularioHijo.Size = new Size(650, 459);
+            panelFormularioHijo.Size = new Size(895, 541);
             panelFormularioHijo.TabIndex = 8;
             // 
             // listView1
             // 
             listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listView1.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnDireccionDomicilio, columnEmail, columnCantidadDeLeche, columnTipoContrato });
-            listView1.Location = new Point(63, 183);
+            listView1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listView1.Location = new Point(55, 137);
+            listView1.Margin = new Padding(3, 2, 3, 2);
             listView1.Name = "listView1";
-            listView1.Size = new Size(524, 249);
+            listView1.Size = new Size(785, 385);
             listView1.TabIndex = 6;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -225,7 +231,8 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(63, 108);
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(55, 76);
             label2.Name = "label2";
             label2.Size = new Size(100, 20);
             label2.TabIndex = 3;
@@ -233,31 +240,33 @@
             // 
             // textBuscarCliente
             // 
-            textBuscarCliente.Location = new Point(63, 131);
+            textBuscarCliente.Location = new Point(55, 98);
+            textBuscarCliente.Margin = new Padding(3, 2, 3, 2);
             textBuscarCliente.Name = "textBuscarCliente";
-            textBuscarCliente.Size = new Size(351, 27);
+            textBuscarCliente.Size = new Size(308, 23);
             textBuscarCliente.TabIndex = 4;
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(274, 26);
+            label1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(394, 20);
             label1.Name = "label1";
-            label1.Size = new Size(103, 27);
+            label1.Size = new Size(107, 28);
             label1.TabIndex = 5;
             label1.Text = "Clientes";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // FormGestionClientes
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 504);
+            ClientSize = new Size(895, 591);
             Controls.Add(panelFormularioHijo);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormGestionClientes";
             Text = "Inventario";
             tableLayoutPanel1.ResumeLayout(false);

@@ -18,10 +18,6 @@ namespace SistemaFinca
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -33,5 +29,9 @@ namespace SistemaFinca
 
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

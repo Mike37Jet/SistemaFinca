@@ -26,9 +26,6 @@ namespace SistemaFinca
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendeMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-
-
-
         private void buttonCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -142,11 +139,6 @@ namespace SistemaFinca
             Application.Exit();
         }
 
-
-
-
-
-
         private void personalizarDiseño()
         {
             subPanelAdministracion.Visible = false;
@@ -167,15 +159,10 @@ namespace SistemaFinca
             }
             if (subPanelGestionGanadera.Visible == true)
             {
-                
-    
-                    subPanelGestionGanadera.Visible = false;
-                
-               
-                    subPanelGanadoLechero.Visible = false;
-  
-                    subPanelGanadoCarne.Visible = false;
-                
+                subPanelGestionGanadera.Visible = false;
+
+                subPanelGanadoLechero.Visible = false;
+                subPanelGanadoCarne.Visible = false;
             }
             if (subPanelInventario.Visible == true)
             {
@@ -189,7 +176,7 @@ namespace SistemaFinca
             {
                 subPanelZonasPastoreo.Visible = false;
             }
-          
+
         }
 
         private void mostrarSubMenu(Panel subMenu)
@@ -198,20 +185,20 @@ namespace SistemaFinca
             {
                 ocultarSubMenu();
                 subMenu.Visible = true;
-               
+
             }
             else
             {
                 subMenu.Visible = false;
             }
         }
-             private void mostrarSubMenu2(Panel subMenu)
+        private void mostrarSubMenu2(Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
                 ocultarSubMenu2();
                 subMenu.Visible = true;
-               
+
             }
             else
             {
@@ -268,7 +255,7 @@ namespace SistemaFinca
             {
                 subPanelGestionGanadera.Size = new Size(279, 122);
             }
-            
+
             abrirFormulariosHijos(new FormGanadoLechero());
             mostrarSubMenu2(subPanelGanadoLechero);
         }
@@ -335,6 +322,16 @@ namespace SistemaFinca
         private void buttonRegistroDeOrdeño_Click(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormRegistroOrdeño());
+        }
+
+        private void buttonParametrosSistema_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormParametrosSistema());
+        }
+
+        private void buttonContrato_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormContratos());
         }
     }
 }

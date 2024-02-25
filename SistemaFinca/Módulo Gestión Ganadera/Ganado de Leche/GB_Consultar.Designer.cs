@@ -44,18 +44,20 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(650, 55);
+            panel1.Size = new Size(895, 41);
             panel1.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(263, 21);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(383, 10);
             label1.Name = "label1";
-            label1.Size = new Size(121, 20);
+            label1.Size = new Size(106, 21);
             label1.TabIndex = 2;
-            label1.Text = "Consultar bovino";
+            label1.Text = "Consultar Res";
             // 
             // panelActualizarCliente
             // 
@@ -64,16 +66,20 @@
             panelActualizarCliente.Controls.Add(textBox1);
             panelActualizarCliente.Controls.Add(label2);
             panelActualizarCliente.Dock = DockStyle.Fill;
-            panelActualizarCliente.Location = new Point(0, 55);
+            panelActualizarCliente.Location = new Point(0, 41);
+            panelActualizarCliente.Margin = new Padding(3, 2, 3, 2);
             panelActualizarCliente.Name = "panelActualizarCliente";
-            panelActualizarCliente.Size = new Size(650, 449);
+            panelActualizarCliente.Size = new Size(895, 500);
             panelActualizarCliente.TabIndex = 3;
+            panelActualizarCliente.Paint += panelActualizarCliente_Paint;
             // 
             // button1
             // 
-            button1.Location = new Point(278, 130);
+            button1.Font = new Font("Segoe UI", 12F);
+            button1.Location = new Point(405, 98);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(85, 40);
             button1.TabIndex = 3;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
@@ -82,36 +88,42 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(74, 79);
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.Location = new Point(211, 62);
             label3.Name = "label3";
-            label3.Size = new Size(97, 20);
+            label3.Size = new Size(100, 21);
             label3.TabIndex = 2;
             label3.Text = "Identificador:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(177, 79);
+            textBox1.Font = new Font("Segoe UI", 12F);
+            textBox1.Location = new Point(317, 59);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(296, 27);
+            textBox1.Size = new Size(260, 29);
             textBox1.TabIndex = 1;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(30, 26);
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(141, 20);
             label2.Name = "label2";
-            label2.Size = new Size(587, 20);
+            label2.Size = new Size(586, 21);
             label2.TabIndex = 0;
-            label2.Text = "Para consultar los datos del bovino, ingrese su número de identificación a continuación:\r\n";
+            label2.Text = "Para consultar los datos del res, ingrese su número de identificación a continuación:\r\n";
             // 
             // FormGB_Consultar
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 504);
+            ClientSize = new Size(895, 541);
             Controls.Add(panelActualizarCliente);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormGB_Consultar";
             Text = "Administrador";
             panel1.ResumeLayout(false);

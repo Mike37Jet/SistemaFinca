@@ -22,5 +22,15 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
         {
             MessageBox.Show("Los datos del bovino se han actualizado exitosamente.", "Actualización Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+	  <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+	<ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +25,9 @@
     <Compile Update="Módulo Administración\Gestión de Usuario\GU_Registrar.cs" />
     <Compile Update="Módulo Administración\Gestión de Usuario\FormGestionUsuario.cs" />
     <Compile Update="Módulo Administración\Gestión de Usuario\SubFormGUActualizar.cs" />
+    <Compile Update="Módulo Administración\Parámetro del Sistema\FormParametrosSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Módulo Clientes\Gestión Clientes\C_Actualizar.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\C_DarDeAlta.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\C_DarDeBaja.cs" />
@@ -33,20 +36,20 @@
     <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\FormGanadoDeCarne.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\GB_Consultar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\GB_Actualizar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\GB_Remover.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\GB_Registrar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\FormGanadoLechero.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\SubFormGB_Consultar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\SubFormGB_Actualizar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Consultar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Actualizar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Remover.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Registrar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\FormGanadoLechero.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\SubFormGB_Consultar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\SubFormGB_Actualizar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\Proceso de Faenamiento\FormProcesoFaenamiento.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\Proceso de Faenamiento\PF_Registrar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\Producción de leche\FormProduccionLeche.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\Producción de leche\PL_Consultar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\Producción de leche\PL_Registrar.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\Registro de ordeño\FormRegistroOrdeño.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado Lechero\Registro de ordeño\RO_Registrar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\Producción de leche\FormProduccionLeche.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\Producción de leche\PL_Consultar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\Producción de leche\PL_Registrar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\Registro de ordeño\FormRegistroOrdeño.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\Registro de ordeño\RO_Registrar.cs" />
     <Compile Update="Módulo Inventario\Alimentaria Bovina\FormAliBov.cs" />
     <Compile Update="Módulo Inventario\Alimentaria Bovina\AB_Actualizar.cs" />
     <Compile Update="Módulo Inventario\Alimentaria Bovina\AB_Consultar.cs" />
@@ -66,6 +69,12 @@
     <Compile Update="Módulo Inventario\Medicamentos Bovinos\MB_Eliminar.cs" />
     <Compile Update="Módulo Inventario\Medicamentos Bovinos\MB_Actualizar.cs" />
     <Compile Update="Módulo Inventario\Medicamentos Bovinos\MB_Consultar.cs" />
+    <Compile Update="Módulo Ventas\Contratos\FormContratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Ventas\Contratos\VContratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Módulo Ventas\Gestión de Pagos\FormGestionPagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +83,9 @@
     </Compile>
     <Compile Update="Módulo Ventas\Recordatorios y Alertas\FormRecordAlert.cs" />
     <Compile Update="Módulo Ventas\Ventas\FormVent.cs" />
+    <Compile Update="Módulo Ventas\Ventas\VNotaDeVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Módulo Zonas de Pastoreo\Gestión Arriendo de áreas\FormGestArriAreas.cs">
       <SubType>Form</SubType>
     </Compile>

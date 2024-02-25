@@ -37,34 +37,40 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(269, 33);
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(392, 46);
             label1.Name = "label1";
-            label1.Size = new Size(70, 20);
+            label1.Size = new Size(73, 21);
             label1.TabIndex = 0;
             label1.Text = "Alimento";
             // 
             // textBox1
             // 
             textBox1.Cursor = Cursors.IBeam;
-            textBox1.Location = new Point(213, 86);
+            textBox1.Font = new Font("Segoe UI", 12F);
+            textBox1.Location = new Point(299, 125);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(278, 27);
+            textBox1.Size = new Size(259, 29);
             textBox1.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(95, 89);
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(296, 102);
             label2.Name = "label2";
-            label2.Size = new Size(64, 20);
+            label2.Size = new Size(68, 21);
             label2.TabIndex = 3;
             label2.Text = "Nombre";
             // 
             // button2
             // 
-            button2.Location = new Point(269, 182);
+            button2.Font = new Font("Segoe UI", 12F);
+            button2.Location = new Point(380, 232);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(97, 38);
             button2.TabIndex = 10;
             button2.Text = "Consultar";
             button2.UseVisualStyleBackColor = true;
@@ -72,14 +78,15 @@
             // 
             // FormAB_Consultar
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 504);
+            ClientSize = new Size(895, 541);
             Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormAB_Consultar";
             Text = "Administrador";
             ResumeLayout(false);
