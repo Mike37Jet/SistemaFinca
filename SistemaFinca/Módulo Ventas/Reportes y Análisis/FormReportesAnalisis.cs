@@ -11,9 +11,9 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SistemaFinca
 {
-    public partial class FormInformesAnalisis : Form
+    public partial class FormReportesAnalisis : Form
     {
-        public FormInformesAnalisis()
+        public FormReportesAnalisis()
         {
             InitializeComponent();
         }
@@ -35,19 +35,19 @@ namespace SistemaFinca
             formularioHijo.Show();
         }
 
-        private void InicializarGraficoLineas(Chart chart)
+        private void inicializarGraficoLineas(Chart chart)
         {
             Series series = new Series("Ganancias Mensuales");
             series.ChartType = SeriesChartType.FastLine;
             series.Palette = ChartColorPalette.Excel;
 
-            series.Points.AddXY("Enero", 522);
+            series.Points.AddXY("Enero", 322);
             series.Points.AddXY("Febrero", 221);
             series.Points.AddXY("Marzo", 150);
-            series.Points.AddXY("Abril", 205);
+            series.Points.AddXY("Abril", 305);
             series.Points.AddXY("Mayo", 133);
             series.Points.AddXY("Junio", 205);
-            series.Points.AddXY("Julio", 128);
+            series.Points.AddXY("Julio", 102);
             series.Points.AddXY("Agosto", 260);
             series.Points.AddXY("Septiembre", 177);
             series.Points.AddXY("Octubre", 212);
@@ -80,16 +80,13 @@ namespace SistemaFinca
             //chart.Size = new Size(367, 261);
 
             // Asegurarse de que el gráfico esté en la parte superior
-            chart.BringToFront();
+            //chart.BringToFront();
 
 
         }
 
 
-        private void buttonRegistrar_Click_1(object sender, EventArgs e)
-        {
 
-        }
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
@@ -104,9 +101,9 @@ namespace SistemaFinca
             }
         }
 
-        private void buttonActualizar_Click(object sender, EventArgs e)
+        private void buttonGenerarReporte_Click(object sender, EventArgs e)
         {
-
+            abrirFormulariosHijos(new FormIFGenerarInforme());
         }
     }
 }
