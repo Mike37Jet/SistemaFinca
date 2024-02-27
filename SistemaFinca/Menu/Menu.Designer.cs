@@ -39,6 +39,7 @@
             buttonAuditoria = new Button();
             panel3 = new Panel();
             subPanelZonasPastoreo = new Panel();
+            button1 = new Button();
             buttonGestionArriendo = new Button();
             buttonSeguimientoActividad = new Button();
             buttonGesZonPast = new Button();
@@ -51,10 +52,10 @@
             buttonInventario = new Button();
             subPanelVenta = new Panel();
             buttonDeudores = new Button();
-            buttonGestionPagos = new Button();
             buttonInformeAnalisis = new Button();
+            buttonGestionPagos = new Button();
             buttonNotaVentas = new Button();
-            buttonContrato = new Button();
+            buttonContratos = new Button();
             buttonVentas = new Button();
             subPanelGestionGanadera = new Panel();
             subPanelGanadoCarne = new Panel();
@@ -216,7 +217,7 @@
             buttonAuditoria.ForeColor = Color.Silver;
             buttonAuditoria.Image = (Image)resources.GetObject("buttonAuditoria.Image");
             buttonAuditoria.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAuditoria.Location = new Point(0, 980);
+            buttonAuditoria.Location = new Point(0, 1021);
             buttonAuditoria.Margin = new Padding(3, 2, 3, 2);
             buttonAuditoria.Name = "buttonAuditoria";
             buttonAuditoria.Padding = new Padding(4, 0, 0, 0);
@@ -231,7 +232,7 @@
             // 
             panel3.BackColor = Color.DarkGray;
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 1030);
+            panel3.Location = new Point(0, 1071);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
             panel3.Size = new Size(252, 2);
@@ -240,6 +241,7 @@
             // subPanelZonasPastoreo
             // 
             subPanelZonasPastoreo.BackColor = Color.FromArgb(25, 25, 25);
+            subPanelZonasPastoreo.Controls.Add(button1);
             subPanelZonasPastoreo.Controls.Add(buttonGestionArriendo);
             subPanelZonasPastoreo.Controls.Add(buttonSeguimientoActividad);
             subPanelZonasPastoreo.Controls.Add(buttonGesZonPast);
@@ -247,8 +249,27 @@
             subPanelZonasPastoreo.Location = new Point(0, 888);
             subPanelZonasPastoreo.Margin = new Padding(3, 2, 3, 2);
             subPanelZonasPastoreo.Name = "subPanelZonasPastoreo";
-            subPanelZonasPastoreo.Size = new Size(252, 92);
+            subPanelZonasPastoreo.Size = new Size(252, 133);
             subPanelZonasPastoreo.TabIndex = 10;
+            // 
+            // button1
+            // 
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Gray;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Arial", 10.2F);
+            button1.ForeColor = Color.Silver;
+            button1.Location = new Point(0, 93);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Padding = new Padding(18, 0, 0, 0);
+            button1.Size = new Size(252, 33);
+            button1.TabIndex = 24;
+            button1.Text = "Arriendo ";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = true;
             // 
             // buttonGestionArriendo
             // 
@@ -263,9 +284,9 @@
             buttonGestionArriendo.Margin = new Padding(3, 2, 3, 2);
             buttonGestionArriendo.Name = "buttonGestionArriendo";
             buttonGestionArriendo.Padding = new Padding(18, 0, 0, 0);
-            buttonGestionArriendo.Size = new Size(252, 30);
-            buttonGestionArriendo.TabIndex = 30;
-            buttonGestionArriendo.Text = "Gestión de Arriendo de Áreas";
+            buttonGestionArriendo.Size = new Size(252, 33);
+            buttonGestionArriendo.TabIndex = 23;
+            buttonGestionArriendo.Text = "Riego";
             buttonGestionArriendo.TextAlign = ContentAlignment.MiddleLeft;
             buttonGestionArriendo.UseVisualStyleBackColor = true;
             buttonGestionArriendo.Click += buttonGestionArriendo_Click;
@@ -285,7 +306,7 @@
             buttonSeguimientoActividad.Padding = new Padding(18, 0, 0, 0);
             buttonSeguimientoActividad.Size = new Size(252, 30);
             buttonSeguimientoActividad.TabIndex = 21;
-            buttonSeguimientoActividad.Text = "Seguimiento de Actividades";
+            buttonSeguimientoActividad.Text = "Fumigación";
             buttonSeguimientoActividad.TextAlign = ContentAlignment.MiddleLeft;
             buttonSeguimientoActividad.UseVisualStyleBackColor = true;
             buttonSeguimientoActividad.Click += buttonSeguimientoActividad_Click;
@@ -305,7 +326,7 @@
             buttonGesZonPast.Padding = new Padding(18, 0, 0, 0);
             buttonGesZonPast.Size = new Size(252, 30);
             buttonGesZonPast.TabIndex = 20;
-            buttonGesZonPast.Text = "Gestión de Zonas de Pastoreo";
+            buttonGesZonPast.Text = "Registro";
             buttonGesZonPast.TextAlign = ContentAlignment.MiddleLeft;
             buttonGesZonPast.UseVisualStyleBackColor = true;
             buttonGesZonPast.Click += buttonGesZonPast_Click;
@@ -362,7 +383,7 @@
             buttonAliBov.Padding = new Padding(18, 0, 0, 0);
             buttonAliBov.Size = new Size(252, 30);
             buttonAliBov.TabIndex = 18;
-            buttonAliBov.Text = "Alimentaria Bovina";
+            buttonAliBov.Text = "Alimentos";
             buttonAliBov.TextAlign = ContentAlignment.MiddleLeft;
             buttonAliBov.UseVisualStyleBackColor = true;
             buttonAliBov.Click += buttonAliBov_Click;
@@ -382,7 +403,7 @@
             buttonMedBov.Padding = new Padding(18, 0, 0, 0);
             buttonMedBov.Size = new Size(252, 30);
             buttonMedBov.TabIndex = 17;
-            buttonMedBov.Text = "Medicamentos Bovinos";
+            buttonMedBov.Text = "Medicinas";
             buttonMedBov.TextAlign = ContentAlignment.MiddleLeft;
             buttonMedBov.UseVisualStyleBackColor = true;
             buttonMedBov.Click += buttonMedBov_Click;
@@ -402,7 +423,7 @@
             buttonIndPers.Padding = new Padding(18, 0, 0, 0);
             buttonIndPers.Size = new Size(252, 30);
             buttonIndPers.TabIndex = 16;
-            buttonIndPers.Text = "Indumentaria del Personal";
+            buttonIndPers.Text = "Indumentarias";
             buttonIndPers.TextAlign = ContentAlignment.MiddleLeft;
             buttonIndPers.UseVisualStyleBackColor = true;
             buttonIndPers.Click += buttonIndPers_Click;
@@ -422,7 +443,7 @@
             buttonHerrAgrGan.Padding = new Padding(18, 0, 0, 0);
             buttonHerrAgrGan.Size = new Size(252, 30);
             buttonHerrAgrGan.TabIndex = 15;
-            buttonHerrAgrGan.Text = "Herramientas Agrícolas y Ganaderas";
+            buttonHerrAgrGan.Text = "Herramientas";
             buttonHerrAgrGan.TextAlign = ContentAlignment.MiddleLeft;
             buttonHerrAgrGan.UseVisualStyleBackColor = true;
             buttonHerrAgrGan.Click += buttonHerrAgrGan_Click;
@@ -457,7 +478,7 @@
             subPanelVenta.Controls.Add(buttonInformeAnalisis);
             subPanelVenta.Controls.Add(buttonGestionPagos);
             subPanelVenta.Controls.Add(buttonNotaVentas);
-            subPanelVenta.Controls.Add(buttonContrato);
+            subPanelVenta.Controls.Add(buttonContratos);
             subPanelVenta.Dock = DockStyle.Top;
             subPanelVenta.Location = new Point(0, 514);
             subPanelVenta.Margin = new Padding(3, 2, 3, 2);
@@ -485,26 +506,6 @@
             buttonDeudores.UseVisualStyleBackColor = true;
             buttonDeudores.Click += buttonAlertas_Click;
             // 
-            // buttonGestionPagos
-            // 
-            buttonGestionPagos.Dock = DockStyle.Top;
-            buttonGestionPagos.FlatAppearance.BorderSize = 0;
-            buttonGestionPagos.FlatAppearance.MouseDownBackColor = Color.Gray;
-            buttonGestionPagos.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
-            buttonGestionPagos.FlatStyle = FlatStyle.Flat;
-            buttonGestionPagos.Font = new Font("Arial", 10.2F);
-            buttonGestionPagos.ForeColor = Color.Silver;
-            buttonGestionPagos.Location = new Point(0, 90);
-            buttonGestionPagos.Margin = new Padding(3, 2, 3, 2);
-            buttonGestionPagos.Name = "buttonGestionPagos";
-            buttonGestionPagos.Padding = new Padding(18, 0, 0, 0);
-            buttonGestionPagos.Size = new Size(252, 30);
-            buttonGestionPagos.TabIndex = 12;
-            buttonGestionPagos.Text = "Gestión de Pagos";
-            buttonGestionPagos.TextAlign = ContentAlignment.MiddleLeft;
-            buttonGestionPagos.UseVisualStyleBackColor = true;
-            buttonGestionPagos.Click += buttonGestionPagos_Click;
-            // 
             // buttonInformeAnalisis
             // 
             buttonInformeAnalisis.Dock = DockStyle.Top;
@@ -514,7 +515,7 @@
             buttonInformeAnalisis.FlatStyle = FlatStyle.Flat;
             buttonInformeAnalisis.Font = new Font("Arial", 10.2F);
             buttonInformeAnalisis.ForeColor = Color.Silver;
-            buttonInformeAnalisis.Location = new Point(0, 60);
+            buttonInformeAnalisis.Location = new Point(0, 90);
             buttonInformeAnalisis.Margin = new Padding(3, 2, 3, 2);
             buttonInformeAnalisis.Name = "buttonInformeAnalisis";
             buttonInformeAnalisis.Padding = new Padding(18, 0, 0, 0);
@@ -524,6 +525,26 @@
             buttonInformeAnalisis.TextAlign = ContentAlignment.MiddleLeft;
             buttonInformeAnalisis.UseVisualStyleBackColor = true;
             buttonInformeAnalisis.Click += buttonInformeAnalisis_Click;
+            // 
+            // buttonGestionPagos
+            // 
+            buttonGestionPagos.Dock = DockStyle.Top;
+            buttonGestionPagos.FlatAppearance.BorderSize = 0;
+            buttonGestionPagos.FlatAppearance.MouseDownBackColor = Color.Gray;
+            buttonGestionPagos.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            buttonGestionPagos.FlatStyle = FlatStyle.Flat;
+            buttonGestionPagos.Font = new Font("Arial", 10.2F);
+            buttonGestionPagos.ForeColor = Color.Silver;
+            buttonGestionPagos.Location = new Point(0, 60);
+            buttonGestionPagos.Margin = new Padding(3, 2, 3, 2);
+            buttonGestionPagos.Name = "buttonGestionPagos";
+            buttonGestionPagos.Padding = new Padding(18, 0, 0, 0);
+            buttonGestionPagos.Size = new Size(252, 30);
+            buttonGestionPagos.TabIndex = 12;
+            buttonGestionPagos.Text = "Gestión de Pagos";
+            buttonGestionPagos.TextAlign = ContentAlignment.MiddleLeft;
+            buttonGestionPagos.UseVisualStyleBackColor = true;
+            buttonGestionPagos.Click += buttonGestionPagos_Click;
             // 
             // buttonNotaVentas
             // 
@@ -545,25 +566,25 @@
             buttonNotaVentas.UseVisualStyleBackColor = true;
             buttonNotaVentas.Click += buttonNotaVentas_Click;
             // 
-            // buttonContrato
+            // buttonContratos
             // 
-            buttonContrato.Dock = DockStyle.Top;
-            buttonContrato.FlatAppearance.BorderSize = 0;
-            buttonContrato.FlatAppearance.MouseDownBackColor = Color.Gray;
-            buttonContrato.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
-            buttonContrato.FlatStyle = FlatStyle.Flat;
-            buttonContrato.Font = new Font("Arial", 10.2F);
-            buttonContrato.ForeColor = Color.Silver;
-            buttonContrato.Location = new Point(0, 0);
-            buttonContrato.Margin = new Padding(3, 2, 3, 2);
-            buttonContrato.Name = "buttonContrato";
-            buttonContrato.Padding = new Padding(18, 0, 0, 0);
-            buttonContrato.Size = new Size(252, 30);
-            buttonContrato.TabIndex = 14;
-            buttonContrato.Text = "Contratos";
-            buttonContrato.TextAlign = ContentAlignment.MiddleLeft;
-            buttonContrato.UseVisualStyleBackColor = true;
-            buttonContrato.Click += buttonContrato_Click;
+            buttonContratos.Dock = DockStyle.Top;
+            buttonContratos.FlatAppearance.BorderSize = 0;
+            buttonContratos.FlatAppearance.MouseDownBackColor = Color.Gray;
+            buttonContratos.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            buttonContratos.FlatStyle = FlatStyle.Flat;
+            buttonContratos.Font = new Font("Arial", 10.2F);
+            buttonContratos.ForeColor = Color.Silver;
+            buttonContratos.Location = new Point(0, 0);
+            buttonContratos.Margin = new Padding(3, 2, 3, 2);
+            buttonContratos.Name = "buttonContratos";
+            buttonContratos.Padding = new Padding(18, 0, 0, 0);
+            buttonContratos.Size = new Size(252, 30);
+            buttonContratos.TabIndex = 15;
+            buttonContratos.Text = "Contratos";
+            buttonContratos.TextAlign = ContentAlignment.MiddleLeft;
+            buttonContratos.UseVisualStyleBackColor = true;
+            buttonContratos.Click += buttonContratos_Click;
             // 
             // buttonVentas
             // 
@@ -648,7 +669,7 @@
             buttonGanadoCarne.Padding = new Padding(18, 0, 0, 0);
             buttonGanadoCarne.Size = new Size(252, 30);
             buttonGanadoCarne.TabIndex = 8;
-            buttonGanadoCarne.Text = "Ganado de Carne";
+            buttonGanadoCarne.Text = "Ganado seco";
             buttonGanadoCarne.TextAlign = ContentAlignment.MiddleLeft;
             buttonGanadoCarne.UseVisualStyleBackColor = true;
             buttonGanadoCarne.Click += buttonGanadoCarne_Click;
@@ -700,7 +721,7 @@
             buttonProduccionDeLeche.Padding = new Padding(44, 0, 0, 0);
             buttonProduccionDeLeche.Size = new Size(252, 30);
             buttonProduccionDeLeche.TabIndex = 7;
-            buttonProduccionDeLeche.Text = "Producción de leche";
+            buttonProduccionDeLeche.Text = "Producción lechero";
             buttonProduccionDeLeche.TextAlign = ContentAlignment.MiddleLeft;
             buttonProduccionDeLeche.UseVisualStyleBackColor = true;
             buttonProduccionDeLeche.Click += buttonProduccionDeLeche_Click;
@@ -720,7 +741,7 @@
             buttonGanadoDeLeche.Padding = new Padding(18, 0, 0, 0);
             buttonGanadoDeLeche.Size = new Size(252, 30);
             buttonGanadoDeLeche.TabIndex = 5;
-            buttonGanadoDeLeche.Text = "Ganado de Leche";
+            buttonGanadoDeLeche.Text = "Ganado de leche";
             buttonGanadoDeLeche.TextAlign = ContentAlignment.MiddleLeft;
             buttonGanadoDeLeche.UseVisualStyleBackColor = true;
             buttonGanadoDeLeche.Click += buttonGanadoBovino_Click;
@@ -742,7 +763,7 @@
             buttonGestionGanadera.Padding = new Padding(4, 0, 0, 0);
             buttonGestionGanadera.Size = new Size(252, 50);
             buttonGestionGanadera.TabIndex = 4;
-            buttonGestionGanadera.Text = "Gestión Ganadera";
+            buttonGestionGanadera.Text = "Reses";
             buttonGestionGanadera.TextAlign = ContentAlignment.MiddleLeft;
             buttonGestionGanadera.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonGestionGanadera.UseVisualStyleBackColor = true;
@@ -930,7 +951,7 @@
             buttonSalir.ForeColor = Color.Silver;
             buttonSalir.Image = (Image)resources.GetObject("buttonSalir.Image");
             buttonSalir.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonSalir.Location = new Point(0, 1032);
+            buttonSalir.Location = new Point(0, 1073);
             buttonSalir.Margin = new Padding(3, 2, 3, 2);
             buttonSalir.Name = "buttonSalir";
             buttonSalir.Padding = new Padding(9, 0, 0, 0);
@@ -1050,6 +1071,7 @@
         private Button buttonProduccionDeLeche;
         private Button buttonAuditoria;
         private Button buttonParametrosSistema;
-        private Button buttonContrato;
+        private Button button1;
+        private Button buttonContratos;
     }
 }

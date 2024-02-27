@@ -27,6 +27,6 @@ namespace SistemaFinca
         {
             MessageBox.Show("La herramienta se ha registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    
+
     }
 }

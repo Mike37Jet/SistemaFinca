@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormIndumentariaDelPersonal: Form
+    public partial class FormIndumentariaDelPersonal : Form
     {
         public FormIndumentariaDelPersonal()
         {

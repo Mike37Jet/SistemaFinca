@@ -71,11 +71,6 @@ namespace SistemaFinca
             abrirFormulariosHijos(new FormGU_Eliminar());
         }
 
-        private void buttonRestablecerContraseña_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormGU_RestablecerContraseña());
-        }
-
         private void buttonRegistrar_MouseHover(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(buttonRegistrar, "Registrar usuario");
@@ -96,14 +91,19 @@ namespace SistemaFinca
             toolTip1.SetToolTip(buttonInforme, "Generar informe");
         }
 
-        private void buttonRestablecerContraseña_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(buttonRestablecerContraseña, "Restablecer contraseña");
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormGU_Consultar());
+        }
+
+        private void buttonBuscar_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonBuscar, "Consultar usuario");
         }
     }
 }

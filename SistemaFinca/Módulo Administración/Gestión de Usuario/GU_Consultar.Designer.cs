@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca
 {
-    partial class FormAB_Eliminar
+    partial class FormGU_Consultar
     {
         /// <summary>
         /// Required designer variable.
@@ -31,63 +31,65 @@
             label1 = new Label();
             textBox1 = new TextBox();
             label2 = new Label();
-            buttonEliminar = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(401, 34);
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(397, 27);
             label1.Name = "label1";
-            label1.Size = new Size(73, 21);
+            label1.Size = new Size(123, 20);
             label1.TabIndex = 0;
-            label1.Text = "Alimento";
+            label1.Text = "Consultar usuario";
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             textBox1.Cursor = Cursors.IBeam;
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(337, 100);
+            textBox1.Location = new Point(333, 110);
             textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(250, 29);
+            textBox1.Size = new Size(244, 23);
             textBox1.TabIndex = 2;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(256, 103);
+            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(349, 78);
             label2.Name = "label2";
-            label2.Size = new Size(40, 21);
+            label2.Size = new Size(223, 20);
             label2.TabIndex = 3;
-            label2.Text = "Tipo";
+            label2.Text = "Número de Cédula de identidad";
             // 
-            // buttonEliminar
+            // button2
             // 
-            buttonEliminar.Font = new Font("Segoe UI", 12F);
-            buttonEliminar.Location = new Point(386, 172);
-            buttonEliminar.Margin = new Padding(3, 2, 3, 2);
-            buttonEliminar.Name = "buttonEliminar";
-            buttonEliminar.Size = new Size(88, 34);
-            buttonEliminar.TabIndex = 10;
-            buttonEliminar.Text = "Eliminar";
-            buttonEliminar.UseVisualStyleBackColor = true;
-            buttonEliminar.Click += button2_Click;
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            button2.Location = new Point(413, 268);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(82, 30);
+            button2.TabIndex = 10;
+            button2.Text = "Consultar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // FormAB_Eliminar
+            // FormGU_Consultar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
-            Controls.Add(buttonEliminar);
+            Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FormAB_Eliminar";
+            Name = "FormGU_Consultar";
             Text = "Administrador";
             ResumeLayout(false);
             PerformLayout();
@@ -98,6 +100,6 @@
         private Label label1;
         private TextBox textBox1;
         private Label label2;
-        private Button buttonEliminar;
+        private Button button2;
     }
 }

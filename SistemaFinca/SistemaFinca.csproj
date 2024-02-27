@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -19,7 +19,9 @@
 
   <ItemGroup>
     <Compile Update="Módulo Administración\Gestión de Usuario\GU_Actualizar.cs" />
-    <Compile Update="Módulo Administración\Gestión de Usuario\GU_RestablecerContraseña.cs" />
+    <Compile Update="Módulo Administración\Gestión de Usuario\GU_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Módulo Administración\Gestión de Usuario\GU_GenerarInforme.cs" />
     <Compile Update="Módulo Administración\Gestión de Usuario\GU_Eliminar.cs" />
     <Compile Update="Módulo Administración\Gestión de Usuario\GU_Registrar.cs" />
@@ -32,6 +34,12 @@
     <Compile Update="Módulo Clientes\Gestión Clientes\FormGestionClientes.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\C_Registrar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\FormGanadoDeCarne.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\Proceso de Faenamiento\GC_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\SubFormGC_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Consultar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Actualizar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Remover.cs" />
@@ -79,11 +87,11 @@
     <Compile Update="Módulo Ventas\Recordatorios y Alertas\FormRecordAlert.cs" />
     <Compile Update="Módulo Ventas\Ventas\FormVent.cs" />
     <Compile Update="Módulo Ventas\Ventas\VNotaDeVenta.cs" />
-    <Compile Update="Módulo Zonas de Pastoreo\Gestión Arriendo de áreas\FormGestArriAreas.cs" />
-    <Compile Update="Módulo Zonas de Pastoreo\Gestión Zonas de pastoreo\FormGestZonPast.cs" />
-    <Compile Update="Módulo Zonas de Pastoreo\Gestión Zonas de pastoreo\GZP_Registrar.cs" />
-    <Compile Update="Módulo Zonas de Pastoreo\Gestión Zonas de pastoreo\GZP_EmitirInformes.cs" />
-    <Compile Update="Módulo Zonas de Pastoreo\Seguimiento de Actividades\FormSeguimientoActividades.cs" />
+    <Compile Update="Módulo Zonas de Pastoreo\Arriendo\FormGestArriAreas.cs" />
+    <Compile Update="Módulo Zonas de Pastoreo\Registro Zonas Pastoreo\FormGestZonPast.cs" />
+    <Compile Update="Módulo Zonas de Pastoreo\Registro Zonas Pastoreo\GZP_Registrar.cs" />
+    <Compile Update="Módulo Zonas de Pastoreo\Registro Zonas Pastoreo\GZP_EmitirInformes.cs" />
+    <Compile Update="Módulo Zonas de Pastoreo\Riego\FormSeguimientoActividades.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

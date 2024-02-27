@@ -38,10 +38,11 @@
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
             listView1 = new ListView();
-            columnNombre = new ColumnHeader();
+            columnTipo = new ColumnHeader();
             columnCantidad = new ColumnHeader();
-            columnFechaVencimiento = new ColumnHeader();
+            columnFechaCaducidad = new ColumnHeader();
             label1 = new Label();
+            columnFechaRegistro = new ColumnHeader();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -166,7 +167,7 @@
             // listView1
             // 
             listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnNombre, columnCantidad, columnFechaVencimiento });
+            listView1.Columns.AddRange(new ColumnHeader[] { columnTipo, columnCantidad, columnFechaCaducidad, columnFechaRegistro });
             listView1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listView1.Location = new Point(41, 64);
             listView1.Margin = new Padding(3, 2, 3, 2);
@@ -176,32 +177,37 @@
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
             // 
-            // columnNombre
+            // columnTipo
             // 
-            columnNombre.Text = "Nombre";
-            columnNombre.Width = 150;
+            columnTipo.Text = "Tipo";
+            columnTipo.Width = 150;
             // 
             // columnCantidad
             // 
             columnCantidad.Text = "Cantidad";
             columnCantidad.Width = 150;
             // 
-            // columnFechaVencimiento
+            // columnFechaCaducidad
             // 
-            columnFechaVencimiento.Text = "Fecha de vencimiento";
-            columnFechaVencimiento.Width = 200;
+            columnFechaCaducidad.Text = "Fecha de caducidad";
+            columnFechaCaducidad.Width = 200;
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(332, 21);
+            label1.Location = new Point(397, 21);
             label1.Name = "label1";
-            label1.Size = new Size(231, 28);
+            label1.Size = new Size(127, 28);
             label1.TabIndex = 5;
-            label1.Text = "Alimentaria Bovina\r\n";
+            label1.Text = "Alimentos";
             label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // columnFechaRegistro
+            // 
+            columnFechaRegistro.Text = "Fecha de registro";
+            columnFechaRegistro.Width = 150;
             // 
             // FormAlimentariaBovina
             // 
@@ -231,8 +237,9 @@
         private Panel panelFormularioHijo;
         private Label label1;
         private ListView listView1;
-        private ColumnHeader columnNombre;
+        private ColumnHeader columnTipo;
         private ColumnHeader columnCantidad;
-        private ColumnHeader columnFechaVencimiento;
+        private ColumnHeader columnFechaCaducidad;
+        private ColumnHeader columnFechaRegistro;
     }
 }

@@ -36,6 +36,8 @@
             button2 = new Button();
             textBox3 = new TextBox();
             label4 = new Label();
+            label5 = new Label();
+            textBox4 = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -84,9 +86,9 @@
             label3.Font = new Font("Segoe UI", 12F);
             label3.Location = new Point(454, 106);
             label3.Name = "label3";
-            label3.Size = new Size(72, 21);
+            label3.Size = new Size(116, 21);
             label3.TabIndex = 5;
-            label3.Text = "Cantidad";
+            label3.Text = "Cantidad inicial";
             // 
             // button2
             // 
@@ -116,15 +118,37 @@
             label4.Font = new Font("Segoe UI", 12F);
             label4.Location = new Point(205, 166);
             label4.Name = "label4";
-            label4.Size = new Size(161, 21);
+            label4.Size = new Size(133, 21);
             label4.TabIndex = 12;
-            label4.Text = "Fecha de Vencimiento";
+            label4.Text = "Fecha de Registro";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.Location = new Point(455, 166);
+            label5.Name = "label5";
+            label5.Size = new Size(105, 21);
+            label5.TabIndex = 14;
+            label5.Text = "Stock mínimo";
+            // 
+            // textBox4
+            // 
+            textBox4.Cursor = Cursors.IBeam;
+            textBox4.Font = new Font("Segoe UI", 12F);
+            textBox4.Location = new Point(455, 189);
+            textBox4.Margin = new Padding(3, 2, 3, 2);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(244, 29);
+            textBox4.TabIndex = 13;
             // 
             // FormMB_Registrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 496);
+            Controls.Add(label5);
+            Controls.Add(textBox4);
             Controls.Add(label4);
             Controls.Add(textBox3);
             Controls.Add(button2);
@@ -151,5 +175,7 @@
         private Button button2;
         private TextBox textBox3;
         private Label label4;
+        private Label label5;
+        private TextBox textBox4;
     }
 }

@@ -30,8 +30,6 @@
         {
             label1 = new Label();
             button2 = new Button();
-            label4 = new Label();
-            textBox3 = new TextBox();
             label5 = new Label();
             textBox4 = new TextBox();
             label6 = new Label();
@@ -51,7 +49,7 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 12F);
-            button2.Location = new Point(365, 274);
+            button2.Location = new Point(365, 227);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Size = new Size(106, 44);
@@ -60,35 +58,15 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(167, 139);
-            label4.Name = "label4";
-            label4.Size = new Size(161, 21);
-            label4.TabIndex = 18;
-            label4.Text = "Fecha de Vencimiento";
-            // 
-            // textBox3
-            // 
-            textBox3.Cursor = Cursors.IBeam;
-            textBox3.Font = new Font("Segoe UI", 12F);
-            textBox3.Location = new Point(167, 162);
-            textBox3.Margin = new Padding(3, 2, 3, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(244, 29);
-            textBox3.TabIndex = 17;
-            // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
             label5.Location = new Point(415, 79);
             label5.Name = "label5";
-            label5.Size = new Size(72, 21);
+            label5.Size = new Size(118, 21);
             label5.TabIndex = 16;
-            label5.Text = "Cantidad";
+            label5.Text = "Nueva cantidad";
             // 
             // textBox4
             // 
@@ -125,8 +103,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 496);
-            Controls.Add(label4);
-            Controls.Add(textBox3);
             Controls.Add(label5);
             Controls.Add(textBox4);
             Controls.Add(label6);
@@ -145,8 +121,6 @@
 
         private Label label1;
         private Button button2;
-        private Label label4;
-        private TextBox textBox3;
         private Label label5;
         private TextBox textBox4;
         private Label label6;

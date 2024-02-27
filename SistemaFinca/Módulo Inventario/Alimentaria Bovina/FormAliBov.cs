@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormAlimentariaBovina: Form
+    public partial class FormAlimentariaBovina : Form
     {
         public FormAlimentariaBovina()
         {

@@ -40,7 +40,7 @@
             listView1 = new ListView();
             columnNombre = new ColumnHeader();
             columnCantidad = new ColumnHeader();
-            columnFechaVencimiento = new ColumnHeader();
+            columnFechaRegistro = new ColumnHeader();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
@@ -163,7 +163,7 @@
             // listView1
             // 
             listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnNombre, columnCantidad, columnFechaVencimiento });
+            listView1.Columns.AddRange(new ColumnHeader[] { columnNombre, columnCantidad, columnFechaRegistro });
             listView1.Font = new Font("Segoe UI", 12F);
             listView1.Location = new Point(47, 89);
             listView1.Name = "listView1";
@@ -182,21 +182,21 @@
             columnCantidad.Text = "Cantidad";
             columnCantidad.Width = 150;
             // 
-            // columnFechaVencimiento
+            // columnFechaRegistro
             // 
-            columnFechaVencimiento.Text = "Fecha de vencimiento";
-            columnFechaVencimiento.Width = 200;
+            columnFechaRegistro.Text = "Fecha de registro";
+            columnFechaRegistro.Width = 200;
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(308, 28);
+            label1.Location = new Point(428, 29);
             label1.Name = "label1";
-            label1.Size = new Size(278, 28);
+            label1.Size = new Size(130, 28);
             label1.TabIndex = 5;
-            label1.Text = "Medicamentos Bovinos\r\n";
+            label1.Text = "Medicinas";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // FormMedicamentosBovinos
@@ -228,6 +228,6 @@
         private ListView listView1;
         private ColumnHeader columnNombre;
         private ColumnHeader columnCantidad;
-        private ColumnHeader columnFechaVencimiento;
+        private ColumnHeader columnFechaRegistro;
     }
 }
