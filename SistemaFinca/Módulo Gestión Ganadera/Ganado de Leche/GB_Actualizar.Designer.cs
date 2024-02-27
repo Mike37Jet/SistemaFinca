@@ -89,11 +89,11 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(211, 67);
+            label3.Location = new Point(126, 62);
             label3.Name = "label3";
-            label3.Size = new Size(100, 21);
+            label3.Size = new Size(185, 21);
             label3.TabIndex = 2;
-            label3.Text = "Identificador:";
+            label3.Text = "Número de Identificación";
             label3.Click += label3_Click;
             // 
             // textBox1
