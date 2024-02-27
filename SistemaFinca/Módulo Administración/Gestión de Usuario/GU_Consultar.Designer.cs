@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca
 {
-    partial class FormGU_Eliminar
+    partial class FormGU_Consultar
     {
         /// <summary>
         /// Required designer variable.
@@ -41,9 +41,9 @@
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(397, 27);
             label1.Name = "label1";
-            label1.Size = new Size(115, 20);
+            label1.Size = new Size(123, 20);
             label1.TabIndex = 0;
-            label1.Text = "Eliminar usuario";
+            label1.Text = "Consultar usuario";
             // 
             // textBox1
             // 
@@ -60,7 +60,7 @@
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(347, 78);
+            label2.Location = new Point(349, 78);
             label2.Name = "label2";
             label2.Size = new Size(223, 20);
             label2.TabIndex = 3;
@@ -74,11 +74,11 @@
             button2.Name = "button2";
             button2.Size = new Size(82, 30);
             button2.TabIndex = 10;
-            button2.Text = "Eliminar";
+            button2.Text = "Consultar";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // FormGU_Eliminar
+            // FormGU_Consultar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -89,7 +89,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FormGU_Eliminar";
+            Name = "FormGU_Consultar";
             Text = "Administrador";
             ResumeLayout(false);
             PerformLayout();
