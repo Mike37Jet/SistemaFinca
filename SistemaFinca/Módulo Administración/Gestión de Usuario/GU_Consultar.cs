@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormGU_RestablecerContraseña : Form
+    public partial class FormGU_Consultar : Form
     {
-        public FormGU_RestablecerContraseña()
+        public FormGU_Consultar()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace SistemaFinca
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("La contraseña se ha actualizado exitosamente.", "Actualización Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("El usuario se ha eliminado exitosamente.", "Eliminación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
     }

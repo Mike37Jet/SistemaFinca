@@ -31,8 +31,6 @@
             label1 = new Label();
             textBox1 = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
-            label3 = new Label();
             buttonEliminar = new Button();
             SuspendLayout();
             // 
@@ -50,7 +48,7 @@
             // 
             textBox1.Cursor = Cursors.IBeam;
             textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(314, 77);
+            textBox1.Location = new Point(314, 93);
             textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(257, 29);
@@ -60,31 +58,11 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(211, 80);
+            label2.Location = new Point(211, 96);
             label2.Name = "label2";
             label2.Size = new Size(68, 21);
             label2.TabIndex = 3;
             label2.Text = "Nombre";
-            // 
-            // textBox2
-            // 
-            textBox2.Cursor = Cursors.IBeam;
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(314, 116);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(257, 29);
-            textBox2.TabIndex = 4;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(211, 121);
-            label3.Name = "label3";
-            label3.Size = new Size(72, 21);
-            label3.TabIndex = 5;
-            label3.Text = "Cantidad";
             // 
             // buttonEliminar
             // 
@@ -104,8 +82,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 496);
             Controls.Add(buttonEliminar);
-            Controls.Add(label3);
-            Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label1);
@@ -122,8 +98,6 @@
         private Label label1;
         private TextBox textBox1;
         private Label label2;
-        private TextBox textBox2;
-        private Label label3;
         private Button buttonEliminar;
     }
 }

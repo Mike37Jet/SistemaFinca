@@ -41,6 +41,8 @@
             columnNombre = new ColumnHeader();
             columnCantidad = new ColumnHeader();
             columnEstado = new ColumnHeader();
+            columnTipo = new ColumnHeader();
+            columnFechaRegistro = new ColumnHeader();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
@@ -163,7 +165,7 @@
             // listView1
             // 
             listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnNombre, columnCantidad, columnEstado });
+            listView1.Columns.AddRange(new ColumnHeader[] { columnNombre, columnCantidad, columnEstado, columnTipo, columnFechaRegistro });
             listView1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listView1.Location = new Point(47, 94);
             listView1.Name = "listView1";
@@ -187,16 +189,26 @@
             columnEstado.Text = "Estado";
             columnEstado.Width = 200;
             // 
+            // columnTipo
+            // 
+            columnTipo.Text = "Tipo";
+            columnTipo.Width = 120;
+            // 
+            // columnFechaRegistro
+            // 
+            columnFechaRegistro.Text = "Fecha de registro";
+            columnFechaRegistro.Width = 150;
+            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(226, 28);
+            label1.Location = new Point(381, 30);
             label1.Name = "label1";
-            label1.Size = new Size(442, 28);
+            label1.Size = new Size(171, 28);
             label1.TabIndex = 5;
-            label1.Text = "Herramientas Agrícolas y Ganaderas";
+            label1.Text = "Herramientas";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // FormHerramientasAgricolasGanaderas
@@ -229,5 +241,7 @@
         private ColumnHeader columnNombre;
         private ColumnHeader columnCantidad;
         private ColumnHeader columnEstado;
+        private ColumnHeader columnTipo;
+        private ColumnHeader columnFechaRegistro;
     }
 }
