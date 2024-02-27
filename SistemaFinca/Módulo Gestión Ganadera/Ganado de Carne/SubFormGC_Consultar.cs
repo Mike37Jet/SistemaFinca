@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
 {
-    public partial class SubFormGB_Actualizar : Form
+    public partial class SubFormGC_Consultar : Form
     {
-        public SubFormGB_Actualizar()
+        public SubFormGC_Consultar()
         {
             InitializeComponent();
         }
@@ -23,17 +23,12 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
             MessageBox.Show("Los datos del bovino se han actualizado exitosamente.", "Actualización Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

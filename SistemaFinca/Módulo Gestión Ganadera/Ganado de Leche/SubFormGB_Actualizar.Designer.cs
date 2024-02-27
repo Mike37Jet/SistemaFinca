@@ -39,7 +39,7 @@
             radioButton1 = new RadioButton();
             label1 = new Label();
             button1 = new Button();
-            button2 = new Button();
+            radioButton2 = new RadioButton();
             SuspendLayout();
             // 
             // label5
@@ -137,7 +137,7 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "Ganado de Carne";
             radioButton1.UseVisualStyleBackColor = true;
-          
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // label1
             // 
@@ -161,23 +161,24 @@
             button1.Text = "Nueva foto del Bovino";
             button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // radioButton2
             // 
-            button2.Font = new Font("Segoe UI", 12F);
-            button2.Location = new Point(504, 259);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(168, 34);
-            button2.TabIndex = 38;
-            button2.Text = "Foto de la cría";
-            button2.UseVisualStyleBackColor = true;
+            radioButton2.AutoSize = true;
+            radioButton2.Font = new Font("Segoe UI", 12F);
+            radioButton2.Location = new Point(136, 274);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(119, 25);
+            radioButton2.TabIndex = 39;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Ganado Seco";
+            radioButton2.UseVisualStyleBackColor = true;
             // 
             // SubFormGB_Actualizar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
-            Controls.Add(button2);
+            Controls.Add(radioButton2);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(label7);
@@ -209,6 +210,6 @@
         private RadioButton radioButton1;
         private Label label1;
         private Button button1;
-        private Button button2;
+        private RadioButton radioButton2;
     }
 }

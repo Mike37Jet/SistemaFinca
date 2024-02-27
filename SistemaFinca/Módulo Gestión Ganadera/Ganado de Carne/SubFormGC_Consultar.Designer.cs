@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
 {
-    partial class SubFormGB_Consultar
+    partial class SubFormGC_Consultar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubFormGB_Consultar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubFormGC_Consultar));
             panel1 = new Panel();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
@@ -181,22 +181,22 @@
             label5.Font = new Font("Segoe UI", 12F);
             label5.Location = new Point(631, 208);
             label5.Name = "label5";
-            label5.Size = new Size(80, 21);
+            label5.Size = new Size(77, 21);
             label5.TabIndex = 7;
-            label5.Text = "Categoría:";
+            label5.Text = "Categoría";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F);
-            label6.Location = new Point(636, 248);
+            label6.Location = new Point(636, 253);
             label6.Name = "label6";
-            label6.Size = new Size(68, 21);
+            label6.Size = new Size(43, 21);
             label6.TabIndex = 8;
-            label6.Text = "Lechera ";
+            label6.Text = "Seco";
             label6.Click += label6_Click;
             // 
-            // SubFormGB_Consultar
+            // SubFormGC_Consultar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -211,7 +211,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "SubFormGB_Consultar";
+            Name = "SubFormGC_Consultar";
             Text = "SubFormActualizar";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
