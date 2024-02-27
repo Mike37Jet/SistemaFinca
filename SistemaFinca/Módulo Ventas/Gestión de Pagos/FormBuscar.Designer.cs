@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca
 {
-    partial class FormVentas
+    partial class FormBuscar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             tableLayoutPanel2 = new TableLayoutPanel();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
+            panelHijoPagos = new Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            button1 = new Button();
             buttonBuscarCliente = new Button();
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
             label18 = new Label();
-            tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanelContrato = new TableLayoutPanel();
+            buttonRegresar = new Button();
             panelFormularioHijo.SuspendLayout();
+            panelHijoPagos.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -54,6 +58,32 @@
             tableLayoutPanel2.Size = new Size(200, 100);
             tableLayoutPanel2.TabIndex = 0;
             // 
+            // panelFormularioHijo
+            // 
+            panelFormularioHijo.AutoScroll = true;
+            panelFormularioHijo.Controls.Add(panelHijoPagos);
+            panelFormularioHijo.Dock = DockStyle.Fill;
+            panelFormularioHijo.Location = new Point(0, 0);
+            panelFormularioHijo.Margin = new Padding(3, 2, 3, 2);
+            panelFormularioHijo.Name = "panelFormularioHijo";
+            panelFormularioHijo.Size = new Size(895, 541);
+            panelFormularioHijo.TabIndex = 8;
+            panelFormularioHijo.Paint += panelFormularioHijo_Paint;
+            // 
+            // panelHijoPagos
+            // 
+            panelHijoPagos.Controls.Add(tableLayoutPanel1);
+            panelHijoPagos.Controls.Add(buttonBuscarCliente);
+            panelHijoPagos.Controls.Add(label2);
+            panelHijoPagos.Controls.Add(textBox1);
+            panelHijoPagos.Controls.Add(label1);
+            panelHijoPagos.Controls.Add(label18);
+            panelHijoPagos.Dock = DockStyle.Fill;
+            panelHijoPagos.Location = new Point(0, 0);
+            panelHijoPagos.Name = "panelHijoPagos";
+            panelHijoPagos.Size = new Size(895, 541);
+            panelHijoPagos.TabIndex = 45;
+            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 6;
@@ -63,7 +93,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
-            tableLayoutPanel1.Controls.Add(buttonRegresar, 5, 0);
+            tableLayoutPanel1.Controls.Add(button1, 5, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
             tableLayoutPanel1.Location = new Point(0, 491);
             tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
@@ -71,112 +101,127 @@
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Size = new Size(895, 50);
-            tableLayoutPanel1.TabIndex = 7;
+            tableLayoutPanel1.TabIndex = 49;
             // 
-            // buttonRegresar
+            // button1
             // 
-            buttonRegresar.Dock = DockStyle.Fill;
-            buttonRegresar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonRegresar.Location = new Point(680, 2);
-            buttonRegresar.Margin = new Padding(3, 2, 3, 2);
-            buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(212, 46);
-            buttonRegresar.TabIndex = 5;
-            buttonRegresar.Text = "Regresar";
-            buttonRegresar.UseVisualStyleBackColor = true;
-            buttonRegresar.Click += buttonRegresar_Click;
-            // 
-            // panelFormularioHijo
-            // 
-            panelFormularioHijo.AutoScroll = true;
-            panelFormularioHijo.Controls.Add(buttonBuscarCliente);
-            panelFormularioHijo.Controls.Add(label2);
-            panelFormularioHijo.Controls.Add(textBox1);
-            panelFormularioHijo.Controls.Add(label1);
-            panelFormularioHijo.Controls.Add(label18);
-            panelFormularioHijo.Dock = DockStyle.Fill;
-            panelFormularioHijo.Location = new Point(0, 0);
-            panelFormularioHijo.Margin = new Padding(3, 2, 3, 2);
-            panelFormularioHijo.Name = "panelFormularioHijo";
-            panelFormularioHijo.Size = new Size(895, 491);
-            panelFormularioHijo.TabIndex = 8;
-            panelFormularioHijo.Paint += panelFormularioHijo_Paint;
+            button1.Dock = DockStyle.Fill;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(680, 2);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(212, 46);
+            button1.TabIndex = 5;
+            button1.Text = "Regresar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // buttonBuscarCliente
             // 
             buttonBuscarCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonBuscarCliente.Location = new Point(402, 230);
+            buttonBuscarCliente.Location = new Point(399, 269);
             buttonBuscarCliente.Name = "buttonBuscarCliente";
             buttonBuscarCliente.Size = new Size(97, 35);
-            buttonBuscarCliente.TabIndex = 38;
+            buttonBuscarCliente.TabIndex = 48;
             buttonBuscarCliente.Text = "Buscar";
             buttonBuscarCliente.UseVisualStyleBackColor = true;
-            buttonBuscarCliente.Click += buttonBuscarCliente_Click;
+            buttonBuscarCliente.Click += buttonBuscarCliente_Click_1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(284, 163);
+            label2.Location = new Point(284, 202);
             label2.Name = "label2";
             label2.Size = new Size(21, 15);
-            label2.TabIndex = 37;
+            label2.TabIndex = 47;
             label2.Text = "CI:";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(311, 155);
+            textBox1.Location = new Point(311, 194);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(272, 29);
-            textBox1.TabIndex = 36;
+            textBox1.TabIndex = 46;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(56, 85);
+            label1.Location = new Point(196, 124);
             label1.Name = "label1";
-            label1.Size = new Size(783, 21);
-            label1.TabIndex = 35;
-            label1.Text = "Buscar al cliente interesado en emitir una nota de venta con el fin de verificar la existencia de un contrato previo.";
-            label1.Click += label1_Click;
+            label1.Size = new Size(503, 21);
+            label1.TabIndex = 45;
+            label1.Text = "Buscar al cliente interesado en completar el pago de la factura de venta.";
             // 
             // label18
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(344, 23);
+            label18.Location = new Point(344, 62);
             label18.Name = "label18";
             label18.Size = new Size(207, 32);
-            label18.TabIndex = 34;
+            label18.TabIndex = 44;
             label18.Text = "Buscar Cliente";
             // 
-            // FormVentas
+            // tableLayoutPanelContrato
+            // 
+            tableLayoutPanelContrato.ColumnCount = 6;
+            tableLayoutPanelContrato.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
+            tableLayoutPanelContrato.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
+            tableLayoutPanelContrato.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
+            tableLayoutPanelContrato.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
+            tableLayoutPanelContrato.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
+            tableLayoutPanelContrato.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
+            tableLayoutPanelContrato.Dock = DockStyle.Bottom;
+            tableLayoutPanelContrato.Location = new Point(0, 0);
+            tableLayoutPanelContrato.Margin = new Padding(3, 2, 3, 2);
+            tableLayoutPanelContrato.Name = "tableLayoutPanelContrato";
+            tableLayoutPanelContrato.RowCount = 1;
+            tableLayoutPanelContrato.Size = new Size(200, 100);
+            tableLayoutPanelContrato.TabIndex = 0;
+            // 
+            // buttonRegresar
+            // 
+            buttonRegresar.Dock = DockStyle.Fill;
+            buttonRegresar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonRegresar.Location = new Point(153, 2);
+            buttonRegresar.Margin = new Padding(3, 2, 3, 2);
+            buttonRegresar.Name = "buttonRegresar";
+            buttonRegresar.Size = new Size(44, 96);
+            buttonRegresar.TabIndex = 5;
+            buttonRegresar.Text = "Regresar";
+            buttonRegresar.UseVisualStyleBackColor = true;
+            // 
+            // FormBuscar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
             Controls.Add(panelFormularioHijo);
-            Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FormVentas";
+            Name = "FormBuscar";
             Text = "Inventario";
-            tableLayoutPanel1.ResumeLayout(false);
             panelFormularioHijo.ResumeLayout(false);
-            panelFormularioHijo.PerformLayout();
+            panelHijoPagos.ResumeLayout(false);
+            panelHijoPagos.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
         private TableLayoutPanel tableLayoutPanel2;
-        private TableLayoutPanel tableLayoutPanel1;
         private Panel panelFormularioHijo;
-        private Label label18;
-        private Label label1;
-        private Button buttonRegresar;
+        private Panel panelHijoPagos;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Button button1;
         private Button buttonBuscarCliente;
         private Label label2;
         private TextBox textBox1;
+        private Label label1;
+        private Label label18;
+        private TableLayoutPanel tableLayoutPanelContrato;
+        private Button buttonRegresar;
     }
 }

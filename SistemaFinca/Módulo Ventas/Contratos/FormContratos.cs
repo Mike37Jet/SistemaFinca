@@ -38,10 +38,7 @@ namespace SistemaFinca
 
 
 
-        public void ocultarPanel()
-        {
-            tableLayoutPanelContrato.Visible = false;
-        }
+   
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
@@ -56,22 +53,14 @@ namespace SistemaFinca
             }
         }
 
-        private void buttonActualizar_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void panelFormularioHijo_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
+          
         private void buttonBuscarCliente_Click(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormVContratos());

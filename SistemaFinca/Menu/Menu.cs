@@ -291,7 +291,7 @@ namespace SistemaFinca
 
         private void buttonGestionPagos_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormGestionPagos());
+            abrirFormulariosHijos(new FormBuscar());
         }
 
         private void buttonGesZonPast_Click(object sender, EventArgs e)

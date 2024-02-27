@@ -50,7 +50,7 @@
             buttonHerrAgrGan = new Button();
             buttonInventario = new Button();
             subPanelVenta = new Panel();
-            buttonAlertas = new Button();
+            buttonDeudores = new Button();
             buttonGestionPagos = new Button();
             buttonInformeAnalisis = new Button();
             buttonNotaVentas = new Button();
@@ -264,7 +264,7 @@
             buttonGestionArriendo.Name = "buttonGestionArriendo";
             buttonGestionArriendo.Padding = new Padding(18, 0, 0, 0);
             buttonGestionArriendo.Size = new Size(252, 30);
-            buttonGestionArriendo.TabIndex = 23;
+            buttonGestionArriendo.TabIndex = 30;
             buttonGestionArriendo.Text = "Gestión de Arriendo de Áreas";
             buttonGestionArriendo.TextAlign = ContentAlignment.MiddleLeft;
             buttonGestionArriendo.UseVisualStyleBackColor = true;
@@ -453,9 +453,9 @@
             // subPanelVenta
             // 
             subPanelVenta.BackColor = Color.FromArgb(25, 25, 25);
-            subPanelVenta.Controls.Add(buttonAlertas);
-            subPanelVenta.Controls.Add(buttonGestionPagos);
+            subPanelVenta.Controls.Add(buttonDeudores);
             subPanelVenta.Controls.Add(buttonInformeAnalisis);
+            subPanelVenta.Controls.Add(buttonGestionPagos);
             subPanelVenta.Controls.Add(buttonNotaVentas);
             subPanelVenta.Controls.Add(buttonContrato);
             subPanelVenta.Dock = DockStyle.Top;
@@ -465,25 +465,25 @@
             subPanelVenta.Size = new Size(252, 152);
             subPanelVenta.TabIndex = 9;
             // 
-            // buttonAlertas
+            // buttonDeudores
             // 
-            buttonAlertas.Dock = DockStyle.Top;
-            buttonAlertas.FlatAppearance.BorderSize = 0;
-            buttonAlertas.FlatAppearance.MouseDownBackColor = Color.Gray;
-            buttonAlertas.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
-            buttonAlertas.FlatStyle = FlatStyle.Flat;
-            buttonAlertas.Font = new Font("Arial", 10.2F);
-            buttonAlertas.ForeColor = Color.Silver;
-            buttonAlertas.Location = new Point(0, 120);
-            buttonAlertas.Margin = new Padding(3, 2, 3, 2);
-            buttonAlertas.Name = "buttonAlertas";
-            buttonAlertas.Padding = new Padding(18, 0, 0, 0);
-            buttonAlertas.Size = new Size(252, 30);
-            buttonAlertas.TabIndex = 13;
-            buttonAlertas.Text = "Recordatorios y Alertas";
-            buttonAlertas.TextAlign = ContentAlignment.MiddleLeft;
-            buttonAlertas.UseVisualStyleBackColor = true;
-            buttonAlertas.Click += buttonAlertas_Click;
+            buttonDeudores.Dock = DockStyle.Top;
+            buttonDeudores.FlatAppearance.BorderSize = 0;
+            buttonDeudores.FlatAppearance.MouseDownBackColor = Color.Gray;
+            buttonDeudores.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            buttonDeudores.FlatStyle = FlatStyle.Flat;
+            buttonDeudores.Font = new Font("Arial", 10.2F);
+            buttonDeudores.ForeColor = Color.Silver;
+            buttonDeudores.Location = new Point(0, 120);
+            buttonDeudores.Margin = new Padding(3, 2, 3, 2);
+            buttonDeudores.Name = "buttonDeudores";
+            buttonDeudores.Padding = new Padding(18, 0, 0, 0);
+            buttonDeudores.Size = new Size(252, 30);
+            buttonDeudores.TabIndex = 13;
+            buttonDeudores.Text = "Clientes Morosos";
+            buttonDeudores.TextAlign = ContentAlignment.MiddleLeft;
+            buttonDeudores.UseVisualStyleBackColor = true;
+            buttonDeudores.Click += buttonAlertas_Click;
             // 
             // buttonGestionPagos
             // 
@@ -520,7 +520,7 @@
             buttonInformeAnalisis.Padding = new Padding(18, 0, 0, 0);
             buttonInformeAnalisis.Size = new Size(252, 30);
             buttonInformeAnalisis.TabIndex = 11;
-            buttonInformeAnalisis.Text = "Informes y Análisis";
+            buttonInformeAnalisis.Text = "Reportes y Análisis";
             buttonInformeAnalisis.TextAlign = ContentAlignment.MiddleLeft;
             buttonInformeAnalisis.UseVisualStyleBackColor = true;
             buttonInformeAnalisis.Click += buttonInformeAnalisis_Click;
@@ -1037,7 +1037,7 @@
         private Button buttonGanadoDeLeche;
         private Button buttonGestionUsuario;
         private Button buttonGestionPagos;
-        private Button buttonAlertas;
+        private Button buttonDeudores;
         private Button buttonNotaVentas;
         private Button buttonGestionArriendo;
         private Button buttonClientes;
