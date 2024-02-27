@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
 {
-    public partial class SubFormGB_Consultar : Form
+    public partial class SubFormGC_Consultar : Form
     {
-        public SubFormGB_Consultar()
+        public SubFormGC_Consultar()
         {
             InitializeComponent();
         }

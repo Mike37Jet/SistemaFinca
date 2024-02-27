@@ -32,6 +32,12 @@
     <Compile Update="Módulo Clientes\Gestión Clientes\FormGestionClientes.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\C_Registrar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\FormGanadoDeCarne.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\Proceso de Faenamiento\GC_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\SubFormGC_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Consultar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Actualizar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Remover.cs" />

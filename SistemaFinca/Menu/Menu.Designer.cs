@@ -648,7 +648,7 @@
             buttonGanadoCarne.Padding = new Padding(18, 0, 0, 0);
             buttonGanadoCarne.Size = new Size(252, 30);
             buttonGanadoCarne.TabIndex = 8;
-            buttonGanadoCarne.Text = "Ganado de Carne";
+            buttonGanadoCarne.Text = "Ganado seco";
             buttonGanadoCarne.TextAlign = ContentAlignment.MiddleLeft;
             buttonGanadoCarne.UseVisualStyleBackColor = true;
             buttonGanadoCarne.Click += buttonGanadoCarne_Click;
@@ -700,7 +700,7 @@
             buttonProduccionDeLeche.Padding = new Padding(44, 0, 0, 0);
             buttonProduccionDeLeche.Size = new Size(252, 30);
             buttonProduccionDeLeche.TabIndex = 7;
-            buttonProduccionDeLeche.Text = "Producción de leche";
+            buttonProduccionDeLeche.Text = "Producción lechero";
             buttonProduccionDeLeche.TextAlign = ContentAlignment.MiddleLeft;
             buttonProduccionDeLeche.UseVisualStyleBackColor = true;
             buttonProduccionDeLeche.Click += buttonProduccionDeLeche_Click;
@@ -720,7 +720,7 @@
             buttonGanadoDeLeche.Padding = new Padding(18, 0, 0, 0);
             buttonGanadoDeLeche.Size = new Size(252, 30);
             buttonGanadoDeLeche.TabIndex = 5;
-            buttonGanadoDeLeche.Text = "Ganado de Leche";
+            buttonGanadoDeLeche.Text = "Ganado de leche";
             buttonGanadoDeLeche.TextAlign = ContentAlignment.MiddleLeft;
             buttonGanadoDeLeche.UseVisualStyleBackColor = true;
             buttonGanadoDeLeche.Click += buttonGanadoBovino_Click;
@@ -742,7 +742,7 @@
             buttonGestionGanadera.Padding = new Padding(4, 0, 0, 0);
             buttonGestionGanadera.Size = new Size(252, 50);
             buttonGestionGanadera.TabIndex = 4;
-            buttonGestionGanadera.Text = "Gestión Ganadera";
+            buttonGestionGanadera.Text = "Reses";
             buttonGestionGanadera.TextAlign = ContentAlignment.MiddleLeft;
             buttonGestionGanadera.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonGestionGanadera.UseVisualStyleBackColor = true;
