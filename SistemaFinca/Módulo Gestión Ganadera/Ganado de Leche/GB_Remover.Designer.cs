@@ -32,27 +32,23 @@
             textBox1 = new TextBox();
             label2 = new Label();
             buttonGuardar = new Button();
-            label3 = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton3 = new RadioButton();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(377, 30);
+            label1.Location = new Point(366, 9);
             label1.Name = "label1";
-            label1.Size = new Size(102, 21);
+            label1.Size = new Size(96, 21);
             label1.TabIndex = 0;
-            label1.Text = "Remover Res";
+            label1.Text = "Eliminar Res";
             // 
             // textBox1
             // 
             textBox1.Cursor = Cursors.IBeam;
             textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(192, 111);
+            textBox1.Location = new Point(295, 133);
             textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(244, 29);
@@ -62,7 +58,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(192, 88);
+            label2.Location = new Point(326, 100);
             label2.Name = "label2";
             label2.Size = new Size(185, 21);
             label2.TabIndex = 3;
@@ -72,7 +68,7 @@
             // buttonGuardar
             // 
             buttonGuardar.Font = new Font("Segoe UI", 12F);
-            buttonGuardar.Location = new Point(395, 312);
+            buttonGuardar.Location = new Point(377, 304);
             buttonGuardar.Margin = new Padding(3, 2, 3, 2);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(91, 42);
@@ -81,64 +77,11 @@
             buttonGuardar.UseVisualStyleBackColor = true;
             buttonGuardar.Click += button2_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(192, 175);
-            label3.Name = "label3";
-            label3.Size = new Size(59, 21);
-            label3.TabIndex = 21;
-            label3.Text = "Motivo";
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Segoe UI", 12F);
-            radioButton1.Location = new Point(192, 200);
-            radioButton1.Margin = new Padding(3, 2, 3, 2);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(119, 25);
-            radioButton1.TabIndex = 22;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Fallecimiento";
-            radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Segoe UI", 12F);
-            radioButton2.Location = new Point(192, 223);
-            radioButton2.Margin = new Padding(3, 2, 3, 2);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(117, 25);
-            radioButton2.TabIndex = 23;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Faenamiento";
-            radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            radioButton3.AutoSize = true;
-            radioButton3.Font = new Font("Segoe UI", 12F);
-            radioButton3.Location = new Point(192, 246);
-            radioButton3.Margin = new Padding(3, 2, 3, 2);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(67, 25);
-            radioButton3.TabIndex = 24;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Venta";
-            radioButton3.UseVisualStyleBackColor = true;
-            // 
             // FormGB_Remover
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
-            Controls.Add(radioButton3);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(label3);
             Controls.Add(buttonGuardar);
             Controls.Add(label2);
             Controls.Add(textBox1);
@@ -157,9 +100,5 @@
         private TextBox textBox1;
         private Label label2;
         private Button buttonGuardar;
-        private Label label3;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private RadioButton radioButton3;
     }
 }
