@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaFinca.Módulo_Zonas_de_Pastoreo.Fumigación;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -306,7 +307,7 @@ namespace SistemaFinca
 
         private void buttonSeguimientoActividad_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormSeguimientoActividades());
+            abrirFormulariosHijos(new GDZP_Fumigación());
         }
 
         private void buttonProcesoFaenamiento_Click(object sender, EventArgs e)

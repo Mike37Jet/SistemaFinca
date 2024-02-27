@@ -110,8 +110,4 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Módulo Zonas de Pastoreo\Fumigación\" />
-  </ItemGroup>
-
 </Project>
