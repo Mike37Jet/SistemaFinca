@@ -32,8 +32,6 @@
             panel1 = new Panel();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
             label3 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
@@ -51,8 +49,6 @@
             // 
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(checkBox2);
-            panel1.Controls.Add(checkBox1);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -79,30 +75,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(156, 29);
             textBox1.TabIndex = 4;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Font = new Font("Segoe UI", 12F);
-            checkBox2.Location = new Point(644, 37);
-            checkBox2.Margin = new Padding(3, 2, 3, 2);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(88, 25);
-            checkBox2.TabIndex = 3;
-            checkBox2.Text = "Enfermo";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Segoe UI", 12F);
-            checkBox1.Location = new Point(644, 13);
-            checkBox1.Margin = new Padding(3, 2, 3, 2);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(72, 25);
-            checkBox1.TabIndex = 2;
-            checkBox1.Text = "Activo";
-            checkBox1.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -141,9 +113,10 @@
             label2.Font = new Font("Segoe UI", 12F);
             label2.Location = new Point(33, 101);
             label2.Name = "label2";
-            label2.Size = new Size(92, 21);
+            label2.Size = new Size(107, 21);
             label2.TabIndex = 1;
-            label2.Text = "Foto animal";
+            label2.Text = "Foto de la Res";
+            label2.Click += label2_Click;
             // 
             // label4
             // 
@@ -226,8 +199,6 @@
         private Label label1;
         private TextBox textBox2;
         private TextBox textBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
         private Label label3;
         private PictureBox pictureBox1;
         private Label label2;
