@@ -18,7 +18,7 @@ namespace SistemaFinca
         public FormGanadoDeCarne()
         {
             InitializeComponent();
-            
+
         }
         private Form formularioActivo = null;
 
@@ -79,6 +79,11 @@ namespace SistemaFinca
         }
 
         private void pictureGIF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
