@@ -32,5 +32,10 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
         {
 
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
