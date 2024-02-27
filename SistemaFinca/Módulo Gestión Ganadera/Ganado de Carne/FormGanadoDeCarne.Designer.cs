@@ -177,10 +177,11 @@
             listView1.TabIndex = 8;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // columnNumIdent
             // 
-            columnNumIdent.Text = "Número Identificador";
+            columnNumIdent.Text = "Número de identificación";
             columnNumIdent.Width = 200;
             // 
             // columnRaza
@@ -195,7 +196,7 @@
             // 
             // columnCategoria
             // 
-            columnCategoria.Text = "Categoría";
+            columnCategoria.Text = "Tipo";
             columnCategoria.Width = 80;
             // 
             // label1

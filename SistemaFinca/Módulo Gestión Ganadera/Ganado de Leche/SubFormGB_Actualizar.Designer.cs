@@ -158,14 +158,14 @@
             button1.Name = "button1";
             button1.Size = new Size(194, 34);
             button1.TabIndex = 37;
-            button1.Text = "Nueva foto del Bovino";
+            button1.Text = "Nueva foto de la Res";
             button1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("Segoe UI", 12F);
-            radioButton2.Location = new Point(136, 274);
+            radioButton2.Location = new Point(136, 260);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(119, 25);
             radioButton2.TabIndex = 39;
