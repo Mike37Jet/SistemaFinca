@@ -23,6 +23,6 @@ namespace SistemaFinca
         {
             MessageBox.Show("El alimento se ha consultado exitosamente.", "Consulta Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    
+
     }
 }

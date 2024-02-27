@@ -34,7 +34,7 @@ namespace SistemaFinca
             formularioHijo.Show();
         }
 
-        
+
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {

@@ -37,6 +37,8 @@
             button2 = new Button();
             label2 = new Label();
             textBox1 = new TextBox();
+            radioButton3 = new RadioButton();
+            radioButton4 = new RadioButton();
             SuspendLayout();
             // 
             // label1
@@ -63,17 +65,17 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(243, 132);
+            label3.Location = new Point(211, 130);
             label3.Name = "label3";
-            label3.Size = new Size(72, 21);
+            label3.Size = new Size(118, 21);
             label3.TabIndex = 5;
-            label3.Text = "Cantidad";
+            label3.Text = "Nueva cantidad";
             // 
             // radioButton1
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Segoe UI", 12F);
-            radioButton1.Location = new Point(294, 207);
+            radioButton1.Location = new Point(311, 218);
             radioButton1.Margin = new Padding(3, 2, 3, 2);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(74, 25);
@@ -86,17 +88,17 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(395, 185);
+            label4.Location = new Point(395, 183);
             label4.Name = "label4";
-            label4.Size = new Size(56, 21);
+            label4.Size = new Size(106, 21);
             label4.TabIndex = 7;
-            label4.Text = "Estado";
+            label4.Text = "Nuevo estado";
             // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("Segoe UI", 12F);
-            radioButton2.Location = new Point(294, 230);
+            radioButton2.Location = new Point(311, 241);
             radioButton2.Margin = new Padding(3, 2, 3, 2);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(72, 25);
@@ -137,11 +139,39 @@
             textBox1.Size = new Size(244, 29);
             textBox1.TabIndex = 2;
             // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Font = new Font("Segoe UI", 12F);
+            radioButton3.Location = new Point(499, 241);
+            radioButton3.Margin = new Padding(3, 2, 3, 2);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(91, 25);
+            radioButton3.TabIndex = 12;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "Obsoleto";
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            radioButton4.AutoSize = true;
+            radioButton4.Font = new Font("Segoe UI", 12F);
+            radioButton4.Location = new Point(499, 218);
+            radioButton4.Margin = new Padding(3, 2, 3, 2);
+            radioButton4.Name = "radioButton4";
+            radioButton4.Size = new Size(109, 25);
+            radioButton4.TabIndex = 11;
+            radioButton4.TabStop = true;
+            radioButton4.Text = "Desgastado";
+            radioButton4.UseVisualStyleBackColor = true;
+            // 
             // FormIP_Actualizar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 496);
+            Controls.Add(radioButton3);
+            Controls.Add(radioButton4);
             Controls.Add(button2);
             Controls.Add(radioButton2);
             Controls.Add(label4);
@@ -170,5 +200,7 @@
         private Button button2;
         private Label label2;
         private TextBox textBox1;
+        private RadioButton radioButton3;
+        private RadioButton radioButton4;
     }
 }

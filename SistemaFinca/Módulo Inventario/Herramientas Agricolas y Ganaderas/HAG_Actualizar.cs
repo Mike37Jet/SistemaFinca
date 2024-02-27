@@ -18,11 +18,11 @@ namespace SistemaFinca
         }
 
 
-  
+
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("La herramienta se ha actualizado exitosamente.", "Actualización Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    
+
     }
 }

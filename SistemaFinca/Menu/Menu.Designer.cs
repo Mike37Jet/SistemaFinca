@@ -362,7 +362,7 @@
             buttonAliBov.Padding = new Padding(18, 0, 0, 0);
             buttonAliBov.Size = new Size(252, 30);
             buttonAliBov.TabIndex = 18;
-            buttonAliBov.Text = "Alimentaria Bovina";
+            buttonAliBov.Text = "Alimentos";
             buttonAliBov.TextAlign = ContentAlignment.MiddleLeft;
             buttonAliBov.UseVisualStyleBackColor = true;
             buttonAliBov.Click += buttonAliBov_Click;
@@ -382,7 +382,7 @@
             buttonMedBov.Padding = new Padding(18, 0, 0, 0);
             buttonMedBov.Size = new Size(252, 30);
             buttonMedBov.TabIndex = 17;
-            buttonMedBov.Text = "Medicamentos Bovinos";
+            buttonMedBov.Text = "Medicinas";
             buttonMedBov.TextAlign = ContentAlignment.MiddleLeft;
             buttonMedBov.UseVisualStyleBackColor = true;
             buttonMedBov.Click += buttonMedBov_Click;
@@ -402,7 +402,7 @@
             buttonIndPers.Padding = new Padding(18, 0, 0, 0);
             buttonIndPers.Size = new Size(252, 30);
             buttonIndPers.TabIndex = 16;
-            buttonIndPers.Text = "Indumentaria del Personal";
+            buttonIndPers.Text = "Indumentarias";
             buttonIndPers.TextAlign = ContentAlignment.MiddleLeft;
             buttonIndPers.UseVisualStyleBackColor = true;
             buttonIndPers.Click += buttonIndPers_Click;
@@ -422,7 +422,7 @@
             buttonHerrAgrGan.Padding = new Padding(18, 0, 0, 0);
             buttonHerrAgrGan.Size = new Size(252, 30);
             buttonHerrAgrGan.TabIndex = 15;
-            buttonHerrAgrGan.Text = "Herramientas Agrícolas y Ganaderas";
+            buttonHerrAgrGan.Text = "Herramientas";
             buttonHerrAgrGan.TextAlign = ContentAlignment.MiddleLeft;
             buttonHerrAgrGan.UseVisualStyleBackColor = true;
             buttonHerrAgrGan.Click += buttonHerrAgrGan_Click;

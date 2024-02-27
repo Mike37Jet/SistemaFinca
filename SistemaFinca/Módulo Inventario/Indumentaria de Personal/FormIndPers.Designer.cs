@@ -42,6 +42,7 @@
             columnCantidad = new ColumnHeader();
             columnEstado = new ColumnHeader();
             label1 = new Label();
+            columnFechaRegistro = new ColumnHeader();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -163,7 +164,7 @@
             // listView1
             // 
             listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnNombre, columnCantidad, columnEstado });
+            listView1.Columns.AddRange(new ColumnHeader[] { columnNombre, columnCantidad, columnEstado, columnFechaRegistro });
             listView1.Font = new Font("Segoe UI", 12F);
             listView1.Location = new Point(47, 86);
             listView1.Name = "listView1";
@@ -199,6 +200,11 @@
             label1.Text = "Indumentaria del Personal";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
+            // columnFechaRegistro
+            // 
+            columnFechaRegistro.Text = "Fecha de registro";
+            columnFechaRegistro.Width = 150;
+            // 
             // FormIndumentariaDelPersonal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -229,5 +235,6 @@
         private ColumnHeader columnNombre;
         private ColumnHeader columnCantidad;
         private ColumnHeader columnEstado;
+        private ColumnHeader columnFechaRegistro;
     }
 }

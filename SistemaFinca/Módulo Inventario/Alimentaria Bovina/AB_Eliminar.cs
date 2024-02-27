@@ -27,6 +27,6 @@ namespace SistemaFinca
         {
             MessageBox.Show("El alimento se ha eliminado exitosamente.", "Eliminación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    
+
     }
 }
