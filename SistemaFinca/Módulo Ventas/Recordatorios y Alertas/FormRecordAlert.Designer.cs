@@ -32,13 +32,18 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            label18 = new Label();
-            label2 = new Label();
+            labelClientesDeudores = new Label();
             listView1 = new ListView();
-            columnNumRecord = new ColumnHeader();
+            columnNumCedula = new ColumnHeader();
             columnNombre = new ColumnHeader();
-            columnNumNota = new ColumnHeader();
-            columnValorPagar = new ColumnHeader();
+            columnNumTelefonico = new ColumnHeader();
+            columnDirDomiciliaria = new ColumnHeader();
+            label2 = new Label();
+            label18 = new Label();
+            columnDirEmail = new ColumnHeader();
+            columnMontoPagar = new ColumnHeader();
+            columnCantEntregada = new ColumnHeader();
+            columnCantFaltante = new ColumnHeader();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -67,19 +72,22 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
             tableLayoutPanel1.Controls.Add(buttonRegresar, 5, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 459);
+            tableLayoutPanel1.Location = new Point(0, 541);
+            tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(650, 45);
+            tableLayoutPanel1.Size = new Size(895, 50);
             tableLayoutPanel1.TabIndex = 7;
             // 
             // buttonRegresar
             // 
             buttonRegresar.Dock = DockStyle.Fill;
-            buttonRegresar.Location = new Point(495, 3);
+            buttonRegresar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonRegresar.Location = new Point(680, 2);
+            buttonRegresar.Margin = new Padding(3, 2, 3, 2);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(152, 39);
+            buttonRegresar.Size = new Size(212, 46);
             buttonRegresar.TabIndex = 5;
             buttonRegresar.Text = "Regresar";
             buttonRegresar.UseVisualStyleBackColor = true;
@@ -88,72 +96,104 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
+            panelFormularioHijo.Controls.Add(labelClientesDeudores);
             panelFormularioHijo.Controls.Add(listView1);
             panelFormularioHijo.Controls.Add(label2);
             panelFormularioHijo.Controls.Add(label18);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
+            panelFormularioHijo.Margin = new Padding(3, 2, 3, 2);
             panelFormularioHijo.Name = "panelFormularioHijo";
-            panelFormularioHijo.Size = new Size(650, 459);
+            panelFormularioHijo.Size = new Size(895, 541);
             panelFormularioHijo.TabIndex = 8;
+            // 
+            // labelClientesDeudores
+            // 
+            labelClientesDeudores.AutoSize = true;
+            labelClientesDeudores.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelClientesDeudores.Location = new Point(348, 18);
+            labelClientesDeudores.Name = "labelClientesDeudores";
+            labelClientesDeudores.Size = new Size(212, 28);
+            labelClientesDeudores.TabIndex = 47;
+            labelClientesDeudores.Text = "Clientes Morosos";
+            // 
+            // listView1
+            // 
+            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listView1.Columns.AddRange(new ColumnHeader[] { columnNumCedula, columnNombre, columnNumTelefonico, columnDirDomiciliaria, columnDirEmail, columnMontoPagar, columnCantEntregada, columnCantFaltante });
+            listView1.Location = new Point(38, 91);
+            listView1.Margin = new Padding(3, 2, 3, 2);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(816, 420);
+            listView1.TabIndex = 46;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            // 
+            // columnNumCedula
+            // 
+            columnNumCedula.Text = "Número de cédula";
+            columnNumCedula.Width = 180;
+            // 
+            // columnNombre
+            // 
+            columnNombre.Text = "Nombre";
+            columnNombre.Width = 120;
+            // 
+            // columnNumTelefonico
+            // 
+            columnNumTelefonico.Text = "Número telefónico";
+            columnNumTelefonico.Width = 180;
+            // 
+            // columnDirDomiciliaria
+            // 
+            columnDirDomiciliaria.Text = "Dirección domiciliaria";
+            columnDirDomiciliaria.Width = 100;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(38, 62);
+            label2.Name = "label2";
+            label2.Size = new Size(123, 15);
+            label2.TabIndex = 45;
+            label2.Text = "Lista clientes morosos";
             // 
             // label18
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(196, 30);
+            label18.Location = new Point(172, 22);
             label18.Name = "label18";
-            label18.Size = new Size(241, 23);
+            label18.Size = new Size(0, 18);
             label18.TabIndex = 34;
-            label18.Text = "Recordatorios y Alertas";
             // 
-            // label2
+            // columnDirEmail
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(43, 82);
-            label2.Name = "label2";
-            label2.Size = new Size(153, 20);
-            label2.TabIndex = 45;
-            label2.Text = "Lista de recordatorios";
+            columnDirEmail.Text = "Correo electrónico";
+            columnDirEmail.Width = 160;
             // 
-            // listView1
+            // columnMontoPagar
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnNumRecord, columnNombre, columnNumNota, columnValorPagar });
-            listView1.Location = new Point(43, 121);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(557, 311);
-            listView1.TabIndex = 46;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            columnMontoPagar.Text = "Monto a pagar";
+            columnMontoPagar.Width = 120;
             // 
-            // columnNumRecord
+            // columnCantEntregada
             // 
-            columnNumRecord.Text = "Número de recordatorio";
-            columnNumRecord.Width = 180;
+            columnCantEntregada.Text = "Cantidad de litros entregada";
             // 
-            // columnNombre
+            // columnCantFaltante
             // 
-            columnNombre.Text = "Nombre cliente";
-            columnNombre.Width = 120;
-            // 
-            // columnNumNota
-            // 
-            columnNumNota.Text = "Número de Nota de venta";
-            columnNumNota.Width = 180;
-            // 
-            // columnValorPagar
-            // 
-            columnValorPagar.Text = "Valor a pagar";
-            columnValorPagar.Width = 100;
+            columnCantFaltante.Text = "CantidadFaltante";
             // 
             // FormRecordAlert
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 504);
+            ClientSize = new Size(895, 591);
             Controls.Add(panelFormularioHijo);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormRecordAlert";
             Text = "Inventario";
             tableLayoutPanel1.ResumeLayout(false);
@@ -169,10 +209,15 @@
         private Panel panelFormularioHijo;
         private Label label18;
         private ListView listView1;
-        private ColumnHeader columnNumRecord;
+        private ColumnHeader columnNumCedula;
         private ColumnHeader columnNombre;
-        private ColumnHeader columnNumNota;
-        private ColumnHeader columnValorPagar;
+        private ColumnHeader columnNumTelefonico;
+        private ColumnHeader columnDirDomiciliaria;
         private Label label2;
+        private Label labelClientesDeudores;
+        private ColumnHeader columnDirEmail;
+        private ColumnHeader columnMontoPagar;
+        private ColumnHeader columnCantEntregada;
+        private ColumnHeader columnCantFaltante;
     }
 }

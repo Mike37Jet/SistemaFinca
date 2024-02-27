@@ -27,6 +27,6 @@ namespace SistemaFinca
         {
             MessageBox.Show("El medicamento se ha registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    
+
     }
 }

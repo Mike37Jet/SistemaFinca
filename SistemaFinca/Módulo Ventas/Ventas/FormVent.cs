@@ -56,5 +56,20 @@ namespace SistemaFinca
         {
             abrirFormulariosHijos(new FormVNotaDeVenta());
         }
+
+         
+
+        private void buttonRegresar_Click(object sender, EventArgs e)
+        {
+            if (formularioActivo != null)
+            {
+                formularioActivo.Close();
+                formularioActivo = null;
+            }
+            else
+            {
+                this.Close();
+            }
+        }
     }
 }

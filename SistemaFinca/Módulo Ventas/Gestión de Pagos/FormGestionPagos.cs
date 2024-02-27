@@ -59,5 +59,10 @@ namespace SistemaFinca
         {
 
         }
+
+        private void buttonRegistrarPago_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormGPRegistrarPago());
+        }
     }
 }

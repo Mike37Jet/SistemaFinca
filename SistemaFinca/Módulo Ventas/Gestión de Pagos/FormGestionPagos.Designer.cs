@@ -31,8 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionPagos));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            buttonRegistrarPago = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
+            listView2 = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
+            label1 = new Label();
             listView1 = new ListView();
             columnCodigoNotaVenta = new ColumnHeader();
             columnNombre = new ColumnHeader();
@@ -40,13 +47,6 @@
             columnValorPagar = new ColumnHeader();
             label2 = new Label();
             label18 = new Label();
-            label1 = new Label();
-            listView2 = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
-            buttonMostar = new Button();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -67,28 +67,41 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 6;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 18.3158512F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.721491F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.721491F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.144165F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30.009819F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.0871868F));
-            tableLayoutPanel1.Controls.Add(buttonMostar, 0, 0);
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.63409F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6357212F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6357212F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0981445F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.83201F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.1643162F));
+            tableLayoutPanel1.Controls.Add(buttonRegistrarPago, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonRegresar, 5, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 459);
+            tableLayoutPanel1.Location = new Point(0, 541);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(650, 45);
+            tableLayoutPanel1.Size = new Size(895, 50);
             tableLayoutPanel1.TabIndex = 7;
+            // 
+            // buttonRegistrarPago
+            // 
+            buttonRegistrarPago.Dock = DockStyle.Fill;
+            buttonRegistrarPago.Image = (Image)resources.GetObject("buttonRegistrarPago.Image");
+            buttonRegistrarPago.Location = new Point(0, 0);
+            buttonRegistrarPago.Margin = new Padding(0);
+            buttonRegistrarPago.Name = "buttonRegistrarPago";
+            buttonRegistrarPago.Size = new Size(95, 50);
+            buttonRegistrarPago.TabIndex = 6;
+            buttonRegistrarPago.UseVisualStyleBackColor = true;
+            buttonRegistrarPago.Click += buttonRegistrarPago_Click;
             // 
             // buttonRegresar
             // 
             buttonRegresar.Dock = DockStyle.Fill;
-            buttonRegresar.Location = new Point(508, 3);
+            buttonRegresar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonRegresar.Location = new Point(680, 3);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(139, 39);
+            buttonRegresar.Size = new Size(212, 44);
             buttonRegresar.TabIndex = 5;
             buttonRegresar.Text = "Regresar";
             buttonRegresar.UseVisualStyleBackColor = true;
@@ -105,15 +118,57 @@
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
             panelFormularioHijo.Name = "panelFormularioHijo";
-            panelFormularioHijo.Size = new Size(650, 459);
+            panelFormularioHijo.Size = new Size(895, 541);
             panelFormularioHijo.TabIndex = 8;
+            // 
+            // listView2
+            // 
+            listView2.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+            listView2.Font = new Font("Segoe UI", 11.25F);
+            listView2.Location = new Point(43, 316);
+            listView2.Name = "listView2";
+            listView2.Size = new Size(796, 184);
+            listView2.TabIndex = 48;
+            listView2.UseCompatibleStateImageBehavior = false;
+            listView2.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Código de Nota de Venta";
+            columnHeader1.Width = 200;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Nombre cliente";
+            columnHeader2.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Fecha";
+            columnHeader3.Width = 50;
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Valor a pagar";
+            columnHeader4.Width = 130;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11.25F);
+            label1.Location = new Point(43, 294);
+            label1.Name = "label1";
+            label1.Size = new Size(238, 20);
+            label1.TabIndex = 47;
+            label1.Text = "Lista de notas de venta pendientes";
             // 
             // listView1
             // 
             listView1.Columns.AddRange(new ColumnHeader[] { columnCodigoNotaVenta, columnNombre, columnFecha, columnValorPagar });
-            listView1.Location = new Point(43, 105);
+            listView1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listView1.Location = new Point(43, 92);
             listView1.Name = "listView1";
-            listView1.Size = new Size(557, 146);
+            listView1.Size = new Size(796, 180);
             listView1.TabIndex = 46;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -141,77 +196,28 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(43, 82);
+            label2.Font = new Font("Segoe UI", 11.25F);
+            label2.Location = new Point(43, 71);
             label2.Name = "label2";
-            label2.Size = new Size(177, 20);
+            label2.Size = new Size(222, 20);
             label2.TabIndex = 45;
-            label2.Text = "Lista de pagos realizados";
+            label2.Text = "Lista de notas de venta pagadas";
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(234, 32);
+            label18.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label18.Location = new Point(340, 32);
             label18.Name = "label18";
-            label18.Size = new Size(181, 23);
+            label18.Size = new Size(214, 28);
             label18.TabIndex = 34;
             label18.Text = "Gestión de Pagos";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(43, 271);
-            label1.Name = "label1";
-            label1.Size = new Size(182, 20);
-            label1.TabIndex = 47;
-            label1.Text = "Lista de pagos pendientes";
-            // 
-            // listView2
-            // 
-            listView2.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-            listView2.Location = new Point(43, 294);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(557, 146);
-            listView2.TabIndex = 48;
-            listView2.UseCompatibleStateImageBehavior = false;
-            listView2.View = View.Details;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "Código de Nota de Venta";
-            columnHeader1.Width = 200;
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Nombre cliente";
-            columnHeader2.Width = 120;
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Fecha";
-            columnHeader3.Width = 50;
-            // 
-            // columnHeader4
-            // 
-            columnHeader4.Text = "Valor a pagar";
-            columnHeader4.Width = 130;
-            // 
-            // buttonMostar
-            // 
-            buttonMostar.Dock = DockStyle.Fill;
-            buttonMostar.Image = (Image)resources.GetObject("buttonMostar.Image");
-            buttonMostar.Location = new Point(0, 0);
-            buttonMostar.Margin = new Padding(0);
-            buttonMostar.Name = "buttonMostar";
-            buttonMostar.Size = new Size(119, 45);
-            buttonMostar.TabIndex = 6;
-            buttonMostar.UseVisualStyleBackColor = true;
-            // 
             // FormGestionPagos
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 504);
+            ClientSize = new Size(895, 591);
             Controls.Add(panelFormularioHijo);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -236,11 +242,12 @@
         private ColumnHeader columnValorPagar;
         private Label label2;
         private Label label1;
-        private Button buttonMostar;
+        private Button buttonRegistrarPago;
         private ListView listView2;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
+        private Button button1;
     }
 }

@@ -27,6 +27,6 @@ namespace SistemaFinca
         {
             MessageBox.Show("El alimento se ha registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    
+
     }
 }

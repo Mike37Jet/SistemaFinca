@@ -27,6 +27,6 @@ namespace SistemaFinca
         {
             MessageBox.Show("La herramienta se ha eliminado exitosamente.", "Eliminación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    
+
     }
 }

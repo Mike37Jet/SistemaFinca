@@ -89,11 +89,11 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(211, 62);
+            label3.Location = new Point(126, 62);
             label3.Name = "label3";
-            label3.Size = new Size(100, 21);
+            label3.Size = new Size(185, 21);
             label3.TabIndex = 2;
-            label3.Text = "Identificador:";
+            label3.Text = "Número de Identificación";
             // 
             // textBox1
             // 
@@ -114,6 +114,7 @@
             label2.Size = new Size(586, 21);
             label2.TabIndex = 0;
             label2.Text = "Para consultar los datos del res, ingrese su número de identificación a continuación:\r\n";
+            label2.Click += label2_Click;
             // 
             // FormGB_Consultar
             // 

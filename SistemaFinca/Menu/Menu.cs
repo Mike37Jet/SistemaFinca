@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaFinca.Módulo_Zonas_de_Pastoreo.Fumigación;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -291,12 +292,12 @@ namespace SistemaFinca
 
         private void buttonGestionPagos_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormGestionPagos());
+            abrirFormulariosHijos(new FormBuscar());
         }
 
         private void buttonGesZonPast_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormGestZonPast());
+            abrirFormulariosHijos(new FormGZP_Registrar());
         }
 
         private void buttonGestionArriendo_Click(object sender, EventArgs e)
@@ -306,7 +307,7 @@ namespace SistemaFinca
 
         private void buttonSeguimientoActividad_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormSeguimientoActividades());
+            abrirFormulariosHijos(new GDZP_Fumigación());
         }
 
         private void buttonProcesoFaenamiento_Click(object sender, EventArgs e)
@@ -329,7 +330,7 @@ namespace SistemaFinca
             abrirFormulariosHijos(new FormParametrosSistema());
         }
 
-        private void buttonContrato_Click(object sender, EventArgs e)
+        private void buttonContratos_Click(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormContratos());
         }

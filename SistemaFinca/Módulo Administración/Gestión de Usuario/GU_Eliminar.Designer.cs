@@ -60,11 +60,11 @@
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(397, 88);
+            label2.Location = new Point(347, 78);
             label2.Name = "label2";
-            label2.Size = new Size(134, 20);
+            label2.Size = new Size(223, 20);
             label2.TabIndex = 3;
-            label2.Text = "Número de Cédula";
+            label2.Text = "Número de Cédula de identidad";
             // 
             // button2
             // 

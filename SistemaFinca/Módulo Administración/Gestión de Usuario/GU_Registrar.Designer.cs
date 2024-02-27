@@ -75,9 +75,9 @@
             label2.Font = new Font("Segoe UI", 12F);
             label2.Location = new Point(102, 65);
             label2.Name = "label2";
-            label2.Size = new Size(141, 21);
+            label2.Size = new Size(231, 21);
             label2.TabIndex = 3;
-            label2.Text = "Número de Cédula";
+            label2.Text = "Número de Cédula de identidad";
             // 
             // button2
             // 
@@ -151,10 +151,10 @@
             radioButton2.Location = new Point(115, 370);
             radioButton2.Margin = new Padding(3, 2, 3, 2);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(146, 25);
+            radioButton2.Size = new Size(225, 25);
             radioButton2.TabIndex = 18;
             radioButton2.TabStop = true;
-            radioButton2.Text = "Usuario estándar";
+            radioButton2.Text = "Usuario estándar (Jornalero)";
             radioButton2.UseVisualStyleBackColor = true;
             // 
             // label7
@@ -213,9 +213,9 @@
             label6.Font = new Font("Segoe UI", 12F);
             label6.Location = new Point(102, 195);
             label6.Name = "label6";
-            label6.Size = new Size(64, 21);
+            label6.Size = new Size(145, 21);
             label6.TabIndex = 24;
-            label6.Text = "Usuario";
+            label6.Text = "Nombre de usuario";
             // 
             // label9
             // 

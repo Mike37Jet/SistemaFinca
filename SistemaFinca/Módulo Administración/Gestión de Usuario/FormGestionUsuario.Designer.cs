@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionUsuario));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            buttonBuscar = new Button();
             buttonEliminar = new Button();
             buttonRegistrar = new Button();
-            buttonRestablecerContraseña = new Button();
             buttonInforme = new Button();
             buttonActualizar = new Button();
             buttonRegresar = new Button();
@@ -43,11 +43,10 @@
             columnNombre = new ColumnHeader();
             columnApellidos = new ColumnHeader();
             columnTelefono = new ColumnHeader();
-            columnEmail = new ColumnHeader();
+            columnCorreo = new ColumnHeader();
             columnRol = new ColumnHeader();
-            label2 = new Label();
-            textBuscarCliente = new TextBox();
             label1 = new Label();
+            columnUsuario = new ColumnHeader();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -75,9 +74,9 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.4228458F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 45.6913834F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 132F));
+            tableLayoutPanel1.Controls.Add(buttonBuscar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonEliminar, 1, 0);
             tableLayoutPanel1.Controls.Add(buttonRegistrar, 0, 0);
-            tableLayoutPanel1.Controls.Add(buttonRestablecerContraseña, 4, 0);
             tableLayoutPanel1.Controls.Add(buttonInforme, 3, 0);
             tableLayoutPanel1.Controls.Add(buttonActualizar, 2, 0);
             tableLayoutPanel1.Controls.Add(buttonRegresar, 6, 0);
@@ -90,11 +89,26 @@
             tableLayoutPanel1.Size = new Size(895, 50);
             tableLayoutPanel1.TabIndex = 7;
             // 
+            // buttonBuscar
+            // 
+            buttonBuscar.Dock = DockStyle.Fill;
+            buttonBuscar.Image = (Image)resources.GetObject("buttonBuscar.Image");
+            buttonBuscar.Location = new Point(80, 0);
+            buttonBuscar.Margin = new Padding(0);
+            buttonBuscar.Name = "buttonBuscar";
+            buttonBuscar.Size = new Size(80, 50);
+            buttonBuscar.TabIndex = 12;
+            buttonBuscar.TextAlign = ContentAlignment.BottomCenter;
+            buttonBuscar.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonBuscar.UseVisualStyleBackColor = true;
+            buttonBuscar.Click += buttonBuscar_Click;
+            buttonBuscar.MouseHover += buttonBuscar_MouseHover;
+            // 
             // buttonEliminar
             // 
             buttonEliminar.Dock = DockStyle.Fill;
             buttonEliminar.Image = (Image)resources.GetObject("buttonEliminar.Image");
-            buttonEliminar.Location = new Point(80, 0);
+            buttonEliminar.Location = new Point(160, 0);
             buttonEliminar.Margin = new Padding(0);
             buttonEliminar.Name = "buttonEliminar";
             buttonEliminar.Size = new Size(80, 50);
@@ -120,29 +134,14 @@
             buttonRegistrar.Click += buttonRegistrar_Click_1;
             buttonRegistrar.MouseHover += buttonRegistrar_MouseHover;
             // 
-            // buttonRestablecerContraseña
-            // 
-            buttonRestablecerContraseña.Dock = DockStyle.Fill;
-            buttonRestablecerContraseña.Image = (Image)resources.GetObject("buttonRestablecerContraseña.Image");
-            buttonRestablecerContraseña.Location = new Point(324, 0);
-            buttonRestablecerContraseña.Margin = new Padding(0);
-            buttonRestablecerContraseña.Name = "buttonRestablecerContraseña";
-            buttonRestablecerContraseña.Size = new Size(87, 50);
-            buttonRestablecerContraseña.TabIndex = 9;
-            buttonRestablecerContraseña.TextAlign = ContentAlignment.BottomCenter;
-            buttonRestablecerContraseña.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonRestablecerContraseña.UseVisualStyleBackColor = true;
-            buttonRestablecerContraseña.Click += buttonRestablecerContraseña_Click;
-            buttonRestablecerContraseña.MouseHover += buttonRestablecerContraseña_MouseHover;
-            // 
             // buttonInforme
             // 
             buttonInforme.Dock = DockStyle.Fill;
             buttonInforme.Image = (Image)resources.GetObject("buttonInforme.Image");
-            buttonInforme.Location = new Point(240, 0);
+            buttonInforme.Location = new Point(324, 0);
             buttonInforme.Margin = new Padding(0);
             buttonInforme.Name = "buttonInforme";
-            buttonInforme.Size = new Size(84, 50);
+            buttonInforme.Size = new Size(87, 50);
             buttonInforme.TabIndex = 8;
             buttonInforme.TextAlign = ContentAlignment.BottomCenter;
             buttonInforme.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -154,10 +153,10 @@
             // 
             buttonActualizar.Dock = DockStyle.Fill;
             buttonActualizar.Image = (Image)resources.GetObject("buttonActualizar.Image");
-            buttonActualizar.Location = new Point(160, 0);
+            buttonActualizar.Location = new Point(240, 0);
             buttonActualizar.Margin = new Padding(0);
             buttonActualizar.Name = "buttonActualizar";
-            buttonActualizar.Size = new Size(80, 50);
+            buttonActualizar.Size = new Size(84, 50);
             buttonActualizar.TabIndex = 7;
             buttonActualizar.TextAlign = ContentAlignment.BottomCenter;
             buttonActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -182,8 +181,6 @@
             // 
             panelFormularioHijo.AutoScroll = true;
             panelFormularioHijo.Controls.Add(listView1);
-            panelFormularioHijo.Controls.Add(label2);
-            panelFormularioHijo.Controls.Add(textBuscarCliente);
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
@@ -195,9 +192,9 @@
             // listView1
             // 
             listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnEmail, columnRol });
+            listView1.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnCorreo, columnRol, columnUsuario });
             listView1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listView1.Location = new Point(55, 131);
+            listView1.Location = new Point(51, 84);
             listView1.Margin = new Padding(3, 2, 3, 2);
             listView1.Name = "listView1";
             listView1.Size = new Size(785, 385);
@@ -225,34 +222,15 @@
             columnTelefono.Text = "Teléfono";
             columnTelefono.Width = 80;
             // 
-            // columnEmail
+            // columnCorreo
             // 
-            columnEmail.Text = "E - mail";
-            columnEmail.Width = 80;
+            columnCorreo.Text = "Correo Electrónico";
+            columnCorreo.Width = 150;
             // 
             // columnRol
             // 
             columnRol.Text = "Rol";
             columnRol.Width = 80;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(55, 64);
-            label2.Name = "label2";
-            label2.Size = new Size(104, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Buscar usuario";
-            label2.Click += label2_Click;
-            // 
-            // textBuscarCliente
-            // 
-            textBuscarCliente.Location = new Point(55, 86);
-            textBuscarCliente.Margin = new Padding(3, 2, 3, 2);
-            textBuscarCliente.Name = "textBuscarCliente";
-            textBuscarCliente.Size = new Size(308, 23);
-            textBuscarCliente.TabIndex = 4;
             // 
             // label1
             // 
@@ -265,6 +243,11 @@
             label1.TabIndex = 5;
             label1.Text = "Usuarios";
             label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // columnUsuario
+            // 
+            columnUsuario.Text = "Nombre de usuario";
+            columnUsuario.Width = 150;
             // 
             // FormGestionUsuario
             // 
@@ -286,7 +269,6 @@
         #endregion
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel1;
-        private Button buttonRestablecerContraseña;
         private Button buttonInforme;
         private Button buttonActualizar;
         private Button buttonRegistrar;
@@ -301,7 +283,9 @@
         private ColumnHeader columnNombre;
         private ColumnHeader columnApellidos;
         private ColumnHeader columnTelefono;
-        private ColumnHeader columnEmail;
+        private ColumnHeader columnCorreo;
         private ColumnHeader columnRol;
+        private Button buttonBuscar;
+        private ColumnHeader columnUsuario;
     }
 }

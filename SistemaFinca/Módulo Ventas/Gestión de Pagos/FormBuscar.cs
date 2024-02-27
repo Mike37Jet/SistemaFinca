@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormAlimentariaBovina : Form
+    public partial class FormBuscar : Form
     {
-        public FormAlimentariaBovina()
+        public FormBuscar()
         {
             InitializeComponent();
         }
@@ -37,37 +37,25 @@ namespace SistemaFinca
 
 
 
-        private void buttonRegistrar_Click_1(object sender, EventArgs e)
+
+
+
+
+        private void panelFormularioHijo_Paint(object sender, PaintEventArgs e)
         {
-            abrirFormulariosHijos(new FormAB_Registrar());
+
         }
 
-        private void buttonRegresar_Click(object sender, EventArgs e)
+
+
+        private void buttonBuscarCliente_Click_1(object sender, EventArgs e)
         {
-            if (formularioActivo != null)
-            {
-                formularioActivo.Close();
-                formularioActivo = null;
-            }
-            else
-            {
-                this.Close();
-            }
+            abrirFormulariosHijos(new FormGestionPagos());
         }
 
-        private void buttonActualizar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormAB_Actualizar());
-        }
-
-        private void buttonBuscar_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormAB_Consultar());
-        }
-
-        private void buttonEliminar_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormAB_Eliminar());
+           this.Close();
         }
     }
 }
