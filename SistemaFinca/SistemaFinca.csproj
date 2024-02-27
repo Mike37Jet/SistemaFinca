@@ -79,11 +79,11 @@
     <Compile Update="Módulo Ventas\Recordatorios y Alertas\FormRecordAlert.cs" />
     <Compile Update="Módulo Ventas\Ventas\FormVent.cs" />
     <Compile Update="Módulo Ventas\Ventas\VNotaDeVenta.cs" />
-    <Compile Update="Módulo Zonas de Pastoreo\Gestión Arriendo de áreas\FormGestArriAreas.cs" />
-    <Compile Update="Módulo Zonas de Pastoreo\Gestión Zonas de pastoreo\FormGestZonPast.cs" />
-    <Compile Update="Módulo Zonas de Pastoreo\Gestión Zonas de pastoreo\GZP_Registrar.cs" />
-    <Compile Update="Módulo Zonas de Pastoreo\Gestión Zonas de pastoreo\GZP_EmitirInformes.cs" />
-    <Compile Update="Módulo Zonas de Pastoreo\Seguimiento de Actividades\FormSeguimientoActividades.cs" />
+    <Compile Update="Módulo Zonas de Pastoreo\Arriendo\FormGestArriAreas.cs" />
+    <Compile Update="Módulo Zonas de Pastoreo\Registro Zonas Pastoreo\FormGestZonPast.cs" />
+    <Compile Update="Módulo Zonas de Pastoreo\Registro Zonas Pastoreo\GZP_Registrar.cs" />
+    <Compile Update="Módulo Zonas de Pastoreo\Registro Zonas Pastoreo\GZP_EmitirInformes.cs" />
+    <Compile Update="Módulo Zonas de Pastoreo\Riego\FormSeguimientoActividades.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -108,6 +108,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Módulo Zonas de Pastoreo\Fumigación\" />
   </ItemGroup>
 
 </Project>

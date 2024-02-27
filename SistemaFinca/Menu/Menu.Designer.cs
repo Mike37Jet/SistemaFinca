@@ -39,6 +39,7 @@
             buttonAuditoria = new Button();
             panel3 = new Panel();
             subPanelZonasPastoreo = new Panel();
+            button1 = new Button();
             buttonGestionArriendo = new Button();
             buttonSeguimientoActividad = new Button();
             buttonGesZonPast = new Button();
@@ -54,7 +55,6 @@
             buttonGestionPagos = new Button();
             buttonInformeAnalisis = new Button();
             buttonNotaVentas = new Button();
-            buttonContrato = new Button();
             buttonVentas = new Button();
             subPanelGestionGanadera = new Panel();
             subPanelGanadoCarne = new Panel();
@@ -216,7 +216,7 @@
             buttonAuditoria.ForeColor = Color.Silver;
             buttonAuditoria.Image = (Image)resources.GetObject("buttonAuditoria.Image");
             buttonAuditoria.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAuditoria.Location = new Point(0, 980);
+            buttonAuditoria.Location = new Point(0, 1000);
             buttonAuditoria.Margin = new Padding(3, 2, 3, 2);
             buttonAuditoria.Name = "buttonAuditoria";
             buttonAuditoria.Padding = new Padding(4, 0, 0, 0);
@@ -231,7 +231,7 @@
             // 
             panel3.BackColor = Color.DarkGray;
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 1030);
+            panel3.Location = new Point(0, 1050);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
             panel3.Size = new Size(252, 2);
@@ -240,15 +240,35 @@
             // subPanelZonasPastoreo
             // 
             subPanelZonasPastoreo.BackColor = Color.FromArgb(25, 25, 25);
+            subPanelZonasPastoreo.Controls.Add(button1);
             subPanelZonasPastoreo.Controls.Add(buttonGestionArriendo);
             subPanelZonasPastoreo.Controls.Add(buttonSeguimientoActividad);
             subPanelZonasPastoreo.Controls.Add(buttonGesZonPast);
             subPanelZonasPastoreo.Dock = DockStyle.Top;
-            subPanelZonasPastoreo.Location = new Point(0, 888);
+            subPanelZonasPastoreo.Location = new Point(0, 867);
             subPanelZonasPastoreo.Margin = new Padding(3, 2, 3, 2);
             subPanelZonasPastoreo.Name = "subPanelZonasPastoreo";
-            subPanelZonasPastoreo.Size = new Size(252, 92);
+            subPanelZonasPastoreo.Size = new Size(252, 133);
             subPanelZonasPastoreo.TabIndex = 10;
+            // 
+            // button1
+            // 
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Gray;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Arial", 10.2F);
+            button1.ForeColor = Color.Silver;
+            button1.Location = new Point(0, 93);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Padding = new Padding(18, 0, 0, 0);
+            button1.Size = new Size(252, 33);
+            button1.TabIndex = 24;
+            button1.Text = "Arriendo ";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = true;
             // 
             // buttonGestionArriendo
             // 
@@ -263,9 +283,9 @@
             buttonGestionArriendo.Margin = new Padding(3, 2, 3, 2);
             buttonGestionArriendo.Name = "buttonGestionArriendo";
             buttonGestionArriendo.Padding = new Padding(18, 0, 0, 0);
-            buttonGestionArriendo.Size = new Size(252, 30);
+            buttonGestionArriendo.Size = new Size(252, 33);
             buttonGestionArriendo.TabIndex = 23;
-            buttonGestionArriendo.Text = "Gestión de Arriendo de Áreas";
+            buttonGestionArriendo.Text = "Riego";
             buttonGestionArriendo.TextAlign = ContentAlignment.MiddleLeft;
             buttonGestionArriendo.UseVisualStyleBackColor = true;
             buttonGestionArriendo.Click += buttonGestionArriendo_Click;
@@ -285,7 +305,7 @@
             buttonSeguimientoActividad.Padding = new Padding(18, 0, 0, 0);
             buttonSeguimientoActividad.Size = new Size(252, 30);
             buttonSeguimientoActividad.TabIndex = 21;
-            buttonSeguimientoActividad.Text = "Seguimiento de Actividades";
+            buttonSeguimientoActividad.Text = "Fumigación";
             buttonSeguimientoActividad.TextAlign = ContentAlignment.MiddleLeft;
             buttonSeguimientoActividad.UseVisualStyleBackColor = true;
             buttonSeguimientoActividad.Click += buttonSeguimientoActividad_Click;
@@ -305,7 +325,7 @@
             buttonGesZonPast.Padding = new Padding(18, 0, 0, 0);
             buttonGesZonPast.Size = new Size(252, 30);
             buttonGesZonPast.TabIndex = 20;
-            buttonGesZonPast.Text = "Gestión de Zonas de Pastoreo";
+            buttonGesZonPast.Text = "Registro";
             buttonGesZonPast.TextAlign = ContentAlignment.MiddleLeft;
             buttonGesZonPast.UseVisualStyleBackColor = true;
             buttonGesZonPast.Click += buttonGesZonPast_Click;
@@ -321,7 +341,7 @@
             buttonZonasPastoreo.ForeColor = Color.Silver;
             buttonZonasPastoreo.Image = (Image)resources.GetObject("buttonZonasPastoreo.Image");
             buttonZonasPastoreo.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonZonasPastoreo.Location = new Point(0, 838);
+            buttonZonasPastoreo.Location = new Point(0, 817);
             buttonZonasPastoreo.Margin = new Padding(3, 2, 3, 2);
             buttonZonasPastoreo.Name = "buttonZonasPastoreo";
             buttonZonasPastoreo.Padding = new Padding(4, 0, 0, 0);
@@ -341,7 +361,7 @@
             subPanelInventario.Controls.Add(buttonIndPers);
             subPanelInventario.Controls.Add(buttonHerrAgrGan);
             subPanelInventario.Dock = DockStyle.Top;
-            subPanelInventario.Location = new Point(0, 716);
+            subPanelInventario.Location = new Point(0, 695);
             subPanelInventario.Margin = new Padding(3, 2, 3, 2);
             subPanelInventario.Name = "subPanelInventario";
             subPanelInventario.Size = new Size(252, 122);
@@ -438,7 +458,7 @@
             buttonInventario.ForeColor = Color.Silver;
             buttonInventario.Image = (Image)resources.GetObject("buttonInventario.Image");
             buttonInventario.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonInventario.Location = new Point(0, 666);
+            buttonInventario.Location = new Point(0, 645);
             buttonInventario.Margin = new Padding(3, 2, 3, 2);
             buttonInventario.Name = "buttonInventario";
             buttonInventario.Padding = new Padding(4, 0, 0, 0);
@@ -457,12 +477,11 @@
             subPanelVenta.Controls.Add(buttonGestionPagos);
             subPanelVenta.Controls.Add(buttonInformeAnalisis);
             subPanelVenta.Controls.Add(buttonNotaVentas);
-            subPanelVenta.Controls.Add(buttonContrato);
             subPanelVenta.Dock = DockStyle.Top;
             subPanelVenta.Location = new Point(0, 514);
             subPanelVenta.Margin = new Padding(3, 2, 3, 2);
             subPanelVenta.Name = "subPanelVenta";
-            subPanelVenta.Size = new Size(252, 152);
+            subPanelVenta.Size = new Size(252, 131);
             subPanelVenta.TabIndex = 9;
             // 
             // buttonAlertas
@@ -474,7 +493,7 @@
             buttonAlertas.FlatStyle = FlatStyle.Flat;
             buttonAlertas.Font = new Font("Arial", 10.2F);
             buttonAlertas.ForeColor = Color.Silver;
-            buttonAlertas.Location = new Point(0, 120);
+            buttonAlertas.Location = new Point(0, 90);
             buttonAlertas.Margin = new Padding(3, 2, 3, 2);
             buttonAlertas.Name = "buttonAlertas";
             buttonAlertas.Padding = new Padding(18, 0, 0, 0);
@@ -494,7 +513,7 @@
             buttonGestionPagos.FlatStyle = FlatStyle.Flat;
             buttonGestionPagos.Font = new Font("Arial", 10.2F);
             buttonGestionPagos.ForeColor = Color.Silver;
-            buttonGestionPagos.Location = new Point(0, 90);
+            buttonGestionPagos.Location = new Point(0, 60);
             buttonGestionPagos.Margin = new Padding(3, 2, 3, 2);
             buttonGestionPagos.Name = "buttonGestionPagos";
             buttonGestionPagos.Padding = new Padding(18, 0, 0, 0);
@@ -514,7 +533,7 @@
             buttonInformeAnalisis.FlatStyle = FlatStyle.Flat;
             buttonInformeAnalisis.Font = new Font("Arial", 10.2F);
             buttonInformeAnalisis.ForeColor = Color.Silver;
-            buttonInformeAnalisis.Location = new Point(0, 60);
+            buttonInformeAnalisis.Location = new Point(0, 30);
             buttonInformeAnalisis.Margin = new Padding(3, 2, 3, 2);
             buttonInformeAnalisis.Name = "buttonInformeAnalisis";
             buttonInformeAnalisis.Padding = new Padding(18, 0, 0, 0);
@@ -534,7 +553,7 @@
             buttonNotaVentas.FlatStyle = FlatStyle.Flat;
             buttonNotaVentas.Font = new Font("Arial", 10.2F);
             buttonNotaVentas.ForeColor = Color.Silver;
-            buttonNotaVentas.Location = new Point(0, 30);
+            buttonNotaVentas.Location = new Point(0, 0);
             buttonNotaVentas.Margin = new Padding(3, 2, 3, 2);
             buttonNotaVentas.Name = "buttonNotaVentas";
             buttonNotaVentas.Padding = new Padding(18, 0, 0, 0);
@@ -544,26 +563,6 @@
             buttonNotaVentas.TextAlign = ContentAlignment.MiddleLeft;
             buttonNotaVentas.UseVisualStyleBackColor = true;
             buttonNotaVentas.Click += buttonNotaVentas_Click;
-            // 
-            // buttonContrato
-            // 
-            buttonContrato.Dock = DockStyle.Top;
-            buttonContrato.FlatAppearance.BorderSize = 0;
-            buttonContrato.FlatAppearance.MouseDownBackColor = Color.Gray;
-            buttonContrato.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
-            buttonContrato.FlatStyle = FlatStyle.Flat;
-            buttonContrato.Font = new Font("Arial", 10.2F);
-            buttonContrato.ForeColor = Color.Silver;
-            buttonContrato.Location = new Point(0, 0);
-            buttonContrato.Margin = new Padding(3, 2, 3, 2);
-            buttonContrato.Name = "buttonContrato";
-            buttonContrato.Padding = new Padding(18, 0, 0, 0);
-            buttonContrato.Size = new Size(252, 30);
-            buttonContrato.TabIndex = 14;
-            buttonContrato.Text = "Contratos";
-            buttonContrato.TextAlign = ContentAlignment.MiddleLeft;
-            buttonContrato.UseVisualStyleBackColor = true;
-            buttonContrato.Click += buttonContrato_Click;
             // 
             // buttonVentas
             // 
@@ -930,7 +929,7 @@
             buttonSalir.ForeColor = Color.Silver;
             buttonSalir.Image = (Image)resources.GetObject("buttonSalir.Image");
             buttonSalir.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonSalir.Location = new Point(0, 1032);
+            buttonSalir.Location = new Point(0, 1052);
             buttonSalir.Margin = new Padding(3, 2, 3, 2);
             buttonSalir.Name = "buttonSalir";
             buttonSalir.Padding = new Padding(9, 0, 0, 0);
@@ -1050,6 +1049,6 @@
         private Button buttonProduccionDeLeche;
         private Button buttonAuditoria;
         private Button buttonParametrosSistema;
-        private Button buttonContrato;
+        private Button button1;
     }
 }

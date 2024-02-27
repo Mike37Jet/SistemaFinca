@@ -296,7 +296,7 @@ namespace SistemaFinca
 
         private void buttonGesZonPast_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormGestZonPast());
+            abrirFormulariosHijos(new FormGZP_Registrar());
         }
 
         private void buttonGestionArriendo_Click(object sender, EventArgs e)
