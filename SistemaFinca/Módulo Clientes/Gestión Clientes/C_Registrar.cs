@@ -25,10 +25,7 @@ namespace SistemaFinca
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-            Regex regex = new Regex(pattern);
-            Regex regex2 = new Regex(pattern);
-
+            
             if (!FormGU_Registrar.CedulaEsValida(textCedula.Text))
             {
                 MessageBox.Show("El número de cédula no es válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -40,7 +37,7 @@ namespace SistemaFinca
                 MessageBox.Show("Nombres ingresados no válidos", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (textApellidos.Text.Length > 60 || !FormGU_Registrar.NombresApellidosSonValidos(textNombres.Text))
+            if (textApellidos.Text.Length > 60 || !FormGU_Registrar.NombresApellidosSonValidos(textApellidos.Text))
             {
                 MessageBox.Show("Apellidos ingresados no válidos", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -71,7 +68,7 @@ namespace SistemaFinca
                 try
                 {
                     connection.Open();
-                    String commExisteString = $"SELECT * FROM usuario WHERE cedulausuario = '{textCedula.Text}'";
+                    String commExisteString = $"SELECT * FROM cliente WHERE cedulacliente = '{textCedula.Text}'";
                     NpgsqlCommand commExiste = new NpgsqlCommand(commExisteString, connection);
                     using (NpgsqlDataReader reader = commExiste.ExecuteReader())
                     {
@@ -83,15 +80,15 @@ namespace SistemaFinca
                     }
 
 
-                    //String commString = $"INSERT INTO usuario VALUES('{txtNumeroC.Text}', '{txtNombres.Text}', " +
-                    //$"'{txtApellidos.Text}', '{txtTelefono.Text}', '{txtCorreo.Text}', '{txtNombreU.Text}', '{txtContrasena.Text}', '{rol}', 'A')";
-                    //NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
-                    //int resultado = comm.ExecuteNonQuery();
-                    //if (resultado > 0)
-                    //{
-                    // MessageBox.Show("El cliente se ha registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //FormGU_Registrar.vaciarCampos();
-                    //}
+                    String commString = $"INSERT INTO cliente VALUES('{textCedula.Text}', '{textNombres.Text}', " +
+                        $"'{textApellidos.Text}', '{textTelefono.Text}', '{txtCorreo.Text}', '{textDireccion}', 'A')";
+                    NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                    int resultado = comm.ExecuteNonQuery();
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("El cliente se ha registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        vaciarCampos();
+                    }
                 }
                 catch (NpgsqlException ex)
                 {
@@ -104,8 +101,6 @@ namespace SistemaFinca
                         connection.Close();
                     }
                 }
-
-
             }
         }
 
@@ -122,10 +117,18 @@ namespace SistemaFinca
             contratos.Show();
 
         }
-        private static bool DireccionValida(string direccion)
+        public static bool DireccionValida(string direccion)
         {
             Regex regex = new Regex("^[A-Za-z0-9.\\-]+(?: [A-Za-z0-9.\\-]+){0,99}$");
             return regex.IsMatch(direccion);
+        }
+        private void vaciarCampos()
+        {
+            textCedula.Text = "";
+            textNombres.Text = "";
+            textApellidos.Text = "";
+            textDireccion.Text = "";
+            textTelefono.Text = "";
         }
     }
 }

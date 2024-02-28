@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using Npgsql;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,12 +17,16 @@ namespace SistemaFinca
     {
         private int borderSize;
         private char rol;
+        private String usuario;
+        private String fechainicio;
 
-        public FormMenu(char rol)
+        public FormMenu(char rol, String usuario, String fechainicio)
         {
             InitializeComponent();
             personalizarDiseño();
             this.rol = rol;
+            this.usuario = usuario;
+            this.fechainicio = fechainicio;
             labelRol.Text = rol == 'A' ? "Administrador" : "Jornalero";
         }
 
@@ -32,7 +37,33 @@ namespace SistemaFinca
 
         private void buttonCerrar_Click(object sender, EventArgs e)
         {
+            insertarSesion();
             Application.Exit();
+        }
+
+        private void insertarSesion()
+        {
+            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    String commString = $"INSERT INTO sesiones(usuario, fechainicio, fechafin) VALUES('{this.usuario}', '{this.fechainicio}', now()::timestamp(0))";
+                    NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                    comm.ExecuteNonQuery();
+                }
+                catch (NpgsqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
         }
 
         private void buttonMinimizar_Click(object sender, EventArgs e)
@@ -147,6 +178,7 @@ namespace SistemaFinca
 
         private void buttonSalir_Click(object sender, EventArgs e)
         {
+            insertarSesion();
             Application.Exit();
         }
 

@@ -97,7 +97,7 @@ namespace SistemaFinca
                     try
                     {
                         connection.Open();
-                        String commString = $"SELECT rol, contrasena, estado FROM usuario WHERE usuario = '{textUsuario.Text}'";
+                        String commString = $"SELECT rol, contrasena, estado, usuario FROM usuario WHERE usuario = '{textUsuario.Text}'";
                         NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                         NpgsqlDataReader reader = comm.ExecuteReader();
                         if (!reader.HasRows)
@@ -109,6 +109,8 @@ namespace SistemaFinca
                         char rol = reader.GetChar(0);
                         String contrasenaValida = reader.GetString(1);
                         char estado = reader.GetChar(2);
+                        String usuario = reader.GetString(3);
+
                         if (estado == 'I')
                         {
                             MessageBox.Show("Usuario desactivado temporalmente", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -116,7 +118,9 @@ namespace SistemaFinca
                         }
                         if (textContraseña.Text == contrasenaValida) 
                         {
-                            FormMenu formMenu = new FormMenu(rol);
+                            reader.Close();
+                            String fechaInicio = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                            FormMenu formMenu = new FormMenu(rol, usuario, fechaInicio);
                             formMenu.Show(this);
                             this.Hide();
                         } else
@@ -124,7 +128,6 @@ namespace SistemaFinca
                             MessageBox.Show("Usuario o contraseña inválida. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-
                     }
                     catch (NpgsqlException ex)
                     {

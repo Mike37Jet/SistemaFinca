@@ -85,10 +85,10 @@
             // 
             // buttonActualizar
             // 
-            buttonActualizar.Location = new Point(240, 325);
+            buttonActualizar.Location = new Point(347, 359);
             buttonActualizar.Margin = new Padding(3, 2, 3, 2);
             buttonActualizar.Name = "buttonActualizar";
-            buttonActualizar.Size = new Size(82, 22);
+            buttonActualizar.Size = new Size(124, 46);
             buttonActualizar.TabIndex = 26;
             buttonActualizar.Text = "Actualizar";
             buttonActualizar.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@
             // 
             radioA.AutoSize = true;
             radioA.Font = new Font("Segoe UI", 12F);
-            radioA.Location = new Point(579, 227);
+            radioA.Location = new Point(662, 240);
             radioA.Margin = new Padding(3, 2, 3, 2);
             radioA.Name = "radioA";
             radioA.Size = new Size(71, 25);
@@ -175,7 +175,7 @@
             // 
             radioD.AutoSize = true;
             radioD.Font = new Font("Segoe UI", 12F);
-            radioD.Location = new Point(579, 265);
+            radioD.Location = new Point(662, 278);
             radioD.Margin = new Padding(3, 2, 3, 2);
             radioD.Name = "radioD";
             radioD.Size = new Size(82, 25);
@@ -189,7 +189,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F);
-            label7.Location = new Point(591, 193);
+            label7.Location = new Point(674, 206);
             label7.Name = "label7";
             label7.Size = new Size(59, 21);
             label7.TabIndex = 46;

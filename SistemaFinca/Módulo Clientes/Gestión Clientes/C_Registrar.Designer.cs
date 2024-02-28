@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             panelHijo = new Panel();
-            buttoContrato = new Button();
             label9 = new Label();
             txtCorreo = new TextBox();
             label6 = new Label();
@@ -49,7 +48,6 @@
             // 
             // panelHijo
             // 
-            panelHijo.Controls.Add(buttoContrato);
             panelHijo.Controls.Add(label9);
             panelHijo.Controls.Add(txtCorreo);
             panelHijo.Controls.Add(label6);
@@ -69,18 +67,6 @@
             panelHijo.Name = "panelHijo";
             panelHijo.Size = new Size(895, 541);
             panelHijo.TabIndex = 0;
-            // 
-            // buttoContrato
-            // 
-            buttoContrato.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttoContrato.Font = new Font("Segoe UI", 12F);
-            buttoContrato.Location = new Point(509, 425);
-            buttoContrato.Name = "buttoContrato";
-            buttoContrato.Size = new Size(109, 45);
-            buttoContrato.TabIndex = 39;
-            buttoContrato.Text = "Contrato";
-            buttoContrato.UseVisualStyleBackColor = true;
-            buttoContrato.Click += buttoContrato_Click_1;
             // 
             // label9
             // 
@@ -171,7 +157,7 @@
             // 
             button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button2.Font = new Font("Segoe UI", 12F);
-            button2.Location = new Point(276, 425);
+            button2.Location = new Point(366, 429);
             button2.Name = "button2";
             button2.Size = new Size(109, 45);
             button2.TabIndex = 30;
@@ -248,7 +234,6 @@
         #endregion
 
         private Panel panelHijo;
-        private Button buttoContrato;
         private Label label9;
         private TextBox txtCorreo;
         private Label label6;

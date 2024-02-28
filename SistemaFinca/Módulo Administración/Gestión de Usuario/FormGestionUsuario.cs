@@ -154,5 +154,10 @@ namespace SistemaFinca
         {
             toolTip1.SetToolTip(buttonBuscar, "Consultar usuario");
         }
+
+        private void listUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

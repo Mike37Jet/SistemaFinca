@@ -201,6 +201,7 @@
             listUsuarios.TabIndex = 7;
             listUsuarios.UseCompatibleStateImageBehavior = false;
             listUsuarios.View = View.Details;
+            listUsuarios.SelectedIndexChanged += listUsuarios_SelectedIndexChanged;
             // 
             // columnID
             // 

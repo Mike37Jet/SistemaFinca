@@ -30,8 +30,11 @@
         {
             label1 = new Label();
             buttonImprimir = new Button();
-            textBoxInforme = new TextBox();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
+            listUsuarios = new ListView();
+            nombre = new ColumnHeader();
+            fecha = new ColumnHeader();
+            fechaf = new ColumnHeader();
             SuspendLayout();
             // 
             // label1
@@ -58,22 +61,41 @@
             buttonImprimir.UseVisualStyleBackColor = true;
             buttonImprimir.Click += buttonImprimir_Click;
             // 
-            // textBoxInforme
+            // listUsuarios
             // 
-            textBoxInforme.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBoxInforme.Location = new Point(103, 70);
-            textBoxInforme.Margin = new Padding(3, 2, 3, 2);
-            textBoxInforme.Multiline = true;
-            textBoxInforme.Name = "textBoxInforme";
-            textBoxInforme.Size = new Size(698, 377);
-            textBoxInforme.TabIndex = 11;
+            listUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listUsuarios.Columns.AddRange(new ColumnHeader[] { nombre, fecha, fechaf });
+            listUsuarios.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listUsuarios.Location = new Point(55, 78);
+            listUsuarios.Margin = new Padding(3, 2, 3, 2);
+            listUsuarios.Name = "listUsuarios";
+            listUsuarios.Size = new Size(785, 385);
+            listUsuarios.TabIndex = 11;
+            listUsuarios.UseCompatibleStateImageBehavior = false;
+            listUsuarios.View = View.Details;
+            listUsuarios.SelectedIndexChanged += listUsuarios_SelectedIndexChanged;
+            // 
+            // nombre
+            // 
+            nombre.Text = "Nombre de Usuario";
+            nombre.Width = 150;
+            // 
+            // fecha
+            // 
+            fecha.Text = "Fecha y Hora de Inicio de Sesión";
+            fecha.Width = 230;
+            // 
+            // fechaf
+            // 
+            fechaf.Text = "Fecha y Hora de Fin de Sesión ";
+            fechaf.Width = 230;
             // 
             // FormGU_GenerarInforme
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
-            Controls.Add(textBoxInforme);
+            Controls.Add(listUsuarios);
             Controls.Add(buttonImprimir);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
@@ -90,5 +112,13 @@
         private Button buttonImprimir;
         private TextBox textBoxInforme;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private ListView listU;
+        private ColumnHeader columnCorreo;
+        private ColumnHeader columnRol;
+        private ColumnHeader columnUsuario;
+        private ListView listUsuarios;
+        private ColumnHeader nombre;
+        private ColumnHeader fecha;
+        private ColumnHeader fechaf;
     }
 }

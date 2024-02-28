@@ -33,7 +33,7 @@
             panelActualizarCliente = new Panel();
             button1 = new Button();
             label3 = new Label();
-            textBox1 = new TextBox();
+            txtNumeroC = new TextBox();
             label2 = new Label();
             panel1.SuspendLayout();
             panelActualizarCliente.SuspendLayout();
@@ -62,7 +62,7 @@
             // 
             panelActualizarCliente.Controls.Add(button1);
             panelActualizarCliente.Controls.Add(label3);
-            panelActualizarCliente.Controls.Add(textBox1);
+            panelActualizarCliente.Controls.Add(txtNumeroC);
             panelActualizarCliente.Controls.Add(label2);
             panelActualizarCliente.Dock = DockStyle.Fill;
             panelActualizarCliente.Location = new Point(0, 55);
@@ -91,13 +91,13 @@
             label3.TabIndex = 2;
             label3.Text = "CI:";
             // 
-            // textBox1
+            // txtNumeroC
             // 
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(299, 79);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(296, 29);
-            textBox1.TabIndex = 1;
+            txtNumeroC.Font = new Font("Segoe UI", 12F);
+            txtNumeroC.Location = new Point(299, 79);
+            txtNumeroC.Name = "txtNumeroC";
+            txtNumeroC.Size = new Size(296, 29);
+            txtNumeroC.TabIndex = 1;
             // 
             // label2
             // 
@@ -130,7 +130,7 @@
         private Panel panel1;
         private Label label1;
         private Panel panelActualizarCliente;
-        private TextBox textBox1;
+        private TextBox txtNumeroC;
         private Label label2;
         private Button button1;
         private Label label3;

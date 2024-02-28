@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtNumeroC = new TextBox();
             label2 = new Label();
             buttonGuardar = new Button();
-            textBox2 = new TextBox();
-            label3 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -46,15 +44,15 @@
             label1.TabIndex = 0;
             label1.Text = "Dar de Baja al cliente";
             // 
-            // textBox1
+            // txtNumeroC
             // 
-            textBox1.Cursor = Cursors.IBeam;
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(322, 140);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(244, 29);
-            textBox1.TabIndex = 2;
+            txtNumeroC.Cursor = Cursors.IBeam;
+            txtNumeroC.Font = new Font("Segoe UI", 12F);
+            txtNumeroC.Location = new Point(322, 140);
+            txtNumeroC.Margin = new Padding(3, 2, 3, 2);
+            txtNumeroC.Name = "txtNumeroC";
+            txtNumeroC.Size = new Size(244, 29);
+            txtNumeroC.TabIndex = 2;
             // 
             // label2
             // 
@@ -70,7 +68,7 @@
             // buttonGuardar
             // 
             buttonGuardar.Font = new Font("Segoe UI", 12F);
-            buttonGuardar.Location = new Point(387, 403);
+            buttonGuardar.Location = new Point(386, 380);
             buttonGuardar.Margin = new Padding(3, 2, 3, 2);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(112, 40);
@@ -79,43 +77,20 @@
             buttonGuardar.UseVisualStyleBackColor = true;
             buttonGuardar.Click += button2_Click;
             // 
-            // textBox2
-            // 
-            textBox2.Cursor = Cursors.IBeam;
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(296, 238);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(297, 108);
-            textBox2.TabIndex = 20;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(415, 198);
-            label3.Name = "label3";
-            label3.Size = new Size(59, 21);
-            label3.TabIndex = 21;
-            label3.Text = "Motivo";
-            // 
             // FormC_DarDeBaja
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
-            Controls.Add(label3);
-            Controls.Add(textBox2);
             Controls.Add(buttonGuardar);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtNumeroC);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormC_DarDeBaja";
             Text = "Administrador";
+            Load += FormC_DarDeBaja_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -123,10 +98,8 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtNumeroC;
         private Label label2;
         private Button buttonGuardar;
-        private TextBox textBox2;
-        private Label label3;
     }
 }

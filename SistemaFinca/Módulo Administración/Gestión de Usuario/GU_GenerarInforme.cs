@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
+using Npgsql;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,10 +17,49 @@ namespace SistemaFinca
         public FormGU_GenerarInforme()
         {
             InitializeComponent();
+            getSesiones();
         }
 
+        private void getSesiones()
+        {
+            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    String commString = $"SELECT usuario, fechainicio, fechafin FROM sesiones";
+                    NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                    using (NpgsqlDataReader reader = comm.ExecuteReader())
+                    {
+                        if (!reader.HasRows) {
+                            return;
+                        }
 
-
+                        while (reader.Read())
+                        {
+                            String usuario = reader.GetString(0);
+                            String fechainicio = reader.GetDateTime(1).ToString();
+                            String fechafin = reader.GetDateTime(2).ToString();
+                            ListViewItem item = new ListViewItem(usuario);
+                            item.SubItems.Add(fechainicio);
+                            item.SubItems.Add(fechafin);
+                            listUsuarios.Items.Add(item);
+                        }
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -46,10 +86,15 @@ namespace SistemaFinca
         {
             Font font = new Font("Arial", 14, FontStyle.Regular, GraphicsUnit.Point);
 
-            
-                e.Graphics.DrawString(textBoxInforme.Text, font, Brushes.Black, new RectangleF(0, 100, 2000, 200));
+
+            e.Graphics.DrawString(textBoxInforme.Text, font, Brushes.Black, new RectangleF(0, 100, 2000, 200));
 
 
+
+        }
+
+        private void listUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
