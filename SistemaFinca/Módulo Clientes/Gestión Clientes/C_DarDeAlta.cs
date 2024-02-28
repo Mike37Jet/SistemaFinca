@@ -55,7 +55,7 @@ namespace SistemaFinca
                             return;
                         }
 
-                        DialogResult dialogResult = MessageBox.Show("Esta seguro que desea dar de alta al cliente?", "Confirmación", MessageBoxButtons.YesNo);
+                        DialogResult dialogResult = MessageBox.Show("Está seguro que desea dar de alta al cliente?", "Confirmación", MessageBoxButtons.YesNo);
                         if (dialogResult == DialogResult.No)
                         {
                             return;

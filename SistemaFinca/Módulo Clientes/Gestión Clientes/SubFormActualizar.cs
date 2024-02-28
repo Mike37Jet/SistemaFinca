@@ -72,7 +72,7 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
             }
             if (txtDireccion.Text.Length > 100 || !FormC_Registrar.DireccionValida(txtDireccion.Text))
             {
-                MessageBox.Show("direccion no válida", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Dirección no válida", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -80,7 +80,7 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
             {
                 try
                 {
-                    DialogResult dialogResult = MessageBox.Show("Esta seguro que desea actualizar los datos del usuario?", "Confirmación", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Está seguro que desea actualizar los datos del usuario?", "Confirmación", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.No)
                     {
                         return;

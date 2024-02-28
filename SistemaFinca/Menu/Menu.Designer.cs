@@ -859,7 +859,7 @@
             buttonAdministracion.Padding = new Padding(4, 0, 0, 0);
             buttonAdministracion.Size = new Size(252, 50);
             buttonAdministracion.TabIndex = 0;
-            buttonAdministracion.Text = "Administración";
+            buttonAdministracion.Text = "Administración del Sistema";
             buttonAdministracion.TextAlign = ContentAlignment.MiddleLeft;
             buttonAdministracion.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonAdministracion.UseVisualStyleBackColor = true;

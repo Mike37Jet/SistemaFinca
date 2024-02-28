@@ -89,6 +89,8 @@ namespace SistemaFinca
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
+            listUsuarios.Items.Clear();
+            getUsuarios();
             if (formularioActivo != null)
             {
                 formularioActivo.Close();

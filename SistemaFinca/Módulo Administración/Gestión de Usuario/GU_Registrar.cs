@@ -59,7 +59,7 @@ namespace SistemaFinca
             }
             if (txtNombreU.Text.Length > 15 || txtNombreU.Text.Length < 5 || !UsuarioEsValido(txtNombreU.Text))
             {
-                MessageBox.Show("nombre usuario ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nombre usuario ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtContrasena.Text.Length > 20 || txtContrasena.Text.Length < 8 || !ContrasenaEsValida(txtContrasena.Text))
@@ -132,7 +132,7 @@ namespace SistemaFinca
 
         public static bool NombresApellidosSonValidos(string nombre)
         {
-            Regex regex = new Regex("^[A-Za-zÁÉÍÓÚáéíóúñ]+(?: [A-Za-zÁÉÍÓÚáéíóúñ]+)?$");
+            Regex regex = new Regex("^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)?$");
             return regex.IsMatch(nombre);
         }
 

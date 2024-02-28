@@ -96,6 +96,9 @@ namespace SistemaFinca
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
+            listClientes.Items.Clear();
+            getClientes();
+
             if (formularioActivo != null)
             {
                 formularioActivo.Close();
