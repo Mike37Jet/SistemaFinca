@@ -34,13 +34,35 @@ namespace SistemaFinca
                     try
                     {
                         connection.Open();
-                        String commString = $"SELECT cedulacliente FROM cliente WHERE cedulacliente = '{txtNumeroC.Text}'";
+                        String commString = $"SELECT estado FROM cliente WHERE cedulacliente = '{txtNumeroC.Text}'";
                         NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                         NpgsqlDataReader reader = comm.ExecuteReader();
                         if (!reader.HasRows)
                         {
                             MessageBox.Show("El número de cédula no se encuentra registrado", "Datos no registrados", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
+                        }
+                        reader.Read();
+                        char estado = reader.GetChar(0);
+                        reader.Close();
+                        if (estado == 'I')
+                        {
+                            MessageBox.Show("El cliente ya se encuentra dado de baja", "No se pueda dar de baja al cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                        DialogResult dialogResult = MessageBox.Show("Esta seguro que desea dar de baja al cliente?", "Confirmación", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.No)
+                        {
+                            return;
+                        }
+                        String commString2 = $"UPDATE cliente SET estado = 'I'" +
+                                $" WHERE cedulacliente = '{txtNumeroC.Text}'";
+                        NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
+                        int resultado = comm2.ExecuteNonQuery();
+                        if (resultado > 0)
+                        {
+                            MessageBox.Show("El cliente se ha dado de baja exitosamente.", "Actualización Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     catch (NpgsqlException ex)
@@ -56,40 +78,6 @@ namespace SistemaFinca
                     }
                 }
             }
-            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
-            {
-                try
-                {
-                    DialogResult dialogResult = MessageBox.Show("Esta seguro que desea actualizar los datos del cliente?", "Confirmación", MessageBoxButtons.YesNo);
-                    if (dialogResult == DialogResult.No)
-                    {
-                        return;
-                    }
-                    connection.Open();
-
-                    String commString = $"UPDATE cliente SET estado = 'A'" +
-                        $" WHERE cedulacliente = '{txtNumeroC}'";
-                    NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
-                    int resultado = comm.ExecuteNonQuery();
-                    if (resultado > 0)
-                    {
-                        MessageBox.Show("El cliente se ha dado de baja exitosamente.", "Cambio Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-
-                }
-                catch (NpgsqlException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                finally
-                {
-                    if (connection.State == ConnectionState.Open)
-                    {
-                        connection.Close();
-                    }
-                }
-            }
-            
         }
 
         private void label2_Click(object sender, EventArgs e)

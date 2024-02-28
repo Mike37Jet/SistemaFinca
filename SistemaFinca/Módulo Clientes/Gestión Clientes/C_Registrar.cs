@@ -81,7 +81,7 @@ namespace SistemaFinca
 
 
                     String commString = $"INSERT INTO cliente VALUES('{textCedula.Text}', '{textNombres.Text}', " +
-                        $"'{textApellidos.Text}', '{textTelefono.Text}', '{txtCorreo.Text}', '{textDireccion}', 'A')";
+                        $"'{textApellidos.Text}', '{textTelefono.Text}', '{txtCorreo.Text}', '{textDireccion.Text}', 'A')";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     int resultado = comm.ExecuteNonQuery();
                     if (resultado > 0)

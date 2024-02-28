@@ -211,17 +211,17 @@
             // columnNombre
             // 
             columnNombre.Text = "Nombre";
-            columnNombre.Width = 80;
+            columnNombre.Width = 120;
             // 
             // columnApellidos
             // 
             columnApellidos.Text = "Apellidos";
-            columnApellidos.Width = 80;
+            columnApellidos.Width = 120;
             // 
             // columnTelefono
             // 
             columnTelefono.Text = "Teléfono";
-            columnTelefono.Width = 80;
+            columnTelefono.Width = 120;
             // 
             // columnCorreo
             // 

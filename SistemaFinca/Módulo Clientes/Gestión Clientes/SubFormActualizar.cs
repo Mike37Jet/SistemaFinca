@@ -70,7 +70,7 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
                 MessageBox.Show("Teléfono ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (txtDireccion.Text.Length > 100 || FormC_Registrar.DireccionValida(txtDireccion.Text))
+            if (txtDireccion.Text.Length > 100 || !FormC_Registrar.DireccionValida(txtDireccion.Text))
             {
                 MessageBox.Show("direccion no válida", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

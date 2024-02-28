@@ -37,17 +37,13 @@
             buttonActualizar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            listView1 = new ListView();
+            listClientes = new ListView();
             columnID = new ColumnHeader();
             columnNombre = new ColumnHeader();
             columnApellidos = new ColumnHeader();
             columnTelefono = new ColumnHeader();
             columnDireccionDomicilio = new ColumnHeader();
             columnEmail = new ColumnHeader();
-            columnCantidadDeLeche = new ColumnHeader();
-            columnTipoContrato = new ColumnHeader();
-            label2 = new Label();
-            textBuscarCliente = new TextBox();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
@@ -165,9 +161,7 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
-            panelFormularioHijo.Controls.Add(listView1);
-            panelFormularioHijo.Controls.Add(label2);
-            panelFormularioHijo.Controls.Add(textBuscarCliente);
+            panelFormularioHijo.Controls.Add(listClientes);
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
@@ -176,75 +170,48 @@
             panelFormularioHijo.Size = new Size(895, 541);
             panelFormularioHijo.TabIndex = 8;
             // 
-            // listView1
+            // listClientes
             // 
-            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnDireccionDomicilio, columnEmail, columnCantidadDeLeche, columnTipoContrato });
-            listView1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listView1.Location = new Point(55, 137);
-            listView1.Margin = new Padding(3, 2, 3, 2);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(785, 385);
-            listView1.TabIndex = 6;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            listClientes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listClientes.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnDireccionDomicilio, columnEmail });
+            listClientes.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listClientes.Location = new Point(53, 81);
+            listClientes.Margin = new Padding(3, 2, 3, 2);
+            listClientes.Name = "listClientes";
+            listClientes.Size = new Size(785, 428);
+            listClientes.TabIndex = 6;
+            listClientes.UseCompatibleStateImageBehavior = false;
+            listClientes.View = View.Details;
             // 
             // columnID
             // 
             columnID.Text = "CI";
+            columnID.Width = 80;
             // 
             // columnNombre
             // 
             columnNombre.Text = "Nombre";
-            columnNombre.Width = 65;
+            columnNombre.Width = 120;
             // 
             // columnApellidos
             // 
             columnApellidos.Text = "Apellidos";
-            columnApellidos.Width = 65;
+            columnApellidos.Width = 120;
             // 
             // columnTelefono
             // 
             columnTelefono.Text = "Teléfono";
-            columnTelefono.Width = 65;
+            columnTelefono.Width = 120;
             // 
             // columnDireccionDomicilio
             // 
             columnDireccionDomicilio.Text = "Dirección domiciliaria";
-            columnDireccionDomicilio.Width = 65;
+            columnDireccionDomicilio.Width = 170;
             // 
             // columnEmail
             // 
-            columnEmail.Text = "E - mail";
-            columnEmail.Width = 65;
-            // 
-            // columnCantidadDeLeche
-            // 
-            columnCantidadDeLeche.Text = "Volumen de leche requerido";
-            columnCantidadDeLeche.Width = 65;
-            // 
-            // columnTipoContrato
-            // 
-            columnTipoContrato.Text = "Tipo de contrato";
-            columnTipoContrato.Width = 65;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(55, 76);
-            label2.Name = "label2";
-            label2.Size = new Size(100, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Buscar cliente";
-            // 
-            // textBuscarCliente
-            // 
-            textBuscarCliente.Location = new Point(55, 98);
-            textBuscarCliente.Margin = new Padding(3, 2, 3, 2);
-            textBuscarCliente.Name = "textBuscarCliente";
-            textBuscarCliente.Size = new Size(308, 23);
-            textBuscarCliente.TabIndex = 4;
+            columnEmail.Text = "Correo Electrónico";
+            columnEmail.Width = 140;
             // 
             // label1
             // 
@@ -285,16 +252,12 @@
         private Button buttonRegresar;
         private Panel panelFormularioHijo;
         private Label label1;
-        private Label label2;
-        private TextBox textBuscarCliente;
-        private ListView listView1;
+        private ListView listClientes;
         private ColumnHeader columnID;
         private ColumnHeader columnNombre;
         private ColumnHeader columnApellidos;
         private ColumnHeader columnTelefono;
         private ColumnHeader columnDireccionDomicilio;
         private ColumnHeader columnEmail;
-        private ColumnHeader columnCantidadDeLeche;
-        private ColumnHeader columnTipoContrato;
     }
 }

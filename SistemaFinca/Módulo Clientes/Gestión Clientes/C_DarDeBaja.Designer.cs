@@ -68,7 +68,7 @@
             // buttonGuardar
             // 
             buttonGuardar.Font = new Font("Segoe UI", 12F);
-            buttonGuardar.Location = new Point(386, 380);
+            buttonGuardar.Location = new Point(386, 340);
             buttonGuardar.Margin = new Padding(3, 2, 3, 2);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(112, 40);
