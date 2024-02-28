@@ -1,15 +1,19 @@
+using System.Data;
 using System.Runtime.InteropServices;
+using Npgsql;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 namespace SistemaFinca
 {
 
     public partial class FormLogin : Form
     {
+        public static String user = "postgres";
+        public static String password = "Mt3341459.";
+        public static String connectionString = $"Server=localhost;Port=5432;User Id={user};Password={password};Database=aboost";
 
         public FormLogin()
         {
             InitializeComponent();
-
-
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -81,18 +85,60 @@ namespace SistemaFinca
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textUsuario.Text == "admin" && textContraseña.Text == "admin")
+            if (textUsuario.Text.Length < 5 || textUsuario.Text.Length > 15 || textContraseña.Text.Length < 8 || textContraseña.Text.Length > 20)
             {
-                FormMenu formMenu = new FormMenu();
-                formMenu.Show(this);
-                this.Hide();
+                MessageBox.Show("Usuario o contraseña inválida. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrecta. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+                        String commString = $"SELECT rol, contrasena, estado FROM usuario WHERE usuario = '{textUsuario.Text}'";
+                        NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                        NpgsqlDataReader reader = comm.ExecuteReader();
+                        if (!reader.HasRows)
+                        {
+                            MessageBox.Show("Usuario o contraseña inválida. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        reader.Read();
+                        char rol = reader.GetChar(0);
+                        String contrasenaValida = reader.GetString(1);
+                        char estado = reader.GetChar(2);
+                        if (estado == 'I')
+                        {
+                            MessageBox.Show("Usuario desactivado temporalmente", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        if (textContraseña.Text == contrasenaValida) 
+                        {
+                            FormMenu formMenu = new FormMenu(rol);
+                            formMenu.Show(this);
+                            this.Hide();
+                        } else
+                        {
+                            MessageBox.Show("Usuario o contraseña inválida. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                    }
+                    catch (NpgsqlException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
+                }
             }
-
-
         }
 
         private void textContraseña_KeyPress(object sender, KeyPressEventArgs e)

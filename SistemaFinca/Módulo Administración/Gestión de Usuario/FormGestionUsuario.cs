@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 using ToolTip = System.Windows.Forms.ToolTip;
 
 namespace SistemaFinca
@@ -17,7 +18,55 @@ namespace SistemaFinca
         public FormGestionUsuario()
         {
             InitializeComponent();
+            getUsuarios();
         }
+
+        private void getUsuarios()
+        {
+            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    String commString = $"SELECT cedulausuario, nombres, apellidos, telefono, correo, rol, " +
+                        $"usuario FROM usuario";
+                    NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                    using (NpgsqlDataReader reader = comm.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String cedula = reader.GetString(0);
+                            String nombres = reader.GetString(1);
+                            String apellidos = reader.GetString(2);
+                            String telefono = reader.GetString(3);
+                            String correo = reader.GetString(4);
+                            String rol = reader.GetChar(5) == 'A' ? "Administrador" : "Jornalero";
+                            String usuario = reader.GetString(6);
+                            ListViewItem item = new ListViewItem(cedula);
+                            item.SubItems.Add(nombres);
+                            item.SubItems.Add(apellidos);
+                            item.SubItems.Add(telefono);
+                            item.SubItems.Add(correo);
+                            item.SubItems.Add(rol);
+                            item.SubItems.Add(usuario);
+                            listUsuarios.Items.Add(item);
+                        }
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+        }
+
         private Form formularioActivo = null;
 
         private void abrirFormulariosHijos(Form formularioHijo)

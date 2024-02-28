@@ -73,9 +73,7 @@
             buttonAdministracion = new Button();
             panel2 = new Panel();
             label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            labelRol = new Label();
             pictureBox1 = new PictureBox();
             buttonSalir = new Button();
             panelFormularioHijo = new Panel();
@@ -870,9 +868,7 @@
             // panel2
             // 
             panel2.Controls.Add(label4);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(label1);
+            panel2.Controls.Add(labelRol);
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
@@ -896,38 +892,17 @@
             label4.Text = "     Online";
             label4.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label3
+            // labelRol
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10.2F);
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(108, 48);
-            label3.Name = "label3";
-            label3.Size = new Size(60, 19);
-            label3.TabIndex = 3;
-            label3.Text = "42 Años";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(108, 10);
-            label2.Name = "label2";
-            label2.Size = new Size(96, 19);
-            label2.TabIndex = 2;
-            label2.Text = "Administrador";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.2F);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(108, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(112, 19);
-            label1.TabIndex = 1;
-            label1.Text = "Rolando Almeida";
+            labelRol.AutoSize = true;
+            labelRol.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelRol.ForeColor = SystemColors.ButtonFace;
+            labelRol.Location = new Point(108, 39);
+            labelRol.Name = "labelRol";
+            labelRol.Size = new Size(96, 19);
+            labelRol.TabIndex = 2;
+            labelRol.Text = "Administrador";
+            labelRol.Click += label2_Click;
             // 
             // pictureBox1
             // 
@@ -1039,10 +1014,8 @@
         private Button buttonZonasPastoreo;
         private Panel panelFormularioHijo;
         private PictureBox pictureLogo;
-        private Label label1;
         private PictureBox pictureBox1;
-        private Label label3;
-        private Label label2;
+        private Label labelRol;
         private Label label4;
         private Panel subPanelGestionGanadera;
         private Panel subPanelInventario;

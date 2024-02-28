@@ -31,11 +31,11 @@
             panelHijo = new Panel();
             buttoContrato = new Button();
             label9 = new Label();
-            textEmail = new TextBox();
+            txtCorreo = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            textDireccionDom = new TextBox();
+            textDireccion = new TextBox();
             textApellidos = new TextBox();
             textNombres = new TextBox();
             button2 = new Button();
@@ -51,11 +51,11 @@
             // 
             panelHijo.Controls.Add(buttoContrato);
             panelHijo.Controls.Add(label9);
-            panelHijo.Controls.Add(textEmail);
+            panelHijo.Controls.Add(txtCorreo);
             panelHijo.Controls.Add(label6);
             panelHijo.Controls.Add(label5);
             panelHijo.Controls.Add(label4);
-            panelHijo.Controls.Add(textDireccionDom);
+            panelHijo.Controls.Add(textDireccion);
             panelHijo.Controls.Add(textApellidos);
             panelHijo.Controls.Add(textNombres);
             panelHijo.Controls.Add(button2);
@@ -93,15 +93,16 @@
             label9.TabIndex = 38;
             label9.Text = "Dirección de correo electrónico";
             // 
-            // textEmail
+            // txtCorreo
             // 
-            textEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textEmail.Cursor = Cursors.IBeam;
-            textEmail.Font = new Font("Segoe UI", 12F);
-            textEmail.Location = new Point(107, 346);
-            textEmail.Name = "textEmail";
-            textEmail.Size = new Size(680, 29);
-            textEmail.TabIndex = 37;
+            txtCorreo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtCorreo.Cursor = Cursors.IBeam;
+            txtCorreo.Font = new Font("Segoe UI", 12F);
+            txtCorreo.ForeColor = SystemColors.ActiveBorder;
+            txtCorreo.Location = new Point(107, 345);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(680, 29);
+            txtCorreo.TabIndex = 37;
             // 
             // label6
             // 
@@ -136,15 +137,15 @@
             label4.TabIndex = 34;
             label4.Text = "Nombres";
             // 
-            // textDireccionDom
+            // textDireccion
             // 
-            textDireccionDom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textDireccionDom.Cursor = Cursors.IBeam;
-            textDireccionDom.Font = new Font("Segoe UI", 12F);
-            textDireccionDom.Location = new Point(107, 270);
-            textDireccionDom.Name = "textDireccionDom";
-            textDireccionDom.Size = new Size(680, 29);
-            textDireccionDom.TabIndex = 33;
+            textDireccion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textDireccion.Cursor = Cursors.IBeam;
+            textDireccion.Font = new Font("Segoe UI", 12F);
+            textDireccion.Location = new Point(107, 270);
+            textDireccion.Name = "textDireccion";
+            textDireccion.Size = new Size(680, 29);
+            textDireccion.TabIndex = 33;
             // 
             // textApellidos
             // 
@@ -249,11 +250,11 @@
         private Panel panelHijo;
         private Button buttoContrato;
         private Label label9;
-        private TextBox textEmail;
+        private TextBox txtCorreo;
         private Label label6;
         private Label label5;
         private Label label4;
-        private TextBox textDireccionDom;
+        private TextBox textDireccion;
         private TextBox textApellidos;
         private TextBox textNombres;
         private Button button2;

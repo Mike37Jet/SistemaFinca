@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SistemaFinca
@@ -28,44 +29,85 @@ namespace SistemaFinca
             Regex regex = new Regex(pattern);
             Regex regex2 = new Regex(pattern);
 
-            if (textCedula.Text.Length != 10)
+            if (!FormGU_Registrar.CedulaEsValida(textCedula.Text))
             {
-                MessageBox.Show("Cédula inválida", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            if (textNombres.Text.Length >= 30 || textNombres.Text == null)
-            {
-                MessageBox.Show("Nombres inválidos", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (textApellidos.Text.Length >= 30 || textNombres.Text == null)
-            {
-                MessageBox.Show("Apellidos inválidos", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else if (textTelefono.Text.Length != 10)
-            {
-                MessageBox.Show("Número de teléfono inválido", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else if (textDireccionDom.Text.Length >= 50 || textNombres.Text == null)
-            {
-                MessageBox.Show("Dirección inválida", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else if (!regex.IsMatch(textEmail.Text))
-            {
-
-                MessageBox.Show("Correo Electrónico inválido", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
-                MessageBox.Show("El cliente se ha registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El número de cédula no es válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
+            if (textNombres.Text.Length > 60 || !FormGU_Registrar.NombresApellidosSonValidos(textNombres.Text))
+            {
+                MessageBox.Show("Nombres ingresados no válidos", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (textApellidos.Text.Length > 60 || !FormGU_Registrar.NombresApellidosSonValidos(textNombres.Text))
+            {
+                MessageBox.Show("Apellidos ingresados no válidos", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
 
+            }
+            if (textTelefono.Text.Length > 11 || !FormGU_Registrar.TelefonoEsValido(textTelefono.Text) || textTelefono.Text.Length < 7)
+            {
+                MessageBox.Show("Teléfono ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+            if (textDireccion.Text.Length > 100 || DireccionValida(textDireccion.Text))
+            {
+                MessageBox.Show("direccion no válida", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+            if (!FormGU_Registrar.CorreoEsValido(txtCorreo.Text))
+            {
+                MessageBox.Show("Correo electrónico ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            //MessageBox.Show("El cliente se ha registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    String commExisteString = $"SELECT * FROM usuario WHERE cedulausuario = '{textCedula.Text}'";
+                    NpgsqlCommand commExiste = new NpgsqlCommand(commExisteString, connection);
+                    using (NpgsqlDataReader reader = commExiste.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            MessageBox.Show("El número de cédula ya se encuentra registrado", "Datos registrados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
+
+                    //String commString = $"INSERT INTO usuario VALUES('{txtNumeroC.Text}', '{txtNombres.Text}', " +
+                    //$"'{txtApellidos.Text}', '{txtTelefono.Text}', '{txtCorreo.Text}', '{txtNombreU.Text}', '{txtContrasena.Text}', '{rol}', 'A')";
+                    //NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                    //int resultado = comm.ExecuteNonQuery();
+                    //if (resultado > 0)
+                    //{
+                    // MessageBox.Show("El cliente se ha registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //FormGU_Registrar.vaciarCampos();
+                    //}
+                }
+                catch (NpgsqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+
+
+            }
         }
-
 
         private void buttoContrato_Click_1(object sender, EventArgs e)
         {
@@ -79,6 +121,11 @@ namespace SistemaFinca
            
             contratos.Show();
 
+        }
+        private static bool DireccionValida(string direccion)
+        {
+            Regex regex = new Regex("^[A-Za-z0-9.\\-]+(?: [A-Za-z0-9.\\-]+){0,99}$");
+            return regex.IsMatch(direccion);
         }
     }
 }

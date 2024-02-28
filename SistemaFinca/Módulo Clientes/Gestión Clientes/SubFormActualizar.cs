@@ -12,9 +12,12 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
 {
     public partial class SubFormActualizar : Form
     {
+        
         public SubFormActualizar()
         {
             InitializeComponent();
+      
+            
         }
 
 

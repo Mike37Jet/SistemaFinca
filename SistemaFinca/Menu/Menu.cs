@@ -15,11 +15,14 @@ namespace SistemaFinca
     public partial class FormMenu : Form
     {
         private int borderSize;
+        private char rol;
 
-        public FormMenu()
+        public FormMenu(char rol)
         {
             InitializeComponent();
             personalizarDiseño();
+            this.rol = rol;
+            labelRol.Text = rol == 'A' ? "Administrador" : "Jornalero";
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -102,9 +105,16 @@ namespace SistemaFinca
 
         private void buttonAdministracion_Click(object sender, EventArgs e)
         {
-            mostrarSubMenu(subPanelAdministracion);
-            //abrirFormulariosHijos(new FormAdministrador());
+            if (rol == 'A') {
+                mostrarSubMenu(subPanelAdministracion);
+                //abrirFormulariosHijos(new FormAdministrador());
+            }
+            else {
+                MessageBox.Show("Acceso denegado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
+
         private void buttonGestionGanadera_Click(object sender, EventArgs e)
         {
             subPanelGestionGanadera.Size = new Size(279, 62);
@@ -333,6 +343,11 @@ namespace SistemaFinca
         private void buttonContratos_Click(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormContratos());
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -87,7 +87,7 @@ namespace SistemaFinca
         private void buttonActualizaCantidadMax_Click(object sender, EventArgs e)
         {
             string pattern = @"^[0-9]+$";
-            if (textNuevoPrecioLeche.Text == "")
+            if (textNuevaCapacidadMaxLeche.Text == "")
             {
                 MessageBox.Show("Atributo vacío. Por favor, ingrese un valor.", "Actualización Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -31,9 +31,9 @@
             panel1 = new Panel();
             label1 = new Label();
             panelActualizarCliente = new Panel();
-            button1 = new Button();
+            btnBuscar = new Button();
             label3 = new Label();
-            textBox1 = new TextBox();
+            txtNumeroC = new TextBox();
             label2 = new Label();
             panel1.SuspendLayout();
             panelActualizarCliente.SuspendLayout();
@@ -63,9 +63,9 @@
             // 
             // panelActualizarCliente
             // 
-            panelActualizarCliente.Controls.Add(button1);
+            panelActualizarCliente.Controls.Add(btnBuscar);
             panelActualizarCliente.Controls.Add(label3);
-            panelActualizarCliente.Controls.Add(textBox1);
+            panelActualizarCliente.Controls.Add(txtNumeroC);
             panelActualizarCliente.Controls.Add(label2);
             panelActualizarCliente.Dock = DockStyle.Fill;
             panelActualizarCliente.Location = new Point(0, 41);
@@ -74,17 +74,17 @@
             panelActualizarCliente.Size = new Size(895, 500);
             panelActualizarCliente.TabIndex = 3;
             // 
-            // button1
+            // btnBuscar
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            button1.Location = new Point(406, 98);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 30);
-            button1.TabIndex = 3;
-            button1.Text = "Buscar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            btnBuscar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnBuscar.Location = new Point(406, 98);
+            btnBuscar.Margin = new Padding(3, 2, 3, 2);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(82, 30);
+            btnBuscar.TabIndex = 3;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += button1_Click_1;
             // 
             // label3
             // 
@@ -96,14 +96,15 @@
             label3.TabIndex = 2;
             label3.Text = "CI:";
             // 
-            // textBox1
+            // txtNumeroC
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(317, 59);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(260, 23);
-            textBox1.TabIndex = 1;
+            txtNumeroC.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtNumeroC.Location = new Point(317, 59);
+            txtNumeroC.Margin = new Padding(3, 2, 3, 2);
+            txtNumeroC.Name = "txtNumeroC";
+            txtNumeroC.Size = new Size(260, 23);
+            txtNumeroC.TabIndex = 1;
+            txtNumeroC.TextChanged += textBox1_TextChanged;
             // 
             // label2
             // 
@@ -138,9 +139,9 @@
         private Panel panel1;
         private Label label1;
         private Panel panelActualizarCliente;
-        private TextBox textBox1;
+        private TextBox txtNumeroC;
         private Label label2;
-        private Button button1;
+        private Button btnBuscar;
         private Label label3;
     }
 }

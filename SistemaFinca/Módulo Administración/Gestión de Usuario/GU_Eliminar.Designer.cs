@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtNumeroC = new TextBox();
             label2 = new Label();
-            button2 = new Button();
+            btnEliminar = new Button();
             SuspendLayout();
             // 
             // label1
@@ -45,15 +45,15 @@
             label1.TabIndex = 0;
             label1.Text = "Eliminar usuario";
             // 
-            // textBox1
+            // txtNumeroC
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Cursor = Cursors.IBeam;
-            textBox1.Location = new Point(333, 110);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(244, 23);
-            textBox1.TabIndex = 2;
+            txtNumeroC.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtNumeroC.Cursor = Cursors.IBeam;
+            txtNumeroC.Location = new Point(333, 110);
+            txtNumeroC.Margin = new Padding(3, 2, 3, 2);
+            txtNumeroC.Name = "txtNumeroC";
+            txtNumeroC.Size = new Size(244, 23);
+            txtNumeroC.TabIndex = 2;
             // 
             // label2
             // 
@@ -66,31 +66,32 @@
             label2.TabIndex = 3;
             label2.Text = "Número de Cédula de identidad";
             // 
-            // button2
+            // btnEliminar
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            button2.Location = new Point(413, 268);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(82, 30);
-            button2.TabIndex = 10;
-            button2.Text = "Eliminar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnEliminar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnEliminar.Location = new Point(413, 268);
+            btnEliminar.Margin = new Padding(3, 2, 3, 2);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(82, 30);
+            btnEliminar.TabIndex = 10;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += button2_Click;
             // 
             // FormGU_Eliminar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
-            Controls.Add(button2);
+            Controls.Add(btnEliminar);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtNumeroC);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormGU_Eliminar";
             Text = "Administrador";
+            Load += FormGU_Eliminar_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -98,8 +99,8 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtNumeroC;
         private Label label2;
-        private Button button2;
+        private Button btnEliminar;
     }
 }

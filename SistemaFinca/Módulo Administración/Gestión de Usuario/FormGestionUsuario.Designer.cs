@@ -38,15 +38,15 @@
             buttonActualizar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            listView1 = new ListView();
+            listUsuarios = new ListView();
             columnID = new ColumnHeader();
             columnNombre = new ColumnHeader();
             columnApellidos = new ColumnHeader();
             columnTelefono = new ColumnHeader();
             columnCorreo = new ColumnHeader();
             columnRol = new ColumnHeader();
-            label1 = new Label();
             columnUsuario = new ColumnHeader();
+            label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -180,7 +180,7 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
-            panelFormularioHijo.Controls.Add(listView1);
+            panelFormularioHijo.Controls.Add(listUsuarios);
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
@@ -189,18 +189,18 @@
             panelFormularioHijo.Size = new Size(895, 541);
             panelFormularioHijo.TabIndex = 8;
             // 
-            // listView1
+            // listUsuarios
             // 
-            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnCorreo, columnRol, columnUsuario });
-            listView1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listView1.Location = new Point(51, 84);
-            listView1.Margin = new Padding(3, 2, 3, 2);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(785, 385);
-            listView1.TabIndex = 7;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            listUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listUsuarios.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnCorreo, columnRol, columnUsuario });
+            listUsuarios.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listUsuarios.Location = new Point(51, 84);
+            listUsuarios.Margin = new Padding(3, 2, 3, 2);
+            listUsuarios.Name = "listUsuarios";
+            listUsuarios.Size = new Size(785, 385);
+            listUsuarios.TabIndex = 7;
+            listUsuarios.UseCompatibleStateImageBehavior = false;
+            listUsuarios.View = View.Details;
             // 
             // columnID
             // 
@@ -232,6 +232,11 @@
             columnRol.Text = "Rol";
             columnRol.Width = 80;
             // 
+            // columnUsuario
+            // 
+            columnUsuario.Text = "Nombre de usuario";
+            columnUsuario.Width = 150;
+            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top;
@@ -243,11 +248,6 @@
             label1.TabIndex = 5;
             label1.Text = "Usuarios";
             label1.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // columnUsuario
-            // 
-            columnUsuario.Text = "Nombre de usuario";
-            columnUsuario.Width = 150;
             // 
             // FormGestionUsuario
             // 
@@ -278,7 +278,7 @@
         private TextBox textBuscarCliente;
         private Button buttonEliminar;
         private Button buttonRegresar;
-        private ListView listView1;
+        private ListView listUsuarios;
         private ColumnHeader columnID;
         private ColumnHeader columnNombre;
         private ColumnHeader columnApellidos;
