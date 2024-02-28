@@ -84,7 +84,7 @@
             txtCorreo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtCorreo.Cursor = Cursors.IBeam;
             txtCorreo.Font = new Font("Segoe UI", 12F);
-            txtCorreo.ForeColor = SystemColors.ActiveBorder;
+            txtCorreo.ForeColor = SystemColors.ActiveCaptionText;
             txtCorreo.Location = new Point(107, 345);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(680, 29);
@@ -163,6 +163,7 @@
             button2.TabIndex = 30;
             button2.Text = "Registrar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label3
             // 

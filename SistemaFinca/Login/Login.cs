@@ -8,7 +8,7 @@ namespace SistemaFinca
     public partial class FormLogin : Form
     {
         public static String user = "postgres";
-        public static String password = "Mt3341459.";
+        public static String password = "eeee2003";
         public static String connectionString = $"Server=localhost;Port=5432;User Id={user};Password={password};Database=aboost";
 
         public FormLogin()
@@ -119,7 +119,9 @@ namespace SistemaFinca
                         if (textContraseña.Text == contrasenaValida) 
                         {
                             reader.Close();
-                            String fechaInicio = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                            String commString2 = $"SELECT to_char(now()::timestamp(0), 'YYYY-MM-DD HH24:MI:SS')";
+                            NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
+                            String fechaInicio = comm2.ExecuteScalar().ToString();
                             FormMenu formMenu = new FormMenu(rol, usuario, fechaInicio);
                             formMenu.Show(this);
                             this.Hide();

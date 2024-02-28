@@ -25,7 +25,7 @@ namespace SistemaFinca
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             if (!FormGU_Registrar.CedulaEsValida(textCedula.Text))
             {
                 MessageBox.Show("El número de cédula no es válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -49,7 +49,7 @@ namespace SistemaFinca
                 return;
 
             }
-            if (textDireccion.Text.Length > 100 || DireccionValida(textDireccion.Text))
+            if (textDireccion.Text.Length > 100 || !DireccionValida(textDireccion.Text))
             {
                 MessageBox.Show("direccion no válida", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -113,7 +113,7 @@ namespace SistemaFinca
             panelHijo.Controls.Add(contratos);
             panelHijo.Tag = contratos;
             contratos.BringToFront();
-           
+
             contratos.Show();
 
         }
@@ -129,6 +129,7 @@ namespace SistemaFinca
             textApellidos.Text = "";
             textDireccion.Text = "";
             textTelefono.Text = "";
+            txtCorreo.Text = "";
         }
     }
 }
