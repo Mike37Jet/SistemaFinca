@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            buttonImprimir = new Button();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
             listUsuarios = new ListView();
             nombre = new ColumnHeader();
@@ -47,19 +46,6 @@
             label1.Size = new Size(61, 20);
             label1.TabIndex = 0;
             label1.Text = "Informe";
-            // 
-            // buttonImprimir
-            // 
-            buttonImprimir.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            buttonImprimir.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonImprimir.Location = new Point(411, 478);
-            buttonImprimir.Margin = new Padding(3, 2, 3, 2);
-            buttonImprimir.Name = "buttonImprimir";
-            buttonImprimir.Size = new Size(82, 34);
-            buttonImprimir.TabIndex = 10;
-            buttonImprimir.Text = "Imprimir";
-            buttonImprimir.UseVisualStyleBackColor = true;
-            buttonImprimir.Click += buttonImprimir_Click;
             // 
             // listUsuarios
             // 
@@ -96,7 +82,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
             Controls.Add(listUsuarios);
-            Controls.Add(buttonImprimir);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
@@ -109,7 +94,6 @@
         #endregion
 
         private Label label1;
-        private Button buttonImprimir;
         private TextBox textBoxInforme;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private ListView listU;

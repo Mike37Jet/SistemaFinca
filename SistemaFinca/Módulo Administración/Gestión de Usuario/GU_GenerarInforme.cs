@@ -31,7 +31,8 @@ namespace SistemaFinca
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
                     {
-                        if (!reader.HasRows) {
+                        if (!reader.HasRows)
+                        {
                             return;
                         }
 

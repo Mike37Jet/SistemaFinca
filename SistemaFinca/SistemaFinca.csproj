@@ -30,6 +30,9 @@
     <Compile Update="Módulo Administración\Gestión de Usuario\SubFormGUActualizar.cs" />
     <Compile Update="Módulo Administración\Parámetro del Sistema\FormParametrosSistema.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\C_Actualizar.cs" />
+    <Compile Update="Módulo Clientes\Gestión Clientes\C_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Módulo Clientes\Gestión Clientes\C_DarDeAlta.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\C_DarDeBaja.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\FormGestionClientes.cs" />

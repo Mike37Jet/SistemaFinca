@@ -35,7 +35,6 @@
             textContraseña = new TextBox();
             label1 = new Label();
             button1 = new Button();
-            linkLabel1 = new LinkLabel();
             button2 = new Button();
             button3 = new Button();
             panel1.SuspendLayout();
@@ -124,19 +123,6 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // linkLabel1
-            // 
-            linkLabel1.ActiveLinkColor = Color.FromArgb(0, 122, 204);
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.LinkColor = Color.DimGray;
-            linkLabel1.Location = new Point(425, 279);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(188, 19);
-            linkLabel1.TabIndex = 0;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "¿Has olvidado tu contraseña?";
-            // 
             // button2
             // 
             button2.FlatAppearance.BorderSize = 0;
@@ -175,7 +161,6 @@
             ClientSize = new Size(780, 330);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(linkLabel1);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(textContraseña);
@@ -203,7 +188,6 @@
         private TextBox textContraseña;
         private Label label1;
         private Button button1;
-        private LinkLabel linkLabel1;
         private PictureBox pictureBox3;
         private Button button2;
         private Button button3;

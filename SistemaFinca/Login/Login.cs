@@ -116,7 +116,7 @@ namespace SistemaFinca
                             MessageBox.Show("Usuario desactivado temporalmente", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-                        if (textContraseña.Text == contrasenaValida) 
+                        if (textContraseña.Text == contrasenaValida)
                         {
                             reader.Close();
                             String commString2 = $"SELECT to_char(now()::timestamp(0), 'YYYY-MM-DD HH24:MI:SS')";
@@ -125,7 +125,8 @@ namespace SistemaFinca
                             FormMenu formMenu = new FormMenu(rol, usuario, fechaInicio);
                             formMenu.Show(this);
                             this.Hide();
-                        } else
+                        }
+                        else
                         {
                             MessageBox.Show("Usuario o contraseña inválida. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
@@ -148,7 +149,7 @@ namespace SistemaFinca
 
         private void textContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
             textContraseña.PasswordChar = '*';
         }
     }

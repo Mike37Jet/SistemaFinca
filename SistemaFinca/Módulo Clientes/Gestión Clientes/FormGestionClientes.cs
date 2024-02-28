@@ -148,5 +148,10 @@ namespace SistemaFinca
         {
             toolTip.SetToolTip(buttonActualizar, "Actualizar cliente");
         }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormC_Consultar());
+        }
     }
 }

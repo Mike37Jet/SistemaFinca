@@ -103,11 +103,11 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(156, 33);
+            label2.Location = new Point(111, 34);
             label2.Name = "label2";
-            label2.Size = new Size(583, 21);
+            label2.Size = new Size(673, 21);
             label2.TabIndex = 0;
-            label2.Text = "Para actualizar los datos de un cliente, ingrese su número de cédula a continuación:\r\n";
+            label2.Text = "Para actualizar los datos de un cliente, ingrese su número de cédula de identidad a continuación:\r\n";
             // 
             // FormC_Actualizar
             // 

@@ -45,6 +45,7 @@
             columnDireccionDomicilio = new ColumnHeader();
             columnEmail = new ColumnHeader();
             label1 = new Label();
+            buttonBuscar = new Button();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -64,18 +65,20 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.ColumnCount = 6;
+            tableLayoutPanel1.ColumnCount = 7;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.9939756F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.3855438F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 228F));
+            tableLayoutPanel1.Controls.Add(buttonBuscar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonRegistrar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonDarDeAlta, 3, 0);
             tableLayoutPanel1.Controls.Add(buttonDarDeBaja, 2, 0);
             tableLayoutPanel1.Controls.Add(buttonActualizar, 1, 0);
-            tableLayoutPanel1.Controls.Add(buttonRegresar, 5, 0);
+            tableLayoutPanel1.Controls.Add(buttonRegresar, 6, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
             tableLayoutPanel1.Location = new Point(0, 541);
             tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
@@ -92,7 +95,7 @@
             buttonRegistrar.Location = new Point(0, 0);
             buttonRegistrar.Margin = new Padding(0);
             buttonRegistrar.Name = "buttonRegistrar";
-            buttonRegistrar.Size = new Size(95, 50);
+            buttonRegistrar.Size = new Size(70, 50);
             buttonRegistrar.TabIndex = 6;
             buttonRegistrar.TextAlign = ContentAlignment.BottomCenter;
             buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -104,10 +107,10 @@
             // 
             buttonDarDeAlta.Dock = DockStyle.Fill;
             buttonDarDeAlta.Image = (Image)resources.GetObject("buttonDarDeAlta.Image");
-            buttonDarDeAlta.Location = new Point(285, 0);
+            buttonDarDeAlta.Location = new Point(283, 0);
             buttonDarDeAlta.Margin = new Padding(0);
             buttonDarDeAlta.Name = "buttonDarDeAlta";
-            buttonDarDeAlta.Size = new Size(99, 50);
+            buttonDarDeAlta.Size = new Size(73, 50);
             buttonDarDeAlta.TabIndex = 9;
             buttonDarDeAlta.TextAlign = ContentAlignment.BottomCenter;
             buttonDarDeAlta.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -119,10 +122,10 @@
             // 
             buttonDarDeBaja.Dock = DockStyle.Fill;
             buttonDarDeBaja.Image = (Image)resources.GetObject("buttonDarDeBaja.Image");
-            buttonDarDeBaja.Location = new Point(190, 0);
+            buttonDarDeBaja.Location = new Point(210, 0);
             buttonDarDeBaja.Margin = new Padding(0);
             buttonDarDeBaja.Name = "buttonDarDeBaja";
-            buttonDarDeBaja.Size = new Size(95, 50);
+            buttonDarDeBaja.Size = new Size(73, 50);
             buttonDarDeBaja.TabIndex = 8;
             buttonDarDeBaja.TextAlign = ContentAlignment.BottomCenter;
             buttonDarDeBaja.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -134,10 +137,10 @@
             // 
             buttonActualizar.Dock = DockStyle.Fill;
             buttonActualizar.Image = (Image)resources.GetObject("buttonActualizar.Image");
-            buttonActualizar.Location = new Point(95, 0);
+            buttonActualizar.Location = new Point(140, 0);
             buttonActualizar.Margin = new Padding(0);
             buttonActualizar.Name = "buttonActualizar";
-            buttonActualizar.Size = new Size(95, 50);
+            buttonActualizar.Size = new Size(70, 50);
             buttonActualizar.TabIndex = 7;
             buttonActualizar.TextAlign = ContentAlignment.BottomCenter;
             buttonActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -149,10 +152,10 @@
             // 
             buttonRegresar.Dock = DockStyle.Fill;
             buttonRegresar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonRegresar.Location = new Point(680, 2);
+            buttonRegresar.Location = new Point(667, 2);
             buttonRegresar.Margin = new Padding(3, 2, 3, 2);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(212, 46);
+            buttonRegresar.Size = new Size(225, 46);
             buttonRegresar.TabIndex = 10;
             buttonRegresar.Text = "Regresar";
             buttonRegresar.UseVisualStyleBackColor = true;
@@ -225,6 +228,20 @@
             label1.Text = "Clientes";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
+            // buttonBuscar
+            // 
+            buttonBuscar.Dock = DockStyle.Fill;
+            buttonBuscar.Image = (Image)resources.GetObject("buttonBuscar.Image");
+            buttonBuscar.Location = new Point(70, 0);
+            buttonBuscar.Margin = new Padding(0);
+            buttonBuscar.Name = "buttonBuscar";
+            buttonBuscar.Size = new Size(70, 50);
+            buttonBuscar.TabIndex = 13;
+            buttonBuscar.TextAlign = ContentAlignment.BottomCenter;
+            buttonBuscar.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonBuscar.UseVisualStyleBackColor = true;
+            buttonBuscar.Click += buttonBuscar_Click;
+            // 
             // FormGestionClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -259,5 +276,6 @@
         private ColumnHeader columnTelefono;
         private ColumnHeader columnDireccionDomicilio;
         private ColumnHeader columnEmail;
+        private Button buttonBuscar;
     }
 }

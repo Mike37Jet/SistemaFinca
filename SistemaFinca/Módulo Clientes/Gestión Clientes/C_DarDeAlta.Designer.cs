@@ -59,11 +59,11 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(382, 107);
+            label2.Location = new Point(340, 107);
             label2.Name = "label2";
-            label2.Size = new Size(141, 21);
+            label2.Size = new Size(231, 21);
             label2.TabIndex = 3;
-            label2.Text = "Número de Cédula";
+            label2.Text = "Número de Cédula de identidad";
             // 
             // buttonGuardar
             // 
