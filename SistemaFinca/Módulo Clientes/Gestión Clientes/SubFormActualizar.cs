@@ -24,7 +24,7 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
                 {
                     char estado;
                     connection.Open();
-                    String commExisteString = $"SELECT nombres, apellidos, telefono, dirreccion" +
+                    String commExisteString = $"SELECT nombres, apellidos, telefono, direccion" +
                         $" FROM cliente WHERE cedulacliente = '{this.numeroCedula}'";
                     NpgsqlCommand commExiste = new NpgsqlCommand(commExisteString, connection);
                     using (NpgsqlDataReader reader = commExiste.ExecuteReader())
