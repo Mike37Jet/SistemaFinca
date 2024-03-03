@@ -38,6 +38,8 @@
             buttonCerrar = new Button();
             buttonMinimizar = new Button();
             buttonMostrar = new Button();
+            labelUsuario = new Label();
+            labelContraseña = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
@@ -70,13 +72,12 @@
             textUsuario.BackColor = Color.FromArgb(15, 15, 15);
             textUsuario.BorderStyle = BorderStyle.None;
             textUsuario.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textUsuario.ForeColor = Color.Gray;
+            textUsuario.ForeColor = Color.LightGray;
             textUsuario.Location = new Point(310, 73);
             textUsuario.Margin = new Padding(0);
             textUsuario.Name = "textUsuario";
             textUsuario.Size = new Size(418, 26);
             textUsuario.TabIndex = 1;
-            textUsuario.Text = "USUARIO";
             textUsuario.Click += textUsuario_Click;
             textUsuario.Enter += textUsuario_Enter;
             textUsuario.KeyPress += textUsuario_KeyPress;
@@ -87,13 +88,12 @@
             textContraseña.BackColor = Color.FromArgb(15, 15, 15);
             textContraseña.BorderStyle = BorderStyle.None;
             textContraseña.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textContraseña.ForeColor = Color.Gray;
+            textContraseña.ForeColor = Color.LightGray;
             textContraseña.Location = new Point(310, 137);
             textContraseña.Margin = new Padding(0);
             textContraseña.Name = "textContraseña";
             textContraseña.Size = new Size(418, 26);
             textContraseña.TabIndex = 2;
-            textContraseña.Text = "CONTRASEÑA";
             textContraseña.Click += textContraseña_Click;
             textContraseña.Enter += textContraseña_Enter;
             textContraseña.KeyPress += textContraseña_KeyPress;
@@ -175,12 +175,42 @@
             buttonMostrar.UseVisualStyleBackColor = true;
             buttonMostrar.Click += buttonMostrar1_Click;
             // 
+            // labelUsuario
+            // 
+            labelUsuario.AutoSize = true;
+            labelUsuario.BackColor = Color.Transparent;
+            labelUsuario.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelUsuario.ForeColor = Color.Gray;
+            labelUsuario.Location = new Point(311, 73);
+            labelUsuario.Margin = new Padding(0);
+            labelUsuario.Name = "labelUsuario";
+            labelUsuario.Size = new Size(97, 24);
+            labelUsuario.TabIndex = 9;
+            labelUsuario.Text = "USUARIO";
+            labelUsuario.Click += labelUsuario_Click;
+            // 
+            // labelContraseña
+            // 
+            labelContraseña.AutoSize = true;
+            labelContraseña.BackColor = Color.Transparent;
+            labelContraseña.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelContraseña.ForeColor = Color.Gray;
+            labelContraseña.Location = new Point(311, 137);
+            labelContraseña.Margin = new Padding(0);
+            labelContraseña.Name = "labelContraseña";
+            labelContraseña.Size = new Size(149, 24);
+            labelContraseña.TabIndex = 10;
+            labelContraseña.Text = "CONTRASEÑA";
+            labelContraseña.Click += labelContraseña_Click;
+            // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
             ClientSize = new Size(780, 330);
+            Controls.Add(labelContraseña);
+            Controls.Add(labelUsuario);
             Controls.Add(buttonMostrar);
             Controls.Add(buttonMinimizar);
             Controls.Add(buttonCerrar);
@@ -215,5 +245,7 @@
         private Button buttonCerrar;
         private Button buttonMinimizar;
         private Button buttonMostrar;
+        private Label labelUsuario;
+        private Label labelContraseña;
     }
 }

@@ -17,9 +17,6 @@ namespace SistemaFinca
             buttonMostrar.TabStop = false;
             buttonMinimizar.TabStop = false;
             buttonCerrar.TabStop = false;
-
-
-
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -38,25 +35,23 @@ namespace SistemaFinca
 
         private void textUsuario_Enter(object sender, EventArgs e)
         {
-            if (textUsuario.Text == "USUARIO")
+            if (labelUsuario.Visible == true)
             {
                 textUsuario.SelectionStart = 0;
             }
-
         }
 
         private void textUsuario_Leave(object sender, EventArgs e)
         {
-            if (textUsuario.Text == "")
+            if (labelUsuario.Visible == false && textUsuario.Text == "")
             {
-                textUsuario.Text = "USUARIO";
-                textUsuario.ForeColor = Color.DimGray;
+                labelUsuario.Visible = true;
             }
         }
 
         private void textContraseña_Enter(object sender, EventArgs e)
         {
-            if (textContraseña.Text == "CONTRASEÑA")
+            if (labelContraseña.Visible == true)
             {
                 textContraseña.SelectionStart = 0;
             }
@@ -65,11 +60,10 @@ namespace SistemaFinca
 
         private void textContraseña_Leave(object sender, EventArgs e)
         {
-            if (textContraseña.Text == "")
+            if (labelContraseña.Visible == false && textContraseña.Text == "")
             {
                 textContraseña.PasswordChar = '\0';
-                textContraseña.Text = "CONTRASEÑA";
-                textContraseña.ForeColor = Color.DimGray;
+                labelContraseña.Visible = true;
             }
         }
 
@@ -157,10 +151,9 @@ namespace SistemaFinca
 
         private void textContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (textContraseña.Text == "CONTRASEÑA")
+            if (labelContraseña.Visible == true)
             {
-                textContraseña.Text = "";
-                textContraseña.ForeColor = Color.LightGray;
+                labelContraseña.Visible = false;
                 textContraseña.PasswordChar = '*';
             }
 
@@ -177,16 +170,15 @@ namespace SistemaFinca
 
         private void textUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (textUsuario.Text == "USUARIO")
+            if (labelUsuario.Visible == true)
             {
-                textUsuario.Text = "";
-                textUsuario.ForeColor = Color.LightGray;
+                labelUsuario.Visible = false;
             }
         }
 
         private void textUsuario_Click(object sender, EventArgs e)
         {
-            if (textUsuario.Text == "USUARIO")
+            if (labelUsuario.Visible == true)
             {
                 textUsuario.SelectionStart = 0;
             }
@@ -194,15 +186,11 @@ namespace SistemaFinca
 
         private void textContraseña_Click(object sender, EventArgs e)
         {
-            if (textContraseña.Text == "CONTRASEÑA")
+            if (labelContraseña.Visible == true)
             {
                 textContraseña.SelectionStart = 0;
             }
         }
-
-
-
-     
 
         private void buttonMostrar1_Click(object sender, EventArgs e)
         {
@@ -214,6 +202,16 @@ namespace SistemaFinca
             {
                 textContraseña.PasswordChar = '*';
             }
+        }
+
+        private void labelUsuario_Click(object sender, EventArgs e)
+        {
+            textUsuario.Focus();
+        }
+
+        private void labelContraseña_Click(object sender, EventArgs e)
+        {
+            textContraseña.Focus();
         }
     }
 }
