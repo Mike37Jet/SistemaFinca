@@ -49,7 +49,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F);
-            label6.Location = new Point(24, 114);
+            label6.Location = new Point(24, 153);
             label6.Name = "label6";
             label6.Size = new Size(228, 21);
             label6.TabIndex = 32;
@@ -67,24 +67,27 @@
             // txtCorreo
             // 
             txtCorreo.Cursor = Cursors.IBeam;
-            txtCorreo.Location = new Point(24, 137);
+            txtCorreo.Font = new Font("Segoe UI", 11.25F);
+            txtCorreo.Location = new Point(24, 182);
             txtCorreo.Margin = new Padding(3, 2, 3, 2);
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(501, 23);
+            txtCorreo.Size = new Size(501, 27);
             txtCorreo.TabIndex = 29;
             // 
             // txtNombreU
             // 
             txtNombreU.Cursor = Cursors.IBeam;
-            txtNombreU.Location = new Point(24, 57);
+            txtNombreU.Font = new Font("Segoe UI", 11.25F);
+            txtNombreU.Location = new Point(24, 62);
             txtNombreU.Margin = new Padding(3, 2, 3, 2);
             txtNombreU.Name = "txtNombreU";
-            txtNombreU.Size = new Size(244, 23);
+            txtNombreU.Size = new Size(244, 27);
             txtNombreU.TabIndex = 27;
             txtNombreU.TextChanged += textBox3_TextChanged;
             // 
             // buttonActualizar
             // 
+            buttonActualizar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buttonActualizar.Location = new Point(347, 359);
             buttonActualizar.Margin = new Padding(3, 2, 3, 2);
             buttonActualizar.Name = "buttonActualizar";
@@ -98,7 +101,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(379, 33);
+            label3.Location = new Point(24, 93);
             label3.Name = "label3";
             label3.Size = new Size(92, 21);
             label3.TabIndex = 25;
@@ -107,10 +110,11 @@
             // txtContrasena
             // 
             txtContrasena.Cursor = Cursors.IBeam;
-            txtContrasena.Location = new Point(379, 57);
+            txtContrasena.Font = new Font("Segoe UI", 11.25F);
+            txtContrasena.Location = new Point(24, 122);
             txtContrasena.Margin = new Padding(3, 2, 3, 2);
             txtContrasena.Name = "txtContrasena";
-            txtContrasena.Size = new Size(244, 23);
+            txtContrasena.Size = new Size(244, 27);
             txtContrasena.TabIndex = 24;
             // 
             // label1
@@ -124,7 +128,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(34, 199);
+            label2.Location = new Point(34, 225);
             label2.Name = "label2";
             label2.Size = new Size(0, 15);
             label2.TabIndex = 39;
@@ -143,7 +147,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(24, 193);
+            label5.Location = new Point(24, 213);
             label5.Name = "label5";
             label5.Size = new Size(71, 21);
             label5.TabIndex = 42;
@@ -152,17 +156,18 @@
             // txtTele
             // 
             txtTele.Cursor = Cursors.IBeam;
-            txtTele.Location = new Point(24, 216);
+            txtTele.Font = new Font("Segoe UI", 11.25F);
+            txtTele.Location = new Point(24, 242);
             txtTele.Margin = new Padding(3, 2, 3, 2);
             txtTele.Name = "txtTele";
-            txtTele.Size = new Size(244, 23);
+            txtTele.Size = new Size(244, 27);
             txtTele.TabIndex = 43;
             // 
             // radioA
             // 
             radioA.AutoSize = true;
             radioA.Font = new Font("Segoe UI", 12F);
-            radioA.Location = new Point(662, 240);
+            radioA.Location = new Point(108, 283);
             radioA.Margin = new Padding(3, 2, 3, 2);
             radioA.Name = "radioA";
             radioA.Size = new Size(71, 25);
@@ -175,7 +180,7 @@
             // 
             radioD.AutoSize = true;
             radioD.Font = new Font("Segoe UI", 12F);
-            radioD.Location = new Point(662, 278);
+            radioD.Location = new Point(211, 283);
             radioD.Margin = new Padding(3, 2, 3, 2);
             radioD.Name = "radioD";
             radioD.Size = new Size(82, 25);
@@ -189,7 +194,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F);
-            label7.Location = new Point(674, 206);
+            label7.Location = new Point(24, 283);
             label7.Name = "label7";
             label7.Size = new Size(59, 21);
             label7.TabIndex = 46;

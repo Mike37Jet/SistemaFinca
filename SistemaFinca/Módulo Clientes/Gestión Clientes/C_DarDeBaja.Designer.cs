@@ -38,7 +38,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(367, 52);
+            label1.Location = new Point(369, 56);
             label1.Name = "label1";
             label1.Size = new Size(154, 21);
             label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             txtNumeroC.Cursor = Cursors.IBeam;
             txtNumeroC.Font = new Font("Segoe UI", 12F);
-            txtNumeroC.Location = new Point(322, 140);
+            txtNumeroC.Location = new Point(324, 144);
             txtNumeroC.Margin = new Padding(3, 2, 3, 2);
             txtNumeroC.Name = "txtNumeroC";
             txtNumeroC.Size = new Size(244, 29);
@@ -58,7 +58,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(330, 104);
+            label2.Location = new Point(332, 108);
             label2.Name = "label2";
             label2.Size = new Size(231, 21);
             label2.TabIndex = 3;
@@ -68,7 +68,7 @@
             // buttonGuardar
             // 
             buttonGuardar.Font = new Font("Segoe UI", 12F);
-            buttonGuardar.Location = new Point(386, 340);
+            buttonGuardar.Location = new Point(391, 230);
             buttonGuardar.Margin = new Padding(3, 2, 3, 2);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(112, 40);

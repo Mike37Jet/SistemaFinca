@@ -29,7 +29,7 @@ namespace SistemaFinca
         {
             if (!FormGU_Registrar.CedulaEsValida(txtNumeroC.Text))
             {
-                MessageBox.Show("El número de cédula no es válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El número de cédula no es válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
@@ -51,7 +51,7 @@ namespace SistemaFinca
                         nombreUsuario = reader.GetString(0);
                     }
 
-                    DialogResult dialogResult = MessageBox.Show("Esta seguro que desea eliminar al usuario " + nombreUsuario + "?", "Confirmación", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar al usuario " + nombreUsuario + "?", "Confirmación", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.No)
                     {
                         return;

@@ -36,9 +36,9 @@ namespace SistemaFinca
                     using (NpgsqlDataReader reader = commExiste.ExecuteReader())
                     {
                         reader.Read();
-                        labelPrecioActual.Text = reader.GetFloat(0).ToString();
+                        txtPrecioLeche.Text = reader.GetFloat(0).ToString();
                         reader.Read();
-                        labelCantidadMaxLeche.Text = reader.GetFloat(0).ToString();
+                        txtCapacidadMaxima.Text = reader.GetFloat(0).ToString();
                     }
                 }
                 catch (NpgsqlException ex)
@@ -71,94 +71,48 @@ namespace SistemaFinca
             }
         }
 
-
-        private void buttonActualizarPrecioLeche_Click(object sender, EventArgs e)
+        private void btnActualizar_Click(object sender, EventArgs e)
         {
-            string pattern = @"^[0-9]+(\,[0-9]{1,2})?$";
-            if (textNuevoPrecioLeche.Text == "")
+            string pattern = @"^\d{1,2}(\,\d{1,2})?$";
+            string pattern2 = @"^[1-9]\d{0,2}$|1000";
+            if (txtPrecioLeche.Text == "" || !Regex.IsMatch(txtPrecioLeche.Text, pattern))
             {
-                MessageBox.Show("Atributo vacío. Por favor, ingrese un valor.", "Actualización Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Precio no válido", "Actualización Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else if (!Regex.IsMatch(textNuevoPrecioLeche.Text, pattern))
+            if (txtCapacidadMaxima.Text == "" || !Regex.IsMatch(txtCapacidadMaxima.Text, pattern2))
             {
-                MessageBox.Show("Atributo no numérico o no cumple con la estructura. Por favor, ingrese un valor válido.", "Actualización Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nuevo valor no válido", "Actualización Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
             {
-                using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+                try
                 {
-                    try
+                    connection.Open();
+                    String commString = $"UPDATE parametro SET valorparametro = {txtPrecioLeche.Text.Replace(',', '.')} WHERE idparametro = 1";
+                    NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                    int resultado = comm.ExecuteNonQuery();
+
+                    String commString2 = $"UPDATE parametro SET valorparametro = {txtCapacidadMaxima.Text} WHERE idparametro = 2";
+                    NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
+                    int resultado2 = comm2.ExecuteNonQuery();
+                    if (resultado > 0 && resultado2 > 0)
                     {
-                        connection.Open();
-                        String commString = $"UPDATE parametro SET valorparametro = {textNuevoPrecioLeche.Text.Replace(',', '.')} WHERE idparametro = 1";
-                        NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
-                        int resultado = comm.ExecuteNonQuery();
-                        if (resultado > 0)
-                        {
-                            getParametros();
-                            MessageBox.Show("Precio actualizado exitosamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        textNuevoPrecioLeche.Text = "";
-                    }
-                    catch (NpgsqlException ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    finally
-                    {
-                        if (connection.State == ConnectionState.Open)
-                        {
-                            connection.Close();
-                        }
+                        MessageBox.Show("Parámetros actualizados exitosamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-           
-            }
-
-        }
-
-
-        private void buttonActualizaCantidadMax_Click(object sender, EventArgs e)
-        {
-            string pattern = @"^[0-9]+$";
-            if (textNuevaCapacidadMaxLeche.Text == "")
-            {
-                MessageBox.Show("Atributo vacío. Por favor, ingrese un valor.", "Actualización Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (!Regex.IsMatch(textNuevaCapacidadMaxLeche.Text, pattern))
-            {
-                MessageBox.Show("Atributo no numérico o no cumple con la estructura. Por favor, ingrese un valor válido.", "Actualización Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+                catch (NpgsqlException ex)
                 {
-                    try
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
                     {
-                        connection.Open();
-                        String commString = $"UPDATE parametro SET valorparametro = {textNuevaCapacidadMaxLeche.Text} WHERE idparametro = 2";
-                        NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
-                        int resultado = comm.ExecuteNonQuery();
-                        if (resultado > 0)
-                        {
-                            getParametros();
-                            MessageBox.Show("Capacidad del tanque frío actualizada correctamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);    
-                        }
-                        textNuevaCapacidadMaxLeche.Text = "";
-                    }
-                    catch (NpgsqlException ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    finally
-                    {
-                        if (connection.State == ConnectionState.Open)
-                        {
-                            connection.Close();
-                        }
+                        connection.Close();
                     }
                 }
-           
             }
         }
     }

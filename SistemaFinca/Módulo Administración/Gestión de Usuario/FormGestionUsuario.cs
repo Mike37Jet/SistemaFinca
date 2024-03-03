@@ -15,10 +15,58 @@ namespace SistemaFinca
     public partial class FormGestionUsuario : Form
     {
         private ToolTip toolTip1 = new ToolTip();
-        public FormGestionUsuario()
+        private String usuario;
+        public FormGestionUsuario(string usuario)
         {
             InitializeComponent();
             getUsuarios();
+            getUsuariosInactivos();
+            this.usuario = usuario;
+        }
+
+        private void getUsuariosInactivos()
+        {
+            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    String commString = $"SELECT cedulausuario, usuario, correo, rol " +
+                        $" FROM usuario WHERE estado = 'I'";
+                    NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                    using (NpgsqlDataReader reader = comm.ExecuteReader())
+                    {
+                        if (!reader.HasRows)
+                        {
+                            return;
+                        }
+
+                        while (reader.Read())
+                        {
+                            String cedula = reader.GetString(0);
+                            String usuario = reader.GetString(1);
+                            String correo = reader.GetString(2);
+                            String rol = reader.GetChar(3) == 'A' ? "Administrador" : "Jornalero";
+                            ListViewItem item = new ListViewItem(cedula);
+                            item.SubItems.Add(usuario);
+                            item.SubItems.Add(correo);
+                            item.SubItems.Add(rol);
+                            lstUsuariosInactivos.Items.Add(item);
+                        }
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
         }
 
         private void getUsuarios()
@@ -28,27 +76,21 @@ namespace SistemaFinca
                 try
                 {
                     connection.Open();
-                    String commString = $"SELECT cedulausuario, nombres, apellidos, telefono, correo, rol, " +
-                        $"usuario FROM usuario";
+                    String commString = $"SELECT cedulausuario, usuario, correo, rol " +
+                        $" FROM usuario WHERE estado = 'A'";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
                     {
                         while (reader.Read())
                         {
                             String cedula = reader.GetString(0);
-                            String nombres = reader.GetString(1);
-                            String apellidos = reader.GetString(2);
-                            String telefono = reader.GetString(3);
-                            String correo = reader.GetString(4);
-                            String rol = reader.GetChar(5) == 'A' ? "Administrador" : "Jornalero";
-                            String usuario = reader.GetString(6);
+                            String usuario = reader.GetString(1);
+                            String correo = reader.GetString(2);
+                            String rol = reader.GetChar(3) == 'A' ? "Administrador" : "Jornalero";
                             ListViewItem item = new ListViewItem(cedula);
-                            item.SubItems.Add(nombres);
-                            item.SubItems.Add(apellidos);
-                            item.SubItems.Add(telefono);
+                            item.SubItems.Add(usuario);
                             item.SubItems.Add(correo);
                             item.SubItems.Add(rol);
-                            item.SubItems.Add(usuario);
                             listUsuarios.Items.Add(item);
                         }
                     }
@@ -90,7 +132,9 @@ namespace SistemaFinca
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
             listUsuarios.Items.Clear();
+            lstUsuariosInactivos.Items.Clear();
             getUsuarios();
+            getUsuariosInactivos();
             if (formularioActivo != null)
             {
                 formularioActivo.Close();
@@ -109,7 +153,7 @@ namespace SistemaFinca
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormGU_Actualizar());
+            abrirFormulariosHijos(new FormGU_Actualizar(this.usuario));
         }
 
         private void buttonGenerarInforme_Click(object sender, EventArgs e)

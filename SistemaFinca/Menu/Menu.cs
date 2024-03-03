@@ -28,6 +28,7 @@ namespace SistemaFinca
             this.usuario = usuario;
             this.fechainicio = fechainicio;
             labelRol.Text = rol == 'A' ? "Administrador" : "Jornalero";
+            labelUsuario.Text = usuario;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -136,11 +137,13 @@ namespace SistemaFinca
 
         private void buttonAdministracion_Click(object sender, EventArgs e)
         {
-            if (rol == 'A') {
+            if (rol == 'A')
+            {
                 mostrarSubMenu(subPanelAdministracion);
                 //abrirFormulariosHijos(new FormAdministrador());
             }
-            else {
+            else
+            {
                 MessageBox.Show("Acceso denegado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -290,7 +293,7 @@ namespace SistemaFinca
 
         private void buttonGestionUsuario_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormGestionUsuario());
+            abrirFormulariosHijos(new FormGestionUsuario(this.usuario));
         }
 
         private void buttonGanadoBovino_Click(object sender, EventArgs e)

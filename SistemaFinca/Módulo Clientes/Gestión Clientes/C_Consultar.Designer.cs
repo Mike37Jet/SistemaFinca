@@ -36,6 +36,7 @@
             labelNombre = new Label();
             labelDireccion = new Label();
             labeltele = new Label();
+            labelCorreo = new Label();
             SuspendLayout();
             // 
             // label1
@@ -86,7 +87,7 @@
             labelApellido.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelApellido.AutoSize = true;
             labelApellido.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelApellido.Location = new Point(408, 310);
+            labelApellido.Location = new Point(324, 284);
             labelApellido.Name = "labelApellido";
             labelApellido.Size = new Size(75, 20);
             labelApellido.TabIndex = 21;
@@ -97,7 +98,7 @@
             labelNombre.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelNombre.AutoSize = true;
             labelNombre.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNombre.Location = new Point(410, 262);
+            labelNombre.Location = new Point(326, 240);
             labelNombre.Name = "labelNombre";
             labelNombre.Size = new Size(73, 20);
             labelNombre.TabIndex = 20;
@@ -108,7 +109,7 @@
             labelDireccion.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelDireccion.AutoSize = true;
             labelDireccion.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelDireccion.Location = new Point(325, 400);
+            labelDireccion.Location = new Point(241, 372);
             labelDireccion.Name = "labelDireccion";
             labelDireccion.Size = new Size(158, 20);
             labelDireccion.TabIndex = 19;
@@ -119,17 +120,29 @@
             labeltele.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labeltele.AutoSize = true;
             labeltele.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labeltele.Location = new Point(413, 354);
+            labeltele.Location = new Point(329, 328);
             labeltele.Name = "labeltele";
             labeltele.Size = new Size(70, 20);
             labeltele.TabIndex = 18;
             labeltele.Text = "Teléfono:";
+            // 
+            // labelCorreo
+            // 
+            labelCorreo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelCorreo.AutoSize = true;
+            labelCorreo.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelCorreo.Location = new Point(264, 416);
+            labelCorreo.Name = "labelCorreo";
+            labelCorreo.Size = new Size(135, 20);
+            labelCorreo.TabIndex = 22;
+            labelCorreo.Text = "Correo electrónico:";
             // 
             // FormC_Consultar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
+            Controls.Add(labelCorreo);
             Controls.Add(labelApellido);
             Controls.Add(labelNombre);
             Controls.Add(labelDireccion);
@@ -156,5 +169,6 @@
         private Label labelNombre;
         private Label labelDireccion;
         private Label labeltele;
+        private Label labelCorreo;
     }
 }

@@ -33,16 +33,11 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            textNuevaCapacidadMaxLeche = new TextBox();
-            textNuevoPrecioLeche = new TextBox();
-            buttonActualizaCantidadMax = new Button();
-            buttonActualizarPrecioLeche = new Button();
-            labelCantidadMaxLeche = new Label();
-            label6 = new Label();
+            txtCapacidadMaxima = new TextBox();
+            txtPrecioLeche = new TextBox();
+            btnActualizar = new Button();
             label4 = new Label();
-            labelPrecioActual = new Label();
             label3 = new Label();
-            label2 = new Label();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
@@ -97,16 +92,11 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
-            panelFormularioHijo.Controls.Add(textNuevaCapacidadMaxLeche);
-            panelFormularioHijo.Controls.Add(textNuevoPrecioLeche);
-            panelFormularioHijo.Controls.Add(buttonActualizaCantidadMax);
-            panelFormularioHijo.Controls.Add(buttonActualizarPrecioLeche);
-            panelFormularioHijo.Controls.Add(labelCantidadMaxLeche);
-            panelFormularioHijo.Controls.Add(label6);
+            panelFormularioHijo.Controls.Add(txtCapacidadMaxima);
+            panelFormularioHijo.Controls.Add(txtPrecioLeche);
+            panelFormularioHijo.Controls.Add(btnActualizar);
             panelFormularioHijo.Controls.Add(label4);
-            panelFormularioHijo.Controls.Add(labelPrecioActual);
             panelFormularioHijo.Controls.Add(label3);
-            panelFormularioHijo.Controls.Add(label2);
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
@@ -115,111 +105,55 @@
             panelFormularioHijo.Size = new Size(895, 541);
             panelFormularioHijo.TabIndex = 8;
             // 
-            // textNuevaCapacidadMaxLeche
+            // txtCapacidadMaxima
             // 
-            textNuevaCapacidadMaxLeche.Location = new Point(341, 234);
-            textNuevaCapacidadMaxLeche.Name = "textNuevaCapacidadMaxLeche";
-            textNuevaCapacidadMaxLeche.Size = new Size(184, 23);
-            textNuevaCapacidadMaxLeche.TabIndex = 16;
+            txtCapacidadMaxima.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCapacidadMaxima.Location = new Point(341, 234);
+            txtCapacidadMaxima.Name = "txtCapacidadMaxima";
+            txtCapacidadMaxima.Size = new Size(184, 27);
+            txtCapacidadMaxima.TabIndex = 16;
             // 
-            // textNuevoPrecioLeche
+            // txtPrecioLeche
             // 
-            textNuevoPrecioLeche.Location = new Point(341, 138);
-            textNuevoPrecioLeche.Name = "textNuevoPrecioLeche";
-            textNuevoPrecioLeche.Size = new Size(184, 23);
-            textNuevoPrecioLeche.TabIndex = 15;
+            txtPrecioLeche.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPrecioLeche.Location = new Point(341, 138);
+            txtPrecioLeche.Name = "txtPrecioLeche";
+            txtPrecioLeche.Size = new Size(184, 27);
+            txtPrecioLeche.TabIndex = 15;
             // 
-            // buttonActualizaCantidadMax
+            // btnActualizar
             // 
-            buttonActualizaCantidadMax.Image = (Image)resources.GetObject("buttonActualizaCantidadMax.Image");
-            buttonActualizaCantidadMax.Location = new Point(722, 220);
-            buttonActualizaCantidadMax.Margin = new Padding(0);
-            buttonActualizaCantidadMax.Name = "buttonActualizaCantidadMax";
-            buttonActualizaCantidadMax.Size = new Size(80, 50);
-            buttonActualizaCantidadMax.TabIndex = 14;
-            buttonActualizaCantidadMax.Text = "Actualizar";
-            buttonActualizaCantidadMax.TextAlign = ContentAlignment.BottomCenter;
-            buttonActualizaCantidadMax.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonActualizaCantidadMax.UseVisualStyleBackColor = true;
-            buttonActualizaCantidadMax.Click += buttonActualizaCantidadMax_Click;
-            // 
-            // buttonActualizarPrecioLeche
-            // 
-            buttonActualizarPrecioLeche.Image = (Image)resources.GetObject("buttonActualizarPrecioLeche.Image");
-            buttonActualizarPrecioLeche.Location = new Point(722, 124);
-            buttonActualizarPrecioLeche.Margin = new Padding(0);
-            buttonActualizarPrecioLeche.Name = "buttonActualizarPrecioLeche";
-            buttonActualizarPrecioLeche.Size = new Size(80, 50);
-            buttonActualizarPrecioLeche.TabIndex = 13;
-            buttonActualizarPrecioLeche.Text = "Actualizar";
-            buttonActualizarPrecioLeche.TextAlign = ContentAlignment.BottomCenter;
-            buttonActualizarPrecioLeche.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonActualizarPrecioLeche.UseVisualStyleBackColor = true;
-            buttonActualizarPrecioLeche.Click += buttonActualizarPrecioLeche_Click;
-            // 
-            // labelCantidadMaxLeche
-            // 
-            labelCantidadMaxLeche.AutoSize = true;
-            labelCantidadMaxLeche.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelCantidadMaxLeche.Location = new Point(60, 235);
-            labelCantidadMaxLeche.Margin = new Padding(0);
-            labelCantidadMaxLeche.Name = "labelCantidadMaxLeche";
-            labelCantidadMaxLeche.Size = new Size(57, 20);
-            labelCantidadMaxLeche.TabIndex = 11;
-            labelCantidadMaxLeche.Text = "0 Litros";
-            labelCantidadMaxLeche.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(341, 190);
-            label6.Name = "label6";
-            label6.Size = new Size(244, 20);
-            label6.TabIndex = 10;
-            label6.Text = "Nueva capacidad máxima de Leche\r\n";
+            btnActualizar.Image = (Image)resources.GetObject("btnActualizar.Image");
+            btnActualizar.Location = new Point(390, 318);
+            btnActualizar.Margin = new Padding(0);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(80, 50);
+            btnActualizar.TabIndex = 14;
+            btnActualizar.Text = "Actualizar";
+            btnActualizar.TextAlign = ContentAlignment.BottomCenter;
+            btnActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(60, 190);
+            label4.Location = new Point(340, 198);
             label4.Name = "label4";
-            label4.Size = new Size(244, 20);
+            label4.Size = new Size(187, 20);
             label4.TabIndex = 8;
-            label4.Text = "Capacidad máxima actual de Leche\r\n";
-            // 
-            // labelPrecioActual
-            // 
-            labelPrecioActual.AutoSize = true;
-            labelPrecioActual.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelPrecioActual.Location = new Point(60, 139);
-            labelPrecioActual.Margin = new Padding(0);
-            labelPrecioActual.Name = "labelPrecioActual";
-            labelPrecioActual.Size = new Size(29, 20);
-            labelPrecioActual.TabIndex = 7;
-            labelPrecioActual.Text = "0 $";
-            labelPrecioActual.TextAlign = ContentAlignment.MiddleRight;
+            label4.Text = "Capacidad máxima (Litros)";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(60, 98);
+            label3.Location = new Point(339, 93);
             label3.Name = "label3";
-            label3.Size = new Size(231, 20);
+            label3.Size = new Size(190, 20);
             label3.TabIndex = 6;
-            label3.Text = "Precio actual de la Leche por litro";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(341, 98);
-            label2.Name = "label2";
-            label2.Size = new Size(235, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Nuevo precio de la Leche por litro";
+            label3.Text = "Precio por litro de leche ($)";
             // 
             // label1
             // 
@@ -255,18 +189,13 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panelFormularioHijo;
         private Label label1;
-        private Label label2;
         private TextBox textBuscarCliente;
         private Button buttonRegresar;
         private Label label3;
-        private Label labelPrecioActual;
         private Label label4;
-        private Button buttonActualizarPrecioLeche;
         private TextBox textBox1;
-        private Label labelCantidadMaxLeche;
-        private Label label6;
-        private Button buttonActualizaCantidadMax;
-        private TextBox textNuevaCapacidadMaxLeche;
-        private TextBox textNuevoPrecioLeche;
+        private Button btnActualizar;
+        private TextBox txtCapacidadMaxima;
+        private TextBox txtPrecioLeche;
     }
 }

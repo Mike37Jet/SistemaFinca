@@ -38,10 +38,10 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(397, 27);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(393, 27);
             label1.Name = "label1";
-            label1.Size = new Size(115, 20);
+            label1.Size = new Size(123, 21);
             label1.TabIndex = 0;
             label1.Text = "Eliminar usuario";
             // 
@@ -49,10 +49,11 @@
             // 
             txtNumeroC.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtNumeroC.Cursor = Cursors.IBeam;
+            txtNumeroC.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumeroC.Location = new Point(333, 110);
             txtNumeroC.Margin = new Padding(3, 2, 3, 2);
             txtNumeroC.Name = "txtNumeroC";
-            txtNumeroC.Size = new Size(244, 23);
+            txtNumeroC.Size = new Size(244, 27);
             txtNumeroC.TabIndex = 2;
             // 
             // label2
@@ -69,6 +70,7 @@
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnEliminar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEliminar.Location = new Point(413, 268);
             btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";

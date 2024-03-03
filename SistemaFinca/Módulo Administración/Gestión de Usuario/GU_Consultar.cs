@@ -28,7 +28,7 @@ namespace SistemaFinca
         {
             if (!FormGU_Registrar.CedulaEsValida(txtNumeroC.Text))
             {
-                MessageBox.Show("El número de cédula no es válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El número de cédula no es válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))

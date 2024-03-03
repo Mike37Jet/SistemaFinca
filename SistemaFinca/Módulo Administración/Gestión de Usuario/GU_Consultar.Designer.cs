@@ -56,10 +56,11 @@
             // 
             txtNumeroC.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtNumeroC.Cursor = Cursors.IBeam;
+            txtNumeroC.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumeroC.Location = new Point(333, 110);
             txtNumeroC.Margin = new Padding(3, 2, 3, 2);
             txtNumeroC.Name = "txtNumeroC";
-            txtNumeroC.Size = new Size(244, 23);
+            txtNumeroC.Size = new Size(244, 27);
             txtNumeroC.TabIndex = 2;
             // 
             // label2
@@ -76,10 +77,11 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            button2.Location = new Point(408, 160);
+            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Location = new Point(409, 158);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(82, 30);
+            button2.Size = new Size(93, 32);
             button2.TabIndex = 10;
             button2.Text = "Consultar";
             button2.UseVisualStyleBackColor = true;
@@ -90,9 +92,9 @@
             labelContrasena.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelContrasena.AutoSize = true;
             labelContrasena.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelContrasena.Location = new Point(407, 228);
+            labelContrasena.Location = new Point(324, 278);
             labelContrasena.Name = "labelContrasena";
-            labelContrasena.Size = new Size(83, 20);
+            labelContrasena.Size = new Size(86, 20);
             labelContrasena.TabIndex = 11;
             labelContrasena.Text = "Contraseña:";
             labelContrasena.Click += label3_Click;
@@ -102,9 +104,9 @@
             labelNombreU.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelNombreU.AutoSize = true;
             labelNombreU.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNombreU.Location = new Point(351, 282);
+            labelNombreU.Location = new Point(271, 232);
             labelNombreU.Name = "labelNombreU";
-            labelNombreU.Size = new Size(139, 20);
+            labelNombreU.Size = new Size(142, 20);
             labelNombreU.TabIndex = 12;
             labelNombreU.Text = "Nombre de Usuario:";
             // 
@@ -113,9 +115,9 @@
             labeltele.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labeltele.AutoSize = true;
             labeltele.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labeltele.Location = new Point(344, 419);
+            labeltele.Location = new Point(264, 416);
             labeltele.Name = "labeltele";
-            labeltele.Size = new Size(146, 20);
+            labeltele.Size = new Size(149, 20);
             labeltele.TabIndex = 13;
             labeltele.Text = "Número de Teléfono:";
             // 
@@ -124,9 +126,9 @@
             labelCorreo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelCorreo.AutoSize = true;
             labelCorreo.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelCorreo.Location = new Point(358, 469);
+            labelCorreo.Location = new Point(278, 462);
             labelCorreo.Name = "labelCorreo";
-            labelCorreo.Size = new Size(132, 20);
+            labelCorreo.Size = new Size(135, 20);
             labelCorreo.TabIndex = 14;
             labelCorreo.Text = "Correo Electrónico:";
             // 
@@ -145,9 +147,9 @@
             labelNombre.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelNombre.AutoSize = true;
             labelNombre.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNombre.Location = new Point(420, 327);
+            labelNombre.Location = new Point(340, 324);
             labelNombre.Name = "labelNombre";
-            labelNombre.Size = new Size(70, 20);
+            labelNombre.Size = new Size(73, 20);
             labelNombre.TabIndex = 16;
             labelNombre.Text = "Nombres:";
             labelNombre.Click += label3_Click_1;
@@ -157,9 +159,9 @@
             labelApellido.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelApellido.AutoSize = true;
             labelApellido.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelApellido.Location = new Point(418, 375);
+            labelApellido.Location = new Point(338, 370);
             labelApellido.Name = "labelApellido";
-            labelApellido.Size = new Size(72, 20);
+            labelApellido.Size = new Size(75, 20);
             labelApellido.TabIndex = 17;
             labelApellido.Text = "Apellidos:";
             // 

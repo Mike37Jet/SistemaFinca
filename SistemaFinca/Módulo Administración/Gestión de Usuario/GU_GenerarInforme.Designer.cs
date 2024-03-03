@@ -40,10 +40,10 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(422, 25);
             label1.Name = "label1";
-            label1.Size = new Size(61, 20);
+            label1.Size = new Size(65, 21);
             label1.TabIndex = 0;
             label1.Text = "Informe";
             // 
@@ -52,10 +52,10 @@
             listUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listUsuarios.Columns.AddRange(new ColumnHeader[] { nombre, fecha, fechaf });
             listUsuarios.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listUsuarios.Location = new Point(55, 78);
+            listUsuarios.Location = new Point(109, 76);
             listUsuarios.Margin = new Padding(3, 2, 3, 2);
             listUsuarios.Name = "listUsuarios";
-            listUsuarios.Size = new Size(785, 385);
+            listUsuarios.Size = new Size(662, 385);
             listUsuarios.TabIndex = 11;
             listUsuarios.UseCompatibleStateImageBehavior = false;
             listUsuarios.View = View.Details;

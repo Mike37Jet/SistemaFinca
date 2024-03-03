@@ -15,10 +15,12 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
     public partial class SubFormGUActualizar : Form
     {
         private String numeroCedula;
-        public SubFormGUActualizar(string numeroCedula)
+        private String usuario;
+        public SubFormGUActualizar(string numeroCedula, String usuario)
         {
             InitializeComponent();
             this.numeroCedula = numeroCedula;
+            this.usuario = usuario;
             using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
             {
                 try
@@ -45,6 +47,11 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
                     {
                         radioD.Checked = true;
                     }
+                    if (this.usuario == txtNombreU.Text)
+                    {
+                        radioA.Enabled = false;
+                        radioD.Enabled = false;
+                    }
                 }
                 catch (NpgsqlException ex)
                 {
@@ -63,31 +70,31 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
-            if (txtTele.Text.Length > 11 || txtTele.Text.Length < 7 || !FormGU_Registrar.TelefonoEsValido(txtTele.Text))
-            {
-                MessageBox.Show("Teléfono ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtCorreo.Text.Length > 320 || !FormGU_Registrar.CorreoEsValido(txtCorreo.Text))
-            {
-                MessageBox.Show("Correo electrónico ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             if (txtNombreU.Text.Length > 15 || txtNombreU.Text.Length < 5 || !FormGU_Registrar.UsuarioEsValido(txtNombreU.Text))
             {
-                MessageBox.Show("nombre usuario ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nombre de usuario no es válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtContrasena.Text.Length > 20 || txtContrasena.Text.Length < 8 || !FormGU_Registrar.ContrasenaEsValida(txtContrasena.Text))
             {
-                MessageBox.Show("Contraseña ingresada no válida", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Contraseña nueva no es válida", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtCorreo.Text.Length > 320 || !FormGU_Registrar.CorreoEsValido(txtCorreo.Text))
+            {
+                MessageBox.Show("Correo electrónico ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtTele.Text.Length > 11 || txtTele.Text.Length < 7 || !FormGU_Registrar.TelefonoEsValido(txtTele.Text))
+            {
+                MessageBox.Show("Teléfono ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
             {
                 try
                 {
-                    DialogResult dialogResult = MessageBox.Show("Esta seguro que desea actualizar los datos del usuario?", "Confirmación", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Está seguro que desea actualizar los datos del usuario?", "Confirmación", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.No)
                     {
                         return;

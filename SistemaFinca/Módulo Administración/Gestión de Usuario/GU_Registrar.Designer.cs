@@ -158,10 +158,10 @@
             radioJor.Location = new Point(108, 391);
             radioJor.Margin = new Padding(3, 2, 3, 2);
             radioJor.Name = "radioJor";
-            radioJor.Size = new Size(225, 25);
+            radioJor.Size = new Size(93, 25);
             radioJor.TabIndex = 18;
             radioJor.TabStop = true;
-            radioJor.Text = "Usuario estándar (Jornalero)";
+            radioJor.Text = "Jornalero";
             radioJor.UseVisualStyleBackColor = true;
             // 
             // label7

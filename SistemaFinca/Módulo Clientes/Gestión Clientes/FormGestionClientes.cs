@@ -23,6 +23,52 @@ namespace SistemaFinca
         {
             InitializeComponent();
             getClientes();
+            getClientesInactivos();
+        }
+
+        private void getClientesInactivos()
+        {
+            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    String commString2 = $"SELECT cedulacliente, nombres, apellidos, telefono " +
+                                            $"FROM cliente WHERE estado = 'I'";
+                    NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
+                    using (NpgsqlDataReader reader = comm2.ExecuteReader())
+                    {
+                        if (!reader.HasRows)
+                        {
+                            return;
+                        }
+
+                        while (reader.Read())
+                        {
+                            String cedula = reader.GetString(0);
+                            String nombres = reader.GetString(1);
+                            String apellidos = reader.GetString(2);
+                            String telefono = reader.GetString(3);
+                            ListViewItem item = new ListViewItem(cedula);
+                            item.SubItems.Add(nombres);
+                            item.SubItems.Add(apellidos);
+                            item.SubItems.Add(telefono);
+                            lstClientesInactivos.Items.Add(item);
+                        }
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
         }
 
         private void getClientes()
@@ -32,8 +78,8 @@ namespace SistemaFinca
                 try
                 {
                     connection.Open();
-                    String commString = $"SELECT cedulacliente, nombres, apellidos, telefono, direccion, correo " +
-                        $"FROM cliente";
+                    String commString = $"SELECT cedulacliente, nombres, apellidos, telefono " +
+                        $"FROM cliente WHERE estado = 'A'";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
                     {
@@ -48,14 +94,10 @@ namespace SistemaFinca
                             String nombres = reader.GetString(1);
                             String apellidos = reader.GetString(2);
                             String telefono = reader.GetString(3);
-                            String direccion = reader.GetString(4);
-                            String correo = reader.GetString(5);
                             ListViewItem item = new ListViewItem(cedula);
                             item.SubItems.Add(nombres);
                             item.SubItems.Add(apellidos);
                             item.SubItems.Add(telefono);
-                            item.SubItems.Add(direccion);
-                            item.SubItems.Add(correo);
                             listClientes.Items.Add(item);
                         }
                     }
@@ -97,7 +139,9 @@ namespace SistemaFinca
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
             listClientes.Items.Clear();
+            lstClientesInactivos.Items.Clear();
             getClientes();
+            getClientesInactivos();
 
             if (formularioActivo != null)
             {

@@ -78,6 +78,7 @@
             buttonSalir = new Button();
             panelFormularioHijo = new Panel();
             pictureLogo = new PictureBox();
+            labelUsuario = new Label();
             panelEncabezado.SuspendLayout();
             panelMenu.SuspendLayout();
             subPanelZonasPastoreo.SuspendLayout();
@@ -867,6 +868,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(labelUsuario);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(labelRol);
             panel2.Controls.Add(pictureBox1);
@@ -962,6 +964,16 @@
             pictureLogo.TabIndex = 4;
             pictureLogo.TabStop = false;
             // 
+            // labelUsuario
+            // 
+            labelUsuario.AutoSize = true;
+            labelUsuario.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelUsuario.ForeColor = SystemColors.ButtonFace;
+            labelUsuario.Location = new Point(108, 20);
+            labelUsuario.Name = "labelUsuario";
+            labelUsuario.Size = new Size(0, 19);
+            labelUsuario.TabIndex = 5;
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1046,5 +1058,6 @@
         private Button buttonParametrosSistema;
         private Button button1;
         private Button buttonContratos;
+        private Label labelUsuario;
     }
 }

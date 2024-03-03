@@ -15,11 +15,11 @@ namespace SistemaFinca
 {
     public partial class FormGU_Actualizar : Form
     {
-        
-        public FormGU_Actualizar()
+        private String usuario;
+        public FormGU_Actualizar(String usuario)
         {
             InitializeComponent();
-            
+            this.usuario = usuario;
         }
         private Form formularioActivo = null;
         private void abrirFormulariosHijos(Form formularioHijo)
@@ -66,10 +66,11 @@ namespace SistemaFinca
                             MessageBox.Show("El número de cédula no se encuentra registrado", "Datos no registrados", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-                        else {
-                            abrirFormulariosHijos(new SubFormGUActualizar(txtNumeroC.Text));
+                        else
+                        {
+                            abrirFormulariosHijos(new SubFormGUActualizar(txtNumeroC.Text, this.usuario));
                         }
-                   
+
                     }
                     catch (NpgsqlException ex)
                     {

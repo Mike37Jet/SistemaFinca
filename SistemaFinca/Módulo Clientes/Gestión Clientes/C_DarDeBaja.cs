@@ -24,7 +24,7 @@ namespace SistemaFinca
         {
             if (!FormGU_Registrar.CedulaEsValida(txtNumeroC.Text))
             {
-                MessageBox.Show("El número de cédula no es válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El número de cédula de identidad no es válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -39,7 +39,7 @@ namespace SistemaFinca
                         NpgsqlDataReader reader = comm.ExecuteReader();
                         if (!reader.HasRows)
                         {
-                            MessageBox.Show("El número de cédula no se encuentra registrado", "Datos no registrados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("El número de cédula de identidad no se encuentra registrado", "Datos no registrados", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                         reader.Read();

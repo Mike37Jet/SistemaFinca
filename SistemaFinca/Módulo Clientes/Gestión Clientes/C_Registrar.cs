@@ -28,30 +28,30 @@ namespace SistemaFinca
 
             if (!FormGU_Registrar.CedulaEsValida(textCedula.Text))
             {
-                MessageBox.Show("El número de cédula no es válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El número de cédula de identidad no es válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (textNombres.Text.Length > 60 || !FormGU_Registrar.NombresApellidosSonValidos(textNombres.Text))
             {
-                MessageBox.Show("Nombres ingresados no válidos", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nombres ingresados no válidos", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (textApellidos.Text.Length > 60 || !FormGU_Registrar.NombresApellidosSonValidos(textApellidos.Text))
             {
-                MessageBox.Show("Apellidos ingresados no válidos", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Apellidos ingresados no válidos", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
 
             }
             if (textTelefono.Text.Length > 11 || !FormGU_Registrar.TelefonoEsValido(textTelefono.Text) || textTelefono.Text.Length < 7)
             {
-                MessageBox.Show("Teléfono ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Teléfono ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
 
             }
-            if (textDireccion.Text.Length > 100 || !DireccionValida(textDireccion.Text))
+            if (textDireccion.Text.Length > 100 || textDireccion.Text.Length < 10 || !DireccionValida(textDireccion.Text))
             {
-                MessageBox.Show("direccion no válida", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Dirección domiciliaria no válida", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
 
             }
@@ -74,7 +74,7 @@ namespace SistemaFinca
                     {
                         if (reader.HasRows)
                         {
-                            MessageBox.Show("El número de cédula ya se encuentra registrado", "Datos registrados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("El número de cédula de identidad ya se encuentra registrado", "Vuelve a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
@@ -119,7 +119,7 @@ namespace SistemaFinca
         }
         public static bool DireccionValida(string direccion)
         {
-            Regex regex = new Regex("^[A-Za-z0-9.\\-]+(?: [A-Za-z0-9.\\-]+){0,99}$");
+            Regex regex = new Regex(@"^[A-Za-z0-9ÁÉÍÓÚÑáéíóúñ.\-\s]{10,100}$");
             return regex.IsMatch(direccion);
         }
         private void vaciarCampos()

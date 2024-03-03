@@ -77,6 +77,7 @@
             // btnBuscar
             // 
             btnBuscar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnBuscar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuscar.Location = new Point(406, 98);
             btnBuscar.Margin = new Padding(3, 2, 3, 2);
             btnBuscar.Name = "btnBuscar";
@@ -90,19 +91,21 @@
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11.25F);
             label3.Location = new Point(290, 62);
             label3.Name = "label3";
-            label3.Size = new Size(21, 15);
+            label3.Size = new Size(25, 20);
             label3.TabIndex = 2;
             label3.Text = "CI:";
             // 
             // txtNumeroC
             // 
             txtNumeroC.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtNumeroC.Font = new Font("Segoe UI", 11.25F);
             txtNumeroC.Location = new Point(317, 59);
             txtNumeroC.Margin = new Padding(3, 2, 3, 2);
             txtNumeroC.Name = "txtNumeroC";
-            txtNumeroC.Size = new Size(260, 23);
+            txtNumeroC.Size = new Size(260, 27);
             txtNumeroC.TabIndex = 1;
             txtNumeroC.TextChanged += textBox1_TextChanged;
             // 

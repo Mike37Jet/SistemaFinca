@@ -24,7 +24,7 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
                 {
                     char estado;
                     connection.Open();
-                    String commExisteString = $"SELECT nombres, apellidos, telefono, direccion" +
+                    String commExisteString = $"SELECT nombres, apellidos, telefono, direccion, correo" +
                         $" FROM cliente WHERE cedulacliente = '{this.numeroCedula}'";
                     NpgsqlCommand commExiste = new NpgsqlCommand(commExisteString, connection);
                     using (NpgsqlDataReader reader = commExiste.ExecuteReader())
@@ -34,7 +34,7 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
                         txtApellido.Text = $"{reader.GetString(1)}";
                         txtTele.Text = $"{reader.GetString(2)}";
                         txtDireccion.Text = $"{reader.GetString(3)}";
-                        
+                        txtCorreo.Text = $"{reader.GetString(4)}";
                     }
                 }
                 catch (NpgsqlException ex)
@@ -49,30 +49,25 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
                     }
                 }
             }
-
+            labelCliente.Text = $"Número de cédula de identidad: {this.numeroCedula}";
         }
 
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text.Length > 60 || !FormGU_Registrar.NombresApellidosSonValidos(txtNombre.Text))
-            {
-                MessageBox.Show("Nombres ingresados no válidos", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtApellido.Text.Length > 60 || !FormGU_Registrar.NombresApellidosSonValidos(txtApellido.Text))
-            {
-                MessageBox.Show("Apellidos ingresados no válidos", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             if (txtTele.Text.Length > 11 || !FormGU_Registrar.TelefonoEsValido(txtTele.Text) || txtTele.Text.Length < 7)
             {
-                MessageBox.Show("Teléfono ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Teléfono ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (txtDireccion.Text.Length > 100 || !FormC_Registrar.DireccionValida(txtDireccion.Text))
+            if (txtDireccion.Text.Length > 100 || txtDireccion.Text.Length < 10 || !FormC_Registrar.DireccionValida(txtDireccion.Text))
             {
-                MessageBox.Show("Dirección no válida", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Dirección domiciliaria ingresada no válida", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!FormGU_Registrar.CorreoEsValido(txtCorreo.Text))
+            {
+                MessageBox.Show("Correo electrónico ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -80,15 +75,15 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
             {
                 try
                 {
-                    DialogResult dialogResult = MessageBox.Show("Está seguro que desea actualizar los datos del usuario?", "Confirmación", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Está seguro que desea actualizar los datos del cliente?", "Confirmación", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.No)
                     {
                         return;
                     }
                     connection.Open();
-                    
+
                     String commString = $"UPDATE cliente SET nombres = '{txtNombre.Text}', " +
-                        $"apellidos = '{txtApellido.Text}', telefono = '{txtTele.Text}', direccion = '{txtDireccion.Text}' " +
+                        $"apellidos = '{txtApellido.Text}', telefono = '{txtTele.Text}', direccion = '{txtDireccion.Text}', correo = '{txtCorreo.Text}' " +
                         $" WHERE cedulacliente = '{this.numeroCedula}'";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     int resultado = comm.ExecuteNonQuery();
@@ -110,7 +105,7 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
                     }
                 }
             }
-            
+
         }
     }
 }

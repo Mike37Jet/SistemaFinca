@@ -32,39 +32,39 @@ namespace SistemaFinca
         {
             if (!CedulaEsValida(txtNumeroC.Text))
             {
-                MessageBox.Show("El número de cédula no es válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;    
+                MessageBox.Show("El número de cédula no es válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            
+
             if (txtNombres.Text.Length > 60 || !NombresApellidosSonValidos(txtNombres.Text))
             {
-                MessageBox.Show("Nombres ingresados no válidos", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nombres ingresados no válidos", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-                
+
             }
             if (txtApellidos.Text.Length > 60 || !NombresApellidosSonValidos(txtApellidos.Text))
             {
-                MessageBox.Show("Apellidos ingresados no válidos", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Apellidos ingresados no válidos", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtTelefono.Text.Length > 11 || txtTelefono.Text.Length < 7 || !TelefonoEsValido(txtTelefono.Text))
             {
-                MessageBox.Show("Teléfono ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Teléfono ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtCorreo.Text.Length > 320 || !CorreoEsValido(txtCorreo.Text))
             {
-                MessageBox.Show("Correo electrónico ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Correo electrónico ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtNombreU.Text.Length > 15 || txtNombreU.Text.Length < 5 || !UsuarioEsValido(txtNombreU.Text))
             {
-                MessageBox.Show("Nombre usuario ingresado no válido", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nombre usuario ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtContrasena.Text.Length > 20 || txtContrasena.Text.Length < 8 || !ContrasenaEsValida(txtContrasena.Text))
             {
-                MessageBox.Show("Contraseña ingresada no válida", "vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Contraseña ingresada no válida", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
@@ -74,10 +74,21 @@ namespace SistemaFinca
                     connection.Open();
                     String commExisteString = $"SELECT * FROM usuario WHERE cedulausuario = '{txtNumeroC.Text}'";
                     NpgsqlCommand commExiste = new NpgsqlCommand(commExisteString, connection);
-                    using (NpgsqlDataReader reader = commExiste.ExecuteReader()) {
+                    using (NpgsqlDataReader reader = commExiste.ExecuteReader())
+                    {
                         if (reader.HasRows)
                         {
-                            MessageBox.Show("El número de cédula ya se encuentra registrado", "Datos registrados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("El número de cédula ya se encuentra registrado", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                    String commExisteString2 = $"SELECT * FROM usuario WHERE usuario = '{txtNombreU.Text}'";
+                    NpgsqlCommand commExiste2 = new NpgsqlCommand(commExisteString2, connection);
+                    using (NpgsqlDataReader reader = commExiste2.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            MessageBox.Show("El nombre de usuario ya está registrado", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
@@ -89,7 +100,7 @@ namespace SistemaFinca
                     int resultado = comm.ExecuteNonQuery();
                     if (resultado > 0)
                     {
-                        MessageBox.Show("El usuario se ha registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Usuario registrado exitosamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         vaciarCampos();
                     }
                 }
@@ -109,7 +120,7 @@ namespace SistemaFinca
 
         private void vaciarCampos()
         {
-            txtApellidos.Text = ""; 
+            txtApellidos.Text = "";
             txtNombres.Text = "";
             txtContrasena.Text = "";
             txtCorreo.Text = "";
@@ -155,7 +166,8 @@ namespace SistemaFinca
                 return false;
             }
 
-            if (!Regex.IsMatch(cedula, "^[0-9]{10}$")) {
+            if (!Regex.IsMatch(cedula, "^[0-9]{10}$"))
+            {
                 return false;
             }
 

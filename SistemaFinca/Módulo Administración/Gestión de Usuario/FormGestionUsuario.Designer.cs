@@ -38,14 +38,18 @@
             buttonActualizar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
+            label3 = new Label();
+            label2 = new Label();
+            lstUsuariosInactivos = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
             listUsuarios = new ListView();
             columnID = new ColumnHeader();
-            columnNombre = new ColumnHeader();
-            columnApellidos = new ColumnHeader();
-            columnTelefono = new ColumnHeader();
+            columnUsuario = new ColumnHeader();
             columnCorreo = new ColumnHeader();
             columnRol = new ColumnHeader();
-            columnUsuario = new ColumnHeader();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
@@ -180,6 +184,9 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
+            panelFormularioHijo.Controls.Add(label3);
+            panelFormularioHijo.Controls.Add(label2);
+            panelFormularioHijo.Controls.Add(lstUsuariosInactivos);
             panelFormularioHijo.Controls.Add(listUsuarios);
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Dock = DockStyle.Fill;
@@ -189,15 +196,68 @@
             panelFormularioHijo.Size = new Size(895, 541);
             panelFormularioHijo.TabIndex = 8;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            label3.Location = new Point(109, 49);
+            label3.Name = "label3";
+            label3.Size = new Size(126, 20);
+            label3.TabIndex = 10;
+            label3.Text = "Usuarios Activos";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            label2.Location = new Point(109, 305);
+            label2.Name = "label2";
+            label2.Size = new Size(137, 20);
+            label2.TabIndex = 9;
+            label2.Text = "Usuarios Inactivos";
+            // 
+            // lstUsuariosInactivos
+            // 
+            lstUsuariosInactivos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lstUsuariosInactivos.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+            lstUsuariosInactivos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lstUsuariosInactivos.Location = new Point(109, 338);
+            lstUsuariosInactivos.Margin = new Padding(3, 2, 3, 2);
+            lstUsuariosInactivos.Name = "lstUsuariosInactivos";
+            lstUsuariosInactivos.Size = new Size(675, 163);
+            lstUsuariosInactivos.TabIndex = 8;
+            lstUsuariosInactivos.UseCompatibleStateImageBehavior = false;
+            lstUsuariosInactivos.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "CI";
+            columnHeader1.Width = 150;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Nombre de usuario";
+            columnHeader2.Width = 165;
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Correo Electrónico";
+            columnHeader3.Width = 180;
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Rol";
+            columnHeader4.Width = 165;
+            // 
             // listUsuarios
             // 
             listUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listUsuarios.Columns.AddRange(new ColumnHeader[] { columnID, columnNombre, columnApellidos, columnTelefono, columnCorreo, columnRol, columnUsuario });
-            listUsuarios.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listUsuarios.Location = new Point(51, 84);
+            listUsuarios.Columns.AddRange(new ColumnHeader[] { columnID, columnUsuario, columnCorreo, columnRol });
+            listUsuarios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listUsuarios.Location = new Point(109, 85);
             listUsuarios.Margin = new Padding(3, 2, 3, 2);
             listUsuarios.Name = "listUsuarios";
-            listUsuarios.Size = new Size(785, 385);
+            listUsuarios.Size = new Size(675, 178);
             listUsuarios.TabIndex = 7;
             listUsuarios.UseCompatibleStateImageBehavior = false;
             listUsuarios.View = View.Details;
@@ -206,37 +266,22 @@
             // columnID
             // 
             columnID.Text = "CI";
-            columnID.Width = 80;
-            // 
-            // columnNombre
-            // 
-            columnNombre.Text = "Nombre";
-            columnNombre.Width = 120;
-            // 
-            // columnApellidos
-            // 
-            columnApellidos.Text = "Apellidos";
-            columnApellidos.Width = 120;
-            // 
-            // columnTelefono
-            // 
-            columnTelefono.Text = "Teléfono";
-            columnTelefono.Width = 120;
-            // 
-            // columnCorreo
-            // 
-            columnCorreo.Text = "Correo Electrónico";
-            columnCorreo.Width = 150;
-            // 
-            // columnRol
-            // 
-            columnRol.Text = "Rol";
-            columnRol.Width = 80;
+            columnID.Width = 150;
             // 
             // columnUsuario
             // 
             columnUsuario.Text = "Nombre de usuario";
-            columnUsuario.Width = 150;
+            columnUsuario.Width = 165;
+            // 
+            // columnCorreo
+            // 
+            columnCorreo.Text = "Correo Electrónico";
+            columnCorreo.Width = 180;
+            // 
+            // columnRol
+            // 
+            columnRol.Text = "Rol";
+            columnRol.Width = 165;
             // 
             // label1
             // 
@@ -281,12 +326,15 @@
         private Button buttonRegresar;
         private ListView listUsuarios;
         private ColumnHeader columnID;
-        private ColumnHeader columnNombre;
-        private ColumnHeader columnApellidos;
-        private ColumnHeader columnTelefono;
         private ColumnHeader columnCorreo;
         private ColumnHeader columnRol;
         private Button buttonBuscar;
         private ColumnHeader columnUsuario;
+        private ListView lstUsuariosInactivos;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
+        private Label label3;
     }
 }
