@@ -131,5 +131,10 @@ namespace SistemaFinca
             textTelefono.Text = "";
             txtCorreo.Text = "";
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

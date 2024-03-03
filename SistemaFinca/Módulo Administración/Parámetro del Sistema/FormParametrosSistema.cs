@@ -16,17 +16,11 @@ namespace SistemaFinca
 {
     public partial class FormParametrosSistema : Form
     {
-        
-        private double precioActualDeLeche = new double();
-        private int cantidadMaxDeLeche = new int();
 
         public FormParametrosSistema()
         {
             InitializeComponent();
             getParametros();
-            //labelPrecioActual.Text = precioActualDeLeche.ToString() + " $";
-            //labelCantidadMaxLeche.Text = cantidadMaxDeLeche.ToString() + " Litros";
-
 
         }
 
@@ -63,23 +57,6 @@ namespace SistemaFinca
 
         private Form formularioActivo = null;
 
-        private void abrirFormulariosHijos(Form formularioHijo)
-        {
-            if (formularioActivo != null)
-            {
-                formularioActivo.Close();
-            }
-            formularioActivo = formularioHijo;
-            formularioHijo.TopLevel = false;
-            formularioHijo.FormBorderStyle = FormBorderStyle.None;
-            formularioHijo.Dock = DockStyle.Fill;
-            panelFormularioHijo.Controls.Add(formularioHijo);
-            panelFormularioHijo.Tag = formularioHijo;
-            formularioHijo.BringToFront();
-            formularioHijo.Show();
-        }
-
-
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
@@ -93,10 +70,6 @@ namespace SistemaFinca
                 this.Close();
             }
         }
-
-
-
-
 
 
         private void buttonActualizarPrecioLeche_Click(object sender, EventArgs e)
@@ -122,9 +95,10 @@ namespace SistemaFinca
                         int resultado = comm.ExecuteNonQuery();
                         if (resultado > 0)
                         {
-                            MessageBox.Show("Precio actualizado exitosamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             getParametros();
+                            MessageBox.Show("Precio actualizado exitosamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
+                        textNuevoPrecioLeche.Text = "";
                     }
                     catch (NpgsqlException ex)
                     {
@@ -138,8 +112,7 @@ namespace SistemaFinca
                         }
                     }
                 }
-                //labelPrecioActual.Text = textNuevoPrecioLeche.Text + " $";
-                //precioActualDeLeche = double.Parse(textNuevoPrecioLeche.Text);
+           
             }
 
         }
@@ -168,9 +141,10 @@ namespace SistemaFinca
                         int resultado = comm.ExecuteNonQuery();
                         if (resultado > 0)
                         {
-                            MessageBox.Show("Capacidad del tanque frío actualizada correctamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             getParametros();
+                            MessageBox.Show("Capacidad del tanque frío actualizada correctamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);    
                         }
+                        textNuevaCapacidadMaxLeche.Text = "";
                     }
                     catch (NpgsqlException ex)
                     {
@@ -184,8 +158,7 @@ namespace SistemaFinca
                         }
                     }
                 }
-                //labelCantidadMaxLeche.Text = textNuevaCapacidadMaxLeche.Text + " Litros";
-                //cantidadMaxDeLeche = int.Parse(textNuevaCapacidadMaxLeche.Text);
+           
             }
         }
     }

@@ -14,6 +14,12 @@ namespace SistemaFinca
         public FormLogin()
         {
             InitializeComponent();
+            buttonMostrar.TabStop = false;
+            buttonMinimizar.TabStop = false;
+            buttonCerrar.TabStop = false;
+
+
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -26,17 +32,17 @@ namespace SistemaFinca
             Graphics login;
             login = CreateGraphics();
             Pen lapiz = new Pen(Color.Gray);
-            login.DrawLine(lapiz, 310, 100, 717, 100);
-            login.DrawLine(lapiz, 310, 165, 717, 165);
+            login.DrawLine(lapiz, 310, 100, 728, 100);
+            login.DrawLine(lapiz, 310, 165, 728, 165);
         }
 
         private void textUsuario_Enter(object sender, EventArgs e)
         {
             if (textUsuario.Text == "USUARIO")
             {
-                textUsuario.Text = "";
-                textUsuario.ForeColor = Color.LightGray;
+                textUsuario.SelectionStart = 0;
             }
+
         }
 
         private void textUsuario_Leave(object sender, EventArgs e)
@@ -52,9 +58,9 @@ namespace SistemaFinca
         {
             if (textContraseña.Text == "CONTRASEÑA")
             {
-                textContraseña.Text = "";
-                textContraseña.ForeColor = Color.LightGray;
+                textContraseña.SelectionStart = 0;
             }
+
         }
 
         private void textContraseña_Leave(object sender, EventArgs e)
@@ -69,11 +75,13 @@ namespace SistemaFinca
 
         private void button2_Click(object sender, EventArgs e)
         {
+            buttonCerrar.FlatAppearance.BorderSize = 0;
             Application.Exit();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            buttonMinimizar.FlatAppearance.BorderSize = 0;
             this.WindowState = FormWindowState.Minimized;
         }
 
@@ -87,7 +95,7 @@ namespace SistemaFinca
         {
             if (textUsuario.Text.Length < 5 || textUsuario.Text.Length > 15 || textContraseña.Text.Length < 8 || textContraseña.Text.Length > 20)
             {
-                MessageBox.Show("Usuario o contraseña inválida. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario o contraseña incorrecta. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -102,7 +110,7 @@ namespace SistemaFinca
                         NpgsqlDataReader reader = comm.ExecuteReader();
                         if (!reader.HasRows)
                         {
-                            MessageBox.Show("Usuario o contraseña inválida. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Usuario o contraseña incorrecta. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                         reader.Read();
@@ -128,7 +136,7 @@ namespace SistemaFinca
                         }
                         else
                         {
-                            MessageBox.Show("Usuario o contraseña inválida. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Usuario o contraseña inconrrecta. Por favor, inténtalo de nuevo.", "Ingreso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
@@ -149,8 +157,63 @@ namespace SistemaFinca
 
         private void textContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (textContraseña.Text == "CONTRASEÑA")
+            {
+                textContraseña.Text = "";
+                textContraseña.ForeColor = Color.LightGray;
+                textContraseña.PasswordChar = '*';
+            }
 
-            textContraseña.PasswordChar = '*';
+
+            if (textContraseña.PasswordChar == '*')
+            {
+                textContraseña.PasswordChar = '*';
+            }
+            else
+            {
+                textContraseña.PasswordChar = '\0';
+            }
+        }
+
+        private void textUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textUsuario.Text == "USUARIO")
+            {
+                textUsuario.Text = "";
+                textUsuario.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void textUsuario_Click(object sender, EventArgs e)
+        {
+            if (textUsuario.Text == "USUARIO")
+            {
+                textUsuario.SelectionStart = 0;
+            }
+        }
+
+        private void textContraseña_Click(object sender, EventArgs e)
+        {
+            if (textContraseña.Text == "CONTRASEÑA")
+            {
+                textContraseña.SelectionStart = 0;
+            }
+        }
+
+
+
+     
+
+        private void buttonMostrar1_Click(object sender, EventArgs e)
+        {
+            if (textContraseña.PasswordChar == '*')
+            {
+                textContraseña.PasswordChar = '\0';
+            }
+            else if (textContraseña.Text != "CONTRASEÑA")
+            {
+                textContraseña.PasswordChar = '*';
+            }
         }
     }
 }

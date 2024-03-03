@@ -35,8 +35,9 @@
             textContraseña = new TextBox();
             label1 = new Label();
             button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            buttonCerrar = new Button();
+            buttonMinimizar = new Button();
+            buttonMostrar = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
@@ -76,7 +77,9 @@
             textUsuario.Size = new Size(418, 26);
             textUsuario.TabIndex = 1;
             textUsuario.Text = "USUARIO";
+            textUsuario.Click += textUsuario_Click;
             textUsuario.Enter += textUsuario_Enter;
+            textUsuario.KeyPress += textUsuario_KeyPress;
             textUsuario.Leave += textUsuario_Leave;
             // 
             // textContraseña
@@ -91,6 +94,7 @@
             textContraseña.Size = new Size(418, 26);
             textContraseña.TabIndex = 2;
             textContraseña.Text = "CONTRASEÑA";
+            textContraseña.Click += textContraseña_Click;
             textContraseña.Enter += textContraseña_Enter;
             textContraseña.KeyPress += textContraseña_KeyPress;
             textContraseña.Leave += textContraseña_Leave;
@@ -113,6 +117,7 @@
             button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
             button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.LightGray;
             button1.Location = new Point(310, 225);
             button1.Margin = new Padding(3, 2, 3, 2);
@@ -123,35 +128,52 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // button2
+            // buttonCerrar
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(740, 7);
-            button2.Margin = new Padding(0);
-            button2.Name = "button2";
-            button2.Size = new Size(31, 25);
-            button2.TabIndex = 5;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            buttonCerrar.FlatAppearance.BorderColor = SystemColors.ControlText;
+            buttonCerrar.FlatAppearance.BorderSize = 0;
+            buttonCerrar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            buttonCerrar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            buttonCerrar.FlatStyle = FlatStyle.Flat;
+            buttonCerrar.Image = (Image)resources.GetObject("buttonCerrar.Image");
+            buttonCerrar.Location = new Point(740, 7);
+            buttonCerrar.Margin = new Padding(0);
+            buttonCerrar.Name = "buttonCerrar";
+            buttonCerrar.Size = new Size(31, 25);
+            buttonCerrar.TabIndex = 5;
+            buttonCerrar.UseVisualStyleBackColor = true;
+            buttonCerrar.Click += button2_Click;
             // 
-            // button3
+            // buttonMinimizar
             // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.Location = new Point(702, 11);
-            button3.Margin = new Padding(3, 2, 3, 2);
-            button3.Name = "button3";
-            button3.Size = new Size(26, 22);
-            button3.TabIndex = 4;
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            buttonMinimizar.FlatAppearance.BorderColor = SystemColors.ControlText;
+            buttonMinimizar.FlatAppearance.BorderSize = 0;
+            buttonMinimizar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            buttonMinimizar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            buttonMinimizar.FlatStyle = FlatStyle.Flat;
+            buttonMinimizar.Image = (Image)resources.GetObject("buttonMinimizar.Image");
+            buttonMinimizar.Location = new Point(702, 11);
+            buttonMinimizar.Margin = new Padding(3, 2, 3, 2);
+            buttonMinimizar.Name = "buttonMinimizar";
+            buttonMinimizar.Size = new Size(26, 22);
+            buttonMinimizar.TabIndex = 4;
+            buttonMinimizar.UseVisualStyleBackColor = true;
+            buttonMinimizar.Click += button3_Click;
+            // 
+            // buttonMostrar
+            // 
+            buttonMostrar.FlatAppearance.BorderSize = 0;
+            buttonMostrar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            buttonMostrar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            buttonMostrar.FlatStyle = FlatStyle.Flat;
+            buttonMostrar.Image = (Image)resources.GetObject("buttonMostrar.Image");
+            buttonMostrar.Location = new Point(690, 137);
+            buttonMostrar.Margin = new Padding(0);
+            buttonMostrar.Name = "buttonMostrar";
+            buttonMostrar.Size = new Size(38, 26);
+            buttonMostrar.TabIndex = 8;
+            buttonMostrar.UseVisualStyleBackColor = true;
+            buttonMostrar.Click += buttonMostrar1_Click;
             // 
             // FormLogin
             // 
@@ -159,8 +181,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
             ClientSize = new Size(780, 330);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(buttonMostrar);
+            Controls.Add(buttonMinimizar);
+            Controls.Add(buttonCerrar);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(textContraseña);
@@ -189,7 +212,8 @@
         private Label label1;
         private Button button1;
         private PictureBox pictureBox3;
-        private Button button2;
-        private Button button3;
+        private Button buttonCerrar;
+        private Button buttonMinimizar;
+        private Button buttonMostrar;
     }
 }

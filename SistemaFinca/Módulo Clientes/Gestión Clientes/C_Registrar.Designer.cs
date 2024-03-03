@@ -73,7 +73,7 @@
             label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 12F);
-            label9.Location = new Point(107, 323);
+            label9.Location = new Point(335, 363);
             label9.Name = "label9";
             label9.Size = new Size(225, 21);
             label9.TabIndex = 38;
@@ -85,9 +85,9 @@
             txtCorreo.Cursor = Cursors.IBeam;
             txtCorreo.Font = new Font("Segoe UI", 12F);
             txtCorreo.ForeColor = SystemColors.ActiveCaptionText;
-            txtCorreo.Location = new Point(107, 345);
+            txtCorreo.Location = new Point(208, 387);
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(680, 29);
+            txtCorreo.Size = new Size(479, 29);
             txtCorreo.TabIndex = 37;
             // 
             // label6
@@ -95,7 +95,7 @@
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F);
-            label6.Location = new Point(107, 246);
+            label6.Location = new Point(367, 307);
             label6.Name = "label6";
             label6.Size = new Size(160, 21);
             label6.TabIndex = 36;
@@ -106,7 +106,7 @@
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(519, 167);
+            label5.Location = new Point(410, 195);
             label5.Name = "label5";
             label5.Size = new Size(74, 21);
             label5.TabIndex = 35;
@@ -117,7 +117,7 @@
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(107, 167);
+            label4.Location = new Point(410, 139);
             label4.Name = "label4";
             label4.Size = new Size(75, 21);
             label4.TabIndex = 34;
@@ -128,9 +128,9 @@
             textDireccion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textDireccion.Cursor = Cursors.IBeam;
             textDireccion.Font = new Font("Segoe UI", 12F);
-            textDireccion.Location = new Point(107, 270);
+            textDireccion.Location = new Point(208, 331);
             textDireccion.Name = "textDireccion";
-            textDireccion.Size = new Size(680, 29);
+            textDireccion.Size = new Size(479, 29);
             textDireccion.TabIndex = 33;
             // 
             // textApellidos
@@ -138,7 +138,7 @@
             textApellidos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textApellidos.Cursor = Cursors.IBeam;
             textApellidos.Font = new Font("Segoe UI", 12F);
-            textApellidos.Location = new Point(509, 190);
+            textApellidos.Location = new Point(308, 219);
             textApellidos.Name = "textApellidos";
             textApellidos.Size = new Size(278, 29);
             textApellidos.TabIndex = 32;
@@ -148,7 +148,7 @@
             textNombres.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textNombres.Cursor = Cursors.IBeam;
             textNombres.Font = new Font("Segoe UI", 12F);
-            textNombres.Location = new Point(107, 190);
+            textNombres.Location = new Point(308, 163);
             textNombres.Name = "textNombres";
             textNombres.Size = new Size(278, 29);
             textNombres.TabIndex = 31;
@@ -157,7 +157,7 @@
             // 
             button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button2.Font = new Font("Segoe UI", 12F);
-            button2.Location = new Point(366, 429);
+            button2.Location = new Point(393, 457);
             button2.Name = "button2";
             button2.Size = new Size(109, 45);
             button2.TabIndex = 30;
@@ -170,7 +170,7 @@
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(513, 110);
+            label3.Location = new Point(413, 251);
             label3.Name = "label3";
             label3.Size = new Size(68, 21);
             label3.TabIndex = 29;
@@ -181,7 +181,7 @@
             textTelefono.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textTelefono.Cursor = Cursors.IBeam;
             textTelefono.Font = new Font("Segoe UI", 12F);
-            textTelefono.Location = new Point(510, 133);
+            textTelefono.Location = new Point(308, 275);
             textTelefono.Name = "textTelefono";
             textTelefono.Size = new Size(278, 29);
             textTelefono.TabIndex = 28;
@@ -191,18 +191,18 @@
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(107, 110);
+            label2.Location = new Point(332, 83);
             label2.Name = "label2";
-            label2.Size = new Size(231, 21);
+            label2.Size = new Size(228, 21);
             label2.TabIndex = 27;
-            label2.Text = "Número de Cédula de identidad";
+            label2.Text = "Número de cédula de identidad";
             // 
             // textCedula
             // 
             textCedula.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textCedula.Cursor = Cursors.IBeam;
             textCedula.Font = new Font("Segoe UI", 12F);
-            textCedula.Location = new Point(107, 133);
+            textCedula.Location = new Point(308, 107);
             textCedula.Name = "textCedula";
             textCedula.Size = new Size(278, 29);
             textCedula.TabIndex = 26;
@@ -212,7 +212,7 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(366, 70);
+            label1.Location = new Point(363, 21);
             label1.Name = "label1";
             label1.Size = new Size(169, 21);
             label1.TabIndex = 25;
