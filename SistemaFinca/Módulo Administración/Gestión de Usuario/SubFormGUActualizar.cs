@@ -94,12 +94,22 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
             {
                 try
                 {
+                    connection.Open();
+                    String commExisteString2 = $"SELECT * FROM usuario WHERE usuario = '{txtNombreU.Text}'";
+                    NpgsqlCommand commExiste2 = new NpgsqlCommand(commExisteString2, connection);
+                    using (NpgsqlDataReader reader = commExiste2.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            MessageBox.Show("El nombre de usuario ya está registrado", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
                     DialogResult dialogResult = MessageBox.Show("Está seguro que desea actualizar los datos del usuario?", "Confirmación", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.No)
                     {
                         return;
                     }
-                    connection.Open();
                     char estado = radioA.Checked ? 'A' : 'I';
                     String commString = $"UPDATE usuario SET contrasena = '{txtContrasena.Text}', " +
                         $"correo = '{txtCorreo.Text}', usuario = '{txtNombreU.Text}', telefono = '{txtTele.Text}', " +
