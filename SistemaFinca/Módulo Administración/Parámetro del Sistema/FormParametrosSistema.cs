@@ -74,7 +74,7 @@ namespace SistemaFinca
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             string pattern = @"^\d{1,2}(\,\d{1,2})?$";
-            string pattern2 = @"^[1-9]\d{0,2}$|1000";
+            string pattern2 = @"^[1-9]\d{3}$";
             if (txtPrecioLeche.Text == "" || !Regex.IsMatch(txtPrecioLeche.Text, pattern))
             {
                 MessageBox.Show("Precio no válido", "Actualización Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
