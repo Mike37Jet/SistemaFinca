@@ -104,19 +104,6 @@ namespace SistemaFinca
             }
         }
 
-        private void buttoContrato_Click_1(object sender, EventArgs e)
-        {
-            FormVContratos contratos = new FormVContratos();
-            contratos.TopLevel = false;
-            contratos.FormBorderStyle = FormBorderStyle.None;
-            contratos.Dock = DockStyle.Fill;
-            panelHijo.Controls.Add(contratos);
-            panelHijo.Tag = contratos;
-            contratos.BringToFront();
-
-            contratos.Show();
-
-        }
         public static bool DireccionValida(string direccion)
         {
             Regex regex = new Regex(@"^[A-Za-z0-9ÁÉÍÓÚÑáéíóúñ.\-\s]{10,100}$");

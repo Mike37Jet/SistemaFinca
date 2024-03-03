@@ -20,9 +20,7 @@
 
   <ItemGroup>
     <Compile Update="Módulo Administración\Gestión de Usuario\GU_Actualizar.cs" />
-    <Compile Update="Módulo Administración\Gestión de Usuario\GU_Consultar.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Módulo Administración\Gestión de Usuario\GU_Consultar.cs" />
     <Compile Update="Módulo Administración\Gestión de Usuario\GU_GenerarInforme.cs" />
     <Compile Update="Módulo Administración\Gestión de Usuario\GU_Eliminar.cs" />
     <Compile Update="Módulo Administración\Gestión de Usuario\GU_Registrar.cs" />
@@ -30,20 +28,14 @@
     <Compile Update="Módulo Administración\Gestión de Usuario\SubFormGUActualizar.cs" />
     <Compile Update="Módulo Administración\Parámetro del Sistema\FormParametrosSistema.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\C_Actualizar.cs" />
-    <Compile Update="Módulo Clientes\Gestión Clientes\C_Consultar.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Módulo Clientes\Gestión Clientes\C_Consultar.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\C_DarDeAlta.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\C_DarDeBaja.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\FormGestionClientes.cs" />
     <Compile Update="Módulo Clientes\Gestión Clientes\C_Registrar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\FormGanadoDeCarne.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\Proceso de Faenamiento\GC_Consultar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\SubFormGC_Consultar.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\Proceso de Faenamiento\GC_Consultar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\SubFormGC_Consultar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Consultar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Actualizar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\GB_Remover.cs" />
@@ -78,16 +70,12 @@
     <Compile Update="Módulo Inventario\Medicamentos Bovinos\MB_Actualizar.cs" />
     <Compile Update="Módulo Inventario\Medicamentos Bovinos\MB_Consultar.cs" />
     <Compile Update="Módulo Ventas\Contratos\FormContratos.cs" />
-    <Compile Update="Módulo Ventas\Contratos\VContratos.cs" />
-    <Compile Update="Módulo Ventas\Gestión de Pagos\FormBuscar.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Módulo Ventas\Contratos\VC_Registrar.cs" />
+    <Compile Update="Módulo Ventas\Gestión de Pagos\FormBuscar.cs" />
     <Compile Update="Módulo Ventas\Gestión de Pagos\FormGestionPagos.cs" />
     <Compile Update="Módulo Ventas\Deudores\FormReportesAnalisis.cs" />
     <Compile Update="Módulo Ventas\Deudores\IFGenerarReporte.cs" />
-    <Compile Update="Módulo Ventas\Gestión de Pagos\GPRegistrarPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Módulo Ventas\Gestión de Pagos\GPRegistrarPago.cs" />
     <Compile Update="Módulo Ventas\Recordatorios y Alertas\FormRecordAlert.cs" />
     <Compile Update="Módulo Ventas\Ventas\FormVent.cs" />
     <Compile Update="Módulo Ventas\Ventas\VNotaDeVenta.cs" />

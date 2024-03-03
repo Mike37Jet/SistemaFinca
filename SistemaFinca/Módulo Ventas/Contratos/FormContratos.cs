@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,53 @@ namespace SistemaFinca
         public FormContratos()
         {
             InitializeComponent();
+            getContratos();
         }
+
+        private void getContratos()
+        {
+            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    String commString = $"SELECT cedulacliente, cantidadleche, fechainicio, fechafin FROM contrato";
+                    NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                    using (NpgsqlDataReader reader = comm.ExecuteReader())
+                    {
+                        if (!reader.HasRows)
+                        {
+                            return;
+                        }
+
+                        while (reader.Read())
+                        {
+                            String cedula = reader.GetString(0);
+                            String cantidad = reader.GetInt32(1).ToString();
+                            String fechainicio = reader.GetDateTime(2).ToString();
+                            String fechafin = reader.GetDateTime(3).ToString();
+                            ListViewItem item = new ListViewItem(cedula);
+                            item.SubItems.Add(cantidad);
+                            item.SubItems.Add(fechainicio);
+                            item.SubItems.Add(fechafin);
+                            lstContratos.Items.Add(item);
+                        }
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+        }
+
         private Form formularioActivo = null;
 
         private void abrirFormulariosHijos(Form formularioHijo)
@@ -35,13 +82,10 @@ namespace SistemaFinca
         }
 
 
-
-
-
-   
-
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
+            lstContratos.Items.Clear();
+            getContratos();
             if (formularioActivo != null)
             {
                 formularioActivo.Close();
@@ -53,17 +97,27 @@ namespace SistemaFinca
             }
         }
 
-    
+
 
         private void panelFormularioHijo_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-          
-        private void buttonBuscarCliente_Click(object sender, EventArgs e)
+
+        private void btnGenerar_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormVContratos());
+            abrirFormulariosHijos(new FormVC_Registrar());
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

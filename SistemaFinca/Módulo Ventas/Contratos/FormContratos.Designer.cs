@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormContratos));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanelContrato = new TableLayoutPanel();
+            btnEliminar = new Button();
+            btnConsultar = new Button();
+            btnGenerar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            buttonBuscarCliente = new Button();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            label1 = new Label();
+            lstContratos = new ListView();
+            columnID = new ColumnHeader();
+            columnCantidad = new ColumnHeader();
+            columnFechaInicio = new ColumnHeader();
+            columnFechaFin = new ColumnHeader();
             label18 = new Label();
             tableLayoutPanelContrato.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
@@ -63,6 +68,9 @@
             tableLayoutPanelContrato.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
             tableLayoutPanelContrato.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
             tableLayoutPanelContrato.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
+            tableLayoutPanelContrato.Controls.Add(btnEliminar, 0, 0);
+            tableLayoutPanelContrato.Controls.Add(btnConsultar, 0, 0);
+            tableLayoutPanelContrato.Controls.Add(btnGenerar, 0, 0);
             tableLayoutPanelContrato.Controls.Add(buttonRegresar, 5, 0);
             tableLayoutPanelContrato.Dock = DockStyle.Bottom;
             tableLayoutPanelContrato.Location = new Point(0, 491);
@@ -72,6 +80,48 @@
             tableLayoutPanelContrato.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanelContrato.Size = new Size(895, 50);
             tableLayoutPanelContrato.TabIndex = 7;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Dock = DockStyle.Fill;
+            btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
+            btnEliminar.Location = new Point(190, 0);
+            btnEliminar.Margin = new Padding(0);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(95, 50);
+            btnEliminar.TabIndex = 16;
+            btnEliminar.TextAlign = ContentAlignment.BottomCenter;
+            btnEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
+            // 
+            // btnConsultar
+            // 
+            btnConsultar.Dock = DockStyle.Fill;
+            btnConsultar.Image = (Image)resources.GetObject("btnConsultar.Image");
+            btnConsultar.Location = new Point(95, 0);
+            btnConsultar.Margin = new Padding(0);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Size = new Size(95, 50);
+            btnConsultar.TabIndex = 15;
+            btnConsultar.TextAlign = ContentAlignment.BottomCenter;
+            btnConsultar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnConsultar.UseVisualStyleBackColor = true;
+            btnConsultar.Click += btnConsultar_Click;
+            // 
+            // btnGenerar
+            // 
+            btnGenerar.Dock = DockStyle.Fill;
+            btnGenerar.Image = (Image)resources.GetObject("btnGenerar.Image");
+            btnGenerar.Location = new Point(0, 0);
+            btnGenerar.Margin = new Padding(0);
+            btnGenerar.Name = "btnGenerar";
+            btnGenerar.Size = new Size(95, 50);
+            btnGenerar.TabIndex = 14;
+            btnGenerar.TextAlign = ContentAlignment.BottomCenter;
+            btnGenerar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnGenerar.UseVisualStyleBackColor = true;
+            btnGenerar.Click += btnGenerar_Click;
             // 
             // buttonRegresar
             // 
@@ -89,10 +139,7 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
-            panelFormularioHijo.Controls.Add(buttonBuscarCliente);
-            panelFormularioHijo.Controls.Add(label2);
-            panelFormularioHijo.Controls.Add(textBox1);
-            panelFormularioHijo.Controls.Add(label1);
+            panelFormularioHijo.Controls.Add(lstContratos);
             panelFormularioHijo.Controls.Add(label18);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
@@ -102,53 +149,48 @@
             panelFormularioHijo.TabIndex = 8;
             panelFormularioHijo.Paint += panelFormularioHijo_Paint;
             // 
-            // buttonBuscarCliente
+            // lstContratos
             // 
-            buttonBuscarCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonBuscarCliente.Location = new Point(400, 241);
-            buttonBuscarCliente.Name = "buttonBuscarCliente";
-            buttonBuscarCliente.Size = new Size(97, 35);
-            buttonBuscarCliente.TabIndex = 43;
-            buttonBuscarCliente.Text = "Buscar";
-            buttonBuscarCliente.UseVisualStyleBackColor = true;
-            buttonBuscarCliente.Click += buttonBuscarCliente_Click;
+            lstContratos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lstContratos.Columns.AddRange(new ColumnHeader[] { columnID, columnCantidad, columnFechaInicio, columnFechaFin });
+            lstContratos.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lstContratos.Location = new Point(83, 95);
+            lstContratos.Margin = new Padding(3, 2, 3, 2);
+            lstContratos.Name = "lstContratos";
+            lstContratos.Size = new Size(689, 236);
+            lstContratos.TabIndex = 40;
+            lstContratos.UseCompatibleStateImageBehavior = false;
+            lstContratos.View = View.Details;
             // 
-            // label2
+            // columnID
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(282, 174);
-            label2.Name = "label2";
-            label2.Size = new Size(21, 15);
-            label2.TabIndex = 42;
-            label2.Text = "CI:";
+            columnID.Text = "Número de cédula";
+            columnID.Width = 160;
             // 
-            // textBox1
+            // columnCantidad
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(309, 166);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(272, 29);
-            textBox1.TabIndex = 41;
+            columnCantidad.Text = "Cantidad de leche";
+            columnCantidad.Width = 170;
             // 
-            // label1
+            // columnFechaInicio
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(261, 96);
-            label1.Name = "label1";
-            label1.Size = new Size(351, 21);
-            label1.TabIndex = 40;
-            label1.Text = "Buscar al cliente interesado en emitir un contrato.";
+            columnFechaInicio.Text = "Fecha de inicio";
+            columnFechaInicio.Width = 170;
+            // 
+            // columnFechaFin
+            // 
+            columnFechaFin.Text = "Fecha de finalización";
+            columnFechaFin.Width = 170;
             // 
             // label18
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(342, 34);
+            label18.Location = new Point(366, 27);
             label18.Name = "label18";
-            label18.Size = new Size(207, 32);
+            label18.Size = new Size(145, 32);
             label18.TabIndex = 39;
-            label18.Text = "Buscar Cliente";
+            label18.Text = "Contratos";
             // 
             // FormContratos
             // 
@@ -172,10 +214,14 @@
         private TableLayoutPanel tableLayoutPanelContrato;
         private Button buttonRegresar;
         private Panel panelFormularioHijo;
-        private Button buttonBuscarCliente;
-        private Label label2;
-        private TextBox textBox1;
-        private Label label1;
         private Label label18;
+        private Button btnEliminar;
+        private Button btnConsultar;
+        private Button btnGenerar;
+        private ListView lstContratos;
+        private ColumnHeader columnID;
+        private ColumnHeader columnCantidad;
+        private ColumnHeader columnFechaInicio;
+        private ColumnHeader columnFechaFin;
     }
 }
