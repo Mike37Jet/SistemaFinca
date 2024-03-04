@@ -18,6 +18,7 @@ namespace SistemaFinca
         public FormVC_Consultar()
         {
             InitializeComponent();
+            panelContrato.Visible = false;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -32,8 +33,8 @@ namespace SistemaFinca
                 try
                 {
                     connection.Open();
-                    String nombres, apellidos, telefono, correo;
-                    String commExisteString = $"SELECT nombres, apellidos, telefono, correo FROM cliente WHERE cedulacliente = '{txtCedula.Text}'";
+                    String nombres, apellidos, cedulacliente, direccion;
+                    String commExisteString = $"SELECT nombres, apellidos, cedulacliente, direccion FROM cliente WHERE cedulacliente = '{txtCedula.Text}'";
                     NpgsqlCommand commExiste = new NpgsqlCommand(commExisteString, connection);
                     using (NpgsqlDataReader reader = commExiste.ExecuteReader())
                     {
@@ -45,8 +46,8 @@ namespace SistemaFinca
                         reader.Read();
                         nombres = reader.GetString(0);
                         apellidos = reader.GetString(1);
-                        telefono = reader.GetString(2);
-                        correo = reader.GetString(3);
+                        cedulacliente = reader.GetString(2);
+                        direccion = reader.GetString(3);
                     }
                     String commString = $"SELECT fechaemision, fechainicio, fechafin, cantidadleche, cantidadretirada FROM contrato WHERE cedulacliente = '{txtCedula.Text}'" +
                         $" AND pagado = false OR (cantidadleche != cantidadretirada AND pagado = true)";
@@ -59,15 +60,18 @@ namespace SistemaFinca
                             return;
                         }
                         reader.Read();
-                        txtNombres.Text = nombres;
-                        txtApellidos.Text = apellidos;
-                        txtCorreo.Text = correo;
-                        txtTelefono.Text = telefono;
-                        txtFechaEmision.Text = reader.GetDateTime(0).ToString();
-                        txtFechaInicio.Text = reader.GetDateTime(1).ToString();
-                        txtFechaFinalizacion.Text = reader.GetDateTime(2).ToString();
-                        txtCantidadLeche.Text = reader.GetInt32(3).ToString();
+                        labelNombres.Text = nombres;
+                        labelNombres1.Text = nombres;
+                        labelApellidos.Text = apellidos;
+                        labelApellidos1.Text = apellidos;
+                        labelCedula.Text = cedulacliente;
+                        labelDireccionDomiciliaria.Text = direccion;
+                        labelFechaEmision.Text = reader.GetDateTime(0).ToString();
+                        labelFechaInicio.Text = reader.GetDateTime(1).ToString();
+                        labelFechaFinalizacion.Text = reader.GetDateTime(2).ToString();
+                        labelCantidadLeche.Text = reader.GetInt32(3).ToString() + " Litros";
                         txtCantidadRetirada.Text = reader.GetInt32(4).ToString();
+                        panelContrato.Visible = true;
                     }
                 }
                 catch (NpgsqlException ex)
@@ -82,6 +86,16 @@ namespace SistemaFinca
                     }
                 }
             }
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
