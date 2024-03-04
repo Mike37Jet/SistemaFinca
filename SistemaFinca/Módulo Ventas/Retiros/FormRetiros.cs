@@ -80,13 +80,18 @@ namespace SistemaFinca
         }
 
 
-        private void panelFormularioHijo_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void btnRegistrar_Click_1(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormVR_Registrar());
         }
 
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormVR_Eliminar());
+        }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRegresar_Click(object sender, EventArgs e)
         {
             lstRetiros.Items.Clear();
             getRetiros();
@@ -99,16 +104,6 @@ namespace SistemaFinca
             {
                 this.Close();
             }
-        }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormVR_Registrar());
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormVR_Eliminar());
         }
     }
 }

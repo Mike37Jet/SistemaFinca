@@ -31,21 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRetiros));
             tableLayoutPanel2 = new TableLayoutPanel();
             panelFormularioHijo = new Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            btnEliminar = new Button();
+            btnRegistrar = new Button();
+            btnRegresar = new Button();
             panelHijoPagos = new Panel();
             lstRetiros = new ListView();
             columnCantidad = new ColumnHeader();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            btnEliminar = new Button();
-            btnRegistrar = new Button();
-            button1 = new Button();
             label18 = new Label();
             tableLayoutPanelContrato = new TableLayoutPanel();
             buttonRegresar = new Button();
             panelFormularioHijo.SuspendLayout();
-            panelHijoPagos.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            panelHijoPagos.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -64,6 +64,7 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
+            panelFormularioHijo.Controls.Add(tableLayoutPanel1);
             panelFormularioHijo.Controls.Add(panelHijoPagos);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
@@ -71,12 +72,73 @@
             panelFormularioHijo.Name = "panelFormularioHijo";
             panelFormularioHijo.Size = new Size(895, 541);
             panelFormularioHijo.TabIndex = 8;
-            panelFormularioHijo.Paint += panelFormularioHijo_Paint;
+         
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 6;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
+            tableLayoutPanel1.Controls.Add(btnEliminar, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnRegistrar, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnRegresar, 5, 0);
+            tableLayoutPanel1.Dock = DockStyle.Bottom;
+            tableLayoutPanel1.Location = new Point(0, 491);
+            tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(895, 50);
+            tableLayoutPanel1.TabIndex = 50;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Dock = DockStyle.Fill;
+            btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
+            btnEliminar.Location = new Point(95, 0);
+            btnEliminar.Margin = new Padding(0);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(95, 50);
+            btnEliminar.TabIndex = 16;
+            btnEliminar.TextAlign = ContentAlignment.BottomCenter;
+            btnEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click_1;
+            // 
+            // btnRegistrar
+            // 
+            btnRegistrar.Dock = DockStyle.Fill;
+            btnRegistrar.Image = (Image)resources.GetObject("btnRegistrar.Image");
+            btnRegistrar.Location = new Point(0, 0);
+            btnRegistrar.Margin = new Padding(0);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(95, 50);
+            btnRegistrar.TabIndex = 15;
+            btnRegistrar.TextAlign = ContentAlignment.BottomCenter;
+            btnRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click_1;
+            // 
+            // btnRegresar
+            // 
+            btnRegresar.Dock = DockStyle.Fill;
+            btnRegresar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRegresar.Location = new Point(680, 2);
+            btnRegresar.Margin = new Padding(3, 2, 3, 2);
+            btnRegresar.Name = "btnRegresar";
+            btnRegresar.Size = new Size(212, 46);
+            btnRegresar.TabIndex = 5;
+            btnRegresar.Text = "Regresar";
+            btnRegresar.UseVisualStyleBackColor = true;
+            btnRegresar.Click += btnRegresar_Click;
             // 
             // panelHijoPagos
             // 
             panelHijoPagos.Controls.Add(lstRetiros);
-            panelHijoPagos.Controls.Add(tableLayoutPanel1);
             panelHijoPagos.Controls.Add(label18);
             panelHijoPagos.Dock = DockStyle.Fill;
             panelHijoPagos.Location = new Point(0, 0);
@@ -89,10 +151,10 @@
             lstRetiros.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lstRetiros.Columns.AddRange(new ColumnHeader[] { columnCantidad, columnHeader1, columnHeader2 });
             lstRetiros.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lstRetiros.Location = new Point(223, 90);
+            lstRetiros.Location = new Point(152, 105);
             lstRetiros.Margin = new Padding(3, 2, 3, 2);
             lstRetiros.Name = "lstRetiros";
-            lstRetiros.Size = new Size(454, 261);
+            lstRetiros.Size = new Size(590, 325);
             lstRetiros.TabIndex = 50;
             lstRetiros.UseCompatibleStateImageBehavior = false;
             lstRetiros.View = View.Details;
@@ -112,73 +174,11 @@
             columnHeader2.Text = "Estado";
             columnHeader2.Width = 120;
             // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 6;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.6153851F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
-            tableLayoutPanel1.Controls.Add(btnEliminar, 0, 0);
-            tableLayoutPanel1.Controls.Add(btnRegistrar, 0, 0);
-            tableLayoutPanel1.Controls.Add(button1, 5, 0);
-            tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 491);
-            tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(895, 50);
-            tableLayoutPanel1.TabIndex = 49;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.Dock = DockStyle.Fill;
-            btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
-            btnEliminar.Location = new Point(95, 0);
-            btnEliminar.Margin = new Padding(0);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(95, 50);
-            btnEliminar.TabIndex = 16;
-            btnEliminar.TextAlign = ContentAlignment.BottomCenter;
-            btnEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
-            // 
-            // btnRegistrar
-            // 
-            btnRegistrar.Dock = DockStyle.Fill;
-            btnRegistrar.Image = (Image)resources.GetObject("btnRegistrar.Image");
-            btnRegistrar.Location = new Point(0, 0);
-            btnRegistrar.Margin = new Padding(0);
-            btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(95, 50);
-            btnRegistrar.TabIndex = 15;
-            btnRegistrar.TextAlign = ContentAlignment.BottomCenter;
-            btnRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnRegistrar.UseVisualStyleBackColor = true;
-            btnRegistrar.Click += btnRegistrar_Click;
-            // 
-            // button1
-            // 
-            button1.Dock = DockStyle.Fill;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(680, 2);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(212, 46);
-            button1.TabIndex = 5;
-            button1.Text = "Regresar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // label18
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(399, 43);
+            label18.Location = new Point(393, 43);
             label18.Name = "label18";
             label18.Size = new Size(109, 32);
             label18.TabIndex = 44;
@@ -224,9 +224,9 @@
             Name = "FormRetiros";
             Text = "Inventario";
             panelFormularioHijo.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
             panelHijoPagos.ResumeLayout(false);
             panelHijoPagos.PerformLayout();
-            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -234,16 +234,16 @@
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panelFormularioHijo;
         private Panel panelHijoPagos;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Button button1;
         private Label label18;
         private TableLayoutPanel tableLayoutPanelContrato;
         private Button buttonRegresar;
-        private Button btnEliminar;
-        private Button btnRegistrar;
         private ListView lstRetiros;
         private ColumnHeader columnCantidad;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Button btnEliminar;
+        private Button btnRegistrar;
+        private Button btnRegresar;
     }
 }
