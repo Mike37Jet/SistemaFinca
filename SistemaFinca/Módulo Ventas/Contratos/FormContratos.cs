@@ -26,7 +26,7 @@ namespace SistemaFinca
                 try
                 {
                     connection.Open();
-                    String commString = $"SELECT cedulacliente, cantidadleche, fechainicio, fechafin FROM contrato";
+                    String commString = $"SELECT cedulacliente, cantidadleche, cantidadretirada, fechainicio, fechafin FROM contrato";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
                     {
@@ -39,10 +39,12 @@ namespace SistemaFinca
                         {
                             String cedula = reader.GetString(0);
                             String cantidad = reader.GetInt32(1).ToString();
-                            String fechainicio = reader.GetDateTime(2).ToString();
-                            String fechafin = reader.GetDateTime(3).ToString();
+                            String cantidadRetirada = reader.GetInt32(2).ToString();
+                            String fechainicio = reader.GetDateTime(3).ToString();
+                            String fechafin = reader.GetDateTime(4).ToString();
                             ListViewItem item = new ListViewItem(cedula);
                             item.SubItems.Add(cantidad);
+                            item.SubItems.Add(cantidadRetirada);
                             item.SubItems.Add(fechainicio);
                             item.SubItems.Add(fechafin);
                             lstContratos.Items.Add(item);
@@ -112,7 +114,7 @@ namespace SistemaFinca
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-
+            abrirFormulariosHijos(new FormVC_Consultar());
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

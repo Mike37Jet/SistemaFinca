@@ -42,6 +42,7 @@
             columnFechaInicio = new ColumnHeader();
             columnFechaFin = new ColumnHeader();
             label18 = new Label();
+            columnHeader1 = new ColumnHeader();
             tableLayoutPanelContrato.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -152,12 +153,12 @@
             // lstContratos
             // 
             lstContratos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lstContratos.Columns.AddRange(new ColumnHeader[] { columnID, columnCantidad, columnFechaInicio, columnFechaFin });
+            lstContratos.Columns.AddRange(new ColumnHeader[] { columnID, columnCantidad, columnHeader1, columnFechaInicio, columnFechaFin });
             lstContratos.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lstContratos.Location = new Point(83, 95);
+            lstContratos.Location = new Point(71, 71);
             lstContratos.Margin = new Padding(3, 2, 3, 2);
             lstContratos.Name = "lstContratos";
-            lstContratos.Size = new Size(689, 236);
+            lstContratos.Size = new Size(746, 236);
             lstContratos.TabIndex = 40;
             lstContratos.UseCompatibleStateImageBehavior = false;
             lstContratos.View = View.Details;
@@ -170,17 +171,17 @@
             // columnCantidad
             // 
             columnCantidad.Text = "Cantidad de leche";
-            columnCantidad.Width = 170;
+            columnCantidad.Width = 140;
             // 
             // columnFechaInicio
             // 
             columnFechaInicio.Text = "Fecha de inicio";
-            columnFechaInicio.Width = 170;
+            columnFechaInicio.Width = 140;
             // 
             // columnFechaFin
             // 
             columnFechaFin.Text = "Fecha de finalización";
-            columnFechaFin.Width = 170;
+            columnFechaFin.Width = 160;
             // 
             // label18
             // 
@@ -191,6 +192,11 @@
             label18.Size = new Size(145, 32);
             label18.TabIndex = 39;
             label18.Text = "Contratos";
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Cantidad retirada";
+            columnHeader1.Width = 140;
             // 
             // FormContratos
             // 
@@ -223,5 +229,6 @@
         private ColumnHeader columnCantidad;
         private ColumnHeader columnFechaInicio;
         private ColumnHeader columnFechaFin;
+        private ColumnHeader columnHeader1;
     }
 }

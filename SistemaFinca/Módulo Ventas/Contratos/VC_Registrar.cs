@@ -50,6 +50,17 @@ namespace SistemaFinca
                 try
                 {
                     connection.Open();
+                    String commExisteString = $"SELECT * FROM contrato WHERE cedulacliente = '{this.cedulaCliente}' AND pagado = false;";
+                    NpgsqlCommand commExiste = new NpgsqlCommand(commExisteString, connection);
+                    using (NpgsqlDataReader reader = commExiste.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            MessageBox.Show("El cliente ya tiene asociado un contrato", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+
                     String commString = $"INSERT INTO contrato(cedulacliente, cantidadleche, fechainicio, fechafin, fechaemision) " +
                         $"VALUES({this.cedulaCliente}, {txtCantidadLeche.Text}, '{ConvertirFecha(txtFechaInicio.Text)}', " +
                         $"'{ConvertirFecha(txtFechaFinalizacion.Text)}','{ConvertirFecha(txtFechaEmision.Text)}')";
