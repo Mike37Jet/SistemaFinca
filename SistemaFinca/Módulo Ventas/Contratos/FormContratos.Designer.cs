@@ -39,10 +39,10 @@
             lstContratos = new ListView();
             columnID = new ColumnHeader();
             columnCantidad = new ColumnHeader();
+            columnHeader1 = new ColumnHeader();
             columnFechaInicio = new ColumnHeader();
             columnFechaFin = new ColumnHeader();
             label18 = new Label();
-            columnHeader1 = new ColumnHeader();
             tableLayoutPanelContrato.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -158,7 +158,7 @@
             lstContratos.Location = new Point(71, 71);
             lstContratos.Margin = new Padding(3, 2, 3, 2);
             lstContratos.Name = "lstContratos";
-            lstContratos.Size = new Size(746, 236);
+            lstContratos.Size = new Size(746, 382);
             lstContratos.TabIndex = 40;
             lstContratos.UseCompatibleStateImageBehavior = false;
             lstContratos.View = View.Details;
@@ -172,6 +172,11 @@
             // 
             columnCantidad.Text = "Cantidad de leche";
             columnCantidad.Width = 140;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Cantidad retirada";
+            columnHeader1.Width = 140;
             // 
             // columnFechaInicio
             // 
@@ -192,11 +197,6 @@
             label18.Size = new Size(145, 32);
             label18.TabIndex = 39;
             label18.Text = "Contratos";
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "Cantidad retirada";
-            columnHeader1.Width = 140;
             // 
             // FormContratos
             // 
