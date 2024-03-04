@@ -216,11 +216,11 @@
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F);
-            label4.Location = new Point(299, 429);
+            label4.Location = new Point(278, 429);
             label4.Name = "label4";
-            label4.Size = new Size(129, 20);
+            label4.Size = new Size(150, 20);
             label4.TabIndex = 113;
-            label4.Text = "Cantidad de leche";
+            label4.Text = "Cantidad de leche (L)";
             // 
             // txtCantidadLeche
             // 
@@ -239,11 +239,11 @@
             label14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 11.25F);
-            label14.Location = new Point(303, 463);
+            label14.Location = new Point(282, 463);
             label14.Name = "label14";
-            label14.Size = new Size(125, 20);
+            label14.Size = new Size(146, 20);
             label14.TabIndex = 119;
-            label14.Text = "Cantidad retirada";
+            label14.Text = "Cantidad retirada (L)";
             // 
             // txtCantidadRetirada
             // 

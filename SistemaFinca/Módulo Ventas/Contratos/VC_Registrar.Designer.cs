@@ -272,11 +272,11 @@
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F);
-            label4.Location = new Point(303, 390);
+            label4.Location = new Point(282, 390);
             label4.Name = "label4";
-            label4.Size = new Size(129, 20);
+            label4.Size = new Size(150, 20);
             label4.TabIndex = 113;
-            label4.Text = "Cantidad de leche";
+            label4.Text = "Cantidad de leche (L)";
             // 
             // txtCantidadLeche
             // 

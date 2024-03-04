@@ -72,13 +72,13 @@
             buttonGestionUsuario = new Button();
             buttonAdministracion = new Button();
             panel2 = new Panel();
+            labelUsuario = new Label();
             label4 = new Label();
             labelRol = new Label();
             pictureBox1 = new PictureBox();
             buttonSalir = new Button();
             panelFormularioHijo = new Panel();
             pictureLogo = new PictureBox();
-            labelUsuario = new Label();
             panelEncabezado.SuspendLayout();
             panelMenu.SuspendLayout();
             subPanelZonasPastoreo.SuspendLayout();
@@ -540,7 +540,7 @@
             buttonGestionPagos.Padding = new Padding(18, 0, 0, 0);
             buttonGestionPagos.Size = new Size(252, 30);
             buttonGestionPagos.TabIndex = 12;
-            buttonGestionPagos.Text = "Gestión de Pagos";
+            buttonGestionPagos.Text = "Retiros";
             buttonGestionPagos.TextAlign = ContentAlignment.MiddleLeft;
             buttonGestionPagos.UseVisualStyleBackColor = true;
             buttonGestionPagos.Click += buttonGestionPagos_Click;
@@ -879,6 +879,16 @@
             panel2.Size = new Size(252, 100);
             panel2.TabIndex = 6;
             // 
+            // labelUsuario
+            // 
+            labelUsuario.AutoSize = true;
+            labelUsuario.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelUsuario.ForeColor = SystemColors.ButtonFace;
+            labelUsuario.Location = new Point(108, 20);
+            labelUsuario.Name = "labelUsuario";
+            labelUsuario.Size = new Size(0, 19);
+            labelUsuario.TabIndex = 5;
+            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -963,16 +973,6 @@
             pictureLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureLogo.TabIndex = 4;
             pictureLogo.TabStop = false;
-            // 
-            // labelUsuario
-            // 
-            labelUsuario.AutoSize = true;
-            labelUsuario.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelUsuario.ForeColor = SystemColors.ButtonFace;
-            labelUsuario.Location = new Point(108, 20);
-            labelUsuario.Name = "labelUsuario";
-            labelUsuario.Size = new Size(0, 19);
-            labelUsuario.TabIndex = 5;
             // 
             // FormMenu
             // 

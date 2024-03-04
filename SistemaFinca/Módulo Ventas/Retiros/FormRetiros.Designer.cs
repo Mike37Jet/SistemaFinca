@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca
 {
-    partial class FormBuscar
+    partial class FormRetiros
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRetiros));
             tableLayoutPanel2 = new TableLayoutPanel();
             panelFormularioHijo = new Panel();
             panelHijoPagos = new Panel();
+            lstRetiros = new ListView();
+            columnCantidad = new ColumnHeader();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
             tableLayoutPanel1 = new TableLayoutPanel();
+            btnEliminar = new Button();
+            btnRegistrar = new Button();
             button1 = new Button();
-            buttonBuscarCliente = new Button();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            label1 = new Label();
             label18 = new Label();
             tableLayoutPanelContrato = new TableLayoutPanel();
             buttonRegresar = new Button();
@@ -72,17 +75,42 @@
             // 
             // panelHijoPagos
             // 
+            panelHijoPagos.Controls.Add(lstRetiros);
             panelHijoPagos.Controls.Add(tableLayoutPanel1);
-            panelHijoPagos.Controls.Add(buttonBuscarCliente);
-            panelHijoPagos.Controls.Add(label2);
-            panelHijoPagos.Controls.Add(textBox1);
-            panelHijoPagos.Controls.Add(label1);
             panelHijoPagos.Controls.Add(label18);
             panelHijoPagos.Dock = DockStyle.Fill;
             panelHijoPagos.Location = new Point(0, 0);
             panelHijoPagos.Name = "panelHijoPagos";
             panelHijoPagos.Size = new Size(895, 541);
             panelHijoPagos.TabIndex = 45;
+            // 
+            // lstRetiros
+            // 
+            lstRetiros.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lstRetiros.Columns.AddRange(new ColumnHeader[] { columnCantidad, columnHeader1, columnHeader2 });
+            lstRetiros.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lstRetiros.Location = new Point(223, 90);
+            lstRetiros.Margin = new Padding(3, 2, 3, 2);
+            lstRetiros.Name = "lstRetiros";
+            lstRetiros.Size = new Size(454, 261);
+            lstRetiros.TabIndex = 50;
+            lstRetiros.UseCompatibleStateImageBehavior = false;
+            lstRetiros.View = View.Details;
+            // 
+            // columnCantidad
+            // 
+            columnCantidad.Text = "Cantidad de Retiro";
+            columnCantidad.Width = 140;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Fecha";
+            columnHeader1.Width = 140;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Estado";
+            columnHeader2.Width = 120;
             // 
             // tableLayoutPanel1
             // 
@@ -93,6 +121,8 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
+            tableLayoutPanel1.Controls.Add(btnEliminar, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnRegistrar, 0, 0);
             tableLayoutPanel1.Controls.Add(button1, 5, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
             tableLayoutPanel1.Location = new Point(0, 491);
@@ -102,6 +132,34 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Size = new Size(895, 50);
             tableLayoutPanel1.TabIndex = 49;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Dock = DockStyle.Fill;
+            btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
+            btnEliminar.Location = new Point(95, 0);
+            btnEliminar.Margin = new Padding(0);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(95, 50);
+            btnEliminar.TabIndex = 16;
+            btnEliminar.TextAlign = ContentAlignment.BottomCenter;
+            btnEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
+            // 
+            // btnRegistrar
+            // 
+            btnRegistrar.Dock = DockStyle.Fill;
+            btnRegistrar.Image = (Image)resources.GetObject("btnRegistrar.Image");
+            btnRegistrar.Location = new Point(0, 0);
+            btnRegistrar.Margin = new Padding(0);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(95, 50);
+            btnRegistrar.TabIndex = 15;
+            btnRegistrar.TextAlign = ContentAlignment.BottomCenter;
+            btnRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // button1
             // 
@@ -116,53 +174,15 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // buttonBuscarCliente
-            // 
-            buttonBuscarCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonBuscarCliente.Location = new Point(399, 269);
-            buttonBuscarCliente.Name = "buttonBuscarCliente";
-            buttonBuscarCliente.Size = new Size(97, 35);
-            buttonBuscarCliente.TabIndex = 48;
-            buttonBuscarCliente.Text = "Buscar";
-            buttonBuscarCliente.UseVisualStyleBackColor = true;
-            buttonBuscarCliente.Click += buttonBuscarCliente_Click_1;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(284, 202);
-            label2.Name = "label2";
-            label2.Size = new Size(21, 15);
-            label2.TabIndex = 47;
-            label2.Text = "CI:";
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(311, 194);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(272, 29);
-            textBox1.TabIndex = 46;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(196, 124);
-            label1.Name = "label1";
-            label1.Size = new Size(503, 21);
-            label1.TabIndex = 45;
-            label1.Text = "Buscar al cliente interesado en completar el pago de la factura de venta.";
-            // 
             // label18
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(344, 62);
+            label18.Location = new Point(399, 43);
             label18.Name = "label18";
-            label18.Size = new Size(207, 32);
+            label18.Size = new Size(109, 32);
             label18.TabIndex = 44;
-            label18.Text = "Buscar Cliente";
+            label18.Text = "Retiros";
             // 
             // tableLayoutPanelContrato
             // 
@@ -193,7 +213,7 @@
             buttonRegresar.Text = "Regresar";
             buttonRegresar.UseVisualStyleBackColor = true;
             // 
-            // FormBuscar
+            // FormRetiros
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -201,7 +221,7 @@
             Controls.Add(panelFormularioHijo);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FormBuscar";
+            Name = "FormRetiros";
             Text = "Inventario";
             panelFormularioHijo.ResumeLayout(false);
             panelHijoPagos.ResumeLayout(false);
@@ -216,12 +236,14 @@
         private Panel panelHijoPagos;
         private TableLayoutPanel tableLayoutPanel1;
         private Button button1;
-        private Button buttonBuscarCliente;
-        private Label label2;
-        private TextBox textBox1;
-        private Label label1;
         private Label label18;
         private TableLayoutPanel tableLayoutPanelContrato;
         private Button buttonRegresar;
+        private Button btnEliminar;
+        private Button btnRegistrar;
+        private ListView lstRetiros;
+        private ColumnHeader columnCantidad;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
     }
 }

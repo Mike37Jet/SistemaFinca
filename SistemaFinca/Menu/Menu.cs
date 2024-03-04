@@ -342,7 +342,7 @@ namespace SistemaFinca
 
         private void buttonGestionPagos_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormBuscar());
+            abrirFormulariosHijos(new FormRetiros());
         }
 
         private void buttonGesZonPast_Click(object sender, EventArgs e)

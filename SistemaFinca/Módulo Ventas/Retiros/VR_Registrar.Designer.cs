@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca
 {
-    partial class FormVC_Eliminar : Form
+    partial class FormVR_Registrar : Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label11 = new Label();
-            label9 = new Label();
-            label5 = new Label();
-            btnConsultar = new Button();
+            btnRegistrar = new Button();
+            btnBuscar = new Button();
             label3 = new Label();
             txtFechaEmision = new TextBox();
             label18 = new Label();
@@ -41,71 +39,48 @@
             txtFechaInicio = new TextBox();
             label6 = new Label();
             txtCedula = new TextBox();
-            label13 = new Label();
             label4 = new Label();
             txtCantidadLeche = new TextBox();
-            label14 = new Label();
+            label5 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            txtCantidadRetiro = new TextBox();
+            label9 = new Label();
             txtCantidadRetirada = new TextBox();
-            label16 = new Label();
-            txtCorreo = new TextBox();
-            txtTelefono = new TextBox();
-            txtApellidos = new TextBox();
-            txtNombres = new TextBox();
-            btnEliminar = new Button();
             SuspendLayout();
             // 
-            // label11
+            // btnRegistrar
             // 
-            label11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 11.25F);
-            label11.Location = new Point(361, 259);
-            label11.Name = "label11";
-            label11.Size = new Size(67, 20);
-            label11.TabIndex = 93;
-            label11.Text = "Teléfono";
+            btnRegistrar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnRegistrar.Font = new Font("Segoe UI", 11.25F);
+            btnRegistrar.Location = new Point(404, 381);
+            btnRegistrar.Margin = new Padding(3, 2, 3, 2);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(82, 36);
+            btnRegistrar.TabIndex = 103;
+            btnRegistrar.Text = "Registrar";
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
-            // label9
+            // btnBuscar
             // 
-            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 11.25F);
-            label9.Location = new Point(356, 225);
-            label9.Name = "label9";
-            label9.Size = new Size(72, 20);
-            label9.TabIndex = 91;
-            label9.Text = "Apellidos";
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11.25F);
-            label5.Location = new Point(358, 191);
-            label5.Name = "label5";
-            label5.Size = new Size(70, 20);
-            label5.TabIndex = 86;
-            label5.Text = "Nombres";
-            // 
-            // btnConsultar
-            // 
-            btnConsultar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnConsultar.Font = new Font("Segoe UI", 11.25F);
-            btnConsultar.Location = new Point(510, 113);
-            btnConsultar.Margin = new Padding(3, 2, 3, 2);
-            btnConsultar.Name = "btnConsultar";
-            btnConsultar.Size = new Size(103, 27);
-            btnConsultar.TabIndex = 84;
-            btnConsultar.Text = "Consultar";
-            btnConsultar.UseVisualStyleBackColor = true;
-            btnConsultar.Click += btnBuscar_Click;
+            btnBuscar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnBuscar.Font = new Font("Segoe UI", 11.25F);
+            btnBuscar.Location = new Point(510, 113);
+            btnBuscar.Margin = new Padding(3, 2, 3, 2);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(103, 27);
+            btnBuscar.TabIndex = 84;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // label3
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.25F);
-            label3.Location = new Point(304, 327);
+            label3.Location = new Point(128, 191);
             label3.Name = "label3";
             label3.Size = new Size(124, 20);
             label3.TabIndex = 83;
@@ -116,7 +91,7 @@
             txtFechaEmision.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtFechaEmision.Cursor = Cursors.IBeam;
             txtFechaEmision.Font = new Font("Segoe UI", 11.25F);
-            txtFechaEmision.Location = new Point(438, 324);
+            txtFechaEmision.Location = new Point(258, 188);
             txtFechaEmision.Margin = new Padding(3, 2, 3, 2);
             txtFechaEmision.Name = "txtFechaEmision";
             txtFechaEmision.ReadOnly = true;
@@ -127,18 +102,18 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(330, 33);
+            label18.Location = new Point(324, 35);
             label18.Name = "label18";
-            label18.Size = new Size(244, 32);
+            label18.Size = new Size(225, 32);
             label18.TabIndex = 81;
-            label18.Text = "Eliminar Contrato";
+            label18.Text = "Registrar Retiro";
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F);
-            label1.Location = new Point(280, 395);
+            label1.Location = new Point(104, 259);
             label1.Name = "label1";
             label1.Size = new Size(148, 20);
             label1.TabIndex = 105;
@@ -149,7 +124,7 @@
             txtFechaFinalizacion.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtFechaFinalizacion.Cursor = Cursors.IBeam;
             txtFechaFinalizacion.Font = new Font("Segoe UI", 11.25F);
-            txtFechaFinalizacion.Location = new Point(438, 392);
+            txtFechaFinalizacion.Location = new Point(258, 256);
             txtFechaFinalizacion.Margin = new Padding(3, 2, 3, 2);
             txtFechaFinalizacion.Name = "txtFechaFinalizacion";
             txtFechaFinalizacion.ReadOnly = true;
@@ -161,7 +136,7 @@
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F);
-            label2.Location = new Point(320, 361);
+            label2.Location = new Point(144, 225);
             label2.Name = "label2";
             label2.Size = new Size(108, 20);
             label2.TabIndex = 107;
@@ -172,7 +147,7 @@
             txtFechaInicio.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtFechaInicio.Cursor = Cursors.IBeam;
             txtFechaInicio.Font = new Font("Segoe UI", 11.25F);
-            txtFechaInicio.Location = new Point(438, 358);
+            txtFechaInicio.Location = new Point(258, 222);
             txtFechaInicio.Margin = new Padding(3, 2, 3, 2);
             txtFechaInicio.Name = "txtFechaInicio";
             txtFechaInicio.ReadOnly = true;
@@ -184,7 +159,7 @@
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.25F);
-            label6.Location = new Point(341, 82);
+            label6.Location = new Point(308, 82);
             label6.Name = "label6";
             label6.Size = new Size(221, 20);
             label6.TabIndex = 108;
@@ -201,23 +176,12 @@
             txtCedula.Size = new Size(178, 27);
             txtCedula.TabIndex = 109;
             // 
-            // label13
-            // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 11.25F);
-            label13.Location = new Point(296, 293);
-            label13.Name = "label13";
-            label13.Size = new Size(132, 20);
-            label13.TabIndex = 110;
-            label13.Text = "Correo electrónico";
-            // 
             // label4
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F);
-            label4.Location = new Point(278, 429);
+            label4.Location = new Point(102, 293);
             label4.Name = "label4";
             label4.Size = new Size(150, 20);
             label4.TabIndex = 113;
@@ -228,140 +192,105 @@
             txtCantidadLeche.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtCantidadLeche.Cursor = Cursors.IBeam;
             txtCantidadLeche.Font = new Font("Segoe UI", 11.25F);
-            txtCantidadLeche.Location = new Point(438, 426);
+            txtCantidadLeche.Location = new Point(258, 290);
             txtCantidadLeche.Margin = new Padding(3, 2, 3, 2);
             txtCantidadLeche.Name = "txtCantidadLeche";
             txtCantidadLeche.ReadOnly = true;
             txtCantidadLeche.Size = new Size(178, 27);
             txtCantidadLeche.TabIndex = 112;
             // 
-            // label14
+            // label5
             // 
-            label14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 11.25F);
-            label14.Location = new Point(280, 463);
-            label14.Name = "label14";
-            label14.Size = new Size(146, 20);
-            label14.TabIndex = 119;
-            label14.Text = "Cantidad retirada (L)";
+            label5.AutoSize = true;
+            label5.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(162, 156);
+            label5.Name = "label5";
+            label5.Size = new Size(233, 22);
+            label5.TabIndex = 114;
+            label5.Text = "Información del contrato";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(508, 156);
+            label7.Name = "label7";
+            label7.Size = new Size(206, 22);
+            label7.TabIndex = 115;
+            label7.Text = "Información del retiro";
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 11.25F);
+            label8.Location = new Point(514, 191);
+            label8.Name = "label8";
+            label8.Size = new Size(206, 20);
+            label8.TabIndex = 117;
+            label8.Text = "Cantidad de leche a retirar (L)";
+            // 
+            // txtCantidadRetiro
+            // 
+            txtCantidadRetiro.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtCantidadRetiro.Cursor = Cursors.IBeam;
+            txtCantidadRetiro.Font = new Font("Segoe UI", 11.25F);
+            txtCantidadRetiro.Location = new Point(521, 219);
+            txtCantidadRetiro.Margin = new Padding(3, 2, 3, 2);
+            txtCantidadRetiro.Name = "txtCantidadRetiro";
+            txtCantidadRetiro.Size = new Size(178, 27);
+            txtCantidadRetiro.TabIndex = 116;
+            // 
+            // label9
+            // 
+            label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 11.25F);
+            label9.Location = new Point(46, 327);
+            label9.Name = "label9";
+            label9.Size = new Size(206, 20);
+            label9.TabIndex = 119;
+            label9.Text = "Cantidad de leche retirada (L)";
             // 
             // txtCantidadRetirada
             // 
             txtCantidadRetirada.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtCantidadRetirada.Cursor = Cursors.IBeam;
             txtCantidadRetirada.Font = new Font("Segoe UI", 11.25F);
-            txtCantidadRetirada.Location = new Point(438, 460);
+            txtCantidadRetirada.Location = new Point(258, 324);
             txtCantidadRetirada.Margin = new Padding(3, 2, 3, 2);
             txtCantidadRetirada.Name = "txtCantidadRetirada";
             txtCantidadRetirada.ReadOnly = true;
             txtCantidadRetirada.Size = new Size(178, 27);
             txtCantidadRetirada.TabIndex = 118;
             // 
-            // label16
-            // 
-            label16.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(383, 156);
-            label16.Name = "label16";
-            label16.Size = new Size(139, 20);
-            label16.TabIndex = 120;
-            label16.Text = "Datos del contrato";
-            // 
-            // txtCorreo
-            // 
-            txtCorreo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtCorreo.Cursor = Cursors.IBeam;
-            txtCorreo.Font = new Font("Segoe UI", 11.25F);
-            txtCorreo.Location = new Point(438, 290);
-            txtCorreo.Margin = new Padding(3, 2, 3, 2);
-            txtCorreo.Name = "txtCorreo";
-            txtCorreo.ReadOnly = true;
-            txtCorreo.Size = new Size(178, 27);
-            txtCorreo.TabIndex = 121;
-            // 
-            // txtTelefono
-            // 
-            txtTelefono.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtTelefono.Cursor = Cursors.IBeam;
-            txtTelefono.Font = new Font("Segoe UI", 11.25F);
-            txtTelefono.Location = new Point(438, 256);
-            txtTelefono.Margin = new Padding(3, 2, 3, 2);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.ReadOnly = true;
-            txtTelefono.Size = new Size(178, 27);
-            txtTelefono.TabIndex = 122;
-            // 
-            // txtApellidos
-            // 
-            txtApellidos.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtApellidos.Cursor = Cursors.IBeam;
-            txtApellidos.Font = new Font("Segoe UI", 11.25F);
-            txtApellidos.Location = new Point(438, 222);
-            txtApellidos.Margin = new Padding(3, 2, 3, 2);
-            txtApellidos.Name = "txtApellidos";
-            txtApellidos.ReadOnly = true;
-            txtApellidos.Size = new Size(178, 27);
-            txtApellidos.TabIndex = 123;
-            // 
-            // txtNombres
-            // 
-            txtNombres.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtNombres.Cursor = Cursors.IBeam;
-            txtNombres.Font = new Font("Segoe UI", 11.25F);
-            txtNombres.Location = new Point(438, 188);
-            txtNombres.Margin = new Padding(3, 2, 3, 2);
-            txtNombres.Name = "txtNombres";
-            txtNombres.ReadOnly = true;
-            txtNombres.Size = new Size(178, 27);
-            txtNombres.TabIndex = 124;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnEliminar.Font = new Font("Segoe UI", 11.25F);
-            btnEliminar.Location = new Point(398, 503);
-            btnEliminar.Margin = new Padding(3, 2, 3, 2);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(103, 27);
-            btnEliminar.TabIndex = 125;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
-            // 
-            // FormVC_Eliminar
+            // FormVR_Registrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
-            Controls.Add(btnEliminar);
-            Controls.Add(txtNombres);
-            Controls.Add(txtApellidos);
-            Controls.Add(txtTelefono);
-            Controls.Add(txtCorreo);
-            Controls.Add(label16);
-            Controls.Add(label14);
+            Controls.Add(label9);
             Controls.Add(txtCantidadRetirada);
+            Controls.Add(label8);
+            Controls.Add(txtCantidadRetiro);
+            Controls.Add(label7);
+            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(txtCantidadLeche);
-            Controls.Add(label13);
             Controls.Add(txtCedula);
             Controls.Add(label6);
             Controls.Add(label2);
             Controls.Add(txtFechaInicio);
             Controls.Add(label1);
             Controls.Add(txtFechaFinalizacion);
-            Controls.Add(label11);
-            Controls.Add(label9);
-            Controls.Add(label5);
-            Controls.Add(btnConsultar);
+            Controls.Add(btnRegistrar);
+            Controls.Add(btnBuscar);
             Controls.Add(label3);
             Controls.Add(txtFechaEmision);
             Controls.Add(label18);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FormVC_Eliminar";
+            Name = "FormVR_Registrar";
             Text = "Administrador";
             ResumeLayout(false);
             PerformLayout();
@@ -369,13 +298,11 @@
 
         #endregion
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private Button btnRegistrar;
         private Label label15;
         private Button button1;
-        private Label label11;
-        private Label label9;
         private DataGridView dataGridNotaVenta;
-        private Label label5;
-        private Button btnConsultar;
+        private Button btnBuscar;
         private Label label3;
         private TextBox txtFechaEmision;
         private Label label18;
@@ -385,7 +312,6 @@
         private TextBox txtFechaInicio;
         private Label label6;
         private TextBox txtCedula;
-        private Label label13;
         private Label label4;
         private TextBox txtCantidadLeche;
         private DataGridViewTextBoxColumn Column1;
@@ -393,13 +319,11 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
-        private Label label14;
+        private Label label5;
+        private Label label7;
+        private Label label8;
+        private TextBox txtCantidadRetiro;
+        private Label label9;
         private TextBox txtCantidadRetirada;
-        private Label label16;
-        private TextBox txtCorreo;
-        private TextBox txtTelefono;
-        private TextBox txtApellidos;
-        private TextBox txtNombres;
-        private Button btnEliminar;
     }
 }

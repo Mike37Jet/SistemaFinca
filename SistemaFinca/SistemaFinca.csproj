@@ -77,12 +77,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Módulo Ventas\Contratos\VC_Registrar.cs" />
-    <Compile Update="Módulo Ventas\Gestión de Pagos\FormBuscar.cs" />
-    <Compile Update="Módulo Ventas\Gestión de Pagos\FormGestionPagos.cs" />
+    <Compile Update="Módulo Ventas\Retiros\FormRetiros.cs" />
     <Compile Update="Módulo Ventas\Deudores\FormReportesAnalisis.cs" />
     <Compile Update="Módulo Ventas\Deudores\IFGenerarReporte.cs" />
-    <Compile Update="Módulo Ventas\Gestión de Pagos\GPRegistrarPago.cs" />
     <Compile Update="Módulo Ventas\Recordatorios y Alertas\FormRecordAlert.cs" />
+    <Compile Update="Módulo Ventas\Retiros\VR_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Módulo Ventas\Retiros\VR_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Módulo Ventas\Ventas\FormVent.cs" />
     <Compile Update="Módulo Ventas\Ventas\VNotaDeVenta.cs" />
     <Compile Update="Módulo Zonas de Pastoreo\Arriendo\FormGestArriAreas.cs" />
