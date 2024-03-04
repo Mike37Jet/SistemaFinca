@@ -15,7 +15,7 @@ namespace SistemaFinca
 {
     public partial class FormVC_Registrar : Form
     {
-        private String cedulaCliente;
+        private String cedulaCliente = "";
 
         public FormVC_Registrar()
         {
@@ -24,10 +24,10 @@ namespace SistemaFinca
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (this.cedulaCliente == null)
+            if (this.cedulaCliente == "")
             {
                 MessageBox.Show("Número de cédula de identidad no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; 
+                return;
             }
             if (!fechaEsValida(txtFechaEmision.Text) || !fechaEsValida(txtFechaFinalizacion.Text) ||
                 !fechaEsValida(txtFechaFinalizacion.Text))
@@ -50,7 +50,8 @@ namespace SistemaFinca
                 try
                 {
                     connection.Open();
-                    String commExisteString = $"SELECT * FROM contrato WHERE cedulacliente = '{this.cedulaCliente}' AND pagado = false;";
+                    String commExisteString = $"SELECT * FROM contrato WHERE cedulacliente = '{this.cedulaCliente}' AND " +
+                        $"pagado = false OR (cantidadleche != cantidadretirada AND pagado = true)";
                     NpgsqlCommand commExiste = new NpgsqlCommand(commExisteString, connection);
                     using (NpgsqlDataReader reader = commExiste.ExecuteReader())
                     {
@@ -88,7 +89,7 @@ namespace SistemaFinca
 
         private void vaciarCampos()
         {
-            this.cedulaCliente = null;
+            this.cedulaCliente = "";
             txtCedula.Text = "";
             txtCantidadLeche.Text = "";
             txtFechaEmision.Text = "";

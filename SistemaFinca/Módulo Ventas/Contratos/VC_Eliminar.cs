@@ -13,9 +13,10 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormVC_Consultar : Form
+    public partial class FormVC_Eliminar : Form
     {
-        public FormVC_Consultar()
+        private int idcontrato = 0;
+        public FormVC_Eliminar()
         {
             InitializeComponent();
         }
@@ -48,7 +49,7 @@ namespace SistemaFinca
                         telefono = reader.GetString(2);
                         correo = reader.GetString(3);
                     }
-                    String commString = $"SELECT fechaemision, fechainicio, fechafin, cantidadleche, cantidadretirada FROM contrato WHERE cedulacliente = '{txtCedula.Text}'" +
+                    String commString = $"SELECT fechaemision, fechainicio, fechafin, cantidadleche, cantidadretirada, idcontrato FROM contrato WHERE cedulacliente = '{txtCedula.Text}'" +
                         $" AND pagado = false OR (cantidadleche != cantidadretirada AND pagado = true)";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
@@ -68,6 +69,7 @@ namespace SistemaFinca
                         txtFechaFinalizacion.Text = reader.GetDateTime(2).ToString();
                         txtCantidadLeche.Text = reader.GetInt32(3).ToString();
                         txtCantidadRetirada.Text = reader.GetInt32(4).ToString();
+                        idcontrato = reader.GetInt32(5);
                     }
                 }
                 catch (NpgsqlException ex)
@@ -82,6 +84,62 @@ namespace SistemaFinca
                     }
                 }
             }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.idcontrato == 0)
+            {
+                MessageBox.Show("Ingrese el nùmero de cèdula de un cliente", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
+            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar êste contrato?", "Confirmación", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    String commString = $"DELETE FROM contrato WHERE idcontrato = {this.idcontrato}";
+                    NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                    int resultado = comm.ExecuteNonQuery();
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Contrato eliminado exitosamente", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.idcontrato = 0;
+                        vaciarCampos();
+                        return;
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+        }
+
+        private void vaciarCampos()
+        {
+            txtCedula.Text = "";
+            txtCantidadLeche.Text = "";
+            txtFechaEmision.Text = "";
+            txtFechaFinalizacion.Text = "";
+            txtFechaInicio.Text = "";
+            txtApellidos.Text = "";
+            txtNombres.Text = "";
+            txtTelefono.Text = "";
+            txtCorreo.Text = "";
+            txtCantidadRetirada.Text = "";
         }
     }
 }

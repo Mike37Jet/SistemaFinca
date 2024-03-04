@@ -119,7 +119,7 @@ namespace SistemaFinca
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            abrirFormulariosHijos(new FormVC_Eliminar());
         }
     }
 }
