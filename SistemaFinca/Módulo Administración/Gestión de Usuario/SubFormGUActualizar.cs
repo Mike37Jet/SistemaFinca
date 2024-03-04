@@ -95,7 +95,7 @@ namespace SistemaFinca.Módulo_Clientes.Gestión_Clientes
                 try
                 {
                     connection.Open();
-                    String commExisteString2 = $"SELECT * FROM usuario WHERE usuario = '{txtNombreU.Text}'";
+                    String commExisteString2 = $"SELECT * FROM usuario WHERE usuario = '{txtNombreU.Text}' AND cedulausuario <> '{this.numeroCedula}'";
                     NpgsqlCommand commExiste2 = new NpgsqlCommand(commExisteString2, connection);
                     using (NpgsqlDataReader reader = commExiste2.ExecuteReader())
                     {
