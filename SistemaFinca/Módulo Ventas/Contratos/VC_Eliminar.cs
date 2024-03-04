@@ -70,6 +70,7 @@ namespace SistemaFinca
                         txtCantidadLeche.Text = reader.GetInt32(3).ToString();
                         txtCantidadRetirada.Text = reader.GetInt32(4).ToString();
                         idcontrato = reader.GetInt32(5);
+                        txtCedula.Text = "";
                     }
                 }
                 catch (NpgsqlException ex)

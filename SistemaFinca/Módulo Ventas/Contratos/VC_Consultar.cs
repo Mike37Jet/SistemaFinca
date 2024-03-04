@@ -72,6 +72,7 @@ namespace SistemaFinca
                         labelCantidadLeche.Text = reader.GetInt32(3).ToString() + " Litros";
                         txtCantidadRetirada.Text = reader.GetInt32(4).ToString();
                         panelContrato.Visible = true;
+                        txtCedula.Text = ""; 
                     }
                 }
                 catch (NpgsqlException ex)

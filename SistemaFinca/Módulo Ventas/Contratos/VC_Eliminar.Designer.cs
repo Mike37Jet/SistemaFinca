@@ -96,7 +96,7 @@
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(103, 27);
             btnConsultar.TabIndex = 84;
-            btnConsultar.Text = "Consultar";
+            btnConsultar.Text = "Buscar";
             btnConsultar.UseVisualStyleBackColor = true;
             btnConsultar.Click += btnBuscar_Click;
             // 
