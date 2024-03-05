@@ -104,7 +104,7 @@ namespace SistemaFinca
                         reader.Read();
                     }
                     String commString = $"SELECT idcontrato FROM contrato WHERE cedulacliente = '{txtCedula.Text}'" +
-                        $" AND pagado = false OR (cantidadleche != cantidadretirada AND pagado = true)";
+                        $" AND (pagado = false OR (cantidadleche != cantidadretirada AND pagado = true))";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
                     {

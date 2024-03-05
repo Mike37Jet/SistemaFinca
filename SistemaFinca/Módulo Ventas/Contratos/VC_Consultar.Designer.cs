@@ -92,7 +92,7 @@
             // 
             btnConsultar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnConsultar.Font = new Font("Segoe UI", 11.25F);
-            btnConsultar.Location = new Point(476, 113);
+            btnConsultar.Location = new Point(442, 113);
             btnConsultar.Margin = new Padding(3, 2, 3, 2);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(103, 27);
@@ -127,7 +127,7 @@
             txtCedula.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtCedula.Cursor = Cursors.IBeam;
             txtCedula.Font = new Font("Segoe UI", 11.25F);
-            txtCedula.Location = new Point(223, 113);
+            txtCedula.Location = new Point(189, 113);
             txtCedula.Margin = new Padding(3, 2, 3, 2);
             txtCedula.Name = "txtCedula";
             txtCedula.Size = new Size(178, 27);

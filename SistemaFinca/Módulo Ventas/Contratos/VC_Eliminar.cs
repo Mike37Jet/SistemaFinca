@@ -50,7 +50,7 @@ namespace SistemaFinca
                         correo = reader.GetString(3);
                     }
                     String commString = $"SELECT fechaemision, fechainicio, fechafin, cantidadleche, cantidadretirada, idcontrato FROM contrato WHERE cedulacliente = '{txtCedula.Text}'" +
-                        $" AND pagado = false OR (cantidadleche != cantidadretirada AND pagado = true)";
+                        $" AND (pagado = false OR (cantidadleche != cantidadretirada AND pagado = true))";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
                     {
