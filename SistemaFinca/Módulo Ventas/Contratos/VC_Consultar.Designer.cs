@@ -34,6 +34,8 @@
             label6 = new Label();
             txtCedula = new TextBox();
             panelContrato = new Panel();
+            labelCantidadRetirada = new Label();
+            label11 = new Label();
             labelApellidos1 = new Label();
             labelNombres1 = new Label();
             label9 = new Label();
@@ -80,8 +82,6 @@
             labelFechaEmision = new Label();
             label8 = new Label();
             label7 = new Label();
-            label14 = new Label();
-            txtCantidadRetirada = new TextBox();
             label3 = new Label();
             panelContrato.SuspendLayout();
             SuspendLayout();
@@ -135,6 +135,8 @@
             // 
             panelContrato.AutoScroll = true;
             panelContrato.BackColor = SystemColors.ButtonHighlight;
+            panelContrato.Controls.Add(labelCantidadRetirada);
+            panelContrato.Controls.Add(label11);
             panelContrato.Controls.Add(labelApellidos1);
             panelContrato.Controls.Add(labelNombres1);
             panelContrato.Controls.Add(label9);
@@ -181,13 +183,31 @@
             panelContrato.Controls.Add(labelFechaEmision);
             panelContrato.Controls.Add(label8);
             panelContrato.Controls.Add(label7);
-            panelContrato.Controls.Add(label14);
-            panelContrato.Controls.Add(txtCantidadRetirada);
             panelContrato.Controls.Add(label3);
             panelContrato.Location = new Point(56, 156);
             panelContrato.Name = "panelContrato";
             panelContrato.Size = new Size(783, 846);
             panelContrato.TabIndex = 110;
+            // 
+            // labelCantidadRetirada
+            // 
+            labelCantidadRetirada.AutoSize = true;
+            labelCantidadRetirada.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelCantidadRetirada.Location = new Point(179, 506);
+            labelCantidadRetirada.Name = "labelCantidadRetirada";
+            labelCantidadRetirada.Size = new Size(12, 15);
+            labelCantidadRetirada.TabIndex = 193;
+            labelCantidadRetirada.Text = "-";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(48, 506);
+            label11.Name = "label11";
+            label11.Size = new Size(113, 15);
+            label11.TabIndex = 192;
+            label11.Text = "Cantidad entregada:";
             // 
             // labelApellidos1
             // 
@@ -335,7 +355,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(48, 701);
+            label13.Location = new Point(48, 697);
             label13.Name = "label13";
             label13.Size = new Size(664, 30);
             label13.TabIndex = 176;
@@ -346,7 +366,7 @@
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(26, 674);
+            label4.Location = new Point(26, 680);
             label4.Name = "label4";
             label4.Size = new Size(82, 14);
             label4.TabIndex = 175;
@@ -355,7 +375,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(48, 642);
+            label2.Location = new Point(48, 662);
             label2.Name = "label2";
             label2.Size = new Size(656, 15);
             label2.TabIndex = 174;
@@ -366,7 +386,7 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(26, 620);
+            label1.Location = new Point(26, 645);
             label1.Name = "label1";
             label1.Size = new Size(140, 14);
             label1.TabIndex = 173;
@@ -376,7 +396,7 @@
             // 
             labelFechaFinalizacion.AutoSize = true;
             labelFechaFinalizacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelFechaFinalizacion.Location = new Point(179, 588);
+            labelFechaFinalizacion.Location = new Point(179, 613);
             labelFechaFinalizacion.Name = "labelFechaFinalizacion";
             labelFechaFinalizacion.Size = new Size(12, 15);
             labelFechaFinalizacion.TabIndex = 172;
@@ -386,7 +406,7 @@
             // 
             labelFechaInicio.AutoSize = true;
             labelFechaInicio.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelFechaInicio.Location = new Point(179, 568);
+            labelFechaInicio.Location = new Point(179, 589);
             labelFechaInicio.Name = "labelFechaInicio";
             labelFechaInicio.Size = new Size(12, 15);
             labelFechaInicio.TabIndex = 171;
@@ -396,7 +416,7 @@
             // 
             label36.AutoSize = true;
             label36.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label36.Location = new Point(48, 588);
+            label36.Location = new Point(48, 613);
             label36.Name = "label36";
             label36.Size = new Size(121, 15);
             label36.TabIndex = 170;
@@ -406,7 +426,7 @@
             // 
             label35.AutoSize = true;
             label35.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label35.Location = new Point(48, 568);
+            label35.Location = new Point(48, 589);
             label35.Name = "label35";
             label35.Size = new Size(89, 15);
             label35.TabIndex = 169;
@@ -415,7 +435,7 @@
             // label34
             // 
             label34.AutoSize = true;
-            label34.Location = new Point(48, 544);
+            label34.Location = new Point(48, 565);
             label34.Name = "label34";
             label34.Size = new Size(642, 15);
             label34.TabIndex = 168;
@@ -426,7 +446,7 @@
             label33.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label33.AutoSize = true;
             label33.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label33.Location = new Point(26, 525);
+            label33.Location = new Point(26, 538);
             label33.Name = "label33";
             label33.Size = new Size(135, 14);
             label33.TabIndex = 167;
@@ -436,7 +456,7 @@
             // 
             labelCantidadLeche.AutoSize = true;
             labelCantidadLeche.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelCantidadLeche.Location = new Point(179, 489);
+            labelCantidadLeche.Location = new Point(179, 486);
             labelCantidadLeche.Name = "labelCantidadLeche";
             labelCantidadLeche.Size = new Size(12, 15);
             labelCantidadLeche.TabIndex = 166;
@@ -446,18 +466,18 @@
             // 
             label32.AutoSize = true;
             label32.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label32.Location = new Point(48, 489);
+            label32.Location = new Point(48, 486);
             label32.Name = "label32";
-            label32.Size = new Size(125, 15);
+            label32.Size = new Size(109, 15);
             label32.TabIndex = 165;
-            label32.Text = "Cantidad por entregar:";
+            label32.Text = "Cantidad acordada:";
             label32.Click += label32_Click;
             // 
             // label31
             // 
             label31.AutoSize = true;
             label31.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label31.Location = new Point(153, 468);
+            label31.Location = new Point(153, 466);
             label31.Name = "label31";
             label31.Size = new Size(590, 15);
             label31.TabIndex = 164;
@@ -467,7 +487,7 @@
             // 
             label30.AutoSize = true;
             label30.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label30.Location = new Point(48, 468);
+            label30.Location = new Point(48, 466);
             label30.Name = "label30";
             label30.Size = new Size(99, 15);
             label30.TabIndex = 163;
@@ -479,7 +499,7 @@
             label12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label12.AutoSize = true;
             label12.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(26, 449);
+            label12.Location = new Point(26, 441);
             label12.Name = "label12";
             label12.Size = new Size(57, 14);
             label12.TabIndex = 162;
@@ -488,7 +508,7 @@
             // label29
             // 
             label29.AutoSize = true;
-            label29.Location = new Point(26, 368);
+            label29.Location = new Point(26, 365);
             label29.Name = "label29";
             label29.Size = new Size(725, 75);
             label29.TabIndex = 161;
@@ -655,29 +675,6 @@
             label7.TabIndex = 144;
             label7.Text = "Contrato de venta de Leche";
             // 
-            // label14
-            // 
-            label14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 11.25F);
-            label14.Location = new Point(161, 382);
-            label14.Name = "label14";
-            label14.Size = new Size(146, 20);
-            label14.TabIndex = 138;
-            label14.Text = "Cantidad retirada (L)";
-            // 
-            // txtCantidadRetirada
-            // 
-            txtCantidadRetirada.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtCantidadRetirada.Cursor = Cursors.IBeam;
-            txtCantidadRetirada.Font = new Font("Segoe UI", 11.25F);
-            txtCantidadRetirada.Location = new Point(334, 379);
-            txtCantidadRetirada.Margin = new Padding(3, 2, 3, 2);
-            txtCantidadRetirada.Name = "txtCantidadRetirada";
-            txtCantidadRetirada.ReadOnly = true;
-            txtCantidadRetirada.Size = new Size(178, 27);
-            txtCantidadRetirada.TabIndex = 137;
-            // 
             // label3
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -728,8 +725,6 @@
         private Label labelFechaEmision;
         private Label label8;
         private Label label7;
-        private Label label14;
-        private TextBox txtCantidadRetirada;
         private Label label3;
         private Label label22;
         private Label label21;
@@ -773,5 +768,7 @@
         private Label labelApellidos;
         private Label labelNombres;
         private Label label45;
+        private Label labelCantidadRetirada;
+        private Label label11;
     }
 }

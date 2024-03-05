@@ -70,7 +70,7 @@ namespace SistemaFinca
                         labelFechaInicio.Text = reader.GetDateTime(1).ToString();
                         labelFechaFinalizacion.Text = reader.GetDateTime(2).ToString();
                         labelCantidadLeche.Text = reader.GetInt32(3).ToString() + " Litros";
-                        txtCantidadRetirada.Text = reader.GetInt32(4).ToString();
+                        labelCantidadRetirada.Text = reader.GetInt32(4).ToString() + " Litros";
                         panelContrato.Visible = true;
                         txtCedula.Text = ""; 
                     }
