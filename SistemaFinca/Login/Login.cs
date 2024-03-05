@@ -8,7 +8,7 @@ namespace SistemaFinca
     public partial class FormLogin : Form
     {
         public static String user = "postgres";
-        public static String password = "eeee2003";
+        public static String password = "Jetix123@";
         public static String connectionString = $"Server=localhost;Port=5432;User Id={user};Password={password};Database=aboost";
 
         public FormLogin()
