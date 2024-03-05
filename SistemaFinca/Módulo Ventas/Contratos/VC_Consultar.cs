@@ -19,6 +19,7 @@ namespace SistemaFinca
         {
             InitializeComponent();
             panelContrato.Visible = false;
+            picturePagado.Visible = false;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace SistemaFinca
                         cedulacliente = reader.GetString(2);
                         direccion = reader.GetString(3);
                     }
-                    String commString = $"SELECT fechaemision, fechainicio, fechafin, cantidadleche, cantidadretirada FROM contrato WHERE cedulacliente = '{txtCedula.Text}'" +
+                    String commString = $"SELECT fechaemision, fechainicio, fechafin, cantidadleche, cantidadretirada, pagado FROM contrato WHERE cedulacliente = '{txtCedula.Text}'" +
                         $" AND pagado = false OR (cantidadleche != cantidadretirada AND pagado = true)";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
@@ -71,6 +72,10 @@ namespace SistemaFinca
                         labelFechaFinalizacion.Text = reader.GetDateTime(2).ToString();
                         labelCantidadLeche.Text = reader.GetInt32(3).ToString() + " Litros";
                         labelCantidadRetirada.Text = reader.GetInt32(4).ToString() + " Litros";
+                        if (reader.GetBoolean(5))
+                        {
+                            picturePagado.Visible = true;
+                        }
                         panelContrato.Visible = true;
                         txtCedula.Text = "";
                     }
