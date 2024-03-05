@@ -220,12 +220,14 @@ namespace SistemaFinca
                         if (resultado > 0 && resultado2 > 0 && resultado3 > 0)
                         {
                             MessageBox.Show("La nota de venta fue registrada exitosamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            regresar();
                             return;
                         }
                     }
                     if (resultado > 0 && resultado2 > 0)
                     {
                         MessageBox.Show("La nota de venta fue registrada exitosamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        regresar();
                         return;
                     }
                 }
@@ -241,6 +243,11 @@ namespace SistemaFinca
                     }
                 }
             }
+        }
+
+        private void regresar()
+        {
+            this.Close();
         }
     }
 }
