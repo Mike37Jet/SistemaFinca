@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVentas));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
             buttonRegresar = new Button();
@@ -37,6 +38,7 @@
             txtCedula = new TextBox();
             label1 = new Label();
             label18 = new Label();
+            btnConsultar = new Button();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -63,6 +65,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
+            tableLayoutPanel1.Controls.Add(btnConsultar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonRegresar, 5, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
             tableLayoutPanel1.Location = new Point(0, 491);
@@ -151,6 +154,20 @@
             label18.TabIndex = 34;
             label18.Text = "Buscar Cliente";
             // 
+            // btnConsultar
+            // 
+            btnConsultar.Dock = DockStyle.Fill;
+            btnConsultar.Image = (Image)resources.GetObject("btnConsultar.Image");
+            btnConsultar.Location = new Point(0, 0);
+            btnConsultar.Margin = new Padding(0);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Size = new Size(95, 50);
+            btnConsultar.TabIndex = 16;
+            btnConsultar.TextAlign = ContentAlignment.BottomCenter;
+            btnConsultar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnConsultar.UseVisualStyleBackColor = true;
+            btnConsultar.Click += btnConsultar_Click;
+            // 
             // FormVentas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -178,5 +195,6 @@
         private Button buttonBuscarCliente;
         private Label label2;
         private TextBox txtCedula;
+        private Button btnConsultar;
     }
 }

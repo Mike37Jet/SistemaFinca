@@ -14,19 +14,15 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace SistemaFinca
 {
-    public partial class FormVNotaDeVenta : Form
+    public partial class FormVConsultar : Form
     {
         private String cedulacliente, idcontrato;
         private decimal monto;
         private int cantidadLeche;
 
-        public FormVNotaDeVenta(string cedulacliente, string idcontrato)
+        public FormVConsultar()
         {
             InitializeComponent();
-            this.cedulacliente = cedulacliente;
-            this.idcontrato = idcontrato;
-            this.monto = 0;
-            this.cantidadLeche = 0;
             getDatosCliente();
         }
 

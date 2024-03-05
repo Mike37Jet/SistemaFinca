@@ -92,7 +92,7 @@
             // 
             btnConsultar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnConsultar.Font = new Font("Segoe UI", 11.25F);
-            btnConsultar.Location = new Point(425, 113);
+            btnConsultar.Location = new Point(476, 113);
             btnConsultar.Margin = new Padding(3, 2, 3, 2);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(103, 27);
