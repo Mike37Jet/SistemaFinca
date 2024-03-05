@@ -90,7 +90,7 @@
             // 
             btnConsultar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnConsultar.Font = new Font("Segoe UI", 11.25F);
-            btnConsultar.Location = new Point(510, 113);
+            btnConsultar.Location = new Point(493, 113);
             btnConsultar.Margin = new Padding(3, 2, 3, 2);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(103, 27);
@@ -125,7 +125,7 @@
             txtCedula.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtCedula.Cursor = Cursors.IBeam;
             txtCedula.Font = new Font("Segoe UI", 11.25F);
-            txtCedula.Location = new Point(308, 113);
+            txtCedula.Location = new Point(291, 113);
             txtCedula.Margin = new Padding(3, 2, 3, 2);
             txtCedula.Name = "txtCedula";
             txtCedula.Size = new Size(178, 27);
@@ -691,7 +691,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(895, 1061);
+            ClientSize = new Size(895, 788);
             Controls.Add(panelContrato);
             Controls.Add(txtCedula);
             Controls.Add(label6);

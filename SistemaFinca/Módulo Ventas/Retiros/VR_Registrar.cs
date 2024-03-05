@@ -17,6 +17,7 @@ namespace SistemaFinca
     public partial class FormVR_Registrar : Form
     {
         private String idcontrato = "";
+        private Boolean contratoEstado;
 
         public FormVR_Registrar()
         {
@@ -40,7 +41,8 @@ namespace SistemaFinca
                 try
                 {
                     connection.Open();
-                    String commString = $"INSERT INTO retiro(idcontrato, cantidadleche, fechaemision) VALUES(" +
+                    String commString = this.contratoEstado ? $"INSERT INTO retiro(idcontrato, cantidadleche, fechaemision, pagado) VALUES(" +
+                        $"{this.idcontrato}, {txtCantidadRetiro.Text}, current_date, true)" : $"INSERT INTO retiro(idcontrato, cantidadleche, fechaemision) VALUES(" +
                         $"{this.idcontrato}, {txtCantidadRetiro.Text}, current_date)";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     int resultado = comm.ExecuteNonQuery();
@@ -107,7 +109,7 @@ namespace SistemaFinca
                         }
                         reader.Read();
                     }
-                    String commString = $"SELECT fechaemision, fechainicio, fechafin, cantidadleche, cantidadretirada, idcontrato FROM contrato WHERE cedulacliente = '{txtCedula.Text}'" +
+                    String commString = $"SELECT fechaemision, fechainicio, fechafin, cantidadleche, cantidadretirada, idcontrato, pagado FROM contrato WHERE cedulacliente = '{txtCedula.Text}'" +
                         $" AND pagado = false OR (cantidadleche != cantidadretirada AND pagado = true)";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
@@ -124,6 +126,7 @@ namespace SistemaFinca
                         txtCantidadLeche.Text = reader.GetInt32(3).ToString();
                         txtCantidadRetirada.Text = reader.GetInt32(4).ToString();
                         this.idcontrato = reader.GetInt32(5).ToString();
+                        this.contratoEstado = reader.GetBoolean(6);
                     }
                 }
                 catch (NpgsqlException ex)
