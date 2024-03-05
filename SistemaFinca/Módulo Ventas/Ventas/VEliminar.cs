@@ -82,6 +82,11 @@ namespace SistemaFinca
                         if (resultado > 0 && resultado2 > 0 && resultado3 > 0)
                         {
                             MessageBox.Show("Eliminación de nota de venta exitosa", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (lstNotasVenta.Rows.Count == 1)
+                            {
+                                lstNotasVenta.Rows.Clear();
+                                return;
+                            }
                             lstNotasVenta.Rows.Clear();
                             getNotas();
                             return;

@@ -34,7 +34,7 @@ namespace SistemaFinca
                 return;
             }
 
-            if (MessageBox.Show($"Se eliminará el retiro {this.idretiro} del contrato {this.idcontrato}", "Comprobar", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show($"Está seguro de que desea eliminar este retiro?", "Comprobar", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
                 {
@@ -54,6 +54,11 @@ namespace SistemaFinca
                         {
                             MessageBox.Show("Retiro eliminado exitosamente", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.idretiro = "";
+                            if (lstRetiros.Rows.Count == 1)
+                            {
+                                lstRetiros.Rows.Clear();
+                                return;
+                            }
                             lstRetiros.Rows.Clear();
                             getRetiros();
                             return;
