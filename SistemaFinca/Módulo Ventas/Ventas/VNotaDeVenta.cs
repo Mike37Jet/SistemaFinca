@@ -212,11 +212,18 @@ namespace SistemaFinca
                     String commString2 = $"UPDATE retiro SET pagado = true WHERE idcontrato = {this.idcontrato}";
                     NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
                     int resultado2 = comm2.ExecuteNonQuery();
+                    String getIdNota = $"SELECT idnota FROM nota_venta ORDER BY idnota DESC LIMIT 1";
+                    NpgsqlCommand comm3 = new NpgsqlCommand(getIdNota, connection);
+                    String idnota = comm3.ExecuteScalar().ToString();
+                    String setRetiros = $"INSERT INTO nota_venta_retiros SELECT {idnota}, idretiro FROM retiro WHERE idcontrato = {this.idcontrato}";
+                    NpgsqlCommand comm4 = new NpgsqlCommand(setRetiros, connection);
+                    comm4.ExecuteNonQuery();
+
                     if (radContrato.Checked)
                     {
-                        String commString3 = $"UPDATE contrato SET pagado = true WHERE idcontrato = {this.idcontrato}";
-                        NpgsqlCommand comm3 = new NpgsqlCommand(commString3, connection);
-                        int resultado3 = comm3.ExecuteNonQuery();
+                        String commString5 = $"UPDATE contrato SET pagado = true WHERE idcontrato = {this.idcontrato}";
+                        NpgsqlCommand comm5 = new NpgsqlCommand(commString5, connection);
+                        int resultado3 = comm5.ExecuteNonQuery();
                         if (resultado > 0 && resultado2 > 0 && resultado3 > 0)
                         {
                             MessageBox.Show("La nota de venta fue registrada exitosamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
