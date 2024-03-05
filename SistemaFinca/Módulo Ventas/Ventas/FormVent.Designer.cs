@@ -34,7 +34,7 @@
             panelFormularioHijo = new Panel();
             buttonBuscarCliente = new Button();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtCedula = new TextBox();
             label1 = new Label();
             label18 = new Label();
             tableLayoutPanel1.SuspendLayout();
@@ -91,7 +91,7 @@
             panelFormularioHijo.AutoScroll = true;
             panelFormularioHijo.Controls.Add(buttonBuscarCliente);
             panelFormularioHijo.Controls.Add(label2);
-            panelFormularioHijo.Controls.Add(textBox1);
+            panelFormularioHijo.Controls.Add(txtCedula);
             panelFormularioHijo.Controls.Add(label1);
             panelFormularioHijo.Controls.Add(label18);
             panelFormularioHijo.Dock = DockStyle.Fill;
@@ -105,7 +105,7 @@
             // buttonBuscarCliente
             // 
             buttonBuscarCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonBuscarCliente.Location = new Point(402, 230);
+            buttonBuscarCliente.Location = new Point(390, 219);
             buttonBuscarCliente.Name = "buttonBuscarCliente";
             buttonBuscarCliente.Size = new Size(97, 35);
             buttonBuscarCliente.TabIndex = 38;
@@ -122,13 +122,13 @@
             label2.TabIndex = 37;
             label2.Text = "CI:";
             // 
-            // textBox1
+            // txtCedula
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(311, 155);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(272, 29);
-            textBox1.TabIndex = 36;
+            txtCedula.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCedula.Location = new Point(311, 155);
+            txtCedula.Name = "txtCedula";
+            txtCedula.Size = new Size(272, 29);
+            txtCedula.TabIndex = 36;
             // 
             // label1
             // 
@@ -177,6 +177,6 @@
         private Button buttonRegresar;
         private Button buttonBuscarCliente;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtCedula;
     }
 }

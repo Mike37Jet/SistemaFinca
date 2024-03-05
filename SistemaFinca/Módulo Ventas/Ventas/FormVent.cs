@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace SistemaFinca
 {
     public partial class FormVentas : Form
     {
+        private String cedulacliente, idcontrato;
+
         public FormVentas()
         {
             InitializeComponent();
@@ -34,18 +37,10 @@ namespace SistemaFinca
             formularioHijo.Show();
         }
 
-
-
-
-
-
         private void panelFormularioHijo_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-
-
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -54,10 +49,67 @@ namespace SistemaFinca
 
         private void buttonBuscarCliente_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormVNotaDeVenta());
+            if (!FormGU_Registrar.CedulaEsValida(txtCedula.Text))
+            {
+                MessageBox.Show("Número de cédula de identidad no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    String commExisteString = $"SELECT cedulacliente FROM cliente WHERE cedulacliente = '{txtCedula.Text}'";
+                    NpgsqlCommand commExiste = new NpgsqlCommand(commExisteString, connection);
+                    using (NpgsqlDataReader reader = commExiste.ExecuteReader())
+                    {
+                        if (!reader.HasRows)
+                        {
+                            MessageBox.Show("El cliente no está registrado", "Vuelve a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        reader.Read();
+                        cedulacliente = reader.GetString(0);
+                    }
+                    String commString2 = $"SELECT idcontrato FROM contrato WHERE cedulacliente = '{txtCedula.Text}'";
+                    NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
+                    using (NpgsqlDataReader reader = comm2.ExecuteReader())
+                    {
+                        if (!reader.HasRows)
+                        {
+                            MessageBox.Show("No existe un contrato asociado al cliente", "Vuelve a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                    String commString = $"SELECT idcontrato FROM contrato WHERE cedulacliente = '{txtCedula.Text}' " +
+                        $"AND pagado = false";
+                    NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                    using (NpgsqlDataReader reader = comm.ExecuteReader())
+                    {
+                        if (!reader.HasRows)
+                        {
+                            MessageBox.Show("El contrato está pagado", "Vuelve a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        reader.Read();
+                        idcontrato = reader.GetInt32(0).ToString();
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+            abrirFormulariosHijos(new FormVNotaDeVenta(this.cedulacliente, this.idcontrato));
         }
 
-         
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
