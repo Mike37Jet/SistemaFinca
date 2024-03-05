@@ -28,20 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
-            buttonBuscar = new Button();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
+            btnGenerar = new Button();
+            cmbMes = new ComboBox();
+            txtAnio = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             panelReporte = new Panel();
-            labelInforme = new Label();
+            lstRetiros = new DataGridView();
+            ColumnCantRetiro = new DataGridViewTextBoxColumn();
+            ColumnFecha = new DataGridViewTextBoxColumn();
+            ColumnEstado = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panelReporte.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)lstRetiros).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -56,18 +65,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(410, 9);
             label1.Name = "label1";
-            label1.Size = new Size(65, 21);
+            label1.Size = new Size(91, 24);
             label1.TabIndex = 0;
             label1.Text = "Reporte";
             // 
             // panel2
             // 
-            panel2.Controls.Add(buttonBuscar);
-            panel2.Controls.Add(comboBox1);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(btnGenerar);
+            panel2.Controls.Add(cmbMes);
+            panel2.Controls.Add(txtAnio);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
@@ -77,32 +86,32 @@
             panel2.Size = new Size(895, 91);
             panel2.TabIndex = 1;
             // 
-            // buttonBuscar
+            // btnGenerar
             // 
-            buttonBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonBuscar.Location = new Point(523, 43);
-            buttonBuscar.Name = "buttonBuscar";
-            buttonBuscar.Size = new Size(109, 35);
-            buttonBuscar.TabIndex = 5;
-            buttonBuscar.Text = "Buscar";
-            buttonBuscar.UseVisualStyleBackColor = true;
-            buttonBuscar.Click += buttonBuscar_Click;
+            btnGenerar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGenerar.Location = new Point(523, 43);
+            btnGenerar.Name = "btnGenerar";
+            btnGenerar.Size = new Size(109, 35);
+            btnGenerar.TabIndex = 5;
+            btnGenerar.Text = "Generar";
+            btnGenerar.UseVisualStyleBackColor = true;
+            btnGenerar.Click += buttonBuscar_Click;
             // 
-            // comboBox1
+            // cmbMes
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Enero", "Febrero", "Marzo", "Abrir", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" });
-            comboBox1.Location = new Point(285, 52);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 4;
+            cmbMes.FormattingEnabled = true;
+            cmbMes.Items.AddRange(new object[] { "Enero", "Febrero", "Marzo", "Abrir", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" });
+            cmbMes.Location = new Point(285, 52);
+            cmbMes.Name = "cmbMes";
+            cmbMes.Size = new Size(121, 23);
+            cmbMes.TabIndex = 4;
             // 
-            // textBox1
+            // txtAnio
             // 
-            textBox1.Location = new Point(92, 52);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
+            txtAnio.Location = new Point(92, 52);
+            txtAnio.Name = "txtAnio";
+            txtAnio.Size = new Size(100, 23);
+            txtAnio.TabIndex = 3;
             // 
             // label4
             // 
@@ -136,21 +145,89 @@
             // 
             // panelReporte
             // 
-            panelReporte.Controls.Add(labelInforme);
+            panelReporte.Controls.Add(lstRetiros);
             panelReporte.Dock = DockStyle.Fill;
             panelReporte.Location = new Point(0, 127);
             panelReporte.Name = "panelReporte";
             panelReporte.Size = new Size(895, 369);
             panelReporte.TabIndex = 2;
             // 
-            // labelInforme
+            // lstRetiros
             // 
-            labelInforme.AutoSize = true;
-            labelInforme.Location = new Point(368, 318);
-            labelInforme.Name = "labelInforme";
-            labelInforme.Size = new Size(74, 15);
-            labelInforme.TabIndex = 0;
-            labelInforme.Text = "labelInforme";
+            lstRetiros.AllowUserToAddRows = false;
+            lstRetiros.AllowUserToDeleteRows = false;
+            lstRetiros.AllowUserToResizeColumns = false;
+            lstRetiros.AllowUserToResizeRows = false;
+            lstRetiros.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lstRetiros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            lstRetiros.BackgroundColor = Color.FromArgb(45, 66, 91);
+            lstRetiros.BorderStyle = BorderStyle.None;
+            lstRetiros.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            lstRetiros.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            lstRetiros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            lstRetiros.ColumnHeadersHeight = 30;
+            lstRetiros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            lstRetiros.Columns.AddRange(new DataGridViewColumn[] { ColumnCantRetiro, ColumnFecha, ColumnEstado, Column1, Column2 });
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            lstRetiros.DefaultCellStyle = dataGridViewCellStyle5;
+            lstRetiros.EnableHeadersVisualStyles = false;
+            lstRetiros.GridColor = Color.SteelBlue;
+            lstRetiros.Location = new Point(48, 68);
+            lstRetiros.Name = "lstRetiros";
+            lstRetiros.ReadOnly = true;
+            lstRetiros.RowHeadersVisible = false;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(45, 66, 91);
+            dataGridViewCellStyle6.ForeColor = Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = Color.White;
+            lstRetiros.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            lstRetiros.RowTemplate.Height = 25;
+            lstRetiros.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            lstRetiros.Size = new Size(774, 242);
+            lstRetiros.TabIndex = 111;
+            // 
+            // ColumnCantRetiro
+            // 
+            ColumnCantRetiro.HeaderText = "Nombres";
+            ColumnCantRetiro.Name = "ColumnCantRetiro";
+            ColumnCantRetiro.ReadOnly = true;
+            // 
+            // ColumnFecha
+            // 
+            ColumnFecha.HeaderText = "Apellidos";
+            ColumnFecha.Name = "ColumnFecha";
+            ColumnFecha.ReadOnly = true;
+            // 
+            // ColumnEstado
+            // 
+            ColumnEstado.HeaderText = "Monto";
+            ColumnEstado.Name = "ColumnEstado";
+            ColumnEstado.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Cantidad de leche";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Fecha de emisión";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
             // 
             // FormIFGenerarInforme
             // 
@@ -169,7 +246,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panelReporte.ResumeLayout(false);
-            panelReporte.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)lstRetiros).EndInit();
             ResumeLayout(false);
         }
 
@@ -179,12 +256,17 @@
         private Panel panel2;
         private Panel panelReporte;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtAnio;
         private Label label4;
         private Label label3;
         private Label label2;
-        private Button buttonBuscar;
-        private ComboBox comboBox1;
-        private Label labelInforme;
+        private Button btnGenerar;
+        private ComboBox cmbMes;
+        private DataGridView lstRetiros;
+        private DataGridViewTextBoxColumn ColumnCantRetiro;
+        private DataGridViewTextBoxColumn ColumnFecha;
+        private DataGridViewTextBoxColumn ColumnEstado;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
     }
 }

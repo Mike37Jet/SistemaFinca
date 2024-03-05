@@ -224,7 +224,7 @@ namespace SistemaFinca
                         String commString5 = $"UPDATE contrato SET pagado = true WHERE idcontrato = {this.idcontrato}";
                         NpgsqlCommand comm5 = new NpgsqlCommand(commString5, connection);
                         int resultado3 = comm5.ExecuteNonQuery();
-                        if (resultado > 0 && resultado2 > 0 && resultado3 > 0)
+                        if (resultado >= 0 && resultado2 >= 0 && resultado3 >= 0)
                         {
                             MessageBox.Show("La nota de venta fue registrada exitosamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             regresar();

@@ -332,7 +332,7 @@ namespace SistemaFinca
 
         private void buttonInformeAnalisis_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormReportesAnalisis());
+            abrirFormulariosHijos(new FormIFGenerarInforme());
         }
 
         private void buttonAlertas_Click(object sender, EventArgs e)
