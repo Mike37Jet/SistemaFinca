@@ -34,6 +34,7 @@
             label6 = new Label();
             txtCedula = new TextBox();
             panelContrato = new Panel();
+            picturePagado = new PictureBox();
             labelCantidadRetirada = new Label();
             label11 = new Label();
             labelApellidos1 = new Label();
@@ -84,13 +85,14 @@
             label7 = new Label();
             label3 = new Label();
             panelContrato.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picturePagado).BeginInit();
             SuspendLayout();
             // 
             // btnConsultar
             // 
             btnConsultar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnConsultar.Font = new Font("Segoe UI", 11.25F);
-            btnConsultar.Location = new Point(493, 113);
+            btnConsultar.Location = new Point(425, 113);
             btnConsultar.Margin = new Padding(3, 2, 3, 2);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(103, 27);
@@ -125,7 +127,7 @@
             txtCedula.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtCedula.Cursor = Cursors.IBeam;
             txtCedula.Font = new Font("Segoe UI", 11.25F);
-            txtCedula.Location = new Point(291, 113);
+            txtCedula.Location = new Point(223, 113);
             txtCedula.Margin = new Padding(3, 2, 3, 2);
             txtCedula.Name = "txtCedula";
             txtCedula.Size = new Size(178, 27);
@@ -135,6 +137,7 @@
             // 
             panelContrato.AutoScroll = true;
             panelContrato.BackColor = SystemColors.ButtonHighlight;
+            panelContrato.Controls.Add(picturePagado);
             panelContrato.Controls.Add(labelCantidadRetirada);
             panelContrato.Controls.Add(label11);
             panelContrato.Controls.Add(labelApellidos1);
@@ -188,6 +191,16 @@
             panelContrato.Name = "panelContrato";
             panelContrato.Size = new Size(783, 846);
             panelContrato.TabIndex = 110;
+            // 
+            // picturePagado
+            // 
+            picturePagado.Image = (Image)resources.GetObject("picturePagado.Image");
+            picturePagado.Location = new Point(578, 20);
+            picturePagado.Name = "picturePagado";
+            picturePagado.Size = new Size(185, 107);
+            picturePagado.SizeMode = PictureBoxSizeMode.Zoom;
+            picturePagado.TabIndex = 194;
+            picturePagado.TabStop = false;
             // 
             // labelCantidadRetirada
             // 
@@ -553,7 +566,7 @@
             label25.Name = "label25";
             label25.Size = new Size(134, 30);
             label25.TabIndex = 157;
-            label25.Text = "Km5, a 2 Kilometros del \r\naeropuesto de Túlcan";
+            label25.Text = "Km5, a 2 Kilometros del \r\naeropuerto de Túlcan";
             // 
             // label24
             // 
@@ -703,6 +716,7 @@
             Text = "Administrador";
             panelContrato.ResumeLayout(false);
             panelContrato.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picturePagado).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -770,5 +784,6 @@
         private Label label45;
         private Label labelCantidadRetirada;
         private Label label11;
+        private PictureBox picturePagado;
     }
 }
