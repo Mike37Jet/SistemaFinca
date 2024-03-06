@@ -94,7 +94,7 @@ namespace SistemaFinca
                 MessageBox.Show("Ingrese el nùmero de cèdula de un cliente", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar êste contrato?", "Confirmación", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar este contrato?", "Confirmación", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No)
             {
                 return;
