@@ -40,7 +40,7 @@ namespace SistemaFinca
                 {
                     connection.Open();
                     String commString = $"SELECT nombres, apellidos, monto, cantidadleche, fechaemision FROM nota_venta N JOIN cliente C ON " +
-                        $"(cast(N.cedulacliente AS varchar) = C.cedulacliente) WHERE EXTRACT(YEAR FROM fechaemision) = {txtAnio.Text} AND " +
+                        $"(N.cedulacliente = C.cedulacliente) WHERE EXTRACT(YEAR FROM fechaemision) = {txtAnio.Text} AND " +
                         $"EXTRACT(MONTH FROM fechaemision) = {ObtenerNumeroMes(cmbMes.Text)}";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())

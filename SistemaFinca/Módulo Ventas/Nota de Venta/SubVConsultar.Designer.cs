@@ -29,43 +29,34 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label18 = new Label();
             panel2 = new Panel();
-            label1 = new Label();
-            panel3 = new Panel();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            labelIdNota = new Label();
-            labelFechaEmision = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            labelNombre = new Label();
-            labelEmail = new Label();
-            labelTelefono = new Label();
-            labelDireccion = new Label();
+            label41 = new Label();
+            label49 = new Label();
+            label48 = new Label();
+            label47 = new Label();
+            labelTotal = new Label();
+            labelImpuesto = new Label();
+            labelSubTotal = new Label();
+            label45 = new Label();
+            label40 = new Label();
+            label39 = new Label();
+            labeComentario = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
+            label28 = new Label();
+            label27 = new Label();
+            label26 = new Label();
+            label25 = new Label();
+            labelVTotal = new Label();
+            labelPrecioUnitario = new Label();
+            labelCantidad = new Label();
+            label20 = new Label();
             label9 = new Label();
             label10 = new Label();
             label15 = new Label();
             label16 = new Label();
             label17 = new Label();
             labelIdNota1 = new Label();
-            label20 = new Label();
-            labelCantidad = new Label();
-            labelPrecioUnitario = new Label();
-            labelVTotal = new Label();
             label24 = new Label();
-            label25 = new Label();
-            label26 = new Label();
-            label27 = new Label();
-            label28 = new Label();
             label29 = new Label();
             label30 = new Label();
             label31 = new Label();
@@ -76,21 +67,30 @@
             label36 = new Label();
             label37 = new Label();
             label38 = new Label();
-            labeComentario = new Label();
-            label39 = new Label();
-            label40 = new Label();
-            label42 = new Label();
-            labelSubTotal = new Label();
-            labelImpuesto = new Label();
-            labelTotal = new Label();
-            label47 = new Label();
-            label48 = new Label();
-            label49 = new Label();
-            label41 = new Label();
+            labelDireccion = new Label();
+            labelTelefono = new Label();
+            labelEmail = new Label();
+            labelNombre = new Label();
+            label14 = new Label();
+            label13 = new Label();
+            label12 = new Label();
+            label11 = new Label();
+            labelFechaEmision = new Label();
+            labelIdNota = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            panel3 = new Panel();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            label18 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -102,17 +102,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(895, 968);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(274, 36);
-            label18.Name = "label18";
-            label18.Size = new Size(351, 32);
-            label18.TabIndex = 58;
-            label18.Text = "Consultar Notas de Venta";
+        
             // 
             // panel2
             // 
@@ -125,7 +115,7 @@
             panel2.Controls.Add(labelTotal);
             panel2.Controls.Add(labelImpuesto);
             panel2.Controls.Add(labelSubTotal);
-            panel2.Controls.Add(label42);
+            panel2.Controls.Add(label45);
             panel2.Controls.Add(label40);
             panel2.Controls.Add(label39);
             panel2.Controls.Add(labeComentario);
@@ -148,185 +138,110 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(766, 835);
             panel2.TabIndex = 139;
-            panel2.Paint += panel2_Paint;
+          
             // 
-            // label1
+            // label41
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 33F, FontStyle.Bold);
-            label1.Location = new Point(55, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(356, 60);
-            label1.TabIndex = 0;
-            label1.Text = "NOTA DE VENTA";
+            label41.AutoSize = true;
+            label41.Location = new Point(392, 798);
+            label41.Name = "label41";
+            label41.Size = new Size(12, 15);
+            label41.TabIndex = 27;
+            label41.Text = "/";
             // 
-            // panel3
+            // label49
             // 
-            panel3.BackColor = Color.FromArgb(223, 227, 235);
-            panel3.Controls.Add(label6);
-            panel3.Controls.Add(label5);
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(label2);
-            panel3.Location = new Point(55, 102);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(247, 100);
-            panel3.TabIndex = 1;
+            label49.AutoSize = true;
+            label49.Location = new Point(411, 798);
+            label49.Name = "label49";
+            label49.Size = new Size(90, 15);
+            label49.TabIndex = 26;
+            label49.Text = "+593 998938277";
+        
             // 
-            // label2
+            // label48
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(59, 14);
-            label2.Name = "label2";
-            label2.Size = new Size(138, 14);
-            label2.TabIndex = 0;
-            label2.Text = "FINCA \"SAN RAFAEL\"";
+            label48.AutoSize = true;
+            label48.Location = new Point(257, 798);
+            label48.Name = "label48";
+            label48.Size = new Size(132, 15);
+            label48.TabIndex = 25;
+            label48.Text = "sanrarafael@gmail.com";
             // 
-            // label3
+            // label47
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(79, 33);
-            label3.Name = "label3";
-            label3.Size = new Size(98, 15);
-            label3.TabIndex = 1;
-            label3.Text = "Ronaldo Almeida";
+            label47.AutoSize = true;
+            label47.Location = new Point(335, 770);
+            label47.Name = "label47";
+            label47.Size = new Size(120, 15);
+            label47.TabIndex = 24;
+            label47.Text = "FINCA \"SAN RAFAEL\"";
             // 
-            // label4
+            // labelTotal
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(4, 55);
-            label4.Name = "label4";
-            label4.Size = new Size(63, 15);
-            label4.TabIndex = 2;
-            label4.Text = "Dirección:";
+            labelTotal.AutoSize = true;
+            labelTotal.Location = new Point(594, 691);
+            labelTotal.Name = "labelTotal";
+            labelTotal.Size = new Size(12, 15);
+            labelTotal.TabIndex = 23;
+            labelTotal.Text = "-";
+            labelTotal.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label5
+            // labelImpuesto
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(68, 57);
-            label5.Name = "label5";
-            label5.Size = new Size(166, 15);
-            label5.TabIndex = 3;
-            label5.Text = "Panamericana Norte E35 Km5 \r\n";
+            labelImpuesto.AutoSize = true;
+            labelImpuesto.Location = new Point(594, 656);
+            labelImpuesto.Name = "labelImpuesto";
+            labelImpuesto.Size = new Size(37, 15);
+            labelImpuesto.TabIndex = 21;
+            labelImpuesto.Text = "$ 0.00";
+            labelImpuesto.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label6
+            // labelSubTotal
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(15, 75);
-            label6.Name = "label6";
-            label6.Size = new Size(214, 15);
-            label6.TabIndex = 4;
-            label6.Text = "a 2 km del aeropuerto de Tulcá - Carchi";
+            labelSubTotal.AutoSize = true;
+            labelSubTotal.Location = new Point(594, 620);
+            labelSubTotal.Name = "labelSubTotal";
+            labelSubTotal.Size = new Size(12, 15);
+            labelSubTotal.TabIndex = 20;
+            labelSubTotal.Text = "-";
+            labelSubTotal.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // label45
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(574, 123);
-            label7.Name = "label7";
-            label7.Size = new Size(24, 15);
-            label7.TabIndex = 2;
-            label7.Text = "N°:";
+            label45.Location = new Point(527, 691);
+            label45.Name = "label45";
+            label45.Size = new Size(58, 15);
+            label45.TabIndex = 19;
+            label45.Text = "Total";
+            label45.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label8
+            // label40
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(574, 155);
-            label8.Name = "label8";
-            label8.Size = new Size(41, 15);
-            label8.TabIndex = 3;
-            label8.Text = "Fecha:";
+            label40.Location = new Point(527, 645);
+            label40.Name = "label40";
+            label40.Size = new Size(58, 37);
+            label40.TabIndex = 17;
+            label40.Text = "Impuesto\r\n(15%)";
+            label40.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // labelIdNota
+            // label39
             // 
-            labelIdNota.AutoSize = true;
-            labelIdNota.Location = new Point(642, 123);
-            labelIdNota.Name = "labelIdNota";
-            labelIdNota.Size = new Size(12, 15);
-            labelIdNota.TabIndex = 4;
-            labelIdNota.Text = "-";
+            label39.Location = new Point(527, 616);
+            label39.Name = "label39";
+            label39.Size = new Size(58, 23);
+            label39.TabIndex = 16;
+            label39.Text = "SubTotal";
+            label39.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // labelFechaEmision
+            // labeComentario
             // 
-            labelFechaEmision.AutoSize = true;
-            labelFechaEmision.Location = new Point(641, 155);
-            labelFechaEmision.Name = "labelFechaEmision";
-            labelFechaEmision.Size = new Size(12, 15);
-            labelFechaEmision.TabIndex = 5;
-            labelFechaEmision.Text = "-";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(55, 252);
-            label11.Name = "label11";
-            label11.Size = new Size(39, 15);
-            label11.TabIndex = 6;
-            label11.Text = "Email:";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(55, 277);
-            label12.Name = "label12";
-            label12.Size = new Size(55, 15);
-            label12.TabIndex = 7;
-            label12.Text = "Teléfono:";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(55, 302);
-            label13.Name = "label13";
-            label13.Size = new Size(60, 15);
-            label13.TabIndex = 8;
-            label13.Text = "Dirección:";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(55, 227);
-            label14.Name = "label14";
-            label14.Size = new Size(54, 15);
-            label14.TabIndex = 9;
-            label14.Text = "Nombre:";
-            // 
-            // labelNombre
-            // 
-            labelNombre.AutoSize = true;
-            labelNombre.Location = new Point(371, 227);
-            labelNombre.Name = "labelNombre";
-            labelNombre.Size = new Size(12, 15);
-            labelNombre.TabIndex = 10;
-            labelNombre.Text = "-";
-            // 
-            // labelEmail
-            // 
-            labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(371, 252);
-            labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(12, 15);
-            labelEmail.TabIndex = 11;
-            labelEmail.Text = "-";
-            // 
-            // labelTelefono
-            // 
-            labelTelefono.AutoSize = true;
-            labelTelefono.Location = new Point(371, 277);
-            labelTelefono.Name = "labelTelefono";
-            labelTelefono.Size = new Size(12, 15);
-            labelTelefono.TabIndex = 12;
-            labelTelefono.Text = "-";
-            // 
-            // labelDireccion
-            // 
-            labelDireccion.AutoSize = true;
-            labelDireccion.Location = new Point(371, 302);
-            labelDireccion.Name = "labelDireccion";
-            labelDireccion.Size = new Size(12, 15);
-            labelDireccion.TabIndex = 13;
-            labelDireccion.Text = "-";
+            labeComentario.BorderStyle = BorderStyle.FixedSingle;
+            labeComentario.Location = new Point(48, 607);
+            labeComentario.Name = "labeComentario";
+            labeComentario.Size = new Size(366, 116);
+            labeComentario.TabIndex = 15;
+            labeComentario.Text = "Comentarios";
             // 
             // tableLayoutPanel1
             // 
@@ -374,6 +289,106 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
             tableLayoutPanel1.Size = new Size(661, 222);
             tableLayoutPanel1.TabIndex = 14;
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.BackColor = Color.FromArgb(223, 227, 235);
+            label28.Dock = DockStyle.Fill;
+            label28.Location = new Point(594, 70);
+            label28.Margin = new Padding(0);
+            label28.Name = "label28";
+            label28.Size = new Size(67, 25);
+            label28.TabIndex = 14;
+            label28.Text = " ";
+            label28.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.BackColor = Color.FromArgb(223, 227, 235);
+            label27.Dock = DockStyle.Fill;
+            label27.Location = new Point(462, 70);
+            label27.Margin = new Padding(0);
+            label27.Name = "label27";
+            label27.Size = new Size(132, 25);
+            label27.TabIndex = 13;
+            label27.Text = " ";
+            label27.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.BackColor = Color.FromArgb(223, 227, 235);
+            label26.Dock = DockStyle.Fill;
+            label26.Location = new Point(264, 70);
+            label26.Margin = new Padding(0);
+            label26.Name = "label26";
+            label26.Size = new Size(198, 25);
+            label26.TabIndex = 12;
+            label26.Text = " ";
+            label26.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.BackColor = Color.FromArgb(223, 227, 235);
+            label25.Dock = DockStyle.Fill;
+            label25.Location = new Point(66, 70);
+            label25.Margin = new Padding(0);
+            label25.Name = "label25";
+            label25.Size = new Size(198, 25);
+            label25.TabIndex = 11;
+            label25.Text = " ";
+            label25.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelVTotal
+            // 
+            labelVTotal.AutoSize = true;
+            labelVTotal.Dock = DockStyle.Fill;
+            labelVTotal.Location = new Point(594, 40);
+            labelVTotal.Margin = new Padding(0);
+            labelVTotal.Name = "labelVTotal";
+            labelVTotal.Size = new Size(67, 30);
+            labelVTotal.TabIndex = 9;
+            labelVTotal.Text = "-";
+            labelVTotal.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelPrecioUnitario
+            // 
+            labelPrecioUnitario.AutoSize = true;
+            labelPrecioUnitario.Dock = DockStyle.Fill;
+            labelPrecioUnitario.Location = new Point(462, 40);
+            labelPrecioUnitario.Margin = new Padding(0);
+            labelPrecioUnitario.Name = "labelPrecioUnitario";
+            labelPrecioUnitario.Size = new Size(132, 30);
+            labelPrecioUnitario.TabIndex = 8;
+            labelPrecioUnitario.Text = "-";
+            labelPrecioUnitario.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelCantidad
+            // 
+            labelCantidad.AutoSize = true;
+            labelCantidad.Dock = DockStyle.Fill;
+            labelCantidad.Location = new Point(264, 40);
+            labelCantidad.Margin = new Padding(0);
+            labelCantidad.Name = "labelCantidad";
+            labelCantidad.Size = new Size(198, 30);
+            labelCantidad.TabIndex = 7;
+            labelCantidad.Text = "-";
+            labelCantidad.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Dock = DockStyle.Fill;
+            label20.Location = new Point(66, 40);
+            label20.Margin = new Padding(0);
+            label20.Name = "label20";
+            label20.Size = new Size(198, 30);
+            label20.TabIndex = 6;
+            label20.Text = "Leche";
+            label20.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -452,54 +467,6 @@
             labelIdNota1.Text = "-";
             labelIdNota1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Dock = DockStyle.Fill;
-            label20.Location = new Point(66, 40);
-            label20.Margin = new Padding(0);
-            label20.Name = "label20";
-            label20.Size = new Size(198, 30);
-            label20.TabIndex = 6;
-            label20.Text = "Leche";
-            label20.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // labelCantidad
-            // 
-            labelCantidad.AutoSize = true;
-            labelCantidad.Dock = DockStyle.Fill;
-            labelCantidad.Location = new Point(264, 40);
-            labelCantidad.Margin = new Padding(0);
-            labelCantidad.Name = "labelCantidad";
-            labelCantidad.Size = new Size(198, 30);
-            labelCantidad.TabIndex = 7;
-            labelCantidad.Text = "-";
-            labelCantidad.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // labelPrecioUnitario
-            // 
-            labelPrecioUnitario.AutoSize = true;
-            labelPrecioUnitario.Dock = DockStyle.Fill;
-            labelPrecioUnitario.Location = new Point(462, 40);
-            labelPrecioUnitario.Margin = new Padding(0);
-            labelPrecioUnitario.Name = "labelPrecioUnitario";
-            labelPrecioUnitario.Size = new Size(132, 30);
-            labelPrecioUnitario.TabIndex = 8;
-            labelPrecioUnitario.Text = "-";
-            labelPrecioUnitario.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // labelVTotal
-            // 
-            labelVTotal.AutoSize = true;
-            labelVTotal.Dock = DockStyle.Fill;
-            labelVTotal.Location = new Point(594, 40);
-            labelVTotal.Margin = new Padding(0);
-            labelVTotal.Name = "labelVTotal";
-            labelVTotal.Size = new Size(67, 30);
-            labelVTotal.TabIndex = 9;
-            labelVTotal.Text = "-";
-            labelVTotal.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // label24
             // 
             label24.AutoSize = true;
@@ -512,58 +479,6 @@
             label24.TabIndex = 10;
             label24.Text = " ";
             label24.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.BackColor = Color.FromArgb(223, 227, 235);
-            label25.Dock = DockStyle.Fill;
-            label25.Location = new Point(66, 70);
-            label25.Margin = new Padding(0);
-            label25.Name = "label25";
-            label25.Size = new Size(198, 25);
-            label25.TabIndex = 11;
-            label25.Text = " ";
-            label25.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.BackColor = Color.FromArgb(223, 227, 235);
-            label26.Dock = DockStyle.Fill;
-            label26.Location = new Point(264, 70);
-            label26.Margin = new Padding(0);
-            label26.Name = "label26";
-            label26.Size = new Size(198, 25);
-            label26.TabIndex = 12;
-            label26.Text = " ";
-            label26.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.BackColor = Color.FromArgb(223, 227, 235);
-            label27.Dock = DockStyle.Fill;
-            label27.Location = new Point(462, 70);
-            label27.Margin = new Padding(0);
-            label27.Name = "label27";
-            label27.Size = new Size(132, 25);
-            label27.TabIndex = 13;
-            label27.Text = " ";
-            label27.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label28
-            // 
-            label28.AutoSize = true;
-            label28.BackColor = Color.FromArgb(223, 227, 235);
-            label28.Dock = DockStyle.Fill;
-            label28.Location = new Point(594, 70);
-            label28.Margin = new Padding(0);
-            label28.Name = "label28";
-            label28.Size = new Size(67, 25);
-            label28.TabIndex = 14;
-            label28.Text = " ";
-            label28.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label29
             // 
@@ -695,108 +610,193 @@
             label38.Text = " ";
             label38.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // labeComentario
+            // labelDireccion
             // 
-            labeComentario.BorderStyle = BorderStyle.FixedSingle;
-            labeComentario.Location = new Point(48, 607);
-            labeComentario.Name = "labeComentario";
-            labeComentario.Size = new Size(366, 116);
-            labeComentario.TabIndex = 15;
-            labeComentario.Text = "Comentarios";
+            labelDireccion.AutoSize = true;
+            labelDireccion.Location = new Point(371, 302);
+            labelDireccion.Name = "labelDireccion";
+            labelDireccion.Size = new Size(12, 15);
+            labelDireccion.TabIndex = 13;
+            labelDireccion.Text = "-";
             // 
-            // label39
+            // labelTelefono
             // 
-            label39.Location = new Point(527, 616);
-            label39.Name = "label39";
-            label39.Size = new Size(58, 23);
-            label39.TabIndex = 16;
-            label39.Text = "SubTotal";
-            label39.TextAlign = ContentAlignment.MiddleRight;
+            labelTelefono.AutoSize = true;
+            labelTelefono.Location = new Point(371, 277);
+            labelTelefono.Name = "labelTelefono";
+            labelTelefono.Size = new Size(12, 15);
+            labelTelefono.TabIndex = 12;
+            labelTelefono.Text = "-";
             // 
-            // label40
+            // labelEmail
             // 
-            label40.Location = new Point(527, 645);
-            label40.Name = "label40";
-            label40.Size = new Size(58, 37);
-            label40.TabIndex = 17;
-            label40.Text = "Impuesto\r\n(15%)";
-            label40.TextAlign = ContentAlignment.MiddleRight;
+            labelEmail.AutoSize = true;
+            labelEmail.Location = new Point(371, 252);
+            labelEmail.Name = "labelEmail";
+            labelEmail.Size = new Size(12, 15);
+            labelEmail.TabIndex = 11;
+            labelEmail.Text = "-";
             // 
-            // label42
+            // labelNombre
             // 
-            label42.Location = new Point(527, 691);
-            label42.Name = "label42";
-            label42.Size = new Size(58, 15);
-            label42.TabIndex = 19;
-            label42.Text = "Total";
-            label42.TextAlign = ContentAlignment.MiddleRight;
+            labelNombre.AutoSize = true;
+            labelNombre.Location = new Point(371, 227);
+            labelNombre.Name = "labelNombre";
+            labelNombre.Size = new Size(12, 15);
+            labelNombre.TabIndex = 10;
+            labelNombre.Text = "-";
             // 
-            // labelSubTotal
+            // label14
             // 
-            labelSubTotal.AutoSize = true;
-            labelSubTotal.Location = new Point(594, 620);
-            labelSubTotal.Name = "labelSubTotal";
-            labelSubTotal.Size = new Size(12, 15);
-            labelSubTotal.TabIndex = 20;
-            labelSubTotal.Text = "-";
-            labelSubTotal.TextAlign = ContentAlignment.MiddleLeft;
+            label14.AutoSize = true;
+            label14.Location = new Point(55, 227);
+            label14.Name = "label14";
+            label14.Size = new Size(54, 15);
+            label14.TabIndex = 9;
+            label14.Text = "Nombre:";
             // 
-            // labelImpuesto
+            // label13
             // 
-            labelImpuesto.AutoSize = true;
-            labelImpuesto.Location = new Point(594, 656);
-            labelImpuesto.Name = "labelImpuesto";
-            labelImpuesto.Size = new Size(37, 15);
-            labelImpuesto.TabIndex = 21;
-            labelImpuesto.Text = "$ 0.00";
-            labelImpuesto.TextAlign = ContentAlignment.MiddleLeft;
+            label13.AutoSize = true;
+            label13.Location = new Point(55, 302);
+            label13.Name = "label13";
+            label13.Size = new Size(60, 15);
+            label13.TabIndex = 8;
+            label13.Text = "Dirección:";
             // 
-            // labelTotal
+            // label12
             // 
-            labelTotal.AutoSize = true;
-            labelTotal.Location = new Point(594, 691);
-            labelTotal.Name = "labelTotal";
-            labelTotal.Size = new Size(12, 15);
-            labelTotal.TabIndex = 23;
-            labelTotal.Text = "-";
-            labelTotal.TextAlign = ContentAlignment.MiddleLeft;
+            label12.AutoSize = true;
+            label12.Location = new Point(55, 277);
+            label12.Name = "label12";
+            label12.Size = new Size(55, 15);
+            label12.TabIndex = 7;
+            label12.Text = "Teléfono:";
             // 
-            // label47
+            // label11
             // 
-            label47.AutoSize = true;
-            label47.Location = new Point(335, 770);
-            label47.Name = "label47";
-            label47.Size = new Size(120, 15);
-            label47.TabIndex = 24;
-            label47.Text = "FINCA \"SAN RAFAEL\"";
+            label11.AutoSize = true;
+            label11.Location = new Point(55, 252);
+            label11.Name = "label11";
+            label11.Size = new Size(39, 15);
+            label11.TabIndex = 6;
+            label11.Text = "Email:";
             // 
-            // label48
+            // labelFechaEmision
             // 
-            label48.AutoSize = true;
-            label48.Location = new Point(257, 798);
-            label48.Name = "label48";
-            label48.Size = new Size(132, 15);
-            label48.TabIndex = 25;
-            label48.Text = "sanrarafael@gmail.com";
+            labelFechaEmision.AutoSize = true;
+            labelFechaEmision.Location = new Point(641, 155);
+            labelFechaEmision.Name = "labelFechaEmision";
+            labelFechaEmision.Size = new Size(12, 15);
+            labelFechaEmision.TabIndex = 5;
+            labelFechaEmision.Text = "-";
             // 
-            // label49
+            // labelIdNota
             // 
-            label49.AutoSize = true;
-            label49.Location = new Point(411, 798);
-            label49.Name = "label49";
-            label49.Size = new Size(90, 15);
-            label49.TabIndex = 26;
-            label49.Text = "+593 998938277";
-            label49.Click += label49_Click;
+            labelIdNota.AutoSize = true;
+            labelIdNota.Location = new Point(642, 123);
+            labelIdNota.Name = "labelIdNota";
+            labelIdNota.Size = new Size(12, 15);
+            labelIdNota.TabIndex = 4;
+            labelIdNota.Text = "-";
             // 
-            // label41
+            // label8
             // 
-            label41.AutoSize = true;
-            label41.Location = new Point(392, 798);
-            label41.Name = "label41";
-            label41.Size = new Size(12, 15);
-            label41.TabIndex = 27;
-            label41.Text = "/";
+            label8.AutoSize = true;
+            label8.Location = new Point(574, 155);
+            label8.Name = "label8";
+            label8.Size = new Size(41, 15);
+            label8.TabIndex = 3;
+            label8.Text = "Fecha:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(574, 123);
+            label7.Name = "label7";
+            label7.Size = new Size(24, 15);
+            label7.TabIndex = 2;
+            label7.Text = "N°:";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(223, 227, 235);
+            panel3.Controls.Add(label6);
+            panel3.Controls.Add(label5);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(label2);
+            panel3.Location = new Point(55, 102);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(247, 100);
+            panel3.TabIndex = 1;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(15, 75);
+            label6.Name = "label6";
+            label6.Size = new Size(214, 15);
+            label6.TabIndex = 4;
+            label6.Text = "a 2 km del aeropuerto de Tulcá - Carchi";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(68, 57);
+            label5.Name = "label5";
+            label5.Size = new Size(166, 15);
+            label5.TabIndex = 3;
+            label5.Text = "Panamericana Norte E35 Km5 \r\n";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(4, 55);
+            label4.Name = "label4";
+            label4.Size = new Size(63, 15);
+            label4.TabIndex = 2;
+            label4.Text = "Dirección:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(79, 33);
+            label3.Name = "label3";
+            label3.Size = new Size(98, 15);
+            label3.TabIndex = 1;
+            label3.Text = "Ronaldo Almeida";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(59, 14);
+            label2.Name = "label2";
+            label2.Size = new Size(138, 14);
+            label2.TabIndex = 0;
+            label2.Text = "FINCA \"SAN RAFAEL\"";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 33F, FontStyle.Bold);
+            label1.Location = new Point(55, 24);
+            label1.Name = "label1";
+            label1.Size = new Size(356, 60);
+            label1.TabIndex = 0;
+            label1.Text = "NOTA DE VENTA";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label18.Location = new Point(274, 36);
+            label18.Name = "label18";
+            label18.Size = new Size(351, 32);
+            label18.TabIndex = 58;
+            label18.Text = "Consultar Notas de Venta";
             // 
             // SubFormVConsultar
             // 
@@ -813,10 +813,10 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -877,7 +877,7 @@
         private Label labelTotal;
         private Label labelImpuesto;
         private Label labelSubTotal;
-        private Label label42;
+        private Label label45;
         private Label label40;
         private Label label39;
         private Label label41;

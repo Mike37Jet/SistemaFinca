@@ -32,22 +32,6 @@ namespace SistemaFinca
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label49_Click(object sender, EventArgs e)
-        {
-
-        }
-
         internal void llenarDatos(string cantidad, string vTotal, string fecha, string idnota)
         {
             labelCantidad.Text = cantidad;
@@ -55,7 +39,9 @@ namespace SistemaFinca
             labelFechaEmision.Text = fecha;
             labelIdNota.Text = idnota;
             labelIdNota1.Text = idnota;
-            throw new NotImplementedException();
+            labelSubTotal.Text = "$ "+vTotal;
+            labelTotal.Text= "$ " + vTotal;
+            
         }
 
         internal void llenarDatos1(string nombres, string apellidos, string telefono, string correo, string direccion)
@@ -64,7 +50,7 @@ namespace SistemaFinca
             labelTelefono.Text = telefono;
             labelEmail.Text = correo;
             labelDireccion.Text = direccion;
-            throw new NotImplementedException();
+          
         }
     }
 

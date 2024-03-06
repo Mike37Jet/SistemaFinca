@@ -79,7 +79,7 @@ namespace SistemaFinca
                             return;
                         }
                     }
-                    String commNotas = $"SELECT cantidadleche, monto, fechaemision, idnota FROM nota_venta WHERE cedulacliente = {txtCedula.Text}";
+                    String commNotas = $"SELECT cantidadleche, monto, fechaemision, idnota FROM nota_venta WHERE cedulacliente = '{txtCedula.Text}'";
                     NpgsqlCommand comm = new NpgsqlCommand(commNotas, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
                     {
@@ -139,7 +139,7 @@ namespace SistemaFinca
                 {
                     connection.Open();
 
-                    String commString2 = $"SELECT cantidadleche, monto, fechaemision, idnota FROM nota_venta WHERE cedulacliente = {txtCedula.Text}";
+                    String commString2 = $"SELECT cantidadleche, monto, fechaemision, idnota FROM nota_venta WHERE cedulacliente = '{txtCedula.Text}'";
                     NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
                     int resultado = comm2.ExecuteNonQuery();
 
@@ -150,13 +150,10 @@ namespace SistemaFinca
                            string VTotal = reader.GetDecimal(1).ToString();
                            string fecha = reader.GetDateTime(2).ToString();
                            string idnota = reader.GetInt32(3).ToString();
-                            formSubVConsultas.llenarDatos(cantidad,VTotal,fecha,idnota);
-                          
+                           formSubVConsultas.llenarDatos(cantidad,VTotal,fecha,idnota);
+                    }
 
-
-                        }
-
-                    String commString = $"SELECT nombres, apellidos, telefono, correo, direccion FROM cliente WHERE cedulacliente = cast((SELECT cedulacliente FROM nota_venta WHERE idnota = {this.idnota}) as varchar)";
+                    String commString = $"SELECT nombres, apellidos, telefono, correo, direccion FROM cliente WHERE cedulacliente = (SELECT cedulacliente FROM nota_venta WHERE idnota = {this.idnota})";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     int resultado2 = comm.ExecuteNonQuery();
 
@@ -186,30 +183,6 @@ namespace SistemaFinca
                 }
             }
 
-            SaveFileDialog guardar = new SaveFileDialog();
-            guardar.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("dd-MM-yyyyHH-mm-ss"));
-
-
-            string paginaHtml = Properties.Resources.DOCTYPE.ToString();
-
-            if (guardar.ShowDialog() == DialogResult.OK)
-            {
-                using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
-                {
-                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
-                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
-                    pdfDoc.Open();
-                    pdfDoc.Add(new Phrase(""));
-            
-                    using (StringReader notaStr = new StringReader(paginaHtml))
-                    {
-                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, notaStr);
-                    }
-            
-                    pdfDoc.Close();
-                    stream.Close();
-                }
-            }
 
             abrirFormulariosHijos(formSubVConsultas);
         

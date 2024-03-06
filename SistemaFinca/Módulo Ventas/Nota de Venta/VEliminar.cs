@@ -71,7 +71,7 @@ namespace SistemaFinca
                         NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
                         int resultado = comm2.ExecuteNonQuery();
 
-                        String commString = $"UPDATE retiro SET pagado = false WHERE idretiro IN (SELECT idretiro FROM nota_venta_retiros WHERE idnota = {this.idnotaventa})\r\n";
+                        String commString = $"UPDATE retiro SET pagado = false WHERE idretiro IN (SELECT idretiro FROM nota_venta_retiros WHERE idnota = {this.idnotaventa})";
                         NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                         int resultado2 = comm.ExecuteNonQuery();
 
@@ -124,7 +124,7 @@ namespace SistemaFinca
                             return;
                         }
                     }
-                    String commNotas = $"SELECT cantidadleche, monto, fechaemision, idnota, idcontrato FROM nota_venta WHERE cedulacliente = {txtCedula.Text}";
+                    String commNotas = $"SELECT cantidadleche, monto, fechaemision, idnota, idcontrato FROM nota_venta WHERE cedulacliente = '{txtCedula.Text}'";
                     NpgsqlCommand comm = new NpgsqlCommand(commNotas, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
                     {

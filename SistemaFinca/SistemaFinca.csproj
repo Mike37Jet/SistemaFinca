@@ -82,26 +82,26 @@
     </Compile>
     <Compile Update="Módulo Ventas\Contratos\VC_Registrar.cs" />
     <Compile Update="Módulo Ventas\Retiros\FormRetiros.cs" />
-    <Compile Update="Módulo Ventas\Deudores\FormReportesAnalisis.cs" />
-    <Compile Update="Módulo Ventas\Deudores\IFGenerarReporte.cs" />
-    <Compile Update="Módulo Ventas\Recordatorios y Alertas\FormRecordAlert.cs" />
+    <Compile Update="Módulo Ventas\Reporte y Análisis\FormReportesAnalisis.cs" />
+    <Compile Update="Módulo Ventas\Reporte y Análisis\IFGenerarReporte.cs" />
+    <Compile Update="Módulo Ventas\Clientes Morosos\FormClienteMoroso.cs" />
     <Compile Update="Módulo Ventas\Retiros\VR_Eliminar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Módulo Ventas\Retiros\VR_Registrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Módulo Ventas\Ventas\FormVent.cs" />
-    <Compile Update="Módulo Ventas\Ventas\SubVConsultar.cs">
+    <Compile Update="Módulo Ventas\Nota de Venta\FormNotaVenta.cs" />
+    <Compile Update="Módulo Ventas\Nota de Venta\SubVConsultar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Módulo Ventas\Ventas\VEliminar.cs">
+    <Compile Update="Módulo Ventas\Nota de Venta\VEliminar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Módulo Ventas\Ventas\VConsultar.cs">
+    <Compile Update="Módulo Ventas\Nota de Venta\VConsultar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Módulo Ventas\Ventas\VNotaDeVenta.cs" />
+    <Compile Update="Módulo Ventas\Nota de Venta\VPagar.cs" />
     <Compile Update="Módulo Zonas de Pastoreo\Arriendo\FormGestArriAreas.cs" />
     <Compile Update="Módulo Zonas de Pastoreo\Registro Zonas Pastoreo\FormGestZonPast.cs" />
     <Compile Update="Módulo Zonas de Pastoreo\Registro Zonas Pastoreo\GZP_Registrar.cs" />

@@ -337,7 +337,7 @@ namespace SistemaFinca
 
         private void buttonAlertas_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormRecordAlert());
+            abrirFormulariosHijos(new FormClienteMoroso());
         }
 
         private void buttonGestionPagos_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca
 {
-    partial class FormRecordAlert
+    partial class FormClienteMoroso
     {
         /// <summary>
         /// Required designer variable.

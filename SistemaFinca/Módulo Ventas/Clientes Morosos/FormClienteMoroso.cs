@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormRecordAlert : Form
+    public partial class FormClienteMoroso : Form
     {
-        public FormRecordAlert()
+        public FormClienteMoroso()
         {
             InitializeComponent();
         }
