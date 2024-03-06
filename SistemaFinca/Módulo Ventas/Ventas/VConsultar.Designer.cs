@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            panel1 = new Panel();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            panelSubHijo = new Panel();
             buttonVer = new Button();
             lstNotasVenta = new DataGridView();
             ColumnCantRetiro = new DataGridViewTextBoxColumn();
@@ -42,24 +42,24 @@
             label4 = new Label();
             btnConsultar = new Button();
             label18 = new Label();
-            panel1.SuspendLayout();
+            panelSubHijo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)lstNotasVenta).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // panelSubHijo
             // 
-            panel1.Controls.Add(buttonVer);
-            panel1.Controls.Add(lstNotasVenta);
-            panel1.Controls.Add(txtCedula);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(btnConsultar);
-            panel1.Controls.Add(label18);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(895, 541);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            panelSubHijo.Controls.Add(buttonVer);
+            panelSubHijo.Controls.Add(lstNotasVenta);
+            panelSubHijo.Controls.Add(txtCedula);
+            panelSubHijo.Controls.Add(label4);
+            panelSubHijo.Controls.Add(btnConsultar);
+            panelSubHijo.Controls.Add(label18);
+            panelSubHijo.Dock = DockStyle.Fill;
+            panelSubHijo.Location = new Point(0, 0);
+            panelSubHijo.Name = "panelSubHijo";
+            panelSubHijo.Size = new Size(895, 541);
+            panelSubHijo.TabIndex = 0;
+            panelSubHijo.Paint += panel1_Paint;
             // 
             // buttonVer
             // 
@@ -86,36 +86,36 @@
             lstNotasVenta.BorderStyle = BorderStyle.None;
             lstNotasVenta.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             lstNotasVenta.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            lstNotasVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            lstNotasVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             lstNotasVenta.ColumnHeadersHeight = 30;
             lstNotasVenta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             lstNotasVenta.Columns.AddRange(new DataGridViewColumn[] { ColumnCantRetiro, ColumnFecha, ColumnEstado, ColumnID });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            lstNotasVenta.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            lstNotasVenta.DefaultCellStyle = dataGridViewCellStyle5;
             lstNotasVenta.EnableHeadersVisualStyles = false;
             lstNotasVenta.GridColor = Color.SteelBlue;
             lstNotasVenta.Location = new Point(66, 177);
             lstNotasVenta.Name = "lstNotasVenta";
             lstNotasVenta.ReadOnly = true;
             lstNotasVenta.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(45, 66, 91);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            lstNotasVenta.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(45, 66, 91);
+            dataGridViewCellStyle6.ForeColor = Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = Color.White;
+            lstNotasVenta.RowsDefaultCellStyle = dataGridViewCellStyle6;
             lstNotasVenta.RowTemplate.Height = 25;
             lstNotasVenta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             lstNotasVenta.Size = new Size(762, 282);
@@ -197,19 +197,19 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
-            Controls.Add(panel1);
+            Controls.Add(panelSubHijo);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormVConsultar";
             Text = "Administrador";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panelSubHijo.ResumeLayout(false);
+            panelSubHijo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)lstNotasVenta).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private Panel panel1;
+        private Panel panelSubHijo;
         private Button button3;
         private Label label17;
         private Label label16;

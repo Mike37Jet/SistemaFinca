@@ -19,6 +19,7 @@ using iTextSharp.tool.xml;
 using System.IO;
 using System.Drawing.Imaging;
 using DinkToPdf;
+using Microsoft.Identity.Client.NativeInterop;
 
 
 namespace SistemaFinca
@@ -27,6 +28,7 @@ namespace SistemaFinca
     {
         private String idnota = "";
         private String idcliente = "";
+        private SubFormVConsultar formSubVConsultas = new SubFormVConsultar();
         public FormVConsultar()
         {
             InitializeComponent();
@@ -35,6 +37,23 @@ namespace SistemaFinca
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private Form formularioActivo = null;
+        private void abrirFormulariosHijos(Form formularioHijo)
+        {
+            if (formularioActivo != null)
+            {
+                formularioActivo.Close();
+            }
+            formularioActivo = formularioHijo;
+            formularioHijo.TopLevel = false;
+            formularioHijo.FormBorderStyle = FormBorderStyle.None;
+            formularioHijo.Dock = DockStyle.Fill;
+            panelSubHijo.Controls.Add(formularioHijo);
+            panelSubHijo.Tag = formularioHijo;
+            formularioHijo.BringToFront();
+            formularioHijo.Show();
         }
 
 
@@ -131,8 +150,11 @@ namespace SistemaFinca
                            string VTotal = reader.GetDecimal(1).ToString();
                            string fecha = reader.GetDateTime(2).ToString();
                            string idnota = reader.GetInt32(3).ToString();
-                 
-                    }
+                            formSubVConsultas.llenarDatos(cantidad,VTotal,fecha,idnota);
+                          
+
+
+                        }
 
                     String commString = $"SELECT nombres, apellidos, telefono, correo, direccion FROM cliente WHERE cedulacliente = cast((SELECT cedulacliente FROM nota_venta WHERE idnota = {this.idnota}) as varchar)";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
@@ -146,7 +168,9 @@ namespace SistemaFinca
                         string telefono = reader.GetString(2).ToString();
                         string correo = reader.GetString(3).ToString();
                         string direccion = reader.GetString(4).ToString();
-                 
+                        formSubVConsultas.llenarDatos1(nombres, apellidos, telefono, correo, direccion);
+                           
+
                     }
                 }
                 catch (NpgsqlException ex)
@@ -187,7 +211,7 @@ namespace SistemaFinca
                 }
             }
 
-
+            abrirFormulariosHijos(formSubVConsultas);
         
         }
 
