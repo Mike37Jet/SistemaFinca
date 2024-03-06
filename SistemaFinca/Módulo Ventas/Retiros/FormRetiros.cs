@@ -13,11 +13,13 @@ namespace SistemaFinca
 {
     public partial class FormRetiros : Form
     {
-        public FormRetiros()
+        private char rol;
+        public FormRetiros(char rol)
         {
             InitializeComponent();
             lstRetiros.Items.Clear();
             getRetiros();
+            this.rol = rol;
         }
 
         private void getRetiros()
@@ -88,6 +90,11 @@ namespace SistemaFinca
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
+            if (this.rol != 'A')
+            {
+                MessageBox.Show("Acceso denegado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             abrirFormulariosHijos(new FormVR_Eliminar());
         }
 

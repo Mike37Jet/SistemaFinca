@@ -327,7 +327,7 @@ namespace SistemaFinca
 
         private void buttonNotaVentas_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormVentas());
+            abrirFormulariosHijos(new FormVentas(this.rol));
         }
 
         private void buttonInformeAnalisis_Click(object sender, EventArgs e)
@@ -342,7 +342,7 @@ namespace SistemaFinca
 
         private void buttonGestionPagos_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormRetiros());
+            abrirFormulariosHijos(new FormRetiros(this.rol));
         }
 
         private void buttonGesZonPast_Click(object sender, EventArgs e)
@@ -382,7 +382,7 @@ namespace SistemaFinca
 
         private void buttonContratos_Click(object sender, EventArgs e)
         {
-            abrirFormulariosHijos(new FormContratos());
+            abrirFormulariosHijos(new FormContratos(this.rol));
         }
 
         private void label2_Click(object sender, EventArgs e)

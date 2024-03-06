@@ -13,10 +13,12 @@ namespace SistemaFinca
 {
     public partial class FormContratos : Form
     {
-        public FormContratos()
+        private char rol;
+        public FormContratos(char rol)
         {
             InitializeComponent();
             getContratos();
+            this.rol = rol;
         }
 
         private void getContratos()
@@ -109,6 +111,11 @@ namespace SistemaFinca
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            if (this.rol != 'A')
+            {
+                MessageBox.Show("Acceso denegado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             abrirFormulariosHijos(new FormVC_Registrar());
         }
 
@@ -119,6 +126,11 @@ namespace SistemaFinca
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (this.rol != 'A')
+            {
+                MessageBox.Show("Acceso denegado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             abrirFormulariosHijos(new FormVC_Eliminar());
         }
     }

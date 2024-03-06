@@ -14,10 +14,12 @@ namespace SistemaFinca
     public partial class FormVentas : Form
     {
         private String cedulacliente, idcontrato;
+        private char rol;
 
-        public FormVentas()
+        public FormVentas(char rol)
         {
             InitializeComponent();
+            this.rol = rol;
         }
         private Form formularioActivo = null;
 
@@ -131,6 +133,11 @@ namespace SistemaFinca
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (this.rol != 'A')
+            {
+                MessageBox.Show("Acceso denegado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             abrirFormulariosHijos(new FormVEliminar());
         }
     }

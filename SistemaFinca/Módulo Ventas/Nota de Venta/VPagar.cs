@@ -211,8 +211,6 @@ namespace SistemaFinca
             {
                 try
                 {
-                    MessageBox.Show($"{this.idcontrato}", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     connection.Open();
                     String commString = $"INSERT INTO nota_venta(idcontrato, cedulacliente, monto, cantidadleche, fechaemision) " +
                         $"VALUES({this.idcontrato}, '{this.cedulacliente}', {this.monto.ToString().Replace(',', '.')}, {this.cantidadLeche}, '{FormVC_Registrar.ConvertirFecha(txtFechaEmision.Text)}')";
