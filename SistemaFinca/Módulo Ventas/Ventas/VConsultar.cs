@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,13 +11,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Net.Mime.MediaTypeNames;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
+using System.Drawing.Imaging;
+using DinkToPdf;
+
 
 namespace SistemaFinca
 {
     public partial class FormVConsultar : Form
     {
-
+        private String idnota = "";
+        private String idcliente = "";
         public FormVConsultar()
         {
             InitializeComponent();
@@ -27,7 +37,7 @@ namespace SistemaFinca
 
         }
 
- 
+
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             if (!FormGU_Registrar.CedulaEsValida(txtCedula.Text))
@@ -50,7 +60,7 @@ namespace SistemaFinca
                             return;
                         }
                     }
-                    String commNotas = $"SELECT cantidadleche, monto, fechaemision FROM nota_venta WHERE cedulacliente = {txtCedula.Text}";
+                    String commNotas = $"SELECT cantidadleche, monto, fechaemision, idnota FROM nota_venta WHERE cedulacliente = {txtCedula.Text}";
                     NpgsqlCommand comm = new NpgsqlCommand(commNotas, connection);
                     using (NpgsqlDataReader reader = comm.ExecuteReader())
                     {
@@ -59,13 +69,16 @@ namespace SistemaFinca
                             MessageBox.Show("No existen notas de venta", "Vuelve a intentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-                        lstNotasVenta.Items.Clear();
+                        lstNotasVenta.Rows.Clear();
                         while (reader.Read())
                         {
-                            ListViewItem item = new ListViewItem(reader.GetInt32(0).ToString());
-                            item.SubItems.Add(reader.GetDecimal(1).ToString());
-                            item.SubItems.Add(reader.GetDateTime(2).ToString());
-                            lstNotasVenta.Items.Add(item);
+                            string cantidad = reader.GetInt32(0).ToString();
+                            string monto = reader.GetDecimal(1).ToString();
+                            string fecha = reader.GetDateTime(2).ToString();
+                            string idnota = reader.GetInt32(3).ToString();
+
+                            lstNotasVenta.Rows.Add(cantidad, monto, fecha, idnota);
+                            lstNotasVenta.ClearSelection();
                         }
                     }
                 }
@@ -82,5 +95,102 @@ namespace SistemaFinca
                 }
             }
         }
+
+        private void lstNotasVenta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                lstNotasVenta.ClearSelection();
+                lstNotasVenta.Rows[e.RowIndex].Selected = true;
+
+                this.idnota = lstNotasVenta.Rows[e.RowIndex].Cells[3].Value.ToString();
+            }
+        }
+
+        private void buttonVer_Click(object sender, EventArgs e)
+        {
+            if (this.idnota == "")
+            {
+                MessageBox.Show("Seleccione una nota de venta, para visualizar", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    String commString2 = $"SELECT cantidadleche, monto, fechaemision, idnota FROM nota_venta WHERE cedulacliente = {txtCedula.Text}";
+                    NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
+                    int resultado = comm2.ExecuteNonQuery();
+
+                    using (NpgsqlDataReader reader = comm2.ExecuteReader())
+                    while (reader.Read())
+                    {
+                           string cantidad = reader.GetInt32(0).ToString();
+                           string VTotal = reader.GetDecimal(1).ToString();
+                           string fecha = reader.GetDateTime(2).ToString();
+                           string idnota = reader.GetInt32(3).ToString();
+                 
+                    }
+
+                    String commString = $"SELECT nombres, apellidos, telefono, correo, direccion FROM cliente WHERE cedulacliente = cast((SELECT cedulacliente FROM nota_venta WHERE idnota = {this.idnota}) as varchar)";
+                    NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
+                    int resultado2 = comm.ExecuteNonQuery();
+
+                    using (NpgsqlDataReader reader = comm.ExecuteReader())
+                    while (reader.Read())
+                    {
+                        string nombres = reader.GetString(0).ToString();
+                        string apellidos = reader.GetString(1).ToString();
+                        string telefono = reader.GetString(2).ToString();
+                        string correo = reader.GetString(3).ToString();
+                        string direccion = reader.GetString(4).ToString();
+                 
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+
+            SaveFileDialog guardar = new SaveFileDialog();
+            guardar.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("dd-MM-yyyyHH-mm-ss"));
+
+
+            string paginaHtml = Properties.Resources.DOCTYPE.ToString();
+
+            if (guardar.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                    pdfDoc.Add(new Phrase(""));
+            
+                    using (StringReader notaStr = new StringReader(paginaHtml))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, notaStr);
+                    }
+            
+                    pdfDoc.Close();
+                    stream.Close();
+                }
+            }
+
+
+        
+        }
+
     }
+
 }

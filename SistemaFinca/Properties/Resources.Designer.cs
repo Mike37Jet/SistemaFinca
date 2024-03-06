@@ -59,5 +59,108 @@ namespace SistemaFinca.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+        ///
+        ///&lt;head&gt;
+        ///    &lt;title&gt;Nota de Venta&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        table.border {
+        ///            border-collapse: collapse;
+        ///        }
+        ///
+        ///        table.border th {
+        ///            padding: 5px;
+        ///            border: 1px solid black;
+        ///        }
+        ///
+        ///        table.border td {
+        ///            padding: 5px;
+        ///            border: 1px solid black;
+        ///        }
+        ///    &lt;/style&gt;
+        ///&lt;/head&gt;
+        ///
+        ///&lt;body&gt;
+        ///
+        ///    &lt;h1 style=&quot;font-family: &apos;Calibri&apos;;font-size: 50px&quot;&gt;NOTA DE VENTA&lt;/h1&gt; [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string DOCTYPE {
+            get {
+                return ResourceManager.GetString("DOCTYPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;head&gt;
+        ///	&lt;meta charset=&quot;UTF-8&quot;&gt;
+        ///	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        ///	&lt;title&gt;Nota de Venta&lt;/title&gt;
+        ///	&lt;style&gt;
+        ///		body {
+        ///			font-family: Arial, sans-serif;
+        ///		}
+        ///
+        ///		.container {
+        ///			max-width: 600px;
+        ///			margin: 0 auto;
+        ///			padding: 70px;
+        ///			border: 1px solid #ccc;
+        ///		}
+        ///
+        ///		.header {
+        ///			text-align: center;
+        ///			font-weight: bold;
+        ///			font-size: 24px;
+        ///		}
+        ///
+        ///		.info {
+        ///			margin-top: 20px;
+        ///		}
+        ///
+        ///		.table {
+        ///			width: 100%;
+        ///			borde [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string plantillaNota {
+            get {
+                return ResourceManager.GetString("plantillaNota", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+        ///&lt;head&gt;
+        ///	&lt;title&gt;Nota de Venta&lt;/title&gt;
+        ///	&lt;style&gt;
+        ///        table.border {
+        ///            border-collapse: collapse;
+        ///        }
+        ///
+        ///            table.border th {
+        ///                padding: 5px;
+        ///                border: 1px solid black;
+        ///            }
+        ///
+        ///            table.border td {
+        ///                padding: 5px;
+        ///                border: 1px solid black;
+        ///            }
+        ///	&lt;/style&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///
+        ///		&lt;h1 style=&quot;font-family: &apos;Calibri&apos;;font-size: 50px&quot;&gt;N [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string xd {
+            get {
+                return ResourceManager.GetString("xd", resourceCulture);
+            }
+        }
     }
 }

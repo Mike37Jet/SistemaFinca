@@ -28,20 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
-            lstNotasVenta = new ListView();
-            columnCantidad = new ColumnHeader();
-            columnHeader1 = new ColumnHeader();
-            columnFechaEmision = new ColumnHeader();
+            buttonVer = new Button();
+            lstNotasVenta = new DataGridView();
+            ColumnCantRetiro = new DataGridViewTextBoxColumn();
+            ColumnFecha = new DataGridViewTextBoxColumn();
+            ColumnEstado = new DataGridViewTextBoxColumn();
+            ColumnID = new DataGridViewTextBoxColumn();
             txtCedula = new TextBox();
             label4 = new Label();
             btnConsultar = new Button();
             label18 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)lstNotasVenta).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(buttonVer);
             panel1.Controls.Add(lstNotasVenta);
             panel1.Controls.Add(txtCedula);
             panel1.Controls.Add(label4);
@@ -54,33 +61,91 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
+            // buttonVer
+            // 
+            buttonVer.Anchor = AnchorStyles.Bottom;
+            buttonVer.Font = new Font("Segoe UI", 11.25F);
+            buttonVer.Location = new Point(416, 494);
+            buttonVer.Margin = new Padding(3, 2, 3, 2);
+            buttonVer.Name = "buttonVer";
+            buttonVer.Size = new Size(103, 27);
+            buttonVer.TabIndex = 138;
+            buttonVer.Text = "Ver";
+            buttonVer.UseVisualStyleBackColor = true;
+            buttonVer.Click += buttonVer_Click;
+            // 
             // lstNotasVenta
             // 
+            lstNotasVenta.AllowUserToAddRows = false;
+            lstNotasVenta.AllowUserToDeleteRows = false;
+            lstNotasVenta.AllowUserToResizeColumns = false;
+            lstNotasVenta.AllowUserToResizeRows = false;
             lstNotasVenta.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lstNotasVenta.Columns.AddRange(new ColumnHeader[] { columnCantidad, columnHeader1, columnFechaEmision });
-            lstNotasVenta.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lstNotasVenta.Location = new Point(213, 166);
-            lstNotasVenta.Margin = new Padding(3, 2, 3, 2);
+            lstNotasVenta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            lstNotasVenta.BackgroundColor = Color.FromArgb(45, 66, 91);
+            lstNotasVenta.BorderStyle = BorderStyle.None;
+            lstNotasVenta.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            lstNotasVenta.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            lstNotasVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            lstNotasVenta.ColumnHeadersHeight = 30;
+            lstNotasVenta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            lstNotasVenta.Columns.AddRange(new DataGridViewColumn[] { ColumnCantRetiro, ColumnFecha, ColumnEstado, ColumnID });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            lstNotasVenta.DefaultCellStyle = dataGridViewCellStyle2;
+            lstNotasVenta.EnableHeadersVisualStyles = false;
+            lstNotasVenta.GridColor = Color.SteelBlue;
+            lstNotasVenta.Location = new Point(66, 177);
             lstNotasVenta.Name = "lstNotasVenta";
-            lstNotasVenta.Size = new Size(471, 239);
+            lstNotasVenta.ReadOnly = true;
+            lstNotasVenta.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(45, 66, 91);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            lstNotasVenta.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            lstNotasVenta.RowTemplate.Height = 25;
+            lstNotasVenta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            lstNotasVenta.Size = new Size(762, 282);
             lstNotasVenta.TabIndex = 137;
-            lstNotasVenta.UseCompatibleStateImageBehavior = false;
-            lstNotasVenta.View = View.Details;
+            lstNotasVenta.CellClick += lstNotasVenta_CellClick;
             // 
-            // columnCantidad
+            // ColumnCantRetiro
             // 
-            columnCantidad.Text = "Cantidad de leche";
-            columnCantidad.Width = 140;
+            ColumnCantRetiro.HeaderText = "Cantidad de leche";
+            ColumnCantRetiro.Name = "ColumnCantRetiro";
+            ColumnCantRetiro.ReadOnly = true;
             // 
-            // columnHeader1
+            // ColumnFecha
             // 
-            columnHeader1.Text = "Monto";
-            columnHeader1.Width = 140;
+            ColumnFecha.HeaderText = "Monto";
+            ColumnFecha.Name = "ColumnFecha";
+            ColumnFecha.ReadOnly = true;
             // 
-            // columnFechaEmision
+            // ColumnEstado
             // 
-            columnFechaEmision.Text = "Fecha de emisión";
-            columnFechaEmision.Width = 160;
+            ColumnEstado.HeaderText = "Fecha de emisión";
+            ColumnEstado.Name = "ColumnEstado";
+            ColumnEstado.ReadOnly = true;
+            // 
+            // ColumnID
+            // 
+            ColumnID.HeaderText = "Id";
+            ColumnID.Name = "ColumnID";
+            ColumnID.ReadOnly = true;
+            ColumnID.Visible = false;
             // 
             // txtCedula
             // 
@@ -139,6 +204,7 @@
             Text = "Administrador";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)lstNotasVenta).EndInit();
             ResumeLayout(false);
         }
 
@@ -156,9 +222,11 @@
         private TextBox txtCedula;
         private Label label4;
         private Button btnConsultar;
-        private ListView lstNotasVenta;
-        private ColumnHeader columnCantidad;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnFechaEmision;
+        private DataGridView lstNotasVenta;
+        private DataGridViewTextBoxColumn ColumnCantRetiro;
+        private DataGridViewTextBoxColumn ColumnFecha;
+        private DataGridViewTextBoxColumn ColumnEstado;
+        private DataGridViewTextBoxColumn ColumnID;
+        private Button buttonVer;
     }
 }

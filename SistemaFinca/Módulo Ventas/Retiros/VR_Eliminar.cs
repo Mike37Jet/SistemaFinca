@@ -43,11 +43,11 @@ namespace SistemaFinca
                         connection.Open();
 
                         String commString2 = $"UPDATE contrato SET cantidadretirada = cantidadretirada - (SELECT cantidadleche " +
-                            $"FROM retiro WHERE idretiro = {this.idretiro}) WHERE idcontrato = {this.idcontrato}";
+                            $"FROM retiro WHERE idnota = {this.idretiro}) WHERE idcontrato = {this.idcontrato}";
                         NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
                         int resultado = comm2.ExecuteNonQuery();
 
-                        String commString = $"DELETE FROM retiro WHERE idretiro = {this.idretiro}";
+                        String commString = $"DELETE FROM retiro WHERE idnota = {this.idretiro}";
                         NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                         int resultado2 = comm.ExecuteNonQuery();
                         if (resultado > 0 && resultado2 > 0)
@@ -116,7 +116,7 @@ namespace SistemaFinca
                         reader.Read();
                         this.idcontrato = reader.GetInt32(0).ToString();
                     }
-                    String commString2 = $"SELECT cantidadleche, fechaemision, pagado, idretiro FROM retiro WHERE idcontrato = {this.idcontrato}";
+                    String commString2 = $"SELECT cantidadleche, fechaemision, pagado, idnota FROM retiro WHERE idcontrato = {this.idcontrato}";
                     NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
                     using (NpgsqlDataReader reader = comm2.ExecuteReader())
                     {
