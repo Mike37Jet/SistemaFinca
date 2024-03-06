@@ -231,6 +231,16 @@ namespace SistemaFinca
                             return;
                         }
                     }
+                    String compareCantidad = $"SELECT (cantidadleche = cantidadretirada) FROM contrato WHERE idcontrato = {this.idcontrato}";
+                    NpgsqlCommand commCompare = new NpgsqlCommand(compareCantidad, connection);
+                    Boolean cantidadesSonIguales = Convert.ToBoolean(commCompare.ExecuteScalar());
+                    if (cantidadesSonIguales)
+                    {
+                        String commString6 = $"UPDATE contrato SET pagado = true WHERE idcontrato = {this.idcontrato}";
+                        NpgsqlCommand comm6 = new NpgsqlCommand(commString6, connection);
+                        comm6.ExecuteNonQuery();
+                    }
+
                     if (resultado > 0 && resultado2 > 0)
                     {
                         MessageBox.Show("La nota de venta fue registrada exitosamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -41,7 +41,7 @@
             label3 = new Label();
             label2 = new Label();
             panelReporte = new Panel();
-            lstRetiros = new DataGridView();
+            lstNotasVenta = new DataGridView();
             ColumnCantRetiro = new DataGridViewTextBoxColumn();
             ColumnFecha = new DataGridViewTextBoxColumn();
             ColumnEstado = new DataGridViewTextBoxColumn();
@@ -50,7 +50,7 @@
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panelReporte.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)lstRetiros).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lstNotasVenta).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -145,25 +145,25 @@
             // 
             // panelReporte
             // 
-            panelReporte.Controls.Add(lstRetiros);
+            panelReporte.Controls.Add(lstNotasVenta);
             panelReporte.Dock = DockStyle.Fill;
             panelReporte.Location = new Point(0, 127);
             panelReporte.Name = "panelReporte";
             panelReporte.Size = new Size(895, 369);
             panelReporte.TabIndex = 2;
             // 
-            // lstRetiros
+            // lstNotasVenta
             // 
-            lstRetiros.AllowUserToAddRows = false;
-            lstRetiros.AllowUserToDeleteRows = false;
-            lstRetiros.AllowUserToResizeColumns = false;
-            lstRetiros.AllowUserToResizeRows = false;
-            lstRetiros.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lstRetiros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            lstRetiros.BackgroundColor = Color.FromArgb(45, 66, 91);
-            lstRetiros.BorderStyle = BorderStyle.None;
-            lstRetiros.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            lstRetiros.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            lstNotasVenta.AllowUserToAddRows = false;
+            lstNotasVenta.AllowUserToDeleteRows = false;
+            lstNotasVenta.AllowUserToResizeColumns = false;
+            lstNotasVenta.AllowUserToResizeRows = false;
+            lstNotasVenta.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lstNotasVenta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            lstNotasVenta.BackgroundColor = Color.FromArgb(45, 66, 91);
+            lstNotasVenta.BorderStyle = BorderStyle.None;
+            lstNotasVenta.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            lstNotasVenta.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = SystemColors.HotTrack;
             dataGridViewCellStyle4.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
@@ -171,10 +171,10 @@
             dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            lstRetiros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            lstRetiros.ColumnHeadersHeight = 30;
-            lstRetiros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            lstRetiros.Columns.AddRange(new DataGridViewColumn[] { ColumnCantRetiro, ColumnFecha, ColumnEstado, Column1, Column2 });
+            lstNotasVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            lstNotasVenta.ColumnHeadersHeight = 30;
+            lstNotasVenta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            lstNotasVenta.Columns.AddRange(new DataGridViewColumn[] { ColumnCantRetiro, ColumnFecha, ColumnEstado, Column1, Column2 });
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = SystemColors.Window;
             dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
@@ -182,22 +182,22 @@
             dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            lstRetiros.DefaultCellStyle = dataGridViewCellStyle5;
-            lstRetiros.EnableHeadersVisualStyles = false;
-            lstRetiros.GridColor = Color.SteelBlue;
-            lstRetiros.Location = new Point(48, 68);
-            lstRetiros.Name = "lstRetiros";
-            lstRetiros.ReadOnly = true;
-            lstRetiros.RowHeadersVisible = false;
+            lstNotasVenta.DefaultCellStyle = dataGridViewCellStyle5;
+            lstNotasVenta.EnableHeadersVisualStyles = false;
+            lstNotasVenta.GridColor = Color.SteelBlue;
+            lstNotasVenta.Location = new Point(48, 68);
+            lstNotasVenta.Name = "lstNotasVenta";
+            lstNotasVenta.ReadOnly = true;
+            lstNotasVenta.RowHeadersVisible = false;
             dataGridViewCellStyle6.BackColor = Color.FromArgb(45, 66, 91);
             dataGridViewCellStyle6.ForeColor = Color.White;
             dataGridViewCellStyle6.SelectionBackColor = Color.SteelBlue;
             dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            lstRetiros.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            lstRetiros.RowTemplate.Height = 25;
-            lstRetiros.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            lstRetiros.Size = new Size(774, 242);
-            lstRetiros.TabIndex = 111;
+            lstNotasVenta.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            lstNotasVenta.RowTemplate.Height = 25;
+            lstNotasVenta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            lstNotasVenta.Size = new Size(774, 242);
+            lstNotasVenta.TabIndex = 111;
             // 
             // ColumnCantRetiro
             // 
@@ -246,7 +246,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panelReporte.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)lstRetiros).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lstNotasVenta).EndInit();
             ResumeLayout(false);
         }
 
@@ -262,7 +262,7 @@
         private Label label2;
         private Button btnGenerar;
         private ComboBox cmbMes;
-        private DataGridView lstRetiros;
+        private DataGridView lstNotasVenta;
         private DataGridViewTextBoxColumn ColumnCantRetiro;
         private DataGridViewTextBoxColumn ColumnFecha;
         private DataGridViewTextBoxColumn ColumnEstado;
