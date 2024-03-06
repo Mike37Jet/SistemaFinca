@@ -175,11 +175,6 @@ namespace SistemaFinca
         }
         private void buttonClientes_Click(object sender, EventArgs e)
         {
-            if (rol != 'A')
-            {
-                MessageBox.Show("Acceso denegado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             ocultarSubMenu();
             abrirFormulariosHijos(new FormGestionClientes());
         }
