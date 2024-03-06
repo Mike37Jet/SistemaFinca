@@ -139,6 +139,8 @@ namespace SistemaFinca
             txtCantidadLeche.Visible = true;
             txtPrecioLitro.Visible = true;
             btnRegistrar.Visible = true;
+            labelFechaEmision.Visible = true;
+            txtFechaEmision.Visible = true;
         }
 
         private void radContrato_CheckedChanged(object sender, EventArgs e)
@@ -200,13 +202,18 @@ namespace SistemaFinca
 
         private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
+            if (!FormVC_Registrar.fechaEsValida(txtFechaEmision.Text))
+            {
+                MessageBox.Show("Fecha de emisión no válida", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
             {
                 try
                 {
                     connection.Open();
                     String commString = $"INSERT INTO nota_venta(idcontrato, cedulacliente, monto, cantidadleche, fechaemision) " +
-                        $"VALUES({this.idcontrato}, '{this.cedulacliente}', {this.monto.ToString().Replace(',', '.')}, {this.cantidadLeche}, current_date)";
+                        $"VALUES({this.idcontrato}, '{this.cedulacliente}', {this.monto.ToString().Replace(',', '.')}, {this.cantidadLeche}, '{FormVC_Registrar.ConvertirFecha(txtFechaEmision.Text)}')";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     int resultado = comm.ExecuteNonQuery();
                     String commString2 = $"UPDATE retiro SET pagado = true WHERE idcontrato = {this.idcontrato}";

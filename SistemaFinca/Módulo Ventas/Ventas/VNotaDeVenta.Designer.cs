@@ -50,11 +50,15 @@
             label5 = new Label();
             txtTelefono = new TextBox();
             label18 = new Label();
+            labelFechaEmision = new Label();
+            txtFechaEmision = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(txtFechaEmision);
+            panel1.Controls.Add(labelFechaEmision);
             panel1.Controls.Add(txtTotal);
             panel1.Controls.Add(txtPrecioLitro);
             panel1.Controls.Add(txtCantidadLeche);
@@ -87,7 +91,7 @@
             // 
             txtTotal.Cursor = Cursors.IBeam;
             txtTotal.Font = new Font("Segoe UI", 11.25F);
-            txtTotal.Location = new Point(450, 423);
+            txtTotal.Location = new Point(353, 425);
             txtTotal.Margin = new Padding(3, 2, 3, 2);
             txtTotal.Name = "txtTotal";
             txtTotal.ReadOnly = true;
@@ -99,7 +103,7 @@
             // 
             txtPrecioLitro.Cursor = Cursors.IBeam;
             txtPrecioLitro.Font = new Font("Segoe UI", 11.25F);
-            txtPrecioLitro.Location = new Point(450, 388);
+            txtPrecioLitro.Location = new Point(353, 390);
             txtPrecioLitro.Margin = new Padding(3, 2, 3, 2);
             txtPrecioLitro.Name = "txtPrecioLitro";
             txtPrecioLitro.ReadOnly = true;
@@ -111,7 +115,7 @@
             // 
             txtCantidadLeche.Cursor = Cursors.IBeam;
             txtCantidadLeche.Font = new Font("Segoe UI", 11.25F);
-            txtCantidadLeche.Location = new Point(450, 353);
+            txtCantidadLeche.Location = new Point(353, 355);
             txtCantidadLeche.Margin = new Padding(3, 2, 3, 2);
             txtCantidadLeche.Name = "txtCantidadLeche";
             txtCantidadLeche.ReadOnly = true;
@@ -124,7 +128,7 @@
             labelTotal.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelTotal.AutoSize = true;
             labelTotal.Font = new Font("Segoe UI", 11.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            labelTotal.Location = new Point(358, 423);
+            labelTotal.Location = new Point(261, 425);
             labelTotal.Name = "labelTotal";
             labelTotal.Size = new Size(67, 20);
             labelTotal.TabIndex = 130;
@@ -136,7 +140,7 @@
             labelPrecioLitro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelPrecioLitro.AutoSize = true;
             labelPrecioLitro.Font = new Font("Segoe UI", 11.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            labelPrecioLitro.Location = new Point(240, 391);
+            labelPrecioLitro.Location = new Point(143, 393);
             labelPrecioLitro.Name = "labelPrecioLitro";
             labelPrecioLitro.Size = new Size(185, 20);
             labelPrecioLitro.TabIndex = 129;
@@ -148,7 +152,7 @@
             labelCantidadLeche.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelCantidadLeche.AutoSize = true;
             labelCantidadLeche.Font = new Font("Segoe UI", 11.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            labelCantidadLeche.Location = new Point(277, 360);
+            labelCantidadLeche.Location = new Point(180, 362);
             labelCantidadLeche.Name = "labelCantidadLeche";
             labelCantidadLeche.Size = new Size(148, 20);
             labelCantidadLeche.TabIndex = 128;
@@ -173,7 +177,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(386, 320);
+            label3.Location = new Point(289, 322);
             label3.Name = "label3";
             label3.Size = new Size(119, 22);
             label3.TabIndex = 88;
@@ -324,6 +328,29 @@
             label18.TabIndex = 58;
             label18.Text = "Nota de Venta";
             // 
+            // labelFechaEmision
+            // 
+            labelFechaEmision.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelFechaEmision.AutoSize = true;
+            labelFechaEmision.Font = new Font("Segoe UI", 11.25F);
+            labelFechaEmision.Location = new Point(572, 355);
+            labelFechaEmision.Name = "labelFechaEmision";
+            labelFechaEmision.Size = new Size(124, 20);
+            labelFechaEmision.TabIndex = 134;
+            labelFechaEmision.Text = "Fecha de Emisión";
+            labelFechaEmision.Visible = false;
+            // 
+            // txtFechaEmision
+            // 
+            txtFechaEmision.Cursor = Cursors.IBeam;
+            txtFechaEmision.Font = new Font("Segoe UI", 11.25F);
+            txtFechaEmision.Location = new Point(572, 377);
+            txtFechaEmision.Margin = new Padding(3, 2, 3, 2);
+            txtFechaEmision.Name = "txtFechaEmision";
+            txtFechaEmision.Size = new Size(124, 27);
+            txtFechaEmision.TabIndex = 135;
+            txtFechaEmision.Visible = false;
+            // 
             // FormVNotaDeVenta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -370,5 +397,7 @@
         private Label labelTotal;
         private TextBox txtTotal;
         private TextBox txtPrecioLitro;
+        private TextBox txtFechaEmision;
+        private Label labelFechaEmision;
     }
 }
