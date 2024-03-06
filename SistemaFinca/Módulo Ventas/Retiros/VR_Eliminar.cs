@@ -41,13 +41,12 @@ namespace SistemaFinca
                     try
                     {
                         connection.Open();
-
                         String commString2 = $"UPDATE contrato SET cantidadretirada = cantidadretirada - (SELECT cantidadleche " +
-                            $"FROM retiro WHERE idnota = {this.idretiro}) WHERE idcontrato = {this.idcontrato}";
+                            $"FROM retiro WHERE idretiro = {this.idretiro}) WHERE idcontrato = {this.idcontrato}";
                         NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
                         int resultado = comm2.ExecuteNonQuery();
 
-                        String commString = $"DELETE FROM retiro WHERE idnota = {this.idretiro}";
+                        String commString = $"DELETE FROM retiro WHERE idretiro = {this.idretiro}";
                         NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                         int resultado2 = comm.ExecuteNonQuery();
                         if (resultado > 0 && resultado2 > 0)
