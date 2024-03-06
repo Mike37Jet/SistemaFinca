@@ -128,5 +128,10 @@ namespace SistemaFinca
         {
             abrirFormulariosHijos(new FormVConsultar());
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormVEliminar());
+        }
     }
 }

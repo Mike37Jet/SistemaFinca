@@ -92,6 +92,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Módulo Ventas\Ventas\FormVent.cs" />
+    <Compile Update="Módulo Ventas\Ventas\VEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Módulo Ventas\Ventas\VConsultar.cs">
       <SubType>Form</SubType>
     </Compile>

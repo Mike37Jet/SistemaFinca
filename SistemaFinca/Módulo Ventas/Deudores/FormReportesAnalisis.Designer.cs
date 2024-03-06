@@ -63,13 +63,10 @@ namespace SistemaFinca
             label2 = new Label();
             pictureBox1 = new PictureBox();
             label18 = new Label();
-            chartLineas = new Chart();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(chartLineas)).BeginInit();
-            chartLineas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -82,8 +79,6 @@ namespace SistemaFinca
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            
-            inicializarGraficoLineas(this.chartLineas);
             // 
             // tableLayoutPanel2
             // 
@@ -160,11 +155,7 @@ namespace SistemaFinca
             // 
             // panelGraficoLineas
             // 
-            panelGraficoLineas.Controls.Add(this.chartLineas);
-            panelGraficoLineas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top
-           | System.Windows.Forms.AnchorStyles.Bottom)
-           | System.Windows.Forms.AnchorStyles.Left)
-           | System.Windows.Forms.AnchorStyles.Right)));
+            panelGraficoLineas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelGraficoLineas.Location = new Point(0, 238);
             panelGraficoLineas.Name = "panelGraficoLineas";
             panelGraficoLineas.Size = new Size(895, 253);

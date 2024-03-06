@@ -152,7 +152,7 @@ namespace SistemaFinca
                 {
                     connection.Open();
                     String commExisteString = $"SELECT * FROM contrato WHERE cedulacliente = '{this.cedulaCliente}' AND " +
-                        $"pagado = false OR (cantidadleche != cantidadretirada AND pagado = true)";
+                        $"(pagado = false OR (cantidadleche != cantidadretirada AND pagado = true))";
                     NpgsqlCommand commExiste = new NpgsqlCommand(commExisteString, connection);
                     using (NpgsqlDataReader reader = commExiste.ExecuteReader())
                     {

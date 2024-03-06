@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVentas));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            btnConsultar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
             buttonBuscarCliente = new Button();
@@ -38,7 +39,7 @@
             txtCedula = new TextBox();
             label1 = new Label();
             label18 = new Label();
-            btnConsultar = new Button();
+            btnEliminar = new Button();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -65,6 +66,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
+            tableLayoutPanel1.Controls.Add(btnEliminar, 0, 0);
             tableLayoutPanel1.Controls.Add(btnConsultar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonRegresar, 5, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
@@ -75,6 +77,20 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Size = new Size(895, 50);
             tableLayoutPanel1.TabIndex = 7;
+            // 
+            // btnConsultar
+            // 
+            btnConsultar.Dock = DockStyle.Fill;
+            btnConsultar.Image = (Image)resources.GetObject("btnConsultar.Image");
+            btnConsultar.Location = new Point(0, 0);
+            btnConsultar.Margin = new Padding(0);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Size = new Size(95, 50);
+            btnConsultar.TabIndex = 16;
+            btnConsultar.TextAlign = ContentAlignment.BottomCenter;
+            btnConsultar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnConsultar.UseVisualStyleBackColor = true;
+            btnConsultar.Click += btnConsultar_Click;
             // 
             // buttonRegresar
             // 
@@ -154,19 +170,19 @@
             label18.TabIndex = 34;
             label18.Text = "Buscar Cliente";
             // 
-            // btnConsultar
+            // btnEliminar
             // 
-            btnConsultar.Dock = DockStyle.Fill;
-            btnConsultar.Image = (Image)resources.GetObject("btnConsultar.Image");
-            btnConsultar.Location = new Point(0, 0);
-            btnConsultar.Margin = new Padding(0);
-            btnConsultar.Name = "btnConsultar";
-            btnConsultar.Size = new Size(95, 50);
-            btnConsultar.TabIndex = 16;
-            btnConsultar.TextAlign = ContentAlignment.BottomCenter;
-            btnConsultar.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnConsultar.UseVisualStyleBackColor = true;
-            btnConsultar.Click += btnConsultar_Click;
+            btnEliminar.Dock = DockStyle.Fill;
+            btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
+            btnEliminar.Location = new Point(95, 0);
+            btnEliminar.Margin = new Padding(0);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(95, 50);
+            btnEliminar.TabIndex = 17;
+            btnEliminar.TextAlign = ContentAlignment.BottomCenter;
+            btnEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // FormVentas
             // 
@@ -196,5 +212,6 @@
         private Label label2;
         private TextBox txtCedula;
         private Button btnConsultar;
+        private Button btnEliminar;
     }
 }
