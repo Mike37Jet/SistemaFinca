@@ -54,6 +54,14 @@ namespace SistemaFinca
                         $"WHERE idcontrato = {this.idcontrato}";
                     NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
                     int resultado2 = comm2.ExecuteNonQuery();
+
+                    if (contratoEstado)
+                    {
+                        String commSpecialString = $"INSERT INTO nota_venta_retiros(idnota, idretiro) VALUES(" +
+                            $"(SELECT idnota FROM nota_venta WHERE idcontrato = {this.idcontrato} ORDER BY idnota DESC LIMIT 1), (SELECT idretiro FROM retiro ORDER BY idretiro DESC LIMIT 1))";
+                        NpgsqlCommand commSpecial = new NpgsqlCommand(commSpecialString, connection);
+                        commSpecial.ExecuteNonQuery();
+                    }
                     if (resultado2 > 0)
                     {
                         MessageBox.Show("Retiro registrado exitosamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);

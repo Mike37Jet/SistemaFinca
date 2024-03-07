@@ -120,7 +120,7 @@ namespace SistemaFinca
                         reader.Read();
                         this.idcontrato = reader.GetInt32(0).ToString();
                     }
-                    String commString2 = $"SELECT cantidadleche, fechaemision, pagado, idretiro FROM retiro WHERE idcontrato = {this.idcontrato}";
+                    String commString2 = $"SELECT cantidadleche, fechaemision, pagado, idretiro FROM retiro WHERE idcontrato = {this.idcontrato} AND pagado = false";
                     NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
                     using (NpgsqlDataReader reader = comm2.ExecuteReader())
                     {
