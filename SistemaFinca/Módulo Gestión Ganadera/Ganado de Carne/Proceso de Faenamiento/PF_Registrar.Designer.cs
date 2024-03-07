@@ -37,34 +37,40 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(183, 28);
+            label1.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(276, 39);
             label1.Name = "label1";
-            label1.Size = new Size(256, 20);
+            label1.Size = new Size(346, 22);
             label1.TabIndex = 0;
             label1.Text = "Registrar bovino para el faenamiento";
             // 
             // textBox1
             // 
             textBox1.Cursor = Cursors.IBeam;
-            textBox1.Location = new Point(45, 93);
+            textBox1.Font = new Font("Segoe UI", 12F);
+            textBox1.Location = new Point(167, 131);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(278, 27);
+            textBox1.Size = new Size(244, 29);
             textBox1.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(45, 70);
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(167, 108);
             label2.Name = "label2";
-            label2.Size = new Size(173, 20);
+            label2.Size = new Size(180, 21);
             label2.TabIndex = 3;
             label2.Text = "Número de Identificador";
             // 
             // button2
             // 
-            button2.Location = new Point(270, 364);
+            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Location = new Point(390, 404);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(97, 39);
             button2.TabIndex = 10;
             button2.Text = "Registrar";
             button2.UseVisualStyleBackColor = true;
@@ -72,14 +78,15 @@
             // 
             // FormPF_Registrar
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 459);
+            ClientSize = new Size(895, 541);
             Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormPF_Registrar";
             Text = "Administrador";
             ResumeLayout(false);

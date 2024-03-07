@@ -41,8 +41,8 @@
             columnNombre = new ColumnHeader();
             columnCantidad = new ColumnHeader();
             columnEstado = new ColumnHeader();
-            label1 = new Label();
             columnFechaRegistro = new ColumnHeader();
+            label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -95,6 +95,7 @@
             buttonEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonEliminar.UseVisualStyleBackColor = true;
             buttonEliminar.Click += buttonEliminar_Click;
+            buttonEliminar.MouseMove += buttonEliminar_MouseMove;
             // 
             // buttonBuscar
             // 
@@ -109,6 +110,7 @@
             buttonBuscar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonBuscar.UseVisualStyleBackColor = true;
             buttonBuscar.Click += buttonBuscar_Click;
+            buttonBuscar.MouseMove += buttonBuscar_MouseMove;
             // 
             // buttonActualizar
             // 
@@ -123,6 +125,7 @@
             buttonActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonActualizar.UseVisualStyleBackColor = true;
             buttonActualizar.Click += buttonActualizar_Click;
+            buttonActualizar.MouseMove += buttonActualizar_MouseMove;
             // 
             // buttonRegistrar
             // 
@@ -137,6 +140,7 @@
             buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonRegistrar.UseVisualStyleBackColor = true;
             buttonRegistrar.Click += buttonRegistrar_Click_1;
+            buttonRegistrar.MouseMove += buttonRegistrar_MouseMove;
             // 
             // buttonRegresar
             // 
@@ -188,6 +192,11 @@
             columnEstado.Text = "Estado";
             columnEstado.Width = 200;
             // 
+            // columnFechaRegistro
+            // 
+            columnFechaRegistro.Text = "Fecha de registro";
+            columnFechaRegistro.Width = 150;
+            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top;
@@ -199,11 +208,6 @@
             label1.TabIndex = 5;
             label1.Text = "Indumentaria del Personal";
             label1.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // columnFechaRegistro
-            // 
-            columnFechaRegistro.Text = "Fecha de registro";
-            columnFechaRegistro.Width = 150;
             // 
             // FormIndumentariaDelPersonal
             // 

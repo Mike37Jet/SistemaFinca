@@ -165,10 +165,21 @@ namespace SistemaFinca
                         string telefono = reader.GetString(2).ToString();
                         string correo = reader.GetString(3).ToString();
                         string direccion = reader.GetString(4).ToString();
-                        formSubVConsultas.llenarDatos1(nombres, apellidos, telefono, correo, direccion);
-                           
-
+                        formSubVConsultas.llenarDatos1(nombres, apellidos, telefono, correo, direccion);   
                     }
+
+
+                    String commString3 = $"SELECT valorparametro FROM parametro WHERE idparametro = '1'";
+                    NpgsqlCommand comm3 = new NpgsqlCommand(commString3, connection);
+                    int resultado3 = comm3.ExecuteNonQuery();
+
+                    using (NpgsqlDataReader reader = comm3.ExecuteReader())
+                    while (reader.Read())
+                    {
+                        string precioLeche = reader.GetValue(0).ToString();
+                        formSubVConsultas.llenarDatos2(precioLeche);
+                    }
+
                 }
                 catch (NpgsqlException ex)
                 {

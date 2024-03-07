@@ -14,6 +14,7 @@ namespace SistemaFinca
     public partial class FormContratos : Form
     {
         private char rol;
+        private ToolTip toolTip = new ToolTip();
         public FormContratos(char rol)
         {
             InitializeComponent();
@@ -132,6 +133,21 @@ namespace SistemaFinca
                 return;
             }
             abrirFormulariosHijos(new FormVC_Eliminar());
+        }
+
+        private void btnGenerar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(btnGenerar, "Registrar contrato");
+        }
+
+        private void btnConsultar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(btnConsultar, "Consultar contrato");
+        }
+
+        private void btnEliminar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(btnEliminar, "Eliminar contrato");
         }
     }
 }

@@ -72,7 +72,6 @@
             panelFormularioHijo.Name = "panelFormularioHijo";
             panelFormularioHijo.Size = new Size(895, 541);
             panelFormularioHijo.TabIndex = 8;
-         
             // 
             // tableLayoutPanel1
             // 
@@ -108,6 +107,7 @@
             btnEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click_1;
+            btnEliminar.MouseMove += btnEliminar_MouseMove;
             // 
             // btnRegistrar
             // 
@@ -122,6 +122,7 @@
             btnRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnRegistrar.UseVisualStyleBackColor = true;
             btnRegistrar.Click += btnRegistrar_Click_1;
+            btnRegistrar.MouseMove += btnRegistrar_MouseMove;
             // 
             // btnRegresar
             // 

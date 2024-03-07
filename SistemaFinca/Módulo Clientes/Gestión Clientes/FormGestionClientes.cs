@@ -174,31 +174,37 @@ namespace SistemaFinca
             abrirFormulariosHijos(new FormC_DarDeAlta());
         }
 
+        private void buttonConsultar_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormC_Consultar());
+        }
+
+       
 
 
-        private void buttonRegistrar_MouseHover(object sender, EventArgs e)
+        private void buttonRegistrar_MouseMove(object sender, MouseEventArgs e)
         {
             toolTip.SetToolTip(buttonRegistrar, "Registrar cliente");
         }
 
-        private void buttonDarDeBaja_MouseHover(object sender, EventArgs e)
+        private void buttonConsultar_MouseMove(object sender, MouseEventArgs e)
         {
-            toolTip.SetToolTip(buttonDarDeBaja, "Dar de baja al cliente");
+            toolTip.SetToolTip(buttonConsultar, "Consultar cliente");
         }
 
-        private void buttonDarDeAlta_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.SetToolTip(buttonDarDeAlta, "Dar de alta al cliente");
-        }
-
-        private void buttonActualizar_MouseHover(object sender, EventArgs e)
+        private void buttonActualizar_MouseMove(object sender, MouseEventArgs e)
         {
             toolTip.SetToolTip(buttonActualizar, "Actualizar cliente");
         }
 
-        private void buttonBuscar_Click(object sender, EventArgs e)
+        private void buttonDarDeBaja_MouseMove(object sender, MouseEventArgs e)
         {
-            abrirFormulariosHijos(new FormC_Consultar());
+            toolTip.SetToolTip(buttonDarDeBaja, "Dar de baja al cliente");
+        }
+
+        private void buttonDarDeAlta_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonDarDeAlta, "Dar de alta al cliente");
         }
     }
 }

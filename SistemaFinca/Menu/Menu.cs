@@ -20,7 +20,7 @@ namespace SistemaFinca
         private String usuario;
         private String fechainicio;
 
-        public FormMenu(char rol, String usuario, String fechainicio)
+        public FormMenu(char rol, String usuario, String fechainicio, string nombres, string apellidos)
         {
             InitializeComponent();
             personalizarDiseño();
@@ -28,7 +28,8 @@ namespace SistemaFinca
             this.usuario = usuario;
             this.fechainicio = fechainicio;
             labelRol.Text = rol == 'A' ? "Administrador" : "Jornalero";
-            labelUsuario.Text = usuario;
+            labelNombres.Text = nombres;
+            labelApellidos.Text = apellidos;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -345,10 +346,6 @@ namespace SistemaFinca
             abrirFormulariosHijos(new FormGZP_Registrar());
         }
 
-        private void buttonGestionArriendo_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormGestArriAreas());
-        }
 
         private void buttonSeguimientoActividad_Click(object sender, EventArgs e)
         {
@@ -380,9 +377,14 @@ namespace SistemaFinca
             abrirFormulariosHijos(new FormContratos(this.rol));
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void buttonArriendoZona_Click(object sender, EventArgs e)
         {
+            abrirFormulariosHijos(new FormGestArriAreas());
+        }
 
+        private void buttonRiegoZona_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosHijos(new FormRiego());
         }
     }
 }

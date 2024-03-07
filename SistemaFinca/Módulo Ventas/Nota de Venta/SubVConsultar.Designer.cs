@@ -102,7 +102,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(895, 968);
             panel1.TabIndex = 0;
-        
             // 
             // panel2
             // 
@@ -138,7 +137,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(766, 835);
             panel2.TabIndex = 139;
-          
             // 
             // label41
             // 
@@ -157,7 +155,6 @@
             label49.Size = new Size(90, 15);
             label49.TabIndex = 26;
             label49.Text = "+593 998938277";
-        
             // 
             // label48
             // 
@@ -346,6 +343,7 @@
             // 
             labelVTotal.AutoSize = true;
             labelVTotal.Dock = DockStyle.Fill;
+            labelVTotal.Font = new Font("Segoe UI", 12F);
             labelVTotal.Location = new Point(594, 40);
             labelVTotal.Margin = new Padding(0);
             labelVTotal.Name = "labelVTotal";
@@ -358,6 +356,7 @@
             // 
             labelPrecioUnitario.AutoSize = true;
             labelPrecioUnitario.Dock = DockStyle.Fill;
+            labelPrecioUnitario.Font = new Font("Segoe UI", 12F);
             labelPrecioUnitario.Location = new Point(462, 40);
             labelPrecioUnitario.Margin = new Padding(0);
             labelPrecioUnitario.Name = "labelPrecioUnitario";
@@ -370,6 +369,7 @@
             // 
             labelCantidad.AutoSize = true;
             labelCantidad.Dock = DockStyle.Fill;
+            labelCantidad.Font = new Font("Segoe UI", 12F);
             labelCantidad.Location = new Point(264, 40);
             labelCantidad.Margin = new Padding(0);
             labelCantidad.Name = "labelCantidad";
@@ -382,6 +382,7 @@
             // 
             label20.AutoSize = true;
             label20.Dock = DockStyle.Fill;
+            label20.Font = new Font("Segoe UI", 12F);
             label20.Location = new Point(66, 40);
             label20.Margin = new Padding(0);
             label20.Name = "label20";
@@ -395,6 +396,7 @@
             label9.AutoSize = true;
             label9.BackColor = Color.FromArgb(225, 92, 53);
             label9.Dock = DockStyle.Fill;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label9.Location = new Point(0, 0);
             label9.Margin = new Padding(0);
             label9.Name = "label9";
@@ -408,6 +410,7 @@
             label10.AutoSize = true;
             label10.BackColor = Color.FromArgb(225, 92, 53);
             label10.Dock = DockStyle.Fill;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label10.Location = new Point(66, 0);
             label10.Margin = new Padding(0);
             label10.Name = "label10";
@@ -421,6 +424,7 @@
             label15.AutoSize = true;
             label15.BackColor = Color.FromArgb(225, 92, 53);
             label15.Dock = DockStyle.Fill;
+            label15.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label15.Location = new Point(264, 0);
             label15.Margin = new Padding(0);
             label15.Name = "label15";
@@ -434,6 +438,7 @@
             label16.AutoSize = true;
             label16.BackColor = Color.FromArgb(225, 92, 53);
             label16.Dock = DockStyle.Fill;
+            label16.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label16.Location = new Point(462, 0);
             label16.Margin = new Padding(0);
             label16.Name = "label16";
@@ -447,6 +452,7 @@
             label17.AutoSize = true;
             label17.BackColor = Color.FromArgb(225, 92, 53);
             label17.Dock = DockStyle.Fill;
+            label17.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label17.Location = new Point(594, 0);
             label17.Margin = new Padding(0);
             label17.Name = "label17";
@@ -459,6 +465,7 @@
             // 
             labelIdNota1.AutoSize = true;
             labelIdNota1.Dock = DockStyle.Fill;
+            labelIdNota1.Font = new Font("Segoe UI", 12F);
             labelIdNota1.Location = new Point(0, 40);
             labelIdNota1.Margin = new Padding(0);
             labelIdNota1.Name = "labelIdNota1";
@@ -613,108 +620,120 @@
             // labelDireccion
             // 
             labelDireccion.AutoSize = true;
-            labelDireccion.Location = new Point(371, 302);
+            labelDireccion.Font = new Font("Segoe UI", 12F);
+            labelDireccion.Location = new Point(257, 302);
             labelDireccion.Name = "labelDireccion";
-            labelDireccion.Size = new Size(12, 15);
+            labelDireccion.Size = new Size(16, 21);
             labelDireccion.TabIndex = 13;
             labelDireccion.Text = "-";
             // 
             // labelTelefono
             // 
             labelTelefono.AutoSize = true;
-            labelTelefono.Location = new Point(371, 277);
+            labelTelefono.Font = new Font("Segoe UI", 12F);
+            labelTelefono.Location = new Point(257, 277);
             labelTelefono.Name = "labelTelefono";
-            labelTelefono.Size = new Size(12, 15);
+            labelTelefono.Size = new Size(16, 21);
             labelTelefono.TabIndex = 12;
             labelTelefono.Text = "-";
             // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(371, 252);
+            labelEmail.Font = new Font("Segoe UI", 12F);
+            labelEmail.Location = new Point(257, 252);
             labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(12, 15);
+            labelEmail.Size = new Size(16, 21);
             labelEmail.TabIndex = 11;
             labelEmail.Text = "-";
             // 
             // labelNombre
             // 
             labelNombre.AutoSize = true;
-            labelNombre.Location = new Point(371, 227);
+            labelNombre.Font = new Font("Segoe UI", 12F);
+            labelNombre.Location = new Point(257, 227);
             labelNombre.Name = "labelNombre";
-            labelNombre.Size = new Size(12, 15);
+            labelNombre.Size = new Size(16, 21);
             labelNombre.TabIndex = 10;
             labelNombre.Text = "-";
             // 
             // label14
             // 
             label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label14.Location = new Point(55, 227);
             label14.Name = "label14";
-            label14.Size = new Size(54, 15);
+            label14.Size = new Size(75, 21);
             label14.TabIndex = 9;
             label14.Text = "Nombre:";
             // 
             // label13
             // 
             label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label13.Location = new Point(55, 302);
             label13.Name = "label13";
-            label13.Size = new Size(60, 15);
+            label13.Size = new Size(83, 21);
             label13.TabIndex = 8;
             label13.Text = "Dirección:";
             // 
             // label12
             // 
             label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label12.Location = new Point(55, 277);
             label12.Name = "label12";
-            label12.Size = new Size(55, 15);
+            label12.Size = new Size(78, 21);
             label12.TabIndex = 7;
             label12.Text = "Teléfono:";
             // 
             // label11
             // 
             label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label11.Location = new Point(55, 252);
             label11.Name = "label11";
-            label11.Size = new Size(39, 15);
+            label11.Size = new Size(52, 21);
             label11.TabIndex = 6;
             label11.Text = "Email:";
             // 
             // labelFechaEmision
             // 
             labelFechaEmision.AutoSize = true;
-            labelFechaEmision.Location = new Point(641, 155);
+            labelFechaEmision.Font = new Font("Segoe UI", 12F);
+            labelFechaEmision.Location = new Point(633, 155);
             labelFechaEmision.Name = "labelFechaEmision";
-            labelFechaEmision.Size = new Size(12, 15);
+            labelFechaEmision.Size = new Size(16, 21);
             labelFechaEmision.TabIndex = 5;
             labelFechaEmision.Text = "-";
             // 
             // labelIdNota
             // 
             labelIdNota.AutoSize = true;
-            labelIdNota.Location = new Point(642, 123);
+            labelIdNota.Font = new Font("Segoe UI", 12F);
+            labelIdNota.Location = new Point(633, 123);
             labelIdNota.Name = "labelIdNota";
-            labelIdNota.Size = new Size(12, 15);
+            labelIdNota.Size = new Size(16, 21);
             labelIdNota.TabIndex = 4;
             labelIdNota.Text = "-";
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F);
             label8.Location = new Point(574, 155);
             label8.Name = "label8";
-            label8.Size = new Size(41, 15);
+            label8.Size = new Size(53, 21);
             label8.TabIndex = 3;
             label8.Text = "Fecha:";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(574, 123);
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.Location = new Point(596, 123);
             label7.Name = "label7";
-            label7.Size = new Size(24, 15);
+            label7.Size = new Size(31, 21);
             label7.TabIndex = 2;
             label7.Text = "N°:";
             // 
@@ -726,6 +745,7 @@
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(label2);
+            panel3.Font = new Font("Microsoft Sans Serif", 8.25F);
             panel3.Location = new Point(55, 102);
             panel3.Name = "panel3";
             panel3.Size = new Size(247, 100);
@@ -734,18 +754,19 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(15, 75);
+            label6.Font = new Font("Microsoft Sans Serif", 8.25F);
+            label6.Location = new Point(25, 75);
             label6.Name = "label6";
-            label6.Size = new Size(214, 15);
+            label6.Size = new Size(194, 13);
             label6.TabIndex = 4;
             label6.Text = "a 2 km del aeropuerto de Tulcá - Carchi";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(68, 57);
+            label5.Location = new Point(78, 55);
             label5.Name = "label5";
-            label5.Size = new Size(166, 15);
+            label5.Size = new Size(153, 13);
             label5.TabIndex = 3;
             label5.Text = "Panamericana Norte E35 Km5 \r\n";
             // 
@@ -753,7 +774,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(4, 55);
+            label4.Location = new Point(14, 55);
             label4.Name = "label4";
             label4.Size = new Size(63, 15);
             label4.TabIndex = 2;
@@ -762,11 +783,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(79, 33);
+            label3.Location = new Point(54, 35);
             label3.Name = "label3";
-            label3.Size = new Size(98, 15);
+            label3.Size = new Size(145, 13);
             label3.TabIndex = 1;
-            label3.Text = "Ronaldo Almeida";
+            label3.Text = "Ronaldo José Almeida Morillo";
             // 
             // label2
             // 

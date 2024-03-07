@@ -12,6 +12,7 @@ namespace SistemaFinca
 {
     public partial class FormAlimentariaBovina : Form
     {
+        private ToolTip toolTip = new ToolTip();
         public FormAlimentariaBovina()
         {
             InitializeComponent();
@@ -68,6 +69,26 @@ namespace SistemaFinca
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormAB_Eliminar());
+        }
+
+        private void buttonRegistrar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonRegistrar, "Registrar alimento");
+        }
+
+        private void buttonActualizar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonActualizar, "Actualizar alimento");
+        }
+
+        private void buttonBuscar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonBuscar, "Consultar alimento");
+        }
+
+        private void buttonEliminar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonEliminar, "Eliminar alimento");
         }
     }
 }

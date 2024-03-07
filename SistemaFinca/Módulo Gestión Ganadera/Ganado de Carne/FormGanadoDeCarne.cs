@@ -12,7 +12,7 @@ namespace SistemaFinca
 {
     public partial class FormGanadoDeCarne : Form
     {
-
+        private ToolTip toolTip = new ToolTip();
         private float rotationAngleX = 0;
         private float rotationAngleY = 0;
         public FormGanadoDeCarne()
@@ -63,10 +63,6 @@ namespace SistemaFinca
             abrirFormulariosHijos(new FormGB_Actualizar());
         }
 
-        private void buttonGenerarInforme_Click(object sender, EventArgs e)
-        {
-            abrirFormulariosHijos(new FormGU_GenerarInforme());
-        }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
@@ -78,19 +74,26 @@ namespace SistemaFinca
             abrirFormulariosHijos(new FormGC_Consultar());
         }
 
-        private void pictureGIF_Click(object sender, EventArgs e)
-        {
 
+
+        private void buttonActualizar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonActualizar, "Actualizar res");
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void buttonRegistrar_MouseMove(object sender, MouseEventArgs e)
         {
-
+            toolTip.SetToolTip(buttonRegistrar, "Registrar res");
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonEliminar_MouseMove(object sender, MouseEventArgs e)
         {
+            toolTip.SetToolTip(buttonEliminar, "Eliminar res");
+        }
 
+        private void buttonConsultar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonConsultar, "Consultar res");
         }
     }
 }

@@ -166,44 +166,37 @@ namespace SistemaFinca
             abrirFormulariosHijos(new FormGU_Eliminar());
         }
 
-        private void buttonRegistrar_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(buttonRegistrar, "Registrar usuario");
-        }
-
-        private void buttonEliminar_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(buttonEliminar, "Eliminar usuario");
-        }
-
-        private void buttonActualizar_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(buttonActualizar, "Actualizar usuario");
-        }
-
-        private void buttonInforme_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(buttonInforme, "Generar informe");
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormGU_Consultar());
         }
 
-        private void buttonBuscar_MouseHover(object sender, EventArgs e)
+      
+
+
+        private void buttonRegistrar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip1.SetToolTip(buttonRegistrar, "Registrar usuario");
+        }
+
+        private void buttonBuscar_MouseMove(object sender, MouseEventArgs e)
         {
             toolTip1.SetToolTip(buttonBuscar, "Consultar usuario");
         }
 
-        private void listUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonEliminar_MouseMove(object sender, MouseEventArgs e)
         {
+            toolTip1.SetToolTip(buttonEliminar, "Eliminar usuario");
+        }
 
+        private void buttonActualizar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip1.SetToolTip(buttonActualizar, "Actualizar usuario");
+        }
+
+        private void buttonInforme_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip1.SetToolTip(buttonInforme, "Generar informe");
         }
     }
 }

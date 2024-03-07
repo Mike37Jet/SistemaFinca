@@ -12,7 +12,7 @@ namespace SistemaFinca
 {
     public partial class FormRegistroOrdeño : Form
     {
-
+        private ToolTip toolTip = new ToolTip();
         private float rotationAngleX = 0;
         private float rotationAngleY = 0;
         public FormRegistroOrdeño()
@@ -61,9 +61,10 @@ namespace SistemaFinca
         }
 
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+        private void buttonRegistrar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonRegistrar, "Registrar ordeño");
         }
     }
 }

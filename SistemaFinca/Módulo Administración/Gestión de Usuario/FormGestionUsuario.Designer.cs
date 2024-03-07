@@ -106,7 +106,7 @@
             buttonBuscar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonBuscar.UseVisualStyleBackColor = true;
             buttonBuscar.Click += buttonBuscar_Click;
-            buttonBuscar.MouseHover += buttonBuscar_MouseHover;
+            buttonBuscar.MouseMove += buttonBuscar_MouseMove;
             // 
             // buttonEliminar
             // 
@@ -121,7 +121,7 @@
             buttonEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonEliminar.UseVisualStyleBackColor = true;
             buttonEliminar.Click += buttonEliminar_Click;
-            buttonEliminar.MouseHover += buttonEliminar_MouseHover;
+            buttonEliminar.MouseMove += buttonEliminar_MouseMove;
             // 
             // buttonRegistrar
             // 
@@ -136,7 +136,7 @@
             buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonRegistrar.UseVisualStyleBackColor = true;
             buttonRegistrar.Click += buttonRegistrar_Click_1;
-            buttonRegistrar.MouseHover += buttonRegistrar_MouseHover;
+            buttonRegistrar.MouseMove += buttonRegistrar_MouseMove;
             // 
             // buttonInforme
             // 
@@ -151,7 +151,7 @@
             buttonInforme.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonInforme.UseVisualStyleBackColor = true;
             buttonInforme.Click += buttonGenerarInforme_Click;
-            buttonInforme.MouseHover += buttonInforme_MouseHover;
+            buttonInforme.MouseMove += buttonInforme_MouseMove;
             // 
             // buttonActualizar
             // 
@@ -166,7 +166,7 @@
             buttonActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonActualizar.UseVisualStyleBackColor = true;
             buttonActualizar.Click += buttonActualizar_Click;
-            buttonActualizar.MouseHover += buttonActualizar_MouseHover;
+            buttonActualizar.MouseMove += buttonActualizar_MouseMove;
             // 
             // buttonRegresar
             // 
@@ -261,7 +261,7 @@
             listUsuarios.TabIndex = 7;
             listUsuarios.UseCompatibleStateImageBehavior = false;
             listUsuarios.View = View.Details;
-            listUsuarios.SelectedIndexChanged += listUsuarios_SelectedIndexChanged;
+           
             // 
             // columnID
             // 

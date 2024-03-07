@@ -97,6 +97,7 @@
             buttonEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonEliminar.UseVisualStyleBackColor = true;
             buttonEliminar.Click += buttonEliminar_Click;
+            buttonEliminar.MouseMove += buttonEliminar_MouseMove;
             // 
             // buttonRegistrar
             // 
@@ -111,6 +112,7 @@
             buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonRegistrar.UseVisualStyleBackColor = true;
             buttonRegistrar.Click += buttonRegistrar_Click_1;
+            buttonRegistrar.MouseMove += buttonRegistrar_MouseMove;
             // 
             // buttonConsultar
             // 
@@ -125,6 +127,7 @@
             buttonConsultar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonConsultar.UseVisualStyleBackColor = true;
             buttonConsultar.Click += buttonConsultar_Click;
+            buttonConsultar.MouseMove += buttonConsultar_MouseMove;
             // 
             // buttonActualizar
             // 
@@ -139,6 +142,7 @@
             buttonActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonActualizar.UseVisualStyleBackColor = true;
             buttonActualizar.Click += buttonActualizar_Click;
+            buttonActualizar.MouseMove += buttonActualizar_MouseMove;
             // 
             // buttonRegresar
             // 
@@ -177,7 +181,6 @@
             listView1.TabIndex = 8;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
-            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // columnNumIdent
             // 
@@ -210,7 +213,6 @@
             label1.TabIndex = 5;
             label1.Text = "Ganado Seco";
             label1.TextAlign = ContentAlignment.TopCenter;
-            label1.Click += label1_Click;
             // 
             // FormGanadoDeCarne
             // 

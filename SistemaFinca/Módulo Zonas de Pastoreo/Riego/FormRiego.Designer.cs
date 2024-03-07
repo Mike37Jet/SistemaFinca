@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinca
 {
-    partial class FormVentas
+    partial class FormRiego
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVentas));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
-            btnEliminar = new Button();
-            btnConsultar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            buttonBuscarCliente = new Button();
-            label2 = new Label();
-            txtCedula = new TextBox();
-            label1 = new Label();
+            textBox8 = new TextBox();
+            label9 = new Label();
+            textBox4 = new TextBox();
+            label5 = new Label();
+            textBox5 = new TextBox();
+            label6 = new Label();
+            textBox6 = new TextBox();
+            label7 = new Label();
             label18 = new Label();
+            buttonRegistrar = new Button();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -66,47 +68,15 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0769234F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.76923F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.11811F));
-            tableLayoutPanel1.Controls.Add(btnEliminar, 0, 0);
-            tableLayoutPanel1.Controls.Add(btnConsultar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonRegresar, 5, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 491);
+            tableLayoutPanel1.Location = new Point(0, 541);
             tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Size = new Size(895, 50);
             tableLayoutPanel1.TabIndex = 7;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.Dock = DockStyle.Fill;
-            btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
-            btnEliminar.Location = new Point(95, 0);
-            btnEliminar.Margin = new Padding(0);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(95, 50);
-            btnEliminar.TabIndex = 17;
-            btnEliminar.TextAlign = ContentAlignment.BottomCenter;
-            btnEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
-            btnEliminar.MouseMove += btnEliminar_MouseMove;
-            // 
-            // btnConsultar
-            // 
-            btnConsultar.Dock = DockStyle.Fill;
-            btnConsultar.Image = (Image)resources.GetObject("btnConsultar.Image");
-            btnConsultar.Location = new Point(0, 0);
-            btnConsultar.Margin = new Padding(0);
-            btnConsultar.Name = "btnConsultar";
-            btnConsultar.Size = new Size(95, 50);
-            btnConsultar.TabIndex = 16;
-            btnConsultar.TextAlign = ContentAlignment.BottomCenter;
-            btnConsultar.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnConsultar.UseVisualStyleBackColor = true;
-            btnConsultar.Click += btnConsultar_Click;
-            btnConsultar.MouseMove += btnConsultar_MouseMove;
             // 
             // buttonRegresar
             // 
@@ -124,78 +94,129 @@
             // panelFormularioHijo
             // 
             panelFormularioHijo.AutoScroll = true;
-            panelFormularioHijo.Controls.Add(buttonBuscarCliente);
-            panelFormularioHijo.Controls.Add(label2);
-            panelFormularioHijo.Controls.Add(txtCedula);
-            panelFormularioHijo.Controls.Add(label1);
+            panelFormularioHijo.Controls.Add(buttonRegistrar);
+            panelFormularioHijo.Controls.Add(textBox8);
+            panelFormularioHijo.Controls.Add(label9);
+            panelFormularioHijo.Controls.Add(textBox4);
+            panelFormularioHijo.Controls.Add(label5);
+            panelFormularioHijo.Controls.Add(textBox5);
+            panelFormularioHijo.Controls.Add(label6);
+            panelFormularioHijo.Controls.Add(textBox6);
+            panelFormularioHijo.Controls.Add(label7);
             panelFormularioHijo.Controls.Add(label18);
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
             panelFormularioHijo.Margin = new Padding(3, 2, 3, 2);
             panelFormularioHijo.Name = "panelFormularioHijo";
-            panelFormularioHijo.Size = new Size(895, 491);
+            panelFormularioHijo.Size = new Size(895, 541);
             panelFormularioHijo.TabIndex = 8;
-            panelFormularioHijo.Paint += panelFormularioHijo_Paint;
             // 
-            // buttonBuscarCliente
+            // textBox8
             // 
-            buttonBuscarCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonBuscarCliente.Location = new Point(390, 219);
-            buttonBuscarCliente.Name = "buttonBuscarCliente";
-            buttonBuscarCliente.Size = new Size(97, 35);
-            buttonBuscarCliente.TabIndex = 38;
-            buttonBuscarCliente.Text = "Buscar";
-            buttonBuscarCliente.UseVisualStyleBackColor = true;
-            buttonBuscarCliente.Click += buttonBuscarCliente_Click;
+            textBox8.Font = new Font("Segoe UI", 12F);
+            textBox8.Location = new Point(364, 151);
+            textBox8.Margin = new Padding(3, 2, 3, 2);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(167, 29);
+            textBox8.TabIndex = 52;
             // 
-            // label2
+            // label9
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(284, 163);
-            label2.Name = "label2";
-            label2.Size = new Size(21, 15);
-            label2.TabIndex = 37;
-            label2.Text = "CI:";
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F);
+            label9.Location = new Point(388, 117);
+            label9.Name = "label9";
+            label9.Size = new Size(118, 21);
+            label9.TabIndex = 51;
+            label9.Text = "Código de zona";
             // 
-            // txtCedula
+            // textBox4
             // 
-            txtCedula.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCedula.Location = new Point(311, 155);
-            txtCedula.Name = "txtCedula";
-            txtCedula.Size = new Size(272, 29);
-            txtCedula.TabIndex = 36;
+            textBox4.Font = new Font("Segoe UI", 12F);
+            textBox4.Location = new Point(364, 379);
+            textBox4.Margin = new Padding(3, 2, 3, 2);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(167, 29);
+            textBox4.TabIndex = 48;
             // 
-            // label1
+            // label5
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(56, 85);
-            label1.Name = "label1";
-            label1.Size = new Size(783, 21);
-            label1.TabIndex = 35;
-            label1.Text = "Buscar al cliente interesado en emitir una nota de venta con el fin de verificar la existencia de un contrato previo.";
-            label1.Click += label1_Click;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.Location = new Point(380, 345);
+            label5.Name = "label5";
+            label5.Size = new Size(135, 21);
+            label5.TabIndex = 47;
+            label5.Text = "Cantidad de agua ";
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 12F);
+            textBox5.Location = new Point(364, 303);
+            textBox5.Margin = new Padding(3, 2, 3, 2);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(167, 29);
+            textBox5.TabIndex = 46;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F);
+            label6.Location = new Point(375, 269);
+            label6.Name = "label6";
+            label6.Size = new Size(145, 21);
+            label6.TabIndex = 45;
+            label6.Text = "Fecha final de riego";
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 12F);
+            textBox6.Location = new Point(364, 227);
+            textBox6.Margin = new Padding(3, 2, 3, 2);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(167, 29);
+            textBox6.TabIndex = 44;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.Location = new Point(370, 193);
+            label7.Name = "label7";
+            label7.Size = new Size(155, 21);
+            label7.TabIndex = 43;
+            label7.Text = "Fecha inicial de riego";
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(344, 23);
+            label18.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label18.Location = new Point(288, 35);
             label18.Name = "label18";
-            label18.Size = new Size(207, 32);
+            label18.Size = new Size(319, 28);
             label18.TabIndex = 34;
-            label18.Text = "Buscar Cliente";
+            label18.Text = "Riego de zona de pastoreo";
             // 
-            // FormVentas
+            // buttonRegistrar
+            // 
+            buttonRegistrar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonRegistrar.Location = new Point(401, 457);
+            buttonRegistrar.Name = "buttonRegistrar";
+            buttonRegistrar.Size = new Size(91, 38);
+            buttonRegistrar.TabIndex = 53;
+            buttonRegistrar.Text = "Registrar";
+            buttonRegistrar.UseVisualStyleBackColor = true;
+            // 
+            // FormRiego
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(895, 541);
+            ClientSize = new Size(895, 591);
             Controls.Add(panelFormularioHijo);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FormVentas";
+            Name = "FormRiego";
             Text = "Inventario";
             tableLayoutPanel1.ResumeLayout(false);
             panelFormularioHijo.ResumeLayout(false);
@@ -206,14 +227,17 @@
         #endregion
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel1;
+        private Button buttonRegresar;
         private Panel panelFormularioHijo;
         private Label label18;
-        private Label label1;
-        private Button buttonRegresar;
-        private Button buttonBuscarCliente;
-        private Label label2;
-        private TextBox txtCedula;
-        private Button btnConsultar;
-        private Button btnEliminar;
+        private TextBox textBox4;
+        private Label label5;
+        private TextBox textBox5;
+        private Label label6;
+        private TextBox textBox6;
+        private Label label7;
+        private TextBox textBox8;
+        private Label label9;
+        private Button buttonRegistrar;
     }
 }

@@ -96,6 +96,7 @@
             buttonEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonEliminar.UseVisualStyleBackColor = true;
             buttonEliminar.Click += buttonEliminar_Click;
+            buttonEliminar.MouseMove += buttonEliminar_MouseMove;
             // 
             // buttonBuscar
             // 
@@ -110,6 +111,7 @@
             buttonBuscar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonBuscar.UseVisualStyleBackColor = true;
             buttonBuscar.Click += buttonBuscar_Click;
+            buttonBuscar.MouseMove += buttonBuscar_MouseMove;
             // 
             // buttonActualizar
             // 
@@ -124,6 +126,7 @@
             buttonActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonActualizar.UseVisualStyleBackColor = true;
             buttonActualizar.Click += buttonActualizar_Click;
+            buttonActualizar.MouseMove += buttonActualizar_MouseMove;
             // 
             // buttonRegistrar
             // 
@@ -138,6 +141,7 @@
             buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonRegistrar.UseVisualStyleBackColor = true;
             buttonRegistrar.Click += buttonRegistrar_Click_1;
+            buttonRegistrar.MouseMove += buttonRegistrar_MouseMove;
             // 
             // buttonRegresar
             // 

@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ToolTip = System.Windows.Forms.ToolTip;
 
 namespace SistemaFinca
 {
     public partial class FormMedicamentosBovinos : Form
     {
+        private ToolTip toolTip = new ToolTip();
         public FormMedicamentosBovinos()
         {
             InitializeComponent();
@@ -68,6 +71,26 @@ namespace SistemaFinca
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormMB_Eliminar());
+        }
+
+        private void buttonRegistrar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonRegistrar, "Registrar medicamento");
+        }
+
+        private void buttonActualizar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonActualizar, "Actualizar medicamento");
+        }
+
+        private void buttonBuscar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonBuscar, "Consultar medicamento");
+        }
+
+        private void buttonEliminar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonEliminar, "Eliminar medicamento");
         }
     }
 }

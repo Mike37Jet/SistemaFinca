@@ -14,6 +14,7 @@ namespace SistemaFinca
     public partial class FormRetiros : Form
     {
         private char rol;
+        private ToolTip toolTip = new ToolTip();
         public FormRetiros(char rol)
         {
             InitializeComponent();
@@ -111,6 +112,16 @@ namespace SistemaFinca
             {
                 this.Close();
             }
+        }
+
+        private void btnRegistrar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(btnRegistrar, "Registrar retiro");
+        }
+
+        private void btnEliminar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(btnEliminar, "Eliminar retiro");
         }
     }
 }

@@ -48,21 +48,21 @@
             label8 = new Label();
             txtCorreo = new TextBox();
             labelEjCedula = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
+            labelEjNombres = new Label();
+            labelEjUsuario = new Label();
+            labelEjContraseña = new Label();
+            labelEjApellidos = new Label();
+            labelEjTelefono = new Label();
+            labelEjEmail = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
+            label1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(313, 20);
             label1.Name = "label1";
-            label1.Size = new Size(176, 21);
+            label1.Size = new Size(200, 18);
             label1.TabIndex = 0;
             label1.Text = "Registrar nuevo usuario";
             // 
@@ -74,7 +74,7 @@
             txtNumeroC.Margin = new Padding(3, 2, 3, 2);
             txtNumeroC.Name = "txtNumeroC";
             txtNumeroC.Size = new Size(244, 29);
-            txtNumeroC.TabIndex = 2;
+            txtNumeroC.TabIndex = 1;
             // 
             // label2
             // 
@@ -102,27 +102,27 @@
             // 
             txtNombres.Cursor = Cursors.IBeam;
             txtNombres.Font = new Font("Segoe UI", 12F);
-            txtNombres.Location = new Point(102, 172);
+            txtNombres.Location = new Point(456, 88);
             txtNombres.Margin = new Padding(3, 2, 3, 2);
             txtNombres.Name = "txtNombres";
             txtNombres.Size = new Size(244, 29);
-            txtNombres.TabIndex = 11;
+            txtNombres.TabIndex = 2;
             // 
             // txtApellidos
             // 
             txtApellidos.Cursor = Cursors.IBeam;
             txtApellidos.Font = new Font("Segoe UI", 12F);
-            txtApellidos.Location = new Point(456, 172);
+            txtApellidos.Location = new Point(102, 175);
             txtApellidos.Margin = new Padding(3, 2, 3, 2);
             txtApellidos.Name = "txtApellidos";
             txtApellidos.Size = new Size(244, 29);
-            txtApellidos.TabIndex = 12;
+            txtApellidos.TabIndex = 3;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(102, 152);
+            label4.Location = new Point(456, 68);
             label4.Name = "label4";
             label4.Size = new Size(75, 21);
             label4.TabIndex = 14;
@@ -132,7 +132,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(456, 152);
+            label5.Location = new Point(102, 155);
             label5.Name = "label5";
             label5.Size = new Size(74, 21);
             label5.TabIndex = 15;
@@ -146,7 +146,7 @@
             radioAd.Margin = new Padding(3, 2, 3, 2);
             radioAd.Name = "radioAd";
             radioAd.Size = new Size(128, 25);
-            radioAd.TabIndex = 17;
+            radioAd.TabIndex = 8;
             radioAd.TabStop = true;
             radioAd.Text = "Administrador";
             radioAd.UseVisualStyleBackColor = true;
@@ -159,7 +159,7 @@
             radioJor.Margin = new Padding(3, 2, 3, 2);
             radioJor.Name = "radioJor";
             radioJor.Size = new Size(93, 25);
-            radioJor.TabIndex = 18;
+            radioJor.TabIndex = 9;
             radioJor.TabStop = true;
             radioJor.Text = "Jornalero";
             radioJor.UseVisualStyleBackColor = true;
@@ -178,7 +178,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(456, 65);
+            label3.Location = new Point(456, 152);
             label3.Name = "label3";
             label3.Size = new Size(68, 21);
             label3.TabIndex = 5;
@@ -188,7 +188,7 @@
             // 
             txtTelefono.Cursor = Cursors.IBeam;
             txtTelefono.Font = new Font("Segoe UI", 12F);
-            txtTelefono.Location = new Point(456, 88);
+            txtTelefono.Location = new Point(456, 175);
             txtTelefono.Margin = new Padding(3, 2, 3, 2);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(244, 29);
@@ -202,7 +202,7 @@
             txtNombreU.Margin = new Padding(3, 2, 3, 2);
             txtNombreU.Name = "txtNombreU";
             txtNombreU.Size = new Size(244, 29);
-            txtNombreU.TabIndex = 22;
+            txtNombreU.TabIndex = 5;
             // 
             // txtContrasena
             // 
@@ -212,7 +212,7 @@
             txtContrasena.Margin = new Padding(3, 2, 3, 2);
             txtContrasena.Name = "txtContrasena";
             txtContrasena.Size = new Size(244, 29);
-            txtContrasena.TabIndex = 23;
+            txtContrasena.TabIndex = 6;
             // 
             // label6
             // 
@@ -252,82 +252,89 @@
             txtCorreo.Margin = new Padding(3, 2, 3, 2);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(321, 29);
-            txtCorreo.TabIndex = 27;
+            txtCorreo.TabIndex = 7;
             // 
             // labelEjCedula
             // 
             labelEjCedula.AutoSize = true;
+            labelEjCedula.ForeColor = Color.Red;
             labelEjCedula.Location = new Point(102, 119);
             labelEjCedula.Name = "labelEjCedula";
             labelEjCedula.Size = new Size(82, 15);
             labelEjCedula.TabIndex = 28;
             labelEjCedula.Text = "Ej: 1600830705";
             // 
-            // label10
+            // labelEjNombres
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(102, 203);
-            label10.Name = "label10";
-            label10.Size = new Size(79, 15);
-            label10.TabIndex = 29;
-            label10.Text = "Ej: Juan Pablo";
+            labelEjNombres.AutoSize = true;
+            labelEjNombres.ForeColor = Color.Red;
+            labelEjNombres.Location = new Point(456, 119);
+            labelEjNombres.Name = "labelEjNombres";
+            labelEjNombres.Size = new Size(79, 15);
+            labelEjNombres.TabIndex = 29;
+            labelEjNombres.Text = "Ej: Juan Pablo";
             // 
-            // label11
+            // labelEjUsuario
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(102, 293);
-            label11.Name = "label11";
-            label11.Size = new Size(58, 15);
-            label11.TabIndex = 30;
-            label11.Text = "Ej: Admin";
+            labelEjUsuario.AutoSize = true;
+            labelEjUsuario.ForeColor = Color.Red;
+            labelEjUsuario.Location = new Point(102, 293);
+            labelEjUsuario.Name = "labelEjUsuario";
+            labelEjUsuario.Size = new Size(58, 15);
+            labelEjUsuario.TabIndex = 30;
+            labelEjUsuario.Text = "Ej: Admin";
             // 
-            // label12
+            // labelEjContraseña
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(456, 293);
-            label12.Name = "label12";
-            label12.Size = new Size(77, 15);
-            label12.TabIndex = 31;
-            label12.Text = "Ej: pA$sWord";
+            labelEjContraseña.AutoSize = true;
+            labelEjContraseña.ForeColor = Color.Red;
+            labelEjContraseña.Location = new Point(456, 293);
+            labelEjContraseña.Name = "labelEjContraseña";
+            labelEjContraseña.Size = new Size(77, 15);
+            labelEjContraseña.TabIndex = 31;
+            labelEjContraseña.Text = "Ej: pA$sWord";
             // 
-            // label13
+            // labelEjApellidos
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(456, 203);
-            label13.Name = "label13";
-            label13.Size = new Size(123, 15);
-            label13.TabIndex = 32;
-            label13.Text = "Ej: Sánchez Zambrano";
+            labelEjApellidos.AutoSize = true;
+            labelEjApellidos.ForeColor = Color.Red;
+            labelEjApellidos.Location = new Point(102, 206);
+            labelEjApellidos.Name = "labelEjApellidos";
+            labelEjApellidos.Size = new Size(123, 15);
+            labelEjApellidos.TabIndex = 32;
+            labelEjApellidos.Text = "Ej: Sánchez Zambrano";
             // 
-            // label14
+            // labelEjTelefono
             // 
-            label14.AutoSize = true;
-            label14.Location = new Point(456, 119);
-            label14.Name = "label14";
-            label14.Size = new Size(82, 15);
-            label14.TabIndex = 33;
-            label14.Text = "Ej: 0987654321";
+            labelEjTelefono.AutoSize = true;
+            labelEjTelefono.ForeColor = Color.Red;
+            labelEjTelefono.Location = new Point(456, 206);
+            labelEjTelefono.Name = "labelEjTelefono";
+            labelEjTelefono.Size = new Size(82, 15);
+            labelEjTelefono.TabIndex = 33;
+            labelEjTelefono.Text = "Ej: 0987654321";
             // 
-            // label15
+            // labelEjEmail
             // 
-            label15.AutoSize = true;
-            label15.Location = new Point(456, 394);
-            label15.Name = "label15";
-            label15.Size = new Size(124, 15);
-            label15.TabIndex = 34;
-            label15.Text = "Ej: correo@gmail.com";
+            labelEjEmail.AutoSize = true;
+            labelEjEmail.ForeColor = Color.Red;
+            labelEjEmail.Location = new Point(456, 394);
+            labelEjEmail.Name = "labelEjEmail";
+            labelEjEmail.Size = new Size(124, 15);
+            labelEjEmail.TabIndex = 34;
+            labelEjEmail.Text = "Ej: correo@gmail.com";
             // 
             // FormGU_Registrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 541);
-            Controls.Add(label15);
-            Controls.Add(label14);
-            Controls.Add(label13);
-            Controls.Add(label12);
-            Controls.Add(label11);
-            Controls.Add(label10);
+            Controls.Add(labelEjEmail);
+            Controls.Add(labelEjTelefono);
+            Controls.Add(labelEjApellidos);
+            Controls.Add(labelEjContraseña);
+            Controls.Add(labelEjUsuario);
+            Controls.Add(labelEjNombres);
             Controls.Add(labelEjCedula);
             Controls.Add(txtCorreo);
             Controls.Add(label8);
@@ -378,11 +385,11 @@
         private Label label8;
         private TextBox txtCorreo;
         private Label labelEjCedula;
-        private Label label10;
-        private Label label11;
-        private Label label12;
-        private Label label13;
-        private Label label14;
-        private Label label15;
+        private Label labelEjNombres;
+        private Label labelEjUsuario;
+        private Label labelEjContraseña;
+        private Label labelEjApellidos;
+        private Label labelEjTelefono;
+        private Label labelEjEmail;
     }
 }

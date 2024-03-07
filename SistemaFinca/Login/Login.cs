@@ -99,7 +99,7 @@ namespace SistemaFinca
                     try
                     {
                         connection.Open();
-                        String commString = $"SELECT rol, contrasena, estado, usuario FROM usuario WHERE usuario = '{textUsuario.Text}'";
+                        String commString = $"SELECT rol, contrasena, estado, usuario, nombres, apellidos FROM usuario WHERE usuario = '{textUsuario.Text}'";
                         NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                         NpgsqlDataReader reader = comm.ExecuteReader();
                         if (!reader.HasRows)
@@ -112,6 +112,8 @@ namespace SistemaFinca
                         String contrasenaValida = reader.GetString(1);
                         char estado = reader.GetChar(2);
                         String usuario = reader.GetString(3);
+                        String nombres = reader.GetString(4);
+                        String apellidos = reader.GetString(5);
 
                         if (estado == 'I')
                         {
@@ -124,7 +126,7 @@ namespace SistemaFinca
                             String commString2 = $"SELECT to_char(now()::timestamp(0), 'YYYY-MM-DD HH24:MI:SS')";
                             NpgsqlCommand comm2 = new NpgsqlCommand(commString2, connection);
                             String fechaInicio = comm2.ExecuteScalar().ToString();
-                            FormMenu formMenu = new FormMenu(rol, usuario, fechaInicio);
+                            FormMenu formMenu = new FormMenu(rol, usuario, fechaInicio, nombres, apellidos);
                             formMenu.Show(this);
                             this.Hide();
                         }

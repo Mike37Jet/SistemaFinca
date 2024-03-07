@@ -37,10 +37,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(376, 62);
+            label1.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(350, 61);
             label1.Name = "label1";
-            label1.Size = new Size(152, 21);
+            label1.Size = new Size(200, 22);
             label1.TabIndex = 0;
             label1.Text = "Dar de Alta al cliente";
             label1.Click += label1_Click;

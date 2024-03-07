@@ -95,6 +95,7 @@
             btnEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
+            btnEliminar.MouseMove += btnEliminar_MouseMove;
             // 
             // btnConsultar
             // 
@@ -109,6 +110,7 @@
             btnConsultar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnConsultar.UseVisualStyleBackColor = true;
             btnConsultar.Click += btnConsultar_Click;
+            btnConsultar.MouseMove += btnConsultar_MouseMove;
             // 
             // btnGenerar
             // 
@@ -123,6 +125,7 @@
             btnGenerar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnGenerar.UseVisualStyleBackColor = true;
             btnGenerar.Click += btnGenerar_Click;
+            btnGenerar.MouseMove += btnGenerar_MouseMove;
             // 
             // buttonRegresar
             // 

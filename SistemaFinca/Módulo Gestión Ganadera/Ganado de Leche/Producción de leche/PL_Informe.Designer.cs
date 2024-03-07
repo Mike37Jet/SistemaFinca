@@ -47,15 +47,16 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(650, 55);
+            panel1.Size = new Size(895, 55);
             panel1.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(263, 21);
+            label1.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(369, 21);
             label1.Name = "label1";
-            label1.Size = new Size(116, 20);
+            label1.Size = new Size(156, 22);
             label1.TabIndex = 2;
             label1.Text = "Mostrar Informe";
             // 
@@ -69,15 +70,16 @@
             panelActualizarCliente.Dock = DockStyle.Fill;
             panelActualizarCliente.Location = new Point(0, 55);
             panelActualizarCliente.Name = "panelActualizarCliente";
-            panelActualizarCliente.Size = new Size(650, 449);
+            panelActualizarCliente.Size = new Size(895, 536);
             panelActualizarCliente.TabIndex = 3;
             // 
             // radioResumenHistorico
             // 
             radioResumenHistorico.AutoSize = true;
-            radioResumenHistorico.Location = new Point(34, 108);
+            radioResumenHistorico.Font = new Font("Segoe UI", 12F);
+            radioResumenHistorico.Location = new Point(118, 144);
             radioResumenHistorico.Name = "radioResumenHistorico";
-            radioResumenHistorico.Size = new Size(154, 24);
+            radioResumenHistorico.Size = new Size(159, 25);
             radioResumenHistorico.TabIndex = 6;
             radioResumenHistorico.TabStop = true;
             radioResumenHistorico.Text = "Resumen Histórico";
@@ -86,9 +88,10 @@
             // radioAnual
             // 
             radioAnual.AutoSize = true;
-            radioAnual.Location = new Point(34, 78);
+            radioAnual.Font = new Font("Segoe UI", 12F);
+            radioAnual.Location = new Point(118, 114);
             radioAnual.Name = "radioAnual";
-            radioAnual.Size = new Size(68, 24);
+            radioAnual.Size = new Size(68, 25);
             radioAnual.TabIndex = 5;
             radioAnual.TabStop = true;
             radioAnual.Text = "Anual";
@@ -97,9 +100,10 @@
             // radioMensual
             // 
             radioMensual.AutoSize = true;
-            radioMensual.Location = new Point(34, 48);
+            radioMensual.Font = new Font("Segoe UI", 12F);
+            radioMensual.Location = new Point(118, 84);
             radioMensual.Name = "radioMensual";
-            radioMensual.Size = new Size(85, 24);
+            radioMensual.Size = new Size(87, 25);
             radioMensual.TabIndex = 4;
             radioMensual.TabStop = true;
             radioMensual.Text = "Mensual";
@@ -107,9 +111,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(272, 359);
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(391, 376);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(104, 38);
             button1.TabIndex = 3;
             button1.Text = "Imprimir";
             button1.UseVisualStyleBackColor = true;
@@ -118,9 +123,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(21, 15);
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(118, 27);
             label2.Name = "label2";
-            label2.Size = new Size(223, 40);
+            label2.Size = new Size(233, 42);
             label2.TabIndex = 0;
             label2.Text = "Elegir el resumen de producción\r\n\r\n";
             // 
@@ -130,9 +136,9 @@
             // 
             // FormPL_Emitir
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 504);
+            ClientSize = new Size(895, 591);
             Controls.Add(panelActualizarCliente);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;

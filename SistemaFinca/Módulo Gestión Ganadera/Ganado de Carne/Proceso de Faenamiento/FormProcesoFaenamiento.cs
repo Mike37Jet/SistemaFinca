@@ -12,6 +12,7 @@ namespace SistemaFinca
 {
     public partial class FormProcesoFaenamiento : Form
     {
+        private ToolTip toolTip = new ToolTip();
         public FormProcesoFaenamiento()
         {
             InitializeComponent();
@@ -54,6 +55,9 @@ namespace SistemaFinca
             abrirFormulariosHijos(new FormPF_Registrar());
         }
 
-       
+        private void buttonRegistrar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonRegistrar, "Registrar res para el faenamiento");
+        }
     }
 }

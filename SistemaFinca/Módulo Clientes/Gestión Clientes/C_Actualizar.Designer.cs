@@ -51,10 +51,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(369, 21);
             label1.Name = "label1";
-            label1.Size = new Size(157, 25);
+            label1.Size = new Size(169, 22);
             label1.TabIndex = 2;
             label1.Text = "Actualizar cliente";
             // 

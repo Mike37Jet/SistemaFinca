@@ -15,6 +15,7 @@ namespace SistemaFinca
     {
         private String cedulacliente, idcontrato;
         private char rol;
+        private ToolTip toolTip = new ToolTip();
 
         public FormVentas(char rol)
         {
@@ -139,6 +140,16 @@ namespace SistemaFinca
                 return;
             }
             abrirFormulariosHijos(new FormVEliminar());
+        }
+
+        private void btnConsultar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(btnConsultar, "Consultar nota de venta");
+        }
+
+        private void btnEliminar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(btnEliminar, "Eliminar nota de venta");
         }
     }
 }

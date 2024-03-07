@@ -52,6 +52,11 @@ namespace SistemaFinca
             labelDireccion.Text = direccion;
           
         }
+
+        internal void llenarDatos2(string? precioLeche)
+        {
+            labelPrecioUnitario.Text = precioLeche;
+        }
     }
 
 }

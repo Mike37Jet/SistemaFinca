@@ -20,8 +20,19 @@ namespace SistemaFinca
         {
             InitializeComponent();
             radioJor.Checked = true;
+            ocultarEjemplos();
         }
 
+        private void ocultarEjemplos()
+        {
+            labelEjApellidos.Visible = false;
+            labelEjCedula.Visible = false;
+            labelEjContraseña.Visible = false;
+            labelEjEmail.Visible = false;
+            labelEjNombres.Visible = false;
+            labelEjTelefono.Visible = false;
+            labelEjUsuario.Visible = false;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -33,39 +44,75 @@ namespace SistemaFinca
             if (!CedulaEsValida(txtNumeroC.Text))
             {
                 MessageBox.Show("El número de cédula no es válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                labelEjCedula.Visible = true;
                 return;
+            }
+            else
+            {
+                labelEjCedula.Visible = false;
             }
 
             if (txtNombres.Text.Length > 60 || !NombresApellidosSonValidos(txtNombres.Text))
             {
                 MessageBox.Show("Nombres ingresados no válidos", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                labelEjNombres.Visible=true;
                 return;
 
+            }
+            else
+            {
+                labelEjNombres.Visible = false;
             }
             if (txtApellidos.Text.Length > 60 || !NombresApellidosSonValidos(txtApellidos.Text))
             {
                 MessageBox.Show("Apellidos ingresados no válidos", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                labelEjApellidos.Visible=true;
                 return;
+            }
+            else
+            {
+                labelEjApellidos.Visible = false;
             }
             if (txtTelefono.Text.Length > 11 || txtTelefono.Text.Length < 7 || !TelefonoEsValido(txtTelefono.Text))
             {
                 MessageBox.Show("Teléfono ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                labelEjTelefono.Visible=true;
                 return;
             }
-            if (txtCorreo.Text.Length > 320 || !CorreoEsValido(txtCorreo.Text))
+            else
             {
-                MessageBox.Show("Correo electrónico ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                labelEjTelefono.Visible = false;
             }
+          
             if (txtNombreU.Text.Length > 15 || txtNombreU.Text.Length < 5 || !UsuarioEsValido(txtNombreU.Text))
             {
                 MessageBox.Show("Nombre usuario ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                labelEjUsuario.Visible=true;
                 return;
+            }
+            else
+            {
+                labelEjUsuario.Visible = false;
             }
             if (txtContrasena.Text.Length > 20 || txtContrasena.Text.Length < 8 || !ContrasenaEsValida(txtContrasena.Text))
             {
                 MessageBox.Show("Contraseña ingresada no válida", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                labelEjContraseña.Visible=true;
                 return;
+            }
+            else
+            {
+                labelEjContraseña.Visible = false;
+            }
+            if (txtCorreo.Text.Length > 320 || !CorreoEsValido(txtCorreo.Text))
+            {
+                MessageBox.Show("Correo electrónico ingresado no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                labelEjEmail.Visible = true;
+                return;
+            }
+            else
+            {
+                labelEjEmail.Visible = false;
             }
             using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
             {

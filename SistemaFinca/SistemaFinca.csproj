@@ -50,7 +50,7 @@
     <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\Proceso de Faenamiento\FormProcesoFaenamiento.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Carne\Proceso de Faenamiento\PF_Registrar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\Producción de leche\FormProduccionLeche.cs" />
-    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\Producción de leche\PL_Consultar.cs" />
+    <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\Producción de leche\PL_Informe.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\Producción de leche\PL_Registrar.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\Registro de ordeño\FormRegistroOrdeño.cs" />
     <Compile Update="Módulo Gestión Ganadera\Ganado de Leche\Registro de ordeño\RO_Registrar.cs" />
@@ -106,7 +106,7 @@
     <Compile Update="Módulo Zonas de Pastoreo\Registro Zonas Pastoreo\FormGestZonPast.cs" />
     <Compile Update="Módulo Zonas de Pastoreo\Registro Zonas Pastoreo\GZP_Registrar.cs" />
     <Compile Update="Módulo Zonas de Pastoreo\Registro Zonas Pastoreo\GZP_EmitirInformes.cs" />
-    <Compile Update="Módulo Zonas de Pastoreo\Riego\FormSeguimientoActividades.cs" />
+    <Compile Update="Módulo Zonas de Pastoreo\Riego\FormRiego.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

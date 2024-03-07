@@ -73,11 +73,11 @@
             tableLayoutPanel1.Controls.Add(buttonRegistrar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonRegresar, 6, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 459);
+            tableLayoutPanel1.Location = new Point(0, 541);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(650, 45);
+            tableLayoutPanel1.Size = new Size(895, 50);
             tableLayoutPanel1.TabIndex = 7;
             // 
             // buttonRegistrar
@@ -87,19 +87,21 @@
             buttonRegistrar.Location = new Point(0, 0);
             buttonRegistrar.Margin = new Padding(0);
             buttonRegistrar.Name = "buttonRegistrar";
-            buttonRegistrar.Size = new Size(78, 45);
+            buttonRegistrar.Size = new Size(116, 50);
             buttonRegistrar.TabIndex = 6;
             buttonRegistrar.TextAlign = ContentAlignment.BottomCenter;
             buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonRegistrar.UseVisualStyleBackColor = true;
             buttonRegistrar.Click += buttonRegistrar_Click_1;
+            buttonRegistrar.MouseMove += buttonRegistrar_MouseMove;
             // 
             // buttonRegresar
             // 
             buttonRegresar.Dock = DockStyle.Fill;
-            buttonRegresar.Location = new Point(501, 3);
+            buttonRegresar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonRegresar.Location = new Point(745, 3);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(146, 39);
+            buttonRegresar.Size = new Size(147, 44);
             buttonRegresar.TabIndex = 10;
             buttonRegresar.Text = "Regresar";
             buttonRegresar.UseVisualStyleBackColor = true;
@@ -110,9 +112,9 @@
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(210, 27);
+            label1.Location = new Point(332, 27);
             label1.Name = "label1";
-            label1.Size = new Size(231, 27);
+            label1.Size = new Size(189, 22);
             label1.TabIndex = 5;
             label1.Text = "Registro de Ordeño";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -120,9 +122,10 @@
             // listView1
             // 
             listView1.Columns.AddRange(new ColumnHeader[] { columnNumOrd, columnIdenAnim, columnNomOrde, columnFechaOrd, columnHoraOrd });
+            listView1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listView1.Location = new Point(42, 117);
             listView1.Name = "listView1";
-            listView1.Size = new Size(574, 302);
+            listView1.Size = new Size(808, 395);
             listView1.TabIndex = 6;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -153,17 +156,19 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(42, 80);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(42, 88);
             label2.Name = "label2";
-            label2.Size = new Size(214, 20);
+            label2.Size = new Size(224, 21);
             label2.TabIndex = 7;
             label2.Text = "Historial de ordeños anteriores";
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(326, 80);
+            dateTimePicker1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker1.Location = new Point(560, 80);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(290, 27);
+            dateTimePicker1.Size = new Size(290, 29);
             dateTimePicker1.TabIndex = 8;
             // 
             // panelFormularioHijo
@@ -176,14 +181,14 @@
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
             panelFormularioHijo.Name = "panelFormularioHijo";
-            panelFormularioHijo.Size = new Size(650, 459);
+            panelFormularioHijo.Size = new Size(895, 541);
             panelFormularioHijo.TabIndex = 8;
             // 
             // FormRegistroOrdeño
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 504);
+            ClientSize = new Size(895, 591);
             Controls.Add(panelFormularioHijo);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;

@@ -174,6 +174,7 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "GDZP_Fumigación";
             Text = "GDZP_Fumigación";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

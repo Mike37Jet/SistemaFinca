@@ -52,10 +52,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(383, 10);
             label1.Name = "label1";
-            label1.Size = new Size(106, 21);
+            label1.Size = new Size(121, 18);
             label1.TabIndex = 2;
             label1.Text = "Consultar Res";
             // 
@@ -115,7 +115,7 @@
             label2.TabIndex = 0;
             label2.Text = "Para consultar los datos del res, ingrese su número de identificación a continuación:\r\n";
             // 
-            // FormGB_Consultar
+            // FormGC_Consultar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -124,7 +124,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FormGB_Consultar";
+            Name = "FormGC_Consultar";
             Text = "Administrador";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

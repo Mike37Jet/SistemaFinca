@@ -12,6 +12,7 @@ namespace SistemaFinca
 {
     public partial class FormHerramientasAgricolasGanaderas : Form
     {
+        private ToolTip toolTip = new ToolTip();
         public FormHerramientasAgricolasGanaderas()
         {
             InitializeComponent();
@@ -67,6 +68,26 @@ namespace SistemaFinca
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormHAG_Eliminar());
+        }
+
+        private void buttonRegistrar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonRegistrar, "Registrar herramienta");
+        }
+
+        private void buttonActualizar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonActualizar, "Actualizar herramienta");
+        }
+
+        private void buttonBuscar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonBuscar, "Consultar herramienta");
+        }
+
+        private void buttonEliminar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonEliminar, "Eliminar herramienta");
         }
     }
 }

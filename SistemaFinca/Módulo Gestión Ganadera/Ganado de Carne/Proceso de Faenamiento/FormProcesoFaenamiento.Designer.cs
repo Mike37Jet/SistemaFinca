@@ -31,10 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProcesoFaenamiento));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            buttonRegistrar = new Button();
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
-            label2 = new Label();
-            label1 = new Label();
             listView2 = new ListView();
             columnNumIdent = new ColumnHeader();
             columnRaza = new ColumnHeader();
@@ -42,7 +41,8 @@
             columnCategoria = new ColumnHeader();
             columnPromedioLeche = new ColumnHeader();
             columnNumCrias = new ColumnHeader();
-            buttonRegistrar = new Button();
+            label2 = new Label();
+            label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -73,19 +73,36 @@
             tableLayoutPanel1.Controls.Add(buttonRegistrar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonRegresar, 6, 0);
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 459);
+            tableLayoutPanel1.Location = new Point(0, 491);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(650, 45);
+            tableLayoutPanel1.Size = new Size(895, 50);
             tableLayoutPanel1.TabIndex = 7;
+            // 
+            // buttonRegistrar
+            // 
+            buttonRegistrar.BackColor = Color.Gray;
+            buttonRegistrar.Dock = DockStyle.Fill;
+            buttonRegistrar.Image = (Image)resources.GetObject("buttonRegistrar.Image");
+            buttonRegistrar.Location = new Point(0, 0);
+            buttonRegistrar.Margin = new Padding(0);
+            buttonRegistrar.Name = "buttonRegistrar";
+            buttonRegistrar.Size = new Size(136, 50);
+            buttonRegistrar.TabIndex = 6;
+            buttonRegistrar.TextAlign = ContentAlignment.BottomCenter;
+            buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonRegistrar.UseVisualStyleBackColor = false;
+            buttonRegistrar.Click += buttonRegistrar_Click_1;
+            buttonRegistrar.MouseMove += buttonRegistrar_MouseMove;
             // 
             // buttonRegresar
             // 
             buttonRegresar.Dock = DockStyle.Fill;
-            buttonRegresar.Location = new Point(500, 3);
+            buttonRegresar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonRegresar.Location = new Point(746, 3);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(147, 39);
+            buttonRegresar.Size = new Size(146, 44);
             buttonRegresar.TabIndex = 10;
             buttonRegresar.Text = "Regresar";
             buttonRegresar.UseVisualStyleBackColor = true;
@@ -100,37 +117,17 @@
             panelFormularioHijo.Dock = DockStyle.Fill;
             panelFormularioHijo.Location = new Point(0, 0);
             panelFormularioHijo.Name = "panelFormularioHijo";
-            panelFormularioHijo.Size = new Size(650, 459);
+            panelFormularioHijo.Size = new Size(895, 491);
             panelFormularioHijo.TabIndex = 8;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(53, 91);
-            label2.Name = "label2";
-            label2.Size = new Size(248, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Lista de bovino para el faenamiento";
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top;
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(223, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(158, 27);
-            label1.TabIndex = 5;
-            label1.Text = "Faenamiento";
-            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // listView2
             // 
             listView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listView2.Columns.AddRange(new ColumnHeader[] { columnNumIdent, columnRaza, columnEdad, columnCategoria, columnPromedioLeche, columnNumCrias });
+            listView2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listView2.Location = new Point(53, 114);
             listView2.Name = "listView2";
-            listView2.Size = new Size(523, 311);
+            listView2.Size = new Size(768, 343);
             listView2.TabIndex = 9;
             listView2.UseCompatibleStateImageBehavior = false;
             listView2.View = View.Details;
@@ -165,26 +162,33 @@
             columnNumCrias.Text = "Número de crías";
             columnNumCrias.Width = 90;
             // 
-            // buttonRegistrar
+            // label2
             // 
-            buttonRegistrar.BackColor = Color.Gray;
-            buttonRegistrar.Dock = DockStyle.Fill;
-            buttonRegistrar.Image = (Image)resources.GetObject("buttonRegistrar.Image");
-            buttonRegistrar.Location = new Point(0, 0);
-            buttonRegistrar.Margin = new Padding(0);
-            buttonRegistrar.Name = "buttonRegistrar";
-            buttonRegistrar.Size = new Size(91, 45);
-            buttonRegistrar.TabIndex = 6;
-            buttonRegistrar.TextAlign = ContentAlignment.BottomCenter;
-            buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonRegistrar.UseVisualStyleBackColor = false;
-            buttonRegistrar.Click += buttonRegistrar_Click_1;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(53, 90);
+            label2.Name = "label2";
+            label2.Size = new Size(257, 21);
+            label2.TabIndex = 3;
+            label2.Text = "Lista de bovino para el faenamiento";
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top;
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(384, 31);
+            label1.Name = "label1";
+            label1.Size = new Size(127, 22);
+            label1.TabIndex = 5;
+            label1.Text = "Faenamiento";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // FormProcesoFaenamiento
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 504);
+            ClientSize = new Size(895, 541);
             Controls.Add(panelFormularioHijo);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;

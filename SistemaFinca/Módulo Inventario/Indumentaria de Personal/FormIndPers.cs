@@ -12,6 +12,7 @@ namespace SistemaFinca
 {
     public partial class FormIndumentariaDelPersonal : Form
     {
+        private ToolTip toolTip = new ToolTip();
         public FormIndumentariaDelPersonal()
         {
             InitializeComponent();
@@ -68,6 +69,26 @@ namespace SistemaFinca
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
             abrirFormulariosHijos(new FormIP_Eliminar());
+        }
+
+        private void buttonRegistrar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonRegistrar, "Registrar indumentaria");
+        }
+
+        private void buttonActualizar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonActualizar, "Actualizar indumentaria");
+        }
+
+        private void buttonBuscar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonBuscar, "Consultar indumentaria");
+        }
+
+        private void buttonEliminar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonEliminar, "Eliminar indumentaria");
         }
     }
 }

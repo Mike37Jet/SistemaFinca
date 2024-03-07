@@ -39,10 +39,10 @@
             buttonAuditoria = new Button();
             panel3 = new Panel();
             subPanelZonasPastoreo = new Panel();
-            button1 = new Button();
-            buttonGestionArriendo = new Button();
-            buttonSeguimientoActividad = new Button();
-            buttonGesZonPast = new Button();
+            buttonArriendoZona = new Button();
+            buttonRiegoZona = new Button();
+            buttonFumigarZona = new Button();
+            buttonRegistrarZonas = new Button();
             buttonZonasPastoreo = new Button();
             subPanelInventario = new Panel();
             buttonAliBov = new Button();
@@ -72,6 +72,8 @@
             buttonGestionUsuario = new Button();
             buttonAdministracion = new Button();
             panel2 = new Panel();
+            labelApellidos = new Label();
+            labelNombres = new Label();
             labelUsuario = new Label();
             label4 = new Label();
             labelRol = new Label();
@@ -216,7 +218,7 @@
             buttonAuditoria.ForeColor = Color.Silver;
             buttonAuditoria.Image = (Image)resources.GetObject("buttonAuditoria.Image");
             buttonAuditoria.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAuditoria.Location = new Point(0, 1021);
+            buttonAuditoria.Location = new Point(0, 1010);
             buttonAuditoria.Margin = new Padding(3, 2, 3, 2);
             buttonAuditoria.Name = "buttonAuditoria";
             buttonAuditoria.Padding = new Padding(4, 0, 0, 0);
@@ -231,7 +233,7 @@
             // 
             panel3.BackColor = Color.DarkGray;
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 1071);
+            panel3.Location = new Point(0, 1060);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
             panel3.Size = new Size(252, 2);
@@ -240,95 +242,96 @@
             // subPanelZonasPastoreo
             // 
             subPanelZonasPastoreo.BackColor = Color.FromArgb(25, 25, 25);
-            subPanelZonasPastoreo.Controls.Add(button1);
-            subPanelZonasPastoreo.Controls.Add(buttonGestionArriendo);
-            subPanelZonasPastoreo.Controls.Add(buttonSeguimientoActividad);
-            subPanelZonasPastoreo.Controls.Add(buttonGesZonPast);
+            subPanelZonasPastoreo.Controls.Add(buttonArriendoZona);
+            subPanelZonasPastoreo.Controls.Add(buttonRiegoZona);
+            subPanelZonasPastoreo.Controls.Add(buttonFumigarZona);
+            subPanelZonasPastoreo.Controls.Add(buttonRegistrarZonas);
             subPanelZonasPastoreo.Dock = DockStyle.Top;
             subPanelZonasPastoreo.Location = new Point(0, 888);
             subPanelZonasPastoreo.Margin = new Padding(3, 2, 3, 2);
             subPanelZonasPastoreo.Name = "subPanelZonasPastoreo";
-            subPanelZonasPastoreo.Size = new Size(252, 133);
+            subPanelZonasPastoreo.Size = new Size(252, 122);
             subPanelZonasPastoreo.TabIndex = 10;
             // 
-            // button1
+            // buttonArriendoZona
             // 
-            button1.Dock = DockStyle.Top;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.Gray;
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Arial", 10.2F);
-            button1.ForeColor = Color.Silver;
-            button1.Location = new Point(0, 93);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Padding = new Padding(18, 0, 0, 0);
-            button1.Size = new Size(252, 33);
-            button1.TabIndex = 24;
-            button1.Text = "Arriendo ";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
+            buttonArriendoZona.Dock = DockStyle.Top;
+            buttonArriendoZona.FlatAppearance.BorderSize = 0;
+            buttonArriendoZona.FlatAppearance.MouseDownBackColor = Color.Gray;
+            buttonArriendoZona.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            buttonArriendoZona.FlatStyle = FlatStyle.Flat;
+            buttonArriendoZona.Font = new Font("Arial", 10.2F);
+            buttonArriendoZona.ForeColor = Color.Silver;
+            buttonArriendoZona.Location = new Point(0, 90);
+            buttonArriendoZona.Margin = new Padding(3, 2, 3, 2);
+            buttonArriendoZona.Name = "buttonArriendoZona";
+            buttonArriendoZona.Padding = new Padding(18, 0, 0, 0);
+            buttonArriendoZona.Size = new Size(252, 30);
+            buttonArriendoZona.TabIndex = 24;
+            buttonArriendoZona.Text = "Arriendo ";
+            buttonArriendoZona.TextAlign = ContentAlignment.MiddleLeft;
+            buttonArriendoZona.UseVisualStyleBackColor = true;
+            buttonArriendoZona.Click += buttonArriendoZona_Click;
             // 
-            // buttonGestionArriendo
+            // buttonRiegoZona
             // 
-            buttonGestionArriendo.Dock = DockStyle.Top;
-            buttonGestionArriendo.FlatAppearance.BorderSize = 0;
-            buttonGestionArriendo.FlatAppearance.MouseDownBackColor = Color.Gray;
-            buttonGestionArriendo.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
-            buttonGestionArriendo.FlatStyle = FlatStyle.Flat;
-            buttonGestionArriendo.Font = new Font("Arial", 10.2F);
-            buttonGestionArriendo.ForeColor = Color.Silver;
-            buttonGestionArriendo.Location = new Point(0, 60);
-            buttonGestionArriendo.Margin = new Padding(3, 2, 3, 2);
-            buttonGestionArriendo.Name = "buttonGestionArriendo";
-            buttonGestionArriendo.Padding = new Padding(18, 0, 0, 0);
-            buttonGestionArriendo.Size = new Size(252, 33);
-            buttonGestionArriendo.TabIndex = 23;
-            buttonGestionArriendo.Text = "Riego";
-            buttonGestionArriendo.TextAlign = ContentAlignment.MiddleLeft;
-            buttonGestionArriendo.UseVisualStyleBackColor = true;
-            buttonGestionArriendo.Click += buttonGestionArriendo_Click;
+            buttonRiegoZona.Dock = DockStyle.Top;
+            buttonRiegoZona.FlatAppearance.BorderSize = 0;
+            buttonRiegoZona.FlatAppearance.MouseDownBackColor = Color.Gray;
+            buttonRiegoZona.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            buttonRiegoZona.FlatStyle = FlatStyle.Flat;
+            buttonRiegoZona.Font = new Font("Arial", 10.2F);
+            buttonRiegoZona.ForeColor = Color.Silver;
+            buttonRiegoZona.Location = new Point(0, 60);
+            buttonRiegoZona.Margin = new Padding(3, 2, 3, 2);
+            buttonRiegoZona.Name = "buttonRiegoZona";
+            buttonRiegoZona.Padding = new Padding(18, 0, 0, 0);
+            buttonRiegoZona.Size = new Size(252, 30);
+            buttonRiegoZona.TabIndex = 23;
+            buttonRiegoZona.Text = "Riego";
+            buttonRiegoZona.TextAlign = ContentAlignment.MiddleLeft;
+            buttonRiegoZona.UseVisualStyleBackColor = true;
+            buttonRiegoZona.Click += buttonRiegoZona_Click;
             // 
-            // buttonSeguimientoActividad
+            // buttonFumigarZona
             // 
-            buttonSeguimientoActividad.Dock = DockStyle.Top;
-            buttonSeguimientoActividad.FlatAppearance.BorderSize = 0;
-            buttonSeguimientoActividad.FlatAppearance.MouseDownBackColor = Color.Gray;
-            buttonSeguimientoActividad.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
-            buttonSeguimientoActividad.FlatStyle = FlatStyle.Flat;
-            buttonSeguimientoActividad.Font = new Font("Arial", 10.2F);
-            buttonSeguimientoActividad.ForeColor = Color.Silver;
-            buttonSeguimientoActividad.Location = new Point(0, 30);
-            buttonSeguimientoActividad.Margin = new Padding(3, 2, 3, 2);
-            buttonSeguimientoActividad.Name = "buttonSeguimientoActividad";
-            buttonSeguimientoActividad.Padding = new Padding(18, 0, 0, 0);
-            buttonSeguimientoActividad.Size = new Size(252, 30);
-            buttonSeguimientoActividad.TabIndex = 21;
-            buttonSeguimientoActividad.Text = "Fumigación";
-            buttonSeguimientoActividad.TextAlign = ContentAlignment.MiddleLeft;
-            buttonSeguimientoActividad.UseVisualStyleBackColor = true;
-            buttonSeguimientoActividad.Click += buttonSeguimientoActividad_Click;
+            buttonFumigarZona.Dock = DockStyle.Top;
+            buttonFumigarZona.FlatAppearance.BorderSize = 0;
+            buttonFumigarZona.FlatAppearance.MouseDownBackColor = Color.Gray;
+            buttonFumigarZona.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            buttonFumigarZona.FlatStyle = FlatStyle.Flat;
+            buttonFumigarZona.Font = new Font("Arial", 10.2F);
+            buttonFumigarZona.ForeColor = Color.Silver;
+            buttonFumigarZona.Location = new Point(0, 30);
+            buttonFumigarZona.Margin = new Padding(3, 2, 3, 2);
+            buttonFumigarZona.Name = "buttonFumigarZona";
+            buttonFumigarZona.Padding = new Padding(18, 0, 0, 0);
+            buttonFumigarZona.Size = new Size(252, 30);
+            buttonFumigarZona.TabIndex = 21;
+            buttonFumigarZona.Text = "Fumigación";
+            buttonFumigarZona.TextAlign = ContentAlignment.MiddleLeft;
+            buttonFumigarZona.UseVisualStyleBackColor = true;
+            buttonFumigarZona.Click += buttonSeguimientoActividad_Click;
             // 
-            // buttonGesZonPast
+            // buttonRegistrarZonas
             // 
-            buttonGesZonPast.Dock = DockStyle.Top;
-            buttonGesZonPast.FlatAppearance.BorderSize = 0;
-            buttonGesZonPast.FlatAppearance.MouseDownBackColor = Color.Gray;
-            buttonGesZonPast.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
-            buttonGesZonPast.FlatStyle = FlatStyle.Flat;
-            buttonGesZonPast.Font = new Font("Arial", 10.2F);
-            buttonGesZonPast.ForeColor = Color.Silver;
-            buttonGesZonPast.Location = new Point(0, 0);
-            buttonGesZonPast.Margin = new Padding(3, 2, 3, 2);
-            buttonGesZonPast.Name = "buttonGesZonPast";
-            buttonGesZonPast.Padding = new Padding(18, 0, 0, 0);
-            buttonGesZonPast.Size = new Size(252, 30);
-            buttonGesZonPast.TabIndex = 20;
-            buttonGesZonPast.Text = "Registro";
-            buttonGesZonPast.TextAlign = ContentAlignment.MiddleLeft;
-            buttonGesZonPast.UseVisualStyleBackColor = true;
-            buttonGesZonPast.Click += buttonGesZonPast_Click;
+            buttonRegistrarZonas.Dock = DockStyle.Top;
+            buttonRegistrarZonas.FlatAppearance.BorderSize = 0;
+            buttonRegistrarZonas.FlatAppearance.MouseDownBackColor = Color.Gray;
+            buttonRegistrarZonas.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            buttonRegistrarZonas.FlatStyle = FlatStyle.Flat;
+            buttonRegistrarZonas.Font = new Font("Arial", 10.2F);
+            buttonRegistrarZonas.ForeColor = Color.Silver;
+            buttonRegistrarZonas.Location = new Point(0, 0);
+            buttonRegistrarZonas.Margin = new Padding(3, 2, 3, 2);
+            buttonRegistrarZonas.Name = "buttonRegistrarZonas";
+            buttonRegistrarZonas.Padding = new Padding(18, 0, 0, 0);
+            buttonRegistrarZonas.Size = new Size(252, 30);
+            buttonRegistrarZonas.TabIndex = 20;
+            buttonRegistrarZonas.Text = "Registro";
+            buttonRegistrarZonas.TextAlign = ContentAlignment.MiddleLeft;
+            buttonRegistrarZonas.UseVisualStyleBackColor = true;
+            buttonRegistrarZonas.Click += buttonGesZonPast_Click;
             // 
             // buttonZonasPastoreo
             // 
@@ -868,6 +871,8 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(labelApellidos);
+            panel2.Controls.Add(labelNombres);
             panel2.Controls.Add(labelUsuario);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(labelRol);
@@ -878,6 +883,26 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(252, 100);
             panel2.TabIndex = 6;
+            // 
+            // labelApellidos
+            // 
+            labelApellidos.AutoSize = true;
+            labelApellidos.ForeColor = SystemColors.ButtonFace;
+            labelApellidos.Location = new Point(114, 31);
+            labelApellidos.Name = "labelApellidos";
+            labelApellidos.Size = new Size(12, 15);
+            labelApellidos.TabIndex = 7;
+            labelApellidos.Text = "-";
+            // 
+            // labelNombres
+            // 
+            labelNombres.AutoSize = true;
+            labelNombres.ForeColor = SystemColors.ButtonFace;
+            labelNombres.Location = new Point(114, 14);
+            labelNombres.Name = "labelNombres";
+            labelNombres.Size = new Size(12, 15);
+            labelNombres.TabIndex = 6;
+            labelNombres.Text = "-";
             // 
             // labelUsuario
             // 
@@ -892,14 +917,14 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10.2F);
+            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.ButtonFace;
             label4.Image = (Image)resources.GetObject("label4.Image");
             label4.ImageAlign = ContentAlignment.MiddleLeft;
-            label4.Location = new Point(108, 67);
+            label4.Location = new Point(114, 70);
             label4.Margin = new Padding(0);
             label4.Name = "label4";
-            label4.Size = new Size(69, 19);
+            label4.Size = new Size(65, 17);
             label4.TabIndex = 4;
             label4.Text = "     Online";
             label4.TextAlign = ContentAlignment.MiddleRight;
@@ -909,12 +934,12 @@
             labelRol.AutoSize = true;
             labelRol.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelRol.ForeColor = SystemColors.ButtonFace;
-            labelRol.Location = new Point(108, 39);
+            labelRol.Location = new Point(114, 53);
+            labelRol.Margin = new Padding(0);
             labelRol.Name = "labelRol";
             labelRol.Size = new Size(96, 19);
             labelRol.TabIndex = 2;
             labelRol.Text = "Administrador";
-            labelRol.Click += label2_Click;
             // 
             // pictureBox1
             // 
@@ -938,7 +963,7 @@
             buttonSalir.ForeColor = Color.Silver;
             buttonSalir.Image = (Image)resources.GetObject("buttonSalir.Image");
             buttonSalir.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonSalir.Location = new Point(0, 1073);
+            buttonSalir.Location = new Point(0, 1062);
             buttonSalir.Margin = new Padding(3, 2, 3, 2);
             buttonSalir.Name = "buttonSalir";
             buttonSalir.Padding = new Padding(9, 0, 0, 0);
@@ -1037,15 +1062,15 @@
         private Button buttonIndPers;
         private Button buttonAliBov;
         private Button buttonHerrAgrGan;
-        private Button buttonSeguimientoActividad;
-        private Button buttonGesZonPast;
+        private Button buttonFumigarZona;
+        private Button buttonRegistrarZonas;
         private Button buttonInformeAnalisis;
         private Button buttonGanadoDeLeche;
         private Button buttonGestionUsuario;
         private Button buttonGestionPagos;
         private Button buttonDeudores;
         private Button buttonNotaVentas;
-        private Button buttonGestionArriendo;
+        private Button buttonRiegoZona;
         private Button buttonClientes;
         private Panel panel3;
         private Panel subPanelGanadoLechero;
@@ -1056,8 +1081,10 @@
         private Button buttonProduccionDeLeche;
         private Button buttonAuditoria;
         private Button buttonParametrosSistema;
-        private Button button1;
+        private Button buttonArriendoZona;
         private Button buttonContratos;
         private Label labelUsuario;
+        private Label labelApellidos;
+        private Label labelNombres;
     }
 }

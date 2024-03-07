@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionClientes));
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
-            buttonBuscar = new Button();
+            buttonConsultar = new Button();
             buttonRegistrar = new Button();
             buttonDarDeAlta = new Button();
             buttonDarDeBaja = new Button();
@@ -78,7 +78,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.9939756F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.3855438F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 228F));
-            tableLayoutPanel1.Controls.Add(buttonBuscar, 0, 0);
+            tableLayoutPanel1.Controls.Add(buttonConsultar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonRegistrar, 0, 0);
             tableLayoutPanel1.Controls.Add(buttonDarDeAlta, 3, 0);
             tableLayoutPanel1.Controls.Add(buttonDarDeBaja, 2, 0);
@@ -93,19 +93,20 @@
             tableLayoutPanel1.Size = new Size(895, 50);
             tableLayoutPanel1.TabIndex = 7;
             // 
-            // buttonBuscar
+            // buttonConsultar
             // 
-            buttonBuscar.Dock = DockStyle.Fill;
-            buttonBuscar.Image = (Image)resources.GetObject("buttonBuscar.Image");
-            buttonBuscar.Location = new Point(70, 0);
-            buttonBuscar.Margin = new Padding(0);
-            buttonBuscar.Name = "buttonBuscar";
-            buttonBuscar.Size = new Size(70, 50);
-            buttonBuscar.TabIndex = 13;
-            buttonBuscar.TextAlign = ContentAlignment.BottomCenter;
-            buttonBuscar.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonBuscar.UseVisualStyleBackColor = true;
-            buttonBuscar.Click += buttonBuscar_Click;
+            buttonConsultar.Dock = DockStyle.Fill;
+            buttonConsultar.Image = (Image)resources.GetObject("buttonConsultar.Image");
+            buttonConsultar.Location = new Point(70, 0);
+            buttonConsultar.Margin = new Padding(0);
+            buttonConsultar.Name = "buttonConsultar";
+            buttonConsultar.Size = new Size(70, 50);
+            buttonConsultar.TabIndex = 13;
+            buttonConsultar.TextAlign = ContentAlignment.BottomCenter;
+            buttonConsultar.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonConsultar.UseVisualStyleBackColor = true;
+            buttonConsultar.Click += buttonConsultar_Click;
+            buttonConsultar.MouseMove += buttonConsultar_MouseMove;
             // 
             // buttonRegistrar
             // 
@@ -120,7 +121,7 @@
             buttonRegistrar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonRegistrar.UseVisualStyleBackColor = true;
             buttonRegistrar.Click += buttonRegistrar_Click_1;
-            buttonRegistrar.MouseHover += buttonRegistrar_MouseHover;
+            buttonRegistrar.MouseMove += buttonRegistrar_MouseMove;
             // 
             // buttonDarDeAlta
             // 
@@ -135,7 +136,7 @@
             buttonDarDeAlta.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonDarDeAlta.UseVisualStyleBackColor = true;
             buttonDarDeAlta.Click += buttonDarDeAlta_Click;
-            buttonDarDeAlta.MouseHover += buttonDarDeAlta_MouseHover;
+            buttonDarDeAlta.MouseMove += buttonDarDeAlta_MouseMove;
             // 
             // buttonDarDeBaja
             // 
@@ -150,7 +151,7 @@
             buttonDarDeBaja.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonDarDeBaja.UseVisualStyleBackColor = true;
             buttonDarDeBaja.Click += buttonDarDeBaja_Click;
-            buttonDarDeBaja.MouseHover += buttonDarDeBaja_MouseHover;
+            buttonDarDeBaja.MouseMove += buttonDarDeBaja_MouseMove;
             // 
             // buttonActualizar
             // 
@@ -165,7 +166,7 @@
             buttonActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonActualizar.UseVisualStyleBackColor = true;
             buttonActualizar.Click += buttonActualizar_Click;
-            buttonActualizar.MouseHover += buttonActualizar_MouseHover;
+            buttonActualizar.MouseMove += buttonActualizar_MouseMove;
             // 
             // buttonRegresar
             // 
@@ -325,7 +326,7 @@
         private ColumnHeader columnNombre;
         private ColumnHeader columnApellidos;
         private ColumnHeader columnTelefono;
-        private Button buttonBuscar;
+        private Button buttonConsultar;
         private Label label3;
         private Label label2;
         private ListView lstClientesInactivos;

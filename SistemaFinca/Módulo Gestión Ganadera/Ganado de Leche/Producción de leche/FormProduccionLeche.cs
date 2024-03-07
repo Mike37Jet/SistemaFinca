@@ -16,6 +16,7 @@ namespace SistemaFinca
 {
     public partial class FormProduccionLeche : Form
     {
+        private ToolTip toolTip = new ToolTip();
         private List<int> datosBarras;
 
         public FormProduccionLeche()
@@ -45,7 +46,7 @@ namespace SistemaFinca
             chartArea.Name = "ChartArea1";
             chart.ChartAreas.Add(chartArea);
 
-            chart.Dock = DockStyle.Right;
+            chart.Dock = DockStyle.Bottom;
             chart.Name = "chart1";
             chart.TabIndex = 0;
             chart.Text = "chart1";
@@ -61,10 +62,10 @@ namespace SistemaFinca
 
             series.IsValueShownAsLabel = true;
 
-            chart.Size = new Size(288, 261);
+            //chart.Size = new Size(288, 261);
 
             // Asegurarse de que el gráfico esté en la parte superior
-            chart.BringToFront();
+           // chart.BringToFront();
 
 
         }
@@ -95,7 +96,7 @@ namespace SistemaFinca
             chartArea.Name = "ChartArea1";
             chart.ChartAreas.Add(chartArea);
 
-            chart.Dock = DockStyle.Fill;
+            chart.Dock = DockStyle.Bottom;
             chart.Name = "chartBarras";
             chart.TabIndex = 0;
             chart.Text = "Barras";
@@ -111,10 +112,10 @@ namespace SistemaFinca
 
             series.IsValueShownAsLabel = true;
 
-            chart.Size = new Size(367, 261);
+            //chart.Size = new Size(367, 261);
 
             // Asegurarse de que el gráfico esté en la parte superior
-            chart.BringToFront();
+            //chart.BringToFront();
 
 
         }
@@ -164,14 +165,17 @@ namespace SistemaFinca
 
 
 
-        private void panelFormularioHijo_Paint(object sender, PaintEventArgs e)
-        {
 
+
+
+        private void buttonRegistrar_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip.SetToolTip(buttonRegistrar, "Registrar cantidad de leche");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonInforme_MouseMove(object sender, MouseEventArgs e)
         {
-
+            toolTip.SetToolTip(buttonInforme, "Emitir Informe");
         }
     }
 }

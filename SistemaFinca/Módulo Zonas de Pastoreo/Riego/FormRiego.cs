@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaFinca
 {
-    public partial class FormSeguimientoActividades : Form
+    public partial class FormRiego : Form
     {
-        public FormSeguimientoActividades()
+        public FormRiego()
         {
             InitializeComponent();
         }
