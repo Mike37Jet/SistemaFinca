@@ -150,12 +150,14 @@
             // lstRetiros
             // 
             lstRetiros.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lstRetiros.BorderStyle = BorderStyle.None;
             lstRetiros.Columns.AddRange(new ColumnHeader[] { columnCantidad, columnHeader1, columnHeader2 });
             lstRetiros.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lstRetiros.Location = new Point(152, 105);
+            lstRetiros.FullRowSelect = true;
+            lstRetiros.Location = new Point(143, 105);
             lstRetiros.Margin = new Padding(3, 2, 3, 2);
             lstRetiros.Name = "lstRetiros";
-            lstRetiros.Size = new Size(590, 325);
+            lstRetiros.Size = new Size(609, 325);
             lstRetiros.TabIndex = 50;
             lstRetiros.UseCompatibleStateImageBehavior = false;
             lstRetiros.View = View.Details;

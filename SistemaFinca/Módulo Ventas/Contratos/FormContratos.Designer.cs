@@ -37,12 +37,13 @@
             buttonRegresar = new Button();
             panelFormularioHijo = new Panel();
             lstContratos = new ListView();
-            columnID = new ColumnHeader();
+            columnNumCedula = new ColumnHeader();
             columnCantidad = new ColumnHeader();
-            columnHeader1 = new ColumnHeader();
+            columnCantidadFaltante = new ColumnHeader();
             columnFechaInicio = new ColumnHeader();
             columnFechaFin = new ColumnHeader();
             label18 = new Label();
+            columnEstado = new ColumnHeader();
             tableLayoutPanelContrato.SuspendLayout();
             panelFormularioHijo.SuspendLayout();
             SuspendLayout();
@@ -156,8 +157,11 @@
             // lstContratos
             // 
             lstContratos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lstContratos.Columns.AddRange(new ColumnHeader[] { columnID, columnCantidad, columnHeader1, columnFechaInicio, columnFechaFin });
+            lstContratos.BorderStyle = BorderStyle.None;
+            lstContratos.Columns.AddRange(new ColumnHeader[] { columnNumCedula, columnCantidad, columnCantidadFaltante, columnFechaInicio, columnFechaFin, columnEstado });
             lstContratos.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lstContratos.FullRowSelect = true;
+            lstContratos.HeaderStyle = ColumnHeaderStyle.Nonclickable;
             lstContratos.Location = new Point(71, 71);
             lstContratos.Margin = new Padding(3, 2, 3, 2);
             lstContratos.Name = "lstContratos";
@@ -166,30 +170,30 @@
             lstContratos.UseCompatibleStateImageBehavior = false;
             lstContratos.View = View.Details;
             // 
-            // columnID
+            // columnNumCedula
             // 
-            columnID.Text = "Número de cédula";
-            columnID.Width = 160;
+            columnNumCedula.Text = "Número de cédula";
+            columnNumCedula.Width = 135;
             // 
             // columnCantidad
             // 
             columnCantidad.Text = "Cantidad de leche";
-            columnCantidad.Width = 140;
+            columnCantidad.Width = 135;
             // 
-            // columnHeader1
+            // columnCantidadFaltante
             // 
-            columnHeader1.Text = "Cantidad retirada";
-            columnHeader1.Width = 140;
+            columnCantidadFaltante.Text = "Cantidad retirada";
+            columnCantidadFaltante.Width = 135;
             // 
             // columnFechaInicio
             // 
             columnFechaInicio.Text = "Fecha de inicio";
-            columnFechaInicio.Width = 140;
+            columnFechaInicio.Width = 117;
             // 
             // columnFechaFin
             // 
             columnFechaFin.Text = "Fecha de finalización";
-            columnFechaFin.Width = 160;
+            columnFechaFin.Width = 155;
             // 
             // label18
             // 
@@ -200,6 +204,11 @@
             label18.Size = new Size(145, 32);
             label18.TabIndex = 39;
             label18.Text = "Contratos";
+            // 
+            // columnEstado
+            // 
+            columnEstado.Text = "Estado";
+            columnEstado.Width = 70;
             // 
             // FormContratos
             // 
@@ -228,10 +237,11 @@
         private Button btnConsultar;
         private Button btnGenerar;
         private ListView lstContratos;
-        private ColumnHeader columnID;
+        private ColumnHeader columnNumCedula;
         private ColumnHeader columnCantidad;
         private ColumnHeader columnFechaInicio;
         private ColumnHeader columnFechaFin;
-        private ColumnHeader columnHeader1;
+        private ColumnHeader columnCantidadFaltante;
+        private ColumnHeader columnEstado;
     }
 }

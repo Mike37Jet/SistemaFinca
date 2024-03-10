@@ -22,6 +22,7 @@ namespace SistemaFinca
         public FormVR_Registrar()
         {
             InitializeComponent();
+            panelDatosRetirar.Visible = false;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -92,6 +93,7 @@ namespace SistemaFinca
             txtFechaEmision.Text = "";
             txtFechaFinalizacion.Text = "";
             txtFechaInicio.Text = "";
+            textCantidadFaltante.Text = "";
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -133,8 +135,11 @@ namespace SistemaFinca
                         txtFechaFinalizacion.Text = reader.GetDateTime(2).ToString("dd/MM/yyyy");
                         txtCantidadLeche.Text = reader.GetInt32(3).ToString();
                         txtCantidadRetirada.Text = reader.GetInt32(4).ToString();
+                        int cantidadFaltante = reader.GetInt32(3) - reader.GetInt32(4);
+                        textCantidadFaltante.Text = cantidadFaltante.ToString();
                         this.idcontrato = reader.GetInt32(5).ToString();
                         this.contratoEstado = reader.GetBoolean(6);
+                        panelDatosRetirar.Visible = true;
                     }
                 }
                 catch (NpgsqlException ex)
@@ -151,11 +156,7 @@ namespace SistemaFinca
             }
         }
 
-        public static bool fechaEsValida(string fecha)
-        {
-            Regex regex = new Regex(@"^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{2}$");
-            return regex.IsMatch(fecha);
-        }
+ 
 
         public static bool cantidadEsValida(string cantidad)
         {
@@ -163,27 +164,5 @@ namespace SistemaFinca
             return regex.IsMatch(cantidad);
         }
 
-        public static bool fechaEsPosterior(string fechaInicioStr, string fechaFinStr)
-        {
-            DateTime fechaInicio, fechaFin;
-
-            if (DateTime.TryParseExact(fechaInicioStr, "dd/MM/yy", null, System.Globalization.DateTimeStyles.None, out fechaInicio) &&
-                DateTime.TryParseExact(fechaFinStr, "dd/MM/yy", null, System.Globalization.DateTimeStyles.None, out fechaFin))
-            {
-                return fechaFin > fechaInicio;
-            }
-            return false;
-        }
-
-        public static string ConvertirFecha(string fechaOriginalStr)
-        {
-            DateTime fechaOriginal;
-
-            if (DateTime.TryParseExact(fechaOriginalStr, "dd/MM/yy", null, System.Globalization.DateTimeStyles.None, out fechaOriginal))
-            {
-                return fechaOriginal.ToString("yyyy-MM-dd");
-            }
-            return fechaOriginalStr;
-        }
     }
 }
