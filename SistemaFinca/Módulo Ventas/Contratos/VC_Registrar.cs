@@ -21,6 +21,9 @@ namespace SistemaFinca
         {
             InitializeComponent();
             panelRegistrarContrato.Visible = false;
+            txtFechaEmision.ReadOnly = true;
+            txtFechaInicio.ReadOnly = true;
+            txtFechaFinalizacion.ReadOnly = true;
         }
 
         private void vaciarCampos()
@@ -69,6 +72,11 @@ namespace SistemaFinca
                         labelApellidos.Text = reader.GetString(2);
                         labelTelefono.Text = reader.GetString(3);
                         labelCorreo.Text = reader.GetString(4);
+                        DateTime fechaActual = DateTime.Now;
+                        DateTime soloFecha = fechaActual.Date;
+                        txtFechaEmision.Text = soloFecha.ToString("dd/MM/yyyy");
+
+
                         panelRegistrarContrato.Visible = true;
                         txtCedula.Text = "";
                     }
@@ -104,10 +112,22 @@ namespace SistemaFinca
         {
             DateTime fechaInicio, fechaFin;
 
-            if (DateTime.TryParseExact(fechaInicioStr, "dd/MM/yy", null, System.Globalization.DateTimeStyles.None, out fechaInicio) &&
-                DateTime.TryParseExact(fechaFinStr, "dd/MM/yy", null, System.Globalization.DateTimeStyles.None, out fechaFin))
+            if (DateTime.TryParseExact(fechaInicioStr, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out fechaInicio) &&
+                DateTime.TryParseExact(fechaFinStr, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out fechaFin))
             {
                 return fechaFin > fechaInicio;
+            }
+            return false;
+        }
+
+        public static bool fechaEsIgual(string fechaInicioStr, string fechaFinStr)
+        {
+            DateTime fechaInicio, fechaFin;
+
+            if (DateTime.TryParseExact(fechaInicioStr, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out fechaInicio) &&
+                DateTime.TryParseExact(fechaFinStr, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out fechaFin))
+            {
+                return fechaFin == fechaInicio;
             }
             return false;
         }
@@ -130,13 +150,12 @@ namespace SistemaFinca
                 MessageBox.Show("Número de cédula de identidad no válido", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (!fechaEsValida(txtFechaEmision.Text) || !fechaEsValida(txtFechaFinalizacion.Text) ||
-                !fechaEsValida(txtFechaFinalizacion.Text))
+            if (!fechaEsPosterior(txtFechaEmision.Text, txtFechaInicio.Text) && !fechaEsIgual(txtFechaEmision.Text, txtFechaInicio.Text))
             {
-                MessageBox.Show("Fechas no válidas", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La fecha de inicio debe ser igual o posterior a la fecha de emisión", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (!fechaEsPosterior(txtFechaInicio.Text, txtFechaFinalizacion.Text))
+            if (!fechaEsPosterior(txtFechaInicio.Text, txtFechaFinalizacion.Text) )
             {
                 MessageBox.Show("La fecha de finalización debe ser posterior a la fecha de inicio", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -164,8 +183,8 @@ namespace SistemaFinca
                     }
 
                     String commString = $"INSERT INTO contrato(cedulacliente, cantidadleche, fechainicio, fechafin, fechaemision) " +
-                        $"VALUES({this.cedulaCliente}, {txtCantidadLeche.Text}, '{ConvertirFecha(txtFechaInicio.Text)}', " +
-                        $"'{ConvertirFecha(txtFechaFinalizacion.Text)}','{ConvertirFecha(txtFechaEmision.Text)}')";
+                        $"VALUES({this.cedulaCliente}, {txtCantidadLeche.Text}, '{txtFechaInicio.Text}', " +
+                        $"'{txtFechaFinalizacion.Text}','{txtFechaEmision.Text}')";
                     NpgsqlCommand comm = new NpgsqlCommand(commString, connection);
                     int resultado = comm.ExecuteNonQuery();
                     if (resultado > 0)
@@ -186,6 +205,19 @@ namespace SistemaFinca
                     }
                 }
             }
+        }
+
+        private void dateTimeInicio_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fechaSeleccionada = dateTimeInicio.Value.Date;
+            txtFechaInicio.Text = fechaSeleccionada.ToString("dd/MM/yyyy");
+        }
+
+        private void dateTimeFinalizacion_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fechaSeleccionada = dateTimeFinalizacion.Value.Date;
+            txtFechaFinalizacion.Text = fechaSeleccionada.ToString("dd/MM/yyyy");
+          
         }
     }
 }

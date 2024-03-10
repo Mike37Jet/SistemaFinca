@@ -34,6 +34,7 @@
             label6 = new Label();
             txtCedula = new TextBox();
             panelContrato = new Panel();
+            label14 = new Label();
             picturePagado = new PictureBox();
             labelCantidadRetirada = new Label();
             label11 = new Label();
@@ -90,9 +91,8 @@
             // 
             // btnConsultar
             // 
-            btnConsultar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnConsultar.Font = new Font("Segoe UI", 11.25F);
-            btnConsultar.Location = new Point(408, 113);
+            btnConsultar.Location = new Point(558, 113);
             btnConsultar.Margin = new Padding(3, 2, 3, 2);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(103, 27);
@@ -124,10 +124,9 @@
             // 
             // txtCedula
             // 
-            txtCedula.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtCedula.Cursor = Cursors.IBeam;
             txtCedula.Font = new Font("Segoe UI", 11.25F);
-            txtCedula.Location = new Point(155, 113);
+            txtCedula.Location = new Point(362, 113);
             txtCedula.Margin = new Padding(3, 2, 3, 2);
             txtCedula.Name = "txtCedula";
             txtCedula.Size = new Size(178, 27);
@@ -137,6 +136,7 @@
             // 
             panelContrato.AutoScroll = true;
             panelContrato.BackColor = SystemColors.ButtonHighlight;
+            panelContrato.Controls.Add(label14);
             panelContrato.Controls.Add(picturePagado);
             panelContrato.Controls.Add(labelCantidadRetirada);
             panelContrato.Controls.Add(label11);
@@ -191,6 +191,16 @@
             panelContrato.Name = "panelContrato";
             panelContrato.Size = new Size(783, 846);
             panelContrato.TabIndex = 110;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Microsoft Sans Serif", 8.25F);
+            label14.Location = new Point(146, 226);
+            label14.Name = "label14";
+            label14.Size = new Size(200, 13);
+            label14.TabIndex = 195;
+            label14.Text = "a 2 km del aeropuerto de Tulcán - Carchi";
             // 
             // picturePagado
             // 
@@ -484,7 +494,6 @@
             label32.Size = new Size(109, 15);
             label32.TabIndex = 165;
             label32.Text = "Cantidad acordada:";
-            label32.Click += label32_Click;
             // 
             // label31
             // 
@@ -505,7 +514,6 @@
             label30.Size = new Size(99, 15);
             label30.TabIndex = 163;
             label30.Text = "Lugar de entrega:";
-            label30.Click += label30_Click;
             // 
             // label12
             // 
@@ -564,9 +572,9 @@
             label25.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label25.Location = new Point(145, 209);
             label25.Name = "label25";
-            label25.Size = new Size(134, 30);
+            label25.Size = new Size(166, 15);
             label25.TabIndex = 157;
-            label25.Text = "Km5, a 2 Kilometros del \r\naeropuerto de Túlcan";
+            label25.Text = "Panamericana Norte E35 Km5 ";
             // 
             // label24
             // 
@@ -602,11 +610,12 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label21.Location = new Point(141, 158);
+            label21.Location = new Point(144, 158);
             label21.Name = "label21";
             label21.Size = new Size(92, 15);
             label21.TabIndex = 153;
             label21.Text = "Almeida Morillo";
+            label21.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label20
             // 
@@ -617,6 +626,7 @@
             label20.Size = new Size(79, 15);
             label20.TabIndex = 152;
             label20.Text = " Ronaldo José";
+            label20.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label19
             // 
@@ -785,5 +795,6 @@
         private Label labelCantidadRetirada;
         private Label label11;
         private PictureBox picturePagado;
+        private Label label14;
     }
 }

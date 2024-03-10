@@ -134,7 +134,7 @@ namespace SistemaFinca
                         {
 
                             string cantidad = reader.GetInt32(0).ToString();
-                            string fecha = reader.GetDateTime(1).ToString();
+                            string fecha = reader.GetDateTime(1).ToString("dd/MM/yyyy");
                             string estado = reader.GetBoolean(2) ? "Pagado" : "No pagado";
                             string idRetiro = reader.GetInt32(3).ToString();
 

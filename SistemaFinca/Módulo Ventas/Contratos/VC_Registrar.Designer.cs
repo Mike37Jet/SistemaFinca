@@ -33,6 +33,8 @@
             btnBuscar = new Button();
             txtCedula = new TextBox();
             panelRegistrarContrato = new Panel();
+            dateTimeFinalizacion = new DateTimePicker();
+            dateTimeInicio = new DateTimePicker();
             label4 = new Label();
             txtCantidadLeche = new TextBox();
             labelCorreo = new Label();
@@ -82,7 +84,7 @@
             btnBuscar.Margin = new Padding(3, 2, 3, 2);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(103, 27);
-            btnBuscar.TabIndex = 84;
+            btnBuscar.TabIndex = 2;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
             btnBuscar.Click += btnBuscar_Click;
@@ -96,11 +98,13 @@
             txtCedula.Margin = new Padding(3, 2, 3, 2);
             txtCedula.Name = "txtCedula";
             txtCedula.Size = new Size(178, 27);
-            txtCedula.TabIndex = 109;
+            txtCedula.TabIndex = 1;
             // 
             // panelRegistrarContrato
             // 
             panelRegistrarContrato.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelRegistrarContrato.Controls.Add(dateTimeFinalizacion);
+            panelRegistrarContrato.Controls.Add(dateTimeInicio);
             panelRegistrarContrato.Controls.Add(label4);
             panelRegistrarContrato.Controls.Add(txtCantidadLeche);
             panelRegistrarContrato.Controls.Add(labelCorreo);
@@ -123,12 +127,27 @@
             panelRegistrarContrato.Size = new Size(895, 390);
             panelRegistrarContrato.TabIndex = 110;
             // 
+            // dateTimeFinalizacion
+            // 
+            dateTimeFinalizacion.Location = new Point(633, 221);
+            dateTimeFinalizacion.Name = "dateTimeFinalizacion";
+            dateTimeFinalizacion.Size = new Size(210, 23);
+            dateTimeFinalizacion.TabIndex = 5;
+            dateTimeFinalizacion.ValueChanged += dateTimeFinalizacion_ValueChanged;
+            // 
+            // dateTimeInicio
+            // 
+            dateTimeInicio.Location = new Point(633, 186);
+            dateTimeInicio.Name = "dateTimeInicio";
+            dateTimeInicio.Size = new Size(210, 23);
+            dateTimeInicio.TabIndex = 4;
+            dateTimeInicio.ValueChanged += dateTimeInicio_ValueChanged;
+            // 
             // label4
             // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F);
-            label4.Location = new Point(303, 259);
+            label4.Location = new Point(249, 259);
             label4.Name = "label4";
             label4.Size = new Size(150, 20);
             label4.TabIndex = 134;
@@ -136,18 +155,16 @@
             // 
             // txtCantidadLeche
             // 
-            txtCantidadLeche.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtCantidadLeche.Cursor = Cursors.IBeam;
             txtCantidadLeche.Font = new Font("Segoe UI", 11.25F);
-            txtCantidadLeche.Location = new Point(459, 256);
+            txtCantidadLeche.Location = new Point(438, 256);
             txtCantidadLeche.Margin = new Padding(3, 2, 3, 2);
             txtCantidadLeche.Name = "txtCantidadLeche";
             txtCantidadLeche.Size = new Size(178, 27);
-            txtCantidadLeche.TabIndex = 133;
+            txtCantidadLeche.TabIndex = 6;
             // 
             // labelCorreo
             // 
-            labelCorreo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelCorreo.AutoSize = true;
             labelCorreo.Font = new Font("Segoe UI", 11.25F);
             labelCorreo.Location = new Point(438, 111);
@@ -158,10 +175,9 @@
             // 
             // label13
             // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 11.25F);
-            label13.Location = new Point(257, 112);
+            label13.Location = new Point(267, 114);
             label13.Name = "label13";
             label13.Size = new Size(132, 20);
             label13.TabIndex = 131;
@@ -169,10 +185,9 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F);
-            label2.Location = new Point(345, 189);
+            label2.Location = new Point(291, 189);
             label2.Name = "label2";
             label2.Size = new Size(108, 20);
             label2.TabIndex = 130;
@@ -180,10 +195,9 @@
             // 
             // txtFechaInicio
             // 
-            txtFechaInicio.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtFechaInicio.Cursor = Cursors.IBeam;
             txtFechaInicio.Font = new Font("Segoe UI", 11.25F);
-            txtFechaInicio.Location = new Point(459, 186);
+            txtFechaInicio.Location = new Point(438, 186);
             txtFechaInicio.Margin = new Padding(3, 2, 3, 2);
             txtFechaInicio.Name = "txtFechaInicio";
             txtFechaInicio.Size = new Size(178, 27);
@@ -191,10 +205,9 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F);
-            label1.Location = new Point(305, 224);
+            label1.Location = new Point(251, 224);
             label1.Name = "label1";
             label1.Size = new Size(148, 20);
             label1.TabIndex = 128;
@@ -202,10 +215,9 @@
             // 
             // txtFechaFinalizacion
             // 
-            txtFechaFinalizacion.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtFechaFinalizacion.Cursor = Cursors.IBeam;
             txtFechaFinalizacion.Font = new Font("Segoe UI", 11.25F);
-            txtFechaFinalizacion.Location = new Point(459, 221);
+            txtFechaFinalizacion.Location = new Point(438, 221);
             txtFechaFinalizacion.Margin = new Padding(3, 2, 3, 2);
             txtFechaFinalizacion.Name = "txtFechaFinalizacion";
             txtFechaFinalizacion.Size = new Size(178, 27);
@@ -219,14 +231,13 @@
             btnRegistrar.Margin = new Padding(3, 2, 3, 2);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(104, 36);
-            btnRegistrar.TabIndex = 126;
+            btnRegistrar.TabIndex = 7;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
             btnRegistrar.Click += btnRegistrar_Click_1;
             // 
             // labelTelefono
             // 
-            labelTelefono.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelTelefono.AutoSize = true;
             labelTelefono.Font = new Font("Segoe UI", 11.25F);
             labelTelefono.Location = new Point(438, 84);
@@ -237,10 +248,9 @@
             // 
             // label11
             // 
-            label11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 11.25F);
-            label11.Location = new Point(257, 84);
+            label11.Location = new Point(332, 86);
             label11.Name = "label11";
             label11.Size = new Size(67, 20);
             label11.TabIndex = 124;
@@ -248,7 +258,6 @@
             // 
             // labelApellidos
             // 
-            labelApellidos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelApellidos.AutoSize = true;
             labelApellidos.Font = new Font("Segoe UI", 11.25F);
             labelApellidos.Location = new Point(438, 57);
@@ -259,10 +268,9 @@
             // 
             // label9
             // 
-            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11.25F);
-            label9.Location = new Point(257, 56);
+            label9.Location = new Point(327, 58);
             label9.Name = "label9";
             label9.Size = new Size(72, 20);
             label9.TabIndex = 122;
@@ -270,7 +278,6 @@
             // 
             // labelNombres
             // 
-            labelNombres.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelNombres.AutoSize = true;
             labelNombres.Font = new Font("Segoe UI", 11.25F);
             labelNombres.Location = new Point(438, 30);
@@ -281,10 +288,9 @@
             // 
             // label5
             // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F);
-            label5.Location = new Point(257, 28);
+            label5.Location = new Point(329, 30);
             label5.Name = "label5";
             label5.Size = new Size(70, 20);
             label5.TabIndex = 120;
@@ -292,10 +298,9 @@
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.25F);
-            label3.Location = new Point(329, 154);
+            label3.Location = new Point(275, 154);
             label3.Name = "label3";
             label3.Size = new Size(124, 20);
             label3.TabIndex = 119;
@@ -303,14 +308,13 @@
             // 
             // txtFechaEmision
             // 
-            txtFechaEmision.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtFechaEmision.Cursor = Cursors.IBeam;
             txtFechaEmision.Font = new Font("Segoe UI", 11.25F);
-            txtFechaEmision.Location = new Point(459, 151);
+            txtFechaEmision.Location = new Point(438, 151);
             txtFechaEmision.Margin = new Padding(3, 2, 3, 2);
             txtFechaEmision.Name = "txtFechaEmision";
             txtFechaEmision.Size = new Size(178, 27);
-            txtFechaEmision.TabIndex = 118;
+            txtFechaEmision.TabIndex = 3;
             // 
             // FormVC_Registrar
             // 
@@ -365,5 +369,7 @@
         private Label label5;
         private Label label3;
         private TextBox txtFechaEmision;
+        private DateTimePicker dateTimeFinalizacion;
+        private DateTimePicker dateTimeInicio;
     }
 }

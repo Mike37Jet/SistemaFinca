@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            txtFechaEmision = new TextBox();
+            labelFechaEmision = new Label();
             txtTotal = new TextBox();
             txtPrecioLitro = new TextBox();
             txtCantidadLeche = new TextBox();
@@ -50,8 +52,6 @@
             label5 = new Label();
             txtTelefono = new TextBox();
             label18 = new Label();
-            labelFechaEmision = new Label();
-            txtFechaEmision = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -86,6 +86,29 @@
             panel1.Size = new Size(895, 541);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // txtFechaEmision
+            // 
+            txtFechaEmision.Cursor = Cursors.IBeam;
+            txtFechaEmision.Font = new Font("Segoe UI", 11.25F);
+            txtFechaEmision.Location = new Point(572, 386);
+            txtFechaEmision.Margin = new Padding(3, 2, 3, 2);
+            txtFechaEmision.Name = "txtFechaEmision";
+            txtFechaEmision.Size = new Size(124, 27);
+            txtFechaEmision.TabIndex = 135;
+            txtFechaEmision.Visible = false;
+            // 
+            // labelFechaEmision
+            // 
+            labelFechaEmision.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelFechaEmision.AutoSize = true;
+            labelFechaEmision.Font = new Font("Segoe UI", 11.25F);
+            labelFechaEmision.Location = new Point(572, 358);
+            labelFechaEmision.Name = "labelFechaEmision";
+            labelFechaEmision.Size = new Size(124, 20);
+            labelFechaEmision.TabIndex = 134;
+            labelFechaEmision.Text = "Fecha de Emisión";
+            labelFechaEmision.Visible = false;
             // 
             // txtTotal
             // 
@@ -327,29 +350,6 @@
             label18.Size = new Size(201, 32);
             label18.TabIndex = 58;
             label18.Text = "Nota de Venta";
-            // 
-            // labelFechaEmision
-            // 
-            labelFechaEmision.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            labelFechaEmision.AutoSize = true;
-            labelFechaEmision.Font = new Font("Segoe UI", 11.25F);
-            labelFechaEmision.Location = new Point(572, 355);
-            labelFechaEmision.Name = "labelFechaEmision";
-            labelFechaEmision.Size = new Size(124, 20);
-            labelFechaEmision.TabIndex = 134;
-            labelFechaEmision.Text = "Fecha de Emisión";
-            labelFechaEmision.Visible = false;
-            // 
-            // txtFechaEmision
-            // 
-            txtFechaEmision.Cursor = Cursors.IBeam;
-            txtFechaEmision.Font = new Font("Segoe UI", 11.25F);
-            txtFechaEmision.Location = new Point(572, 377);
-            txtFechaEmision.Margin = new Padding(3, 2, 3, 2);
-            txtFechaEmision.Name = "txtFechaEmision";
-            txtFechaEmision.Size = new Size(124, 27);
-            txtFechaEmision.TabIndex = 135;
-            txtFechaEmision.Visible = false;
             // 
             // FormVNotaDeVenta
             // 

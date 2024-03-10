@@ -93,7 +93,7 @@ namespace SistemaFinca
                         {
                             string cantidad = reader.GetInt32(0).ToString();
                             string monto = reader.GetDecimal(1).ToString();
-                            string fecha = reader.GetDateTime(2).ToString();
+                            string fecha = reader.GetDateTime(2).ToString("dd/MM/yyyy");
                             string idnota = reader.GetInt32(3).ToString();
 
                             lstNotasVenta.Rows.Add(cantidad, monto, fecha, idnota);
@@ -148,7 +148,7 @@ namespace SistemaFinca
                     {
                            string cantidad = reader.GetInt32(0).ToString();
                            string VTotal = reader.GetDecimal(1).ToString();
-                           string fecha = reader.GetDateTime(2).ToString();
+                           string fecha = reader.GetDateTime(2).ToString("dd/MM/yyyy");
                            string idnota = reader.GetInt32(3).ToString();
                            formSubVConsultas.llenarDatos(cantidad,VTotal,fecha,idnota);
                     }

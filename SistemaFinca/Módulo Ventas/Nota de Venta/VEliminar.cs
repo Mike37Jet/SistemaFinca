@@ -138,7 +138,7 @@ namespace SistemaFinca
                         {
                             String cantidad = reader.GetInt32(0).ToString();
                             String monto = reader.GetDecimal(1).ToString();
-                            String fechaemision = reader.GetDateTime(2).ToString();
+                            String fechaemision = reader.GetDateTime(2).ToString("dd/MM/yyyy");
                             String notaventa = reader.GetInt32(3).ToString();
                             String idcontrato = reader.GetInt32(4).ToString();
                             lstNotasVenta.Rows.Add(cantidad, monto, fechaemision, notaventa, idcontrato);

@@ -64,9 +64,9 @@ namespace SistemaFinca
                         txtApellidos.Text = apellidos;
                         txtCorreo.Text = correo;
                         txtTelefono.Text = telefono;
-                        txtFechaEmision.Text = reader.GetDateTime(0).ToString();
-                        txtFechaInicio.Text = reader.GetDateTime(1).ToString();
-                        txtFechaFinalizacion.Text = reader.GetDateTime(2).ToString();
+                        txtFechaEmision.Text = reader.GetDateTime(0).ToString("dd/MM/yyyy");
+                        txtFechaInicio.Text = reader.GetDateTime(1).ToString("dd/MM/yyyy");
+                        txtFechaFinalizacion.Text = reader.GetDateTime(2).ToString("dd/MM/yyyy");
                         txtCantidadLeche.Text = reader.GetInt32(3).ToString();
                         txtCantidadRetirada.Text = reader.GetInt32(4).ToString();
                         idcontrato = reader.GetInt32(5);

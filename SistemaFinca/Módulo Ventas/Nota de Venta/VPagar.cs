@@ -19,6 +19,7 @@ namespace SistemaFinca
         private String cedulacliente, idcontrato;
         private decimal monto;
         private int cantidadLeche;
+        
 
         public FormVNotaDeVenta(string cedulacliente, string idcontrato)
         {
@@ -27,6 +28,7 @@ namespace SistemaFinca
             this.idcontrato = idcontrato;
             this.monto = 0;
             this.cantidadLeche = 0;
+            txtFechaEmision.ReadOnly = true;
             getDatosCliente();
         }
 
@@ -47,6 +49,9 @@ namespace SistemaFinca
                         txtApellidos.Text = reader.GetString(1);
                         txtCorreo.Text = reader.GetString(2);
                         txtTelefono.Text = reader.GetString(3);
+                        DateTime fechaActual = DateTime.Now;
+                        DateTime soloFecha = fechaActual.Date;
+                        txtFechaEmision.Text = soloFecha.ToString("dd/MM/yyyy");
                     }
                 }
                 catch (NpgsqlException ex)
@@ -202,11 +207,11 @@ namespace SistemaFinca
 
         private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
-            if (!FormVC_Registrar.fechaEsValida(txtFechaEmision.Text))
-            {
-                MessageBox.Show("Fecha de emisión no válida", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //if (!FormVC_Registrar.fechaEsValida(txtFechaEmision.Text))
+            //{
+            //    MessageBox.Show("Fecha de emisión no válida", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
             using (NpgsqlConnection connection = new NpgsqlConnection(FormLogin.connectionString))
             {
                 try

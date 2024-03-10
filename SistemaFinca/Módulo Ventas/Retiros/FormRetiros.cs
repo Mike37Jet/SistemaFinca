@@ -41,7 +41,7 @@ namespace SistemaFinca
                         while (reader.Read())
                         {
                             String cantidad = reader.GetInt32(0).ToString();
-                            String fecha = reader.GetDateTime(1).ToString();
+                            String fecha = reader.GetDateTime(1).ToString("dd/MM/yyyy");
                             String estado = reader.GetBoolean(2) ? "Pagado" : "No pagado";
                             ListViewItem item = new ListViewItem(cantidad);
                             item.SubItems.Add(fecha);

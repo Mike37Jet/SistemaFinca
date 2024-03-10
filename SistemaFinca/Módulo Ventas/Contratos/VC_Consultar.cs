@@ -67,9 +67,9 @@ namespace SistemaFinca
                         labelApellidos1.Text = apellidos;
                         labelCedula.Text = cedulacliente;
                         labelDireccionDomiciliaria.Text = direccion;
-                        labelFechaEmision.Text = reader.GetDateTime(0).ToString();
-                        labelFechaInicio.Text = reader.GetDateTime(1).ToString();
-                        labelFechaFinalizacion.Text = reader.GetDateTime(2).ToString();
+                        labelFechaEmision.Text = reader.GetDateTime(0).ToString("dd/MM/yyyy");
+                        labelFechaInicio.Text = reader.GetDateTime(1).ToString("dd/MM/yyyy");
+                        labelFechaFinalizacion.Text = reader.GetDateTime(2).ToString("dd/MM/yyyy");
                         labelCantidadLeche.Text = reader.GetInt32(3).ToString() + " Litros";
                         labelCantidadRetirada.Text = reader.GetInt32(4).ToString() + " Litros";
                         if (reader.GetBoolean(5))
@@ -94,14 +94,5 @@ namespace SistemaFinca
             }
         }
 
-        private void label30_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label32_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -39,8 +39,8 @@ namespace SistemaFinca
                         while (reader.Read())
                         {
                             String usuario = reader.GetString(0);
-                            String fechainicio = reader.GetDateTime(1).ToString();
-                            String fechafin = reader.GetDateTime(2).ToString();
+                            String fechainicio = reader.GetDateTime(1).ToString("dd/MM/yyyy");
+                            String fechafin = reader.GetDateTime(2).ToString("dd/MM/yyyy");
                             ListViewItem item = new ListViewItem(usuario);
                             item.SubItems.Add(fechainicio);
                             item.SubItems.Add(fechafin);

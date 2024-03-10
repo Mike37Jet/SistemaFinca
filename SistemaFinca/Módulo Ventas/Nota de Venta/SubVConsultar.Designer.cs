@@ -238,7 +238,7 @@
             labeComentario.Name = "labeComentario";
             labeComentario.Size = new Size(366, 116);
             labeComentario.TabIndex = 15;
-            labeComentario.Text = "Comentarios";
+            labeComentario.Text = "Ninguno";
             // 
             // tableLayoutPanel1
             // 
@@ -757,9 +757,9 @@
             label6.Font = new Font("Microsoft Sans Serif", 8.25F);
             label6.Location = new Point(25, 75);
             label6.Name = "label6";
-            label6.Size = new Size(194, 13);
+            label6.Size = new Size(200, 13);
             label6.TabIndex = 4;
-            label6.Text = "a 2 km del aeropuerto de Tulcá - Carchi";
+            label6.Text = "a 2 km del aeropuerto de Tulcán - Carchi";
             // 
             // label5
             // 

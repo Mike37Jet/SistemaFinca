@@ -57,7 +57,7 @@ namespace SistemaFinca
                             String apellidos = reader.GetString(1);
                             String monto = reader.GetDecimal(2).ToString();
                             String cantidad = reader.GetInt32(3).ToString();
-                            String fecha = reader.GetDateTime(4).ToString();
+                            String fecha = reader.GetDateTime(4).ToString("dd/MM/yyyy");
                             lstNotasVenta.Rows.Add(nombres, apellidos, monto, cantidad, fecha);
                         }
                     }

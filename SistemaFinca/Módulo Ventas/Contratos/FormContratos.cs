@@ -43,8 +43,8 @@ namespace SistemaFinca
                             String cedula = reader.GetString(0);
                             String cantidad = reader.GetInt32(1).ToString();
                             String cantidadRetirada = reader.GetInt32(2).ToString();
-                            String fechainicio = reader.GetDateTime(3).ToString();
-                            String fechafin = reader.GetDateTime(4).ToString();
+                            String fechainicio = reader.GetDateTime(3).ToString("dd/MM/yyyy");
+                            String fechafin = reader.GetDateTime(4).ToString("dd/MM/yyyy");
                             ListViewItem item = new ListViewItem(cedula);
                             item.SubItems.Add(cantidad);
                             item.SubItems.Add(cantidadRetirada);
