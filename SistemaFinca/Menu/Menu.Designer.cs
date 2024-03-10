@@ -991,7 +991,7 @@
             // 
             pictureLogo.Anchor = AnchorStyles.None;
             pictureLogo.Image = (Image)resources.GetObject("pictureLogo.Image");
-            pictureLogo.Location = new Point(301, 174);
+            pictureLogo.Location = new Point(321, 174);
             pictureLogo.Margin = new Padding(3, 2, 3, 2);
             pictureLogo.Name = "pictureLogo";
             pictureLogo.Size = new Size(260, 260);

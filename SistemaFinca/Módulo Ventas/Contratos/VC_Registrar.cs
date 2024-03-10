@@ -190,6 +190,7 @@ namespace SistemaFinca
                     if (resultado > 0)
                     {
                         MessageBox.Show("Contrato registrado satisfactoriamente", "Contrato registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        panelRegistrarContrato.Visible = false;
                         vaciarCampos();
                     }
                 }

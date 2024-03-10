@@ -195,10 +195,10 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Font = new Font("Microsoft Sans Serif", 8.25F);
+            label14.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label14.Location = new Point(146, 226);
             label14.Name = "label14";
-            label14.Size = new Size(200, 13);
+            label14.Size = new Size(215, 13);
             label14.TabIndex = 195;
             label14.Text = "a 2 km del aeropuerto de Tulcán - Carchi";
             // 
@@ -274,11 +274,10 @@
             // 
             // labelDireccionDomiciliaria
             // 
-            labelDireccionDomiciliaria.AutoSize = true;
             labelDireccionDomiciliaria.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelDireccionDomiciliaria.Location = new Point(516, 209);
             labelDireccionDomiciliaria.Name = "labelDireccionDomiciliaria";
-            labelDireccionDomiciliaria.Size = new Size(12, 15);
+            labelDireccionDomiciliaria.Size = new Size(247, 56);
             labelDireccionDomiciliaria.TabIndex = 187;
             labelDireccionDomiciliaria.Text = "-";
             // 
